@@ -29,14 +29,29 @@ listing:
 :::
 :::
 
-<!-- Números do programa: substitua pelos valores reais.
-     Ex.: estatísticas do ohsome ou do OSM Stats do capítulo. -->
+<!-- Números do programa: calculados automaticamente a cada publicação.
+     Ações, estudantes e parceiros vêm dos arquivos do próprio site;
+     as edições vêm do OpenStreetMap (veja dados/osm.json). -->
 ::: {.numeros}
-<div><strong>00</strong><span>estudantes envolvidos</span></div>
-<div><strong>00</strong><span>ações realizadas</span></div>
-<div><strong>0.000</strong><span>edições no OpenStreetMap</span></div>
-<div><strong>00</strong><span>parceiros</span></div>
+::: {}
+**{{< contar estudantes >}}**
+[estudantes envolvidos]{}
 :::
+::: {}
+**{{< contar acoes >}}**
+[ações realizadas]{}
+:::
+::: {}
+**{{< osm edicoes >}}**
+[edições no OpenStreetMap]{}
+:::
+::: {}
+**{{< contar parceiros >}}**
+[parceiros]{}
+:::
+:::
+
+[Números atualizados em {{< atualizado >}}.]{.atualizacao}
 
 ## Ações recentes
 

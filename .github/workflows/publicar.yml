@@ -1,10 +1,20 @@
-# Publica o site automaticamente a cada alteração na branch main.
+# Publica o site automaticamente:
+#  - a cada alteração na branch main;
+#  - toda segunda-feira às 6h (horário de Brasília), mesmo sem alterações,
+#    para atualizar os contadores (eventos que já aconteceram, edições no OSM);
+#  - manualmente, pelo botão "Run workflow" na aba Actions.
 name: Publicar site
 
 on:
   push:
     branches: main
-  workflow_dispatch:      # permite publicar manualmente pela aba Actions
+  schedule:
+    - cron: "0 9 * * 1"   # 9h UTC = 6h em Brasília, às segundas
+  workflow_dispatch:
+
+env:
+  # Hashtag usada nos changesets do programa (sem o #).
+  HASHTAG: youthmappersufv
 
 jobs:
   publicar:
@@ -14,6 +24,27 @@ jobs:
     steps:
       - name: Baixar o repositório
         uses: actions/checkout@v4
+
+      - name: Atualizar estatísticas do OpenStreetMap
+        # Se a API estiver fora do ar, o site é publicado assim mesmo,
+        # com os valores de dados/osm.json que estão no repositório.
+        continue-on-error: true
+        run: |
+          RESPOSTA=$(curl -sf --max-time 30 "https://stats.now.ohsome.org/api/stats/${HASHTAG}")
+          echo "$RESPOSTA" | jq '{
+            edicoes:     (.result.edits     // empty),
+            mapeadores:  (.result.users     // empty),
+            edificacoes: (.result.buildings // empty),
+            km_vias:     (.result.roads     // empty | floor),
+            fonte:       "ohsomeNow stats, hashtag #\(env.HASHTAG)"
+          }' > /tmp/osm.json
+          # Só substitui o arquivo se veio um número válido
+          if jq -e '.edicoes | numbers' /tmp/osm.json > /dev/null; then
+            mv /tmp/osm.json dados/osm.json
+            cat dados/osm.json
+          else
+            echo "Resposta inesperada da API; mantendo dados/osm.json"
+          fi
 
       - name: Instalar o Quarto
         uses: quarto-dev/quarto-actions/setup@v2

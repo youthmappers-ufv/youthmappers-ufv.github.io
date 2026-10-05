@@ -96,6 +96,7 @@ a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem; margin: 1rem 0 2rem;
   div { border-left: 4px solid $ouro; padding: .25rem 0 .25rem .9rem; }
+  p { margin: 0; }
   strong { display: block; font-family: $headings-font-family; font-size: 1.9rem; line-height: 1.1; color: $marinho; }
   span { color: $cinza; }
 }
@@ -113,6 +114,9 @@ a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
   }
   .card-body { text-align: center; }
 }
+
+// Data de atualização dos números
+.atualizacao { display: block; margin: -1.25rem 0 2rem; font-size: .85rem; color: $cinza; }
 
 // Bloco de ficha técnica dos eventos e projetos
 .ficha {

@@ -10,6 +10,8 @@ project:
   # ignorados automaticamente pelo Quarto e não viram páginas.
   resources:
     - imagens/
+  # Antes de gerar o site, busca as estatísticas do OSM (veja o script).
+  pre-render: scripts/atualizar-osm.ts
 
 lang: pt
 language:
@@ -43,11 +45,14 @@ website:
       - href: publicacoes.qmd
         text: Publicações
     right:
+      - icon: instagram
+        href: https://instagram.com/youthmappers.ufv
+        aria-label: Instagram do programa
       - icon: github
         href: https://github.com/youthmappers-ufv
         aria-label: GitHub do programa
       - icon: envelope
-        href: mailto:smarzaro@ufv.br
+        href: mailto:youthmapperschapter@ufv.br
         aria-label: Contato por e-mail
   page-footer:
     left: "Programa de Extensão YouthMappers UFV, campus Rio Paranaíba"

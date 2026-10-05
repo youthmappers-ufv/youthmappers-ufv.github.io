@@ -1,11 +1,11 @@
 ---
 title: "Rodrigo Smarzaro"
-image: fotos/rodrigo-smarzaro.svg
+image: fotos/rodrigo-smarzaro.png
 description: "Coordenador do programa"
 situacao: coordenacao
 ---
 
-Professor da UFV, campus Rio Paranaíba. Trabalha com bancos de dados e bancos de dados geográficos.
+Professor da UFV e atual coordenador do programa YouthMappers UFV. Tem experiência na área de Ciência da Computação, com ênfase em Banco de Dados, atuando principalmente nos seguintes temas: bancos de dados geográficos, urban computing, VGI e integração de dados espaciais. Mapeador OSM desde 2008, membro da comunidade YouthMappers desde 2024, membro da OSGEO Brasil.
 
 - E-mail: [smarzaro@ufv.br](mailto:smarzaro@ufv.br)
-- OpenStreetMap: (seu usuário)
+- OpenStreetMap: [Smarzaro](https://www.openstreetmap.org/user/Smarzaro)

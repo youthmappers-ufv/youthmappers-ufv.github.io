@@ -81,3 +81,28 @@ da pasta `_freeze/` junto com a página.
 - `_quarto.yml`: menu, rodapé e opções gerais.
 - `tema.scss`: cores e fontes.
 - `.github/workflows/publicar.yml`: publicação automática.
+
+## Números da página inicial (automáticos)
+
+Os quatro números da página inicial são calculados sozinhos a cada
+publicação. Ninguém precisa editá-los, mas eles dependem de convenções:
+
+| Número | De onde vem | O que manter |
+|---|---|---|
+| Estudantes envolvidos | Arquivos em `equipe/` com `situacao: atual` ou `egresso` | Cadastrar toda pessoa que participa |
+| Ações realizadas | Pastas em `eventos/` cuja data já passou | Nome da pasta começando por `AAAA-MM-DD` |
+| Edições no OpenStreetMap | Estatísticas da hashtag `#youthmappersufv` | **Usar a hashtag em todo changeset do programa** |
+| Parceiros | Arquivos de logo em `imagens/parceiros/` | Um logo por parceiro |
+
+As edições do OSM são consultadas pelo script `scripts/atualizar-osm.ts`,
+que roda sozinho antes de cada renderização, inclusive no `quarto preview`
+(no máximo uma consulta a cada 12 horas). Ele grava o resultado em
+`dados/osm.json`; tudo bem fazer commit desse arquivo junto com suas alterações.
+
+O site é republicado toda segunda-feira, mesmo sem alterações, para
+atualizar as edições do OSM e passar a contar eventos que já aconteceram.
+
+**A hashtag nas edições.** No JOSM ou no iD, inclua `#youthmappersufv` no
+comentário do changeset. Nos projetos do Tasking Manager criados pelo
+programa, coloque a hashtag no comentário padrão do projeto: assim ela
+entra automaticamente em toda edição feita por ele.
