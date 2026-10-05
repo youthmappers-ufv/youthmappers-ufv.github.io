@@ -1,0 +1,15 @@
+---
+title: "Ações e eventos"
+description: "Mapathons, oficinas, palestras e participações em eventos."
+listing:
+  contents: eventos
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: [date, title]
+  filter-ui: true
+  fields: [image, date, title, description, categories]
+  image-height: 200px
+  feed: true
+page-layout: full
+---

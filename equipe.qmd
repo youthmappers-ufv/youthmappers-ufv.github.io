@@ -1,0 +1,46 @@
+---
+title: "Equipe"
+description: "Coordenação, bolsistas, voluntários e egressos do programa."
+listing:
+  - id: coordenacao
+    contents: equipe
+    type: grid
+    include:
+      situacao: coordenacao
+    fields: [image, title, description]
+    sort: title
+    image-height: 160px
+  - id: atuais
+    contents: equipe
+    type: grid
+    include:
+      situacao: atual
+    fields: [image, title, description]
+    sort: title
+    image-height: 160px
+  - id: egressos
+    contents: equipe
+    type: grid
+    include:
+      situacao: egresso
+    fields: [image, title, description]
+    sort: title
+    image-height: 160px
+---
+
+## Coordenação
+
+::: {#coordenacao}
+:::
+
+## Equipe atual
+
+::: {#atuais}
+:::
+
+## Egressos
+
+Estudantes que passaram pelo programa e ajudaram a construí-lo.
+
+::: {#egressos}
+:::

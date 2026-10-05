@@ -1,0 +1,8 @@
+---
+title: "Bolsista de Exemplo"
+image: fotos/bolsista-exemplo.svg
+description: "Bolsista, Sistemas de Informação"
+situacao: atual
+---
+
+Pessoa de exemplo. Substitua pelo texto real: interesses, projetos em que atua e links (GitHub, usuário do OSM, Lattes).

@@ -1,0 +1,31 @@
+---
+title: "Título do evento"
+date: 2026-01-31                     # AAAA-MM-DD
+description: "Uma frase que resume a ação (aparece no cartão da listagem)."
+image: capa.jpg                      # foto horizontal, ~1600 px de largura
+categories: [mapathon]               # ex.: mapathon, oficina, palestra, conferência
+---
+
+::: {.ficha}
+Data
+:   31/01/2026, das 14h às 18h
+
+Local
+:   Onde aconteceu
+
+Participantes
+:   Quantas pessoas
+
+Links
+:   [Projeto no Tasking Manager](https://tasks.hotosm.org)
+:::
+
+Conte o que aconteceu: o que foi feito, quem participou, que dados foram produzidos.
+
+## Fotos
+
+::: {.galeria}
+![Legenda da foto](fotos/01.jpg){group="evento" fig-alt="Descrição da foto"}
+
+![Legenda da foto](fotos/02.jpg){group="evento" fig-alt="Descrição da foto"}
+:::

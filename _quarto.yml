@@ -1,0 +1,65 @@
+# =============================================================
+# Configuração global do site YouthMappers UFV
+# Normalmente só o coordenador precisa editar este arquivo:
+# ele define o menu, o rodapé e a aparência de todas as páginas.
+# =============================================================
+project:
+  type: website
+  output-dir: _site
+  # Arquivos e pastas que começam com "_" (como _modelos/) são
+  # ignorados automaticamente pelo Quarto e não viram páginas.
+  resources:
+    - imagens/
+
+lang: pt
+language:
+  title-block-published: "Data"
+  title-block-modified: "Atualizado em"
+
+website:
+  title: "YouthMappers UFV"
+  description: "Capítulo YouthMappers da Universidade Federal de Viçosa, campus Rio Paranaíba: mapeamento colaborativo e ferramentas abertas com OpenStreetMap."
+  site-url: https://youthmappers-ufv.github.io   # ajuste se usar outro endereço
+  repo-url: https://github.com/youthmappers-ufv/youthmappers-ufv.github.io
+  favicon: imagens/favicon.svg
+  open-graph: true            # gera prévias bonitas ao compartilhar links
+  search: true
+  navbar:
+    logo: imagens/logo.svg
+    left:
+      - href: index.qmd
+        text: Início
+      - href: sobre.qmd
+        text: O programa
+      - href: eventos.qmd
+        text: Ações e eventos
+      - href: projetos.qmd
+        text: Projetos
+      - href: equipe.qmd
+        text: Equipe
+      - href: publicacoes.qmd
+        text: Publicações
+    right:
+      - icon: github
+        href: https://github.com/youthmappers-ufv
+        aria-label: GitHub do programa
+      - icon: envelope
+        href: mailto:smarzaro@ufv.br
+        aria-label: Contato por e-mail
+  page-footer:
+    left: "Programa de Extensão YouthMappers UFV, campus Rio Paranaíba"
+    right: "Dados de mapa © colaboradores do [OpenStreetMap](https://www.openstreetmap.org/copyright)"
+
+format:
+  html:
+    theme: [cosmo, tema.scss]
+    toc: false
+    lightbox: true            # fotos ampliáveis e navegáveis em galeria
+    link-external-newwindow: true
+    date-format: "DD/MM/YYYY"
+
+execute:
+  # Código Python/R (mapas, gráficos) roda na máquina de quem edita
+  # e o resultado fica salvo em _freeze/. Assim o GitHub não precisa
+  # instalar nada para publicar o site.
+  freeze: auto

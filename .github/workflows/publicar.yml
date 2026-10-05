@@ -1,0 +1,26 @@
+# Publica o site automaticamente a cada alteração na branch main.
+name: Publicar site
+
+on:
+  push:
+    branches: main
+  workflow_dispatch:      # permite publicar manualmente pela aba Actions
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar o Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Renderizar e publicar na branch gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

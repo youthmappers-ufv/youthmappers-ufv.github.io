@@ -1,0 +1,11 @@
+---
+title: "Nome Completo"
+image: fotos/nome-completo.jpg       # foto quadrada, ~400 x 400 px
+description: "Bolsista, Sistemas de Informação"
+situacao: atual                      # coordenacao, atual ou egresso
+---
+
+Breve apresentação: interesses e projetos em que atua.
+
+- OpenStreetMap: [usuario](https://www.openstreetmap.org/user/usuario)
+- GitHub: [usuario](https://github.com/usuario)

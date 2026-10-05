@@ -1,0 +1,22 @@
+---
+title: "Nome do projeto"
+date: 2026-01-31                     # data de início
+description: "Uma frase que resume o projeto."
+image: capa.jpg
+categories: [extensão]               # ensino, pesquisa, extensão, TCC...
+---
+
+::: {.ficha}
+Tipo
+:   Projeto de extensão
+
+Período
+:   2026 em diante
+
+Situação
+:   Em andamento
+:::
+
+## Objetivo
+
+## Resultados

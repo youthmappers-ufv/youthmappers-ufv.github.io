@@ -1,0 +1,12 @@
+---
+title: "Projetos"
+description: "Projetos de ensino, pesquisa, extensão e TCC vinculados ao programa."
+listing:
+  contents: projetos
+  type: grid
+  sort: "date desc"
+  categories: true
+  fields: [image, title, description, categories]
+  image-height: 200px
+page-layout: full
+---

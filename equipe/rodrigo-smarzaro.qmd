@@ -1,0 +1,11 @@
+---
+title: "Rodrigo Smarzaro"
+image: fotos/rodrigo-smarzaro.svg
+description: "Coordenador do programa"
+situacao: coordenacao
+---
+
+Professor da UFV, campus Rio Paranaíba. Trabalha com bancos de dados e bancos de dados geográficos.
+
+- E-mail: [smarzaro@ufv.br](mailto:smarzaro@ufv.br)
+- OpenStreetMap: (seu usuário)

@@ -1,0 +1,33 @@
+---
+title: "O programa"
+description: "O que é o YouthMappers UFV, o que fazemos e como participar."
+---
+
+<!-- TEXTO DE EXEMPLO: adapte a partir da proposta registrada na
+     Pró-Reitoria de Extensão e Cultura (fundamentação, objetivos, ODS). -->
+
+O **YouthMappers UFV** é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional [YouthMappers](https://www.youthmappers.org), que reúne estudantes universitários em torno do mapeamento colaborativo.
+
+O programa atua em duas frentes:
+
+- **Mapeamento colaborativo**: produção e validação de dados abertos no [OpenStreetMap](https://www.openstreetmap.org), em ações com a comunidade, escolas e o poder público.
+- **Ferramentas abertas**: desenvolvimento de aplicações e análises com dados do OpenStreetMap em projetos de ensino, pesquisa, extensão e TCC, com estudantes de Sistemas de Informação e de Ciência de Dados e Inteligência Artificial.
+
+## Objetivos
+
+<!-- Copie aqui o objetivo geral e os específicos da proposta. -->
+
+Objetivo geral e objetivos específicos do programa.
+
+## Parceiros
+
+<!-- Liste prefeituras, comunidades e instituições parceiras. -->
+
+- Comunidade OpenStreetMap Brasil
+- Prefeituras da região
+
+## Como participar {#como-participar}
+
+Estudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.
+
+Para entrar no programa, escreva para [smarzaro@ufv.br](mailto:smarzaro@ufv.br) informando seu nome, curso e período.

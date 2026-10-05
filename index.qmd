@@ -1,0 +1,53 @@
+---
+pagetitle: "YouthMappers UFV"
+page-layout: full
+listing:
+  - id: ultimos-eventos
+    contents: eventos
+    type: grid
+    sort: "date desc"
+    max-items: 3
+    fields: [image, date, title, description]
+    image-height: 180px
+  - id: projetos-destaque
+    contents: projetos
+    type: grid
+    sort: "date desc"
+    max-items: 3
+    fields: [image, title, description]
+    image-height: 180px
+---
+
+::: {.destaque style="background-image: url(imagens/malha-urbana.svg);"}
+<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando a própria cidade</p>
+
+[O capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.]{.lead}
+
+::: {.acoes}
+[Conheça as ações](eventos.qmd){.btn-mapa}
+[Participe do programa](sobre.qmd#como-participar){.btn-contorno}
+:::
+:::
+
+<!-- Números do programa: substitua pelos valores reais.
+     Ex.: estatísticas do ohsome ou do OSM Stats do capítulo. -->
+::: {.numeros}
+<div><strong>00</strong><span>estudantes envolvidos</span></div>
+<div><strong>00</strong><span>ações realizadas</span></div>
+<div><strong>0.000</strong><span>edições no OpenStreetMap</span></div>
+<div><strong>00</strong><span>parceiros</span></div>
+:::
+
+## Ações recentes
+
+::: {#ultimos-eventos}
+:::
+
+[Ver todas as ações e eventos](eventos.qmd)
+
+## Projetos em andamento
+
+::: {#projetos-destaque}
+:::
+
+[Ver todos os projetos](projetos.qmd)

@@ -1,0 +1,129 @@
+/*-- scss:defaults --*/
+// =============================================================
+// Tema visual do site. Para mudar as cores do site inteiro,
+// basta alterar as variáveis abaixo.
+// Paleta inspirada nas cores de um mapa do OpenStreetMap:
+// tinta das legendas, parques, água e vias secundárias.
+// =============================================================
+$tinta:   #1d2b36;   // texto principal e títulos
+$parque:  #2e7d5b;   // cor principal (links, botões)
+$agua:    #dcebf0;   // fundos claros de destaque
+$via:     #e8a33d;   // acento usado com parcimônia
+$cinza:   #5b6b78;   // textos secundários
+
+$primary:        $parque;
+$body-color:     $tinta;
+$link-color:     $parque;
+$navbar-bg:      #ffffff;
+$navbar-fg:      $tinta;
+$navbar-hl:      $parque;
+$footer-bg:      $tinta;
+$footer-fg:      #e6edf1;
+
+$font-family-sans-serif: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family:   "Archivo", "Atkinson Hyperlegible", system-ui, sans-serif;
+$headings-font-weight:   700;
+$font-size-root:         17px;
+$line-height-base:       1.6;
+$border-radius:          .35rem;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap');
+
+// Largura confortável de leitura nos textos corridos
+main.content p, main.content li { max-width: 72ch; }
+
+h1, h2, h3 { letter-spacing: -0.01em; }
+h2 { margin-top: 2.2rem; }
+
+.navbar { border-bottom: 1px solid rgba($tinta, .08); }
+.navbar-brand img { max-height: 34px; }
+
+// ---------- Destaque da página inicial ----------
+// O único elemento "ousado" do site: um trecho de malha urbana
+// desenhado em SVG, como um recorte de mapa, atrás do título.
+.destaque {
+  position: relative;
+  margin: 0 0 2.5rem;
+  padding: 3.5rem 2rem 3rem;
+  background-color: $agua;
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  .titulo-destaque {
+    font-family: $headings-font-family;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    max-width: 16ch;
+    margin: 0 0 1rem;
+    color: $tinta;
+    border: none;
+  }
+  p.lead { max-width: 46ch; font-size: 1.2rem; font-weight: 400; color: $tinta; }
+  .acoes { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+}
+
+.btn-mapa {
+  background: $parque; color: #fff; padding: .6rem 1.1rem;
+  border-radius: $border-radius; text-decoration: none; font-weight: 700;
+  &:hover, &:focus { background: darken($parque, 8%); color: #fff; }
+}
+.btn-contorno {
+  border: 2px solid $tinta; color: $tinta; padding: .5rem 1rem;
+  border-radius: $border-radius; text-decoration: none; font-weight: 700;
+  background: rgba(#fff, .7);
+  &:hover, &:focus { background: #fff; color: $tinta; }
+}
+
+a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
+  outline: 3px solid $via; outline-offset: 2px;
+}
+
+// Números do programa (preencha com dados reais)
+.numeros {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem; margin: 1rem 0 2rem;
+  div { border-left: 4px solid $via; padding: .25rem 0 .25rem .9rem; }
+  strong { display: block; font-family: $headings-font-family; font-size: 1.9rem; line-height: 1.1; }
+  span { color: $cinza; }
+}
+
+// ---------- Listagens ----------
+.quarto-grid-item .card-title { font-family: $headings-font-family; }
+.quarto-grid-item img, .quarto-grid-item .card-img-top { object-fit: cover; }
+
+// Cartões de pessoas: fotos redondas e centralizadas
+#listing-coordenacao, #listing-atuais, #listing-egressos {
+  .card-img-top { text-align: center; margin: 1.2rem 0 0; }
+  img.card-img {
+    width: 140px !important; height: 140px !important;
+    border-radius: 50%; object-fit: cover;
+  }
+  .card-body { text-align: center; }
+}
+
+// Bloco de ficha técnica dos eventos e projetos
+.ficha {
+  background: $agua; border-radius: $border-radius;
+  padding: 1rem 1.25rem; margin: 1rem 0 1.75rem;
+  dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .3rem 1rem; }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+}
+
+// Galeria de fotos dos eventos
+.galeria {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .6rem;
+  p { margin: 0; }
+  img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: $border-radius; }
+}
+
+.mapa { height: 380px; border-radius: $border-radius; margin: 1rem 0 2rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
