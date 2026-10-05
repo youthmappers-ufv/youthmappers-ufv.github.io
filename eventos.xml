@@ -10,7 +10,7 @@
 <atom:link href="https://youthmappers-ufv.github.io/eventos.xml" rel="self" type="application/rss+xml"/>
 <description>Mapathons, oficinas, palestras e participações em eventos.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 12 Nov 2026 03:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>State of the Map Brasil 2026</title>
   <link>https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/</link>
@@ -48,7 +48,7 @@ Universidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV
   <category>conferência</category>
   <category>comunidade OSM</category>
   <guid>https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/</guid>
-  <pubDate>Thu, 12 Nov 2026 03:00:00 GMT</pubDate>
+  <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
   <media:content url="https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/capa.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -153,7 +153,7 @@ Prefeitura Municipal (exemplo)
   <category>mapathon</category>
   <category>acessibilidade</category>
   <guid>https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/</guid>
-  <pubDate>Thu, 20 Aug 2026 03:00:00 GMT</pubDate>
+  <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
   <media:content url="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/capa.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
