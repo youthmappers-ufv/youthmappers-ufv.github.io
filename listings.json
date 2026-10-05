@@ -1,0 +1,34 @@
+[
+  {
+    "listing": "/projetos.html",
+    "items": [
+      "/projetos/imagens-de-rua-360/index.html",
+      "/projetos/mapeamento-calcadas/index.html"
+    ]
+  },
+  {
+    "listing": "/eventos.html",
+    "items": [
+      "/eventos/2026-11-12-sotm-brasil-2026/index.html",
+      "/eventos/2026-08-20-mapathon-calcadas/index.html"
+    ]
+  },
+  {
+    "listing": "/equipe.html",
+    "items": [
+      "/equipe/rodrigo-smarzaro.html",
+      "/equipe/bolsista-exemplo.html",
+      "/equipe/voluntario-exemplo.html",
+      "/equipe/egressa-exemplo.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/eventos/2026-11-12-sotm-brasil-2026/index.html",
+      "/eventos/2026-08-20-mapathon-calcadas/index.html",
+      "/projetos/imagens-de-rua-360/index.html",
+      "/projetos/mapeamento-calcadas/index.html"
+    ]
+  }
+]

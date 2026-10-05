@@ -1,0 +1,254 @@
+[
+  {
+    "objectID": "sobre.html",
+    "href": "sobre.html",
+    "title": "O programa",
+    "section": "",
+    "text": "O YouthMappers UFV é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional YouthMappers, que reúne estudantes universitários em torno do mapeamento colaborativo.\nO programa atua em duas frentes:"
+  },
+  {
+    "objectID": "sobre.html#objetivos",
+    "href": "sobre.html#objetivos",
+    "title": "O programa",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nObjetivo geral e objetivos específicos do programa."
+  },
+  {
+    "objectID": "sobre.html#parceiros",
+    "href": "sobre.html#parceiros",
+    "title": "O programa",
+    "section": "Parceiros",
+    "text": "Parceiros\n\n\nComunidade OpenStreetMap Brasil\nPrefeituras da região"
+  },
+  {
+    "objectID": "sobre.html#como-participar",
+    "href": "sobre.html#como-participar",
+    "title": "O programa",
+    "section": "Como participar",
+    "text": "Como participar\nEstudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.\nPara entrar no programa, escreva para smarzaro@ufv.br informando seu nome, curso e período."
+  },
+  {
+    "objectID": "projetos.html",
+    "href": "projetos.html",
+    "title": "Projetos",
+    "section": "",
+    "text": "Imagens de rua 360°\n\n\n\npesquisa\n\nTCC\n\nvisão computacional\n\n\n\nColeta de imagens de rua com câmera 360° e uso de visão computacional para apoiar o mapeamento. (Projeto de exemplo.)\n\n\n\n\n\n\n\n\n\n\n\n\nCalçadas acessíveis\n\n\n\nextensão\n\nacessibilidade\n\n\n\nMapeamento de calçadas, rampas e obstáculos para avaliar a acessibilidade urbana. (Projeto de exemplo.)\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "projetos/imagens-de-rua-360/index.html",
+    "href": "projetos/imagens-de-rua-360/index.html",
+    "title": "Imagens de rua 360°",
+    "section": "",
+    "text": "Tipo\n\nProjeto de pesquisa e TCC\n\nSituação\n\nEm planejamento\n\n\n\nTexto de exemplo descrevendo o projeto."
+  },
+  {
+    "objectID": "eventos.html",
+    "href": "eventos.html",
+    "title": "Ações e eventos",
+    "section": "",
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Título\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\n\nconferência\n\ncomunidade OSM\n\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapathon de calçadas no centro\n\n\n\nmapathon\n\nacessibilidade\n\n\n\nEstudantes mapearam a acessibilidade das calçadas do centro da cidade. (Evento de exemplo.)\n\n\n\n20/08/2026\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "eventos/2026-08-20-mapathon-calcadas/index.html",
+    "href": "eventos/2026-08-20-mapathon-calcadas/index.html",
+    "title": "Mapathon de calçadas no centro",
+    "section": "",
+    "text": "Data\n\n20/08/2026, das 14h às 18h\n\nLocal\n\nLaboratório de Informática, UFV campus Rio Paranaíba\n\nParticipantes\n\n25 estudantes\n\nParceiros\n\nPrefeitura Municipal (exemplo)\n\nLinks\n\nProjeto no Tasking Manager e álbum completo\nTexto de exemplo descrevendo a ação: o que foi feito, quem participou, que dados foram produzidos e o que aconteceu depois. Escreva para quem não conhece o OpenStreetMap."
+  },
+  {
+    "objectID": "eventos/2026-08-20-mapathon-calcadas/index.html#área-mapeada",
+    "href": "eventos/2026-08-20-mapathon-calcadas/index.html#área-mapeada",
+    "title": "Mapathon de calçadas no centro",
+    "section": "Área mapeada",
+    "text": "Área mapeada"
+  },
+  {
+    "objectID": "eventos/2026-08-20-mapathon-calcadas/index.html#fotos",
+    "href": "eventos/2026-08-20-mapathon-calcadas/index.html#fotos",
+    "title": "Mapathon de calçadas no centro",
+    "section": "Fotos",
+    "text": "Fotos\nClique em uma foto para ampliar e use as setas para navegar.\n\n\n\n\nAbertura da atividade\n\n\n\n\n\nEquipe em campo\n\n\n\n\n\nColeta de dados nas calçadas\n\n\n\n\n\nEdição no OpenStreetMap\n\n\n\n\n\nValidação dos dados\n\n\n\n\n\nFoto do grupo"
+  },
+  {
+    "objectID": "equipe/voluntario-exemplo.html",
+    "href": "equipe/voluntario-exemplo.html",
+    "title": "Voluntário de Exemplo",
+    "section": "",
+    "text": "Pessoa de exemplo."
+  },
+  {
+    "objectID": "equipe/egressa-exemplo.html",
+    "href": "equipe/egressa-exemplo.html",
+    "title": "Egressa de Exemplo",
+    "section": "",
+    "text": "Pessoa de exemplo. Ao sair do programa, basta trocar a situação para egresso: a página dela continua no site."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "Este guia é para bolsistas e voluntários. Você não precisa saber programar: todo o conteúdo do site são arquivos de texto em Markdown (.qmd).\nAo salvar uma alteração na branch main, o site é republicado sozinho em 2 ou 3 minutos. Acompanhe na aba Actions do repositório.\n\n\n\nPelo navegador (mais simples). Abra o arquivo no GitHub, clique no lápis, edite e clique em Commit changes. Para enviar fotos, entre na pasta e use Add file &gt; Upload files.\nNo seu computador. Instale o Quarto, clone o repositório e rode quarto preview na pasta do projeto. O site abre no navegador e se atualiza a cada arquivo salvo.\n\nSe você ainda está aprendendo, crie uma branch e abra um pull request: a coordenação revisa antes de publicar.\n\n\n\n\nCopie a pasta _modelos/evento/ para dentro de eventos/.\nRenomeie a pasta no formato AAAA-MM-DD-nome-curto, por exemplo eventos/2027-03-15-oficina-josm/.\nEdite o index.qmd: título, data, descrição, categorias e o texto.\nColoque a foto de capa como capa.jpg e as demais em fotos/.\n\nO evento aparece sozinho na página de eventos e na página inicial.\nCategorias: reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas.\n\n\n\nMesmo processo: copie _modelos/projeto/ para projetos/nome-do-projeto/.\n\n\n\n\nCopie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nColoque a foto em equipe/fotos/nome-sobrenome.jpg (quadrada, ~400 px).\nPreencha o arquivo. O campo situacao decide a seção da página: coordenacao, atual ou egresso.\n\nQuando alguém sai do programa, não apague o arquivo: troque situacao: atual por situacao: egresso e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”).\n\n\n\nAcrescente a entrada BibTeX em publicacoes.bib. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também eventtitle, eventdate e venue.\nPara citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas bibliography e csl (veja projetos/mapeamento-calcadas/) e use [@chave] no texto.\n\n\n\nO repositório tem limite de tamanho. Fotos de celular são grandes demais.\n\nReduza cada foto para no máximo 1600 px no lado maior antes de enviar (ex.: squoosh.app, direto no navegador).\nEnvie no máximo 12 fotos por evento. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.\nUse nomes sem espaços e sem acentos: 01.jpg, 02.jpg…\nPeça autorização de uso de imagem das pessoas fotografadas.\n\n\n\n\nA página de exemplo eventos/2026-08-20-mapathon-calcadas/ tem um mapa interativo. Copie o bloco e troque as coordenadas.\nMapas gerados com Python (ex.: folium) também funcionam: como o projeto usa freeze: auto, rode quarto render no seu computador e faça commit da pasta _freeze/ junto com a página.\n\n\n\n\n_quarto.yml: menu, rodapé e opções gerais.\ntema.scss: cores e fontes.\n.github/workflows/publicar.yml: publicação automática."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#duas-formas-de-editar",
+    "href": "CONTRIBUTING.html#duas-formas-de-editar",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "Pelo navegador (mais simples). Abra o arquivo no GitHub, clique no lápis, edite e clique em Commit changes. Para enviar fotos, entre na pasta e use Add file &gt; Upload files.\nNo seu computador. Instale o Quarto, clone o repositório e rode quarto preview na pasta do projeto. O site abre no navegador e se atualiza a cada arquivo salvo.\n\nSe você ainda está aprendendo, crie uma branch e abra um pull request: a coordenação revisa antes de publicar."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#adicionar-um-evento-ou-ação",
+    "href": "CONTRIBUTING.html#adicionar-um-evento-ou-ação",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "Copie a pasta _modelos/evento/ para dentro de eventos/.\nRenomeie a pasta no formato AAAA-MM-DD-nome-curto, por exemplo eventos/2027-03-15-oficina-josm/.\nEdite o index.qmd: título, data, descrição, categorias e o texto.\nColoque a foto de capa como capa.jpg e as demais em fotos/.\n\nO evento aparece sozinho na página de eventos e na página inicial.\nCategorias: reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#adicionar-um-projeto",
+    "href": "CONTRIBUTING.html#adicionar-um-projeto",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "Mesmo processo: copie _modelos/projeto/ para projetos/nome-do-projeto/."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#adicionar-uma-pessoa-à-equipe",
+    "href": "CONTRIBUTING.html#adicionar-uma-pessoa-à-equipe",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "Copie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nColoque a foto em equipe/fotos/nome-sobrenome.jpg (quadrada, ~400 px).\nPreencha o arquivo. O campo situacao decide a seção da página: coordenacao, atual ou egresso.\n\nQuando alguém sai do programa, não apague o arquivo: troque situacao: atual por situacao: egresso e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”)."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#adicionar-uma-publicação",
+    "href": "CONTRIBUTING.html#adicionar-uma-publicação",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "Acrescente a entrada BibTeX em publicacoes.bib. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também eventtitle, eventdate e venue.\nPara citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas bibliography e csl (veja projetos/mapeamento-calcadas/) e use [@chave] no texto."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#fotos-regras-importantes",
+    "href": "CONTRIBUTING.html#fotos-regras-importantes",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "O repositório tem limite de tamanho. Fotos de celular são grandes demais.\n\nReduza cada foto para no máximo 1600 px no lado maior antes de enviar (ex.: squoosh.app, direto no navegador).\nEnvie no máximo 12 fotos por evento. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.\nUse nomes sem espaços e sem acentos: 01.jpg, 02.jpg…\nPeça autorização de uso de imagem das pessoas fotografadas."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#mapas",
+    "href": "CONTRIBUTING.html#mapas",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "A página de exemplo eventos/2026-08-20-mapathon-calcadas/ tem um mapa interativo. Copie o bloco e troque as coordenadas.\nMapas gerados com Python (ex.: folium) também funcionam: como o projeto usa freeze: auto, rode quarto render no seu computador e faça commit da pasta _freeze/ junto com a página."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#arquivos-que-só-a-coordenação-altera",
+    "href": "CONTRIBUTING.html#arquivos-que-só-a-coordenação-altera",
+    "title": "Como atualizar o site do YouthMappers UFV",
+    "section": "",
+    "text": "_quarto.yml: menu, rodapé e opções gerais.\ntema.scss: cores e fontes.\n.github/workflows/publicar.yml: publicação automática."
+  },
+  {
+    "objectID": "equipe/bolsista-exemplo.html",
+    "href": "equipe/bolsista-exemplo.html",
+    "title": "Bolsista de Exemplo",
+    "section": "",
+    "text": "Pessoa de exemplo. Substitua pelo texto real: interesses, projetos em que atua e links (GitHub, usuário do OSM, Lattes)."
+  },
+  {
+    "objectID": "equipe/rodrigo-smarzaro.html",
+    "href": "equipe/rodrigo-smarzaro.html",
+    "title": "Rodrigo Smarzaro",
+    "section": "",
+    "text": "Professor da UFV, campus Rio Paranaíba. Trabalha com bancos de dados e bancos de dados geográficos.\n\nE-mail: smarzaro@ufv.br\nOpenStreetMap: (seu usuário)"
+  },
+  {
+    "objectID": "equipe.html",
+    "href": "equipe.html",
+    "title": "Equipe",
+    "section": "",
+    "text": "Coordenador do programa\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "equipe.html#coordenação",
+    "href": "equipe.html#coordenação",
+    "title": "Equipe",
+    "section": "",
+    "text": "Coordenador do programa\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "equipe.html#equipe-atual",
+    "href": "equipe.html#equipe-atual",
+    "title": "Equipe",
+    "section": "Equipe atual",
+    "text": "Equipe atual\n\n\n\n\n\n\n\n\n\n\nBolsista de Exemplo\n\n\nBolsista, Sistemas de Informação\n\n\n\n\n\n\n\n\n\n\n\n\nVoluntário de Exemplo\n\n\nVoluntário, Ciência de Dados e IA\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "equipe.html#egressos",
+    "href": "equipe.html#egressos",
+    "title": "Equipe",
+    "section": "Egressos",
+    "text": "Egressos\nEstudantes que passaram pelo programa e ajudaram a construí-lo.\n\n\n\n\n\n\n\n\n\n\nEgressa de Exemplo\n\n\nBolsista de 2025 a 2026, Sistemas de Informação\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "eventos/2026-11-12-sotm-brasil-2026/index.html",
+    "href": "eventos/2026-11-12-sotm-brasil-2026/index.html",
+    "title": "State of the Map Brasil 2026",
+    "section": "",
+    "text": "Data\n\n12 e 13 de novembro de 2026\n\nLocal\n\nUberlândia, MG\n\nOrganização\n\nUniversidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV)\n\nSite oficial\n\n\n(link do evento)\n\n\n\nO State of the Map Brasil é o encontro anual da comunidade brasileira do OpenStreetMap."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "YouthMappers UFV",
+    "section": "",
+    "text": "Estudantes mapeando a própria cidade\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa"
+  },
+  {
+    "objectID": "index.html#ações-recentes",
+    "href": "index.html#ações-recentes",
+    "title": "YouthMappers UFV",
+    "section": "Ações recentes",
+    "text": "Ações recentes\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapathon de calçadas no centro\n\n\nEstudantes mapearam a acessibilidade das calçadas do centro da cidade. (Evento de exemplo.)\n\n\n\n20/08/2026\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
+  },
+  {
+    "objectID": "index.html#projetos-em-andamento",
+    "href": "index.html#projetos-em-andamento",
+    "title": "YouthMappers UFV",
+    "section": "Projetos em andamento",
+    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nImagens de rua 360°\n\n\nColeta de imagens de rua com câmera 360° e uso de visão computacional para apoiar o mapeamento. (Projeto de exemplo.)\n\n\n\n\n\n\n\n\n\n\n\n\nCalçadas acessíveis\n\n\nMapeamento de calçadas, rampas e obstáculos para avaliar a acessibilidade urbana. (Projeto de exemplo.)\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
+  },
+  {
+    "objectID": "projetos/mapeamento-calcadas/index.html",
+    "href": "projetos/mapeamento-calcadas/index.html",
+    "title": "Calçadas acessíveis",
+    "section": "",
+    "text": "Tipo\n\nProjeto de extensão\n\nPeríodo\n\n2026 em diante\n\nCoordenação\n\nRodrigo Smarzaro\n\nSituação\n\nEm andamento\n\nCódigo e dados\n\nRepositório no GitHub"
+  },
+  {
+    "objectID": "projetos/mapeamento-calcadas/index.html#objetivo",
+    "href": "projetos/mapeamento-calcadas/index.html#objetivo",
+    "title": "Calçadas acessíveis",
+    "section": "Objetivo",
+    "text": "Objetivo\nTexto de exemplo: o problema que o projeto enfrenta, para quem e como."
+  },
+  {
+    "objectID": "projetos/mapeamento-calcadas/index.html#resultados",
+    "href": "projetos/mapeamento-calcadas/index.html#resultados",
+    "title": "Calçadas acessíveis",
+    "section": "Resultados",
+    "text": "Resultados\nTexto de exemplo: dados produzidos, ferramentas, trabalhos publicados. Para citar uma publicação do programa, use a chave do BibTeX, como em (Sobrenome; Smarzaro, 2026)."
+  },
+  {
+    "objectID": "projetos/mapeamento-calcadas/index.html#ações-relacionadas",
+    "href": "projetos/mapeamento-calcadas/index.html#ações-relacionadas",
+    "title": "Calçadas acessíveis",
+    "section": "Ações relacionadas",
+    "text": "Ações relacionadas\n\nMapathon de calçadas no centro"
+  },
+  {
+    "objectID": "publicacoes.html",
+    "href": "publicacoes.html",
+    "title": "Publicações",
+    "section": "",
+    "text": "As referências abaixo são geradas automaticamente a partir do arquivo publicacoes.bib, no padrão ABNT. Para incluir uma publicação, basta acrescentar a entrada BibTeX nesse arquivo.\n\n\nSMARZARO, Rodrigo. Título de exemplo: introdução ao OpenStreetMap. Oficina. Universidade Federal de Viçosa, campus Rio Paranaíba, 2026.\n\n\nSOBRENOME, Nome; SMARZARO, Rodrigo. Título de exemplo: mapeamento colaborativo de calçadas com estudantes. Em: STATE OF THE MAP BRASIL. Anais do State of the Map Brasil 2026. Uberlândia, MG: 2026."
+  }
+]

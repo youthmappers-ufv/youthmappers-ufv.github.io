@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>YouthMappers UFV</title>
+<link>https://youthmappers-ufv.github.io/eventos.html</link>
+<atom:link href="https://youthmappers-ufv.github.io/eventos.xml" rel="self" type="application/rss+xml"/>
+<description>Mapathons, oficinas, palestras e participações em eventos.</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Thu, 12 Nov 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>State of the Map Brasil 2026</title>
+  <link>https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="ficha">
+<dl>
+<dt>Data</dt>
+<dd>
+12 e 13 de novembro de 2026
+</dd>
+<dt>Local</dt>
+<dd>
+Uberlândia, MG
+</dd>
+<dt>Organização</dt>
+<dd>
+Universidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV)
+</dd>
+<dt>Site oficial</dt>
+<dd>
+<!-- inclua o link oficial do evento -->
+(link do evento)
+</dd>
+</dl>
+</div>
+<p>O State of the Map Brasil é o encontro anual da comunidade brasileira do OpenStreetMap. <!-- Descreva a participação do programa: organização, trabalhos apresentados, oficinas. --></p>
+
+
+
+ ]]></description>
+  <category>conferência</category>
+  <category>comunidade OSM</category>
+  <guid>https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/</guid>
+  <pubDate>Thu, 12 Nov 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/capa.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Mapathon de calçadas no centro</title>
+  <link>https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- EVENTO DE EXEMPLO: mostra todos os recursos disponíveis.
+     Para criar um evento novo, copie a pasta _modelos/evento/. -->
+<div class="ficha">
+<dl>
+<dt>Data</dt>
+<dd>
+20/08/2026, das 14h às 18h
+</dd>
+<dt>Local</dt>
+<dd>
+Laboratório de Informática, UFV campus Rio Paranaíba
+</dd>
+<dt>Participantes</dt>
+<dd>
+25 estudantes
+</dd>
+<dt>Parceiros</dt>
+<dd>
+Prefeitura Municipal (exemplo)
+</dd>
+<dt>Links</dt>
+<dd>
+<a href="https://tasks.hotosm.org">Projeto no Tasking Manager</a> e <a href="https://example.com">álbum completo</a>
+</dd>
+</dl>
+</div>
+<p>Texto de exemplo descrevendo a ação: o que foi feito, quem participou, que dados foram produzidos e o que aconteceu depois. Escreva para quem não conhece o OpenStreetMap.</p>
+<section id="área-mapeada" class="level2">
+<h2 class="anchored" data-anchor-id="área-mapeada">Área mapeada</h2>
+<!-- Mapa interativo com Leaflet. Troque as coordenadas pelo centro
+     da área mapeada (copie do openstreetmap.org: botão direito > Mostrar endereço). -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<div id="mapa-evento" class="mapa" aria-label="Mapa da área mapeada no evento"></div>
+<script>
+  const mapa = L.map('mapa-evento').setView([-19.194, -46.247], 16);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mapa);
+  // Retângulo de exemplo marcando a área do mapathon
+  L.rectangle([[-19.197, -46.251], [-19.191, -46.243]],
+              {color: '#2e7d5b', weight: 2, fillOpacity: 0.15}).addTo(mapa);
+</script>
+</section>
+<section id="fotos" class="level2">
+<h2 class="anchored" data-anchor-id="fotos">Fotos</h2>
+<p>Clique em uma foto para ampliar e use as setas para navegar.</p>
+<div class="galeria">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/01.jpg" class="lightbox" data-gallery="mapathon" title="Abertura da atividade"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/01.jpg" class="img-fluid figure-img" alt="Abertura da atividade"></a></p>
+<figcaption>Abertura da atividade</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/02.jpg" class="lightbox" data-gallery="mapathon" title="Equipe em campo"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/02.jpg" class="img-fluid figure-img" alt="Equipe em campo"></a></p>
+<figcaption>Equipe em campo</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/03.jpg" class="lightbox" data-gallery="mapathon" title="Coleta de dados nas calçadas"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/03.jpg" class="img-fluid figure-img" alt="Coleta de dados nas calçadas"></a></p>
+<figcaption>Coleta de dados nas calçadas</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/04.jpg" class="lightbox" data-gallery="mapathon" title="Edição no OpenStreetMap"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/04.jpg" class="img-fluid figure-img" alt="Edição no OpenStreetMap"></a></p>
+<figcaption>Edição no OpenStreetMap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/05.jpg" class="lightbox" data-gallery="mapathon" title="Validação dos dados"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/05.jpg" class="img-fluid figure-img" alt="Validação dos dados"></a></p>
+<figcaption>Validação dos dados</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/06.jpg" class="lightbox" data-gallery="mapathon" title="Foto do grupo"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/06.jpg" class="img-fluid figure-img" alt="Foto do grupo"></a></p>
+<figcaption>Foto do grupo</figcaption>
+</figure>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>mapathon</category>
+  <category>acessibilidade</category>
+  <guid>https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/</guid>
+  <pubDate>Thu, 20 Aug 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/capa.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>
