@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5bccb82a8e726d296ad4a79542ede259.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-65c44abcf812af18095c7927f0742fbc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,12 +128,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/youthmappers.ufv"> <i class="bi bi-instagram" role="img" aria-label="Instagram do programa">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/youthmappers-ufv"> <i class="bi bi-github" role="img" aria-label="GitHub do programa">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:smarzaro@ufv.br"> <i class="bi bi-envelope" role="img" aria-label="Contato por e-mail">
+    <a class="nav-link" href="mailto:youthmapperschapter@ufv.br"> <i class="bi bi-envelope" role="img" aria-label="Contato por e-mail">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -218,6 +223,49 @@ ul.task-list li input[type="checkbox"] {
 <li><code>tema.scss</code>: cores e fontes.</li>
 <li><code>.github/workflows/publicar.yml</code>: publicação automática.</li>
 </ul>
+</section>
+<section id="números-da-página-inicial-automáticos" class="level2">
+<h2 class="anchored" data-anchor-id="números-da-página-inicial-automáticos">Números da página inicial (automáticos)</h2>
+<p>Os quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Número</th>
+<th>De onde vem</th>
+<th>O que manter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Estudantes envolvidos</td>
+<td>Arquivos em <code>equipe/</code> com <code>situacao: atual</code> ou <code>egresso</code></td>
+<td>Cadastrar toda pessoa que participa</td>
+</tr>
+<tr class="even">
+<td>Ações realizadas</td>
+<td>Pastas em <code>eventos/</code> cuja data já passou</td>
+<td>Nome da pasta começando por <code>AAAA-MM-DD</code></td>
+</tr>
+<tr class="odd">
+<td>Edições no OpenStreetMap</td>
+<td>Estatísticas da hashtag <code>#youthmappersufv</code></td>
+<td><strong>Usar a hashtag em todo changeset do programa</strong></td>
+</tr>
+<tr class="even">
+<td>Parceiros</td>
+<td>Arquivos de logo em <code>imagens/parceiros/</code></td>
+<td>Um logo por parceiro</td>
+</tr>
+</tbody>
+</table>
+<p>As edições do OSM são consultadas pelo script <code>scripts/atualizar-osm.ts</code>, que roda sozinho antes de cada renderização, inclusive no <code>quarto preview</code> (no máximo uma consulta a cada 12 horas). Ele grava o resultado em <code>dados/osm.json</code>; tudo bem fazer commit desse arquivo junto com suas alterações.</p>
+<p>O site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.</p>
+<p><strong>A hashtag nas edições.</strong> No JOSM ou no iD, inclua <code>#youthmappersufv</code> no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele.</p>
 
 
 </section>
