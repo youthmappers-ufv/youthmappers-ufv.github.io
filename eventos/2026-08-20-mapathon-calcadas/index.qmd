@@ -45,7 +45,7 @@ Texto de exemplo descrevendo a ação: o que foi feito, quem participou, que dad
   }).addTo(mapa);
   // Retângulo de exemplo marcando a área do mapathon
   L.rectangle([[-19.197, -46.251], [-19.191, -46.243]],
-              {color: '#2e7d5b', weight: 2, fillOpacity: 0.15}).addTo(mapa);
+              {color: '#7a1f21', weight: 2, fillOpacity: 0.15}).addTo(mapa);
 </script>
 ```
 

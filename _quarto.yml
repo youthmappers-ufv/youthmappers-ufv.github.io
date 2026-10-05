@@ -21,11 +21,14 @@ website:
   description: "Capítulo YouthMappers da Universidade Federal de Viçosa, campus Rio Paranaíba: mapeamento colaborativo e ferramentas abertas com OpenStreetMap."
   site-url: https://youthmappers-ufv.github.io   # ajuste se usar outro endereço
   repo-url: https://github.com/youthmappers-ufv/youthmappers-ufv.github.io
-  favicon: imagens/favicon.svg
+  favicon: imagens/favicon.png
+  image: imagens/compartilhamento.jpg   # prévia ao compartilhar o link
   open-graph: true            # gera prévias bonitas ao compartilhar links
   search: true
   navbar:
-    logo: imagens/logo.svg
+    title: false                 # o banner já contém o nome do programa
+    logo: imagens/logo-banner.png
+    logo-alt: "YouthMappers UFV, página inicial"
     left:
       - href: index.qmd
         text: Início
@@ -57,6 +60,8 @@ format:
     lightbox: true            # fotos ampliáveis e navegáveis em galeria
     link-external-newwindow: true
     date-format: "DD/MM/YYYY"
+    include-in-header:
+      text: '<link rel="apple-touch-icon" href="/imagens/apple-touch-icon.png">'
 
 execute:
   # Código Python/R (mapas, gráficos) roda na máquina de quem edita
