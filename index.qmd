@@ -19,7 +19,7 @@ listing:
 ---
 
 ::: {.destaque style="background-image: url(imagens/malha-urbana.svg);"}
-<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando a própria cidade</p>
+<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando o mundo</p>
 
 [O capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.]{.lead}
 
