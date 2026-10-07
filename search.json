@@ -7,32 +7,25 @@
     "text": "Ordenar por\n      Pré-selecionado\n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Título\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\n\nconferência\n\ncomunidade OSM\n\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\n\nmapathon\n\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "projetos/mapeamento-calcadas/index.html",
-    "href": "projetos/mapeamento-calcadas/index.html",
-    "title": "Calçadas acessíveis",
+    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html",
+    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html",
+    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
     "section": "",
-    "text": "Tipo\n\nProjeto de extensão\n\nPeríodo\n\n2026 em diante\n\nCoordenação\n\nRodrigo Smarzaro\n\nSituação\n\nEm andamento\n\nCódigo e dados\n\nRepositório no GitHub"
+    "text": "Tipo\n\nProjeto de extensão\n\nPeríodo\n\n2025 em diante\n\nCoordenação\n\nRodrigo Smarzaro\n\nSituação\n\nEm andamento\n\nParceiros\n\ntomtom"
   },
   {
-    "objectID": "projetos/mapeamento-calcadas/index.html#objetivo",
-    "href": "projetos/mapeamento-calcadas/index.html#objetivo",
-    "title": "Calçadas acessíveis",
+    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html#objetivo",
+    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html#objetivo",
+    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
     "section": "Objetivo",
-    "text": "Objetivo\nTexto de exemplo: o problema que o projeto enfrenta, para quem e como."
+    "text": "Objetivo\nO projeto promove a interação universidade-sociedade por meio da tradução e adaptação do software MapComplete1, disponibilizando a ferramenta para comunidades e colaboradores internacionais de mapeamento colaborativo. A ação vai além da mera tradução, incluindo testes de funcionalidade, revisão linguística e integração com a comunidade OSM, garantindo que o conhecimento técnico produzido na universidade seja socializado e utilizado por diferentes grupos."
   },
   {
-    "objectID": "projetos/mapeamento-calcadas/index.html#resultados",
-    "href": "projetos/mapeamento-calcadas/index.html#resultados",
-    "title": "Calçadas acessíveis",
+    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html#resultados",
+    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html#resultados",
+    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
     "section": "Resultados",
-    "text": "Resultados\nTexto de exemplo: dados produzidos, ferramentas, trabalhos publicados. Para citar uma publicação do programa, use a chave do BibTeX, como em (Sobrenome; Smarzaro, 2026)."
-  },
-  {
-    "objectID": "projetos/mapeamento-calcadas/index.html#ações-relacionadas",
-    "href": "projetos/mapeamento-calcadas/index.html#ações-relacionadas",
-    "title": "Calçadas acessíveis",
-    "section": "Ações relacionadas",
-    "text": "Ações relacionadas\n\nMapathon de calçadas no centro"
+    "text": "Resultados\nForam traduzidas 6.416 frases, 42315 palavras e 259,498 caracteres. Em Dezembro de 2025, o software foi completamente traduzido e localizado para o português brasileiro, com a versão final publicada no repositório oficial do MapComplete."
   },
   {
     "objectID": "eventos/2026-11-12-sotm-brasil-2026/index.html",
@@ -46,7 +39,7 @@
     "href": "projetos.html",
     "title": "Projetos",
     "section": "",
-    "text": "Imagens de rua 360°\n\n\n\npesquisa\n\nTCC\n\nvisão computacional\n\n\n\nColeta de imagens de rua com câmera 360° e uso de visão computacional para apoiar o mapeamento. (Projeto de exemplo.)\n\n\n\n\n\n\n\n\n\n\n\n\nCalçadas acessíveis\n\n\n\nextensão\n\nacessibilidade\n\n\n\nMapeamento de calçadas, rampas e obstáculos para avaliar a acessibilidade urbana. (Projeto de exemplo.)\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Tradução e Localização do Software MapComplete para Português Brasileiro\n\n\n\nextensão\n\nacessibilidade\n\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\n\nextensão\n\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "equipe/rodrigo-smarzaro.html",
@@ -179,7 +172,7 @@
     "href": "index.html#projetos-em-andamento",
     "title": "YouthMappers UFV",
     "section": "Projetos em andamento",
-    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nImagens de rua 360°\n\n\nColeta de imagens de rua com câmera 360° e uso de visão computacional para apoiar o mapeamento. (Projeto de exemplo.)\n\n\n\n\n\n\n\n\n\n\n\n\nCalçadas acessíveis\n\n\nMapeamento de calçadas, rampas e obstáculos para avaliar a acessibilidade urbana. (Projeto de exemplo.)\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
+    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
   },
   {
     "objectID": "equipe/bolsista-exemplo.html",
@@ -252,10 +245,10 @@
     "text": "Fotos\nClique em uma foto para ampliar e use as setas para navegar.\n\n\n\n\nAbertura da atividade\n\n\n\n\n\nEquipe\n\n\n\n\n\nEquipe"
   },
   {
-    "objectID": "projetos/imagens-de-rua-360/index.html",
-    "href": "projetos/imagens-de-rua-360/index.html",
-    "title": "Imagens de rua 360°",
+    "objectID": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
+    "href": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
+    "title": "Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial",
     "section": "",
-    "text": "Tipo\n\nProjeto de pesquisa e TCC\n\nSituação\n\nEm planejamento\n\n\n\nTexto de exemplo descrevendo o projeto."
+    "text": "Tipo\n\nProjeto de extensão\n\nSituação\n\nFinalizado\n\n\n\nA ação extensionista deste projeto busca promover uma interação efetiva entre a Universidade Federal de Viçosa e a sociedade, de modo a socializar o conhecimento acadêmico em geotecnologias para além do ambiente universitário. A proposta vai além da simples transferência de saberes ou da prestação pontual de serviços: pretende-se desenvolver um processo dialógico, no qual universidade e comunidade atuem como parceiros na construção de soluções.\nA geração de ortoimagens do campus e de áreas urbanas próximas será utilizada como meio para que os discentes aprendam e apliquem técnicas avançadas de coleta, processamento e análise de dados geoespaciais, ao mesmo tempo em que a comunidade terá acesso a produtos cartográficos de alta qualidade, úteis para planejamento urbano, gestão territorial e apoio à tomada de decisão. Essa troca permite que demandas reais da sociedade orientem o processo de ensino-aprendizagem, fortalecendo o caráter educativo e transformador da extensão.\nDessa forma, a ação extensionista constitui um espaço de cooperação, onde o conhecimento científico produzido na universidade é ressignificado a partir das necessidades locais, contribuindo para o desenvolvimento sustentável e para a formação crítica e cidadã dos estudantes envolvidos."
   }
 ]
