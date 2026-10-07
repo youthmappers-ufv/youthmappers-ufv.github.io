@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Bolsista de 2025 a 2026, Sistemas de Informação">
+<meta name="description" content="Membra fundadora do projeto YouthmappersUFV">
 
-<title>Egressa de Exemplo – YouthMappers UFV</title>
+<title>Júlia Mendonça Silva – YouthMappers UFV</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -48,6 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-65c44abcf812af18095c7927f0742fbc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="apple-touch-icon" href="../imagens/apple-touch-icon.png">
 
 
-<meta property="og:title" content="Egressa de Exemplo – YouthMappers UFV">
-<meta property="og:description" content="Bolsista de 2025 a 2026, Sistemas de Informação">
-<meta property="og:image" content="https://youthmappers-ufv.github.io/equipe/fotos/egressa-exemplo.svg">
+<meta property="og:title" content="Júlia Mendonça Silva – YouthMappers UFV">
+<meta property="og:description" content="Membra fundadora do projeto YouthmappersUFV">
+<meta property="og:image" content="https://youthmappers-ufv.github.io/equipe/fotos/julia-mendonca.jpeg">
 <meta property="og:site_name" content="YouthMappers UFV">
 </head>
 
@@ -160,12 +163,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Egressa de Exemplo</h1>
+<h1 class="title">Júlia Mendonça Silva</h1>
 </div>
 
 <div>
   <div class="description">
-    Bolsista de 2025 a 2026, Sistemas de Informação
+    Membra fundadora do projeto YouthmappersUFV
   </div>
 </div>
 
@@ -182,7 +185,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Pessoa de exemplo. Ao sair do programa, basta trocar a situação para egresso: a página dela continua no site.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotos/julia-mendonca.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="fotos/julia-mendonca.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="200"></a></p>
+</figure>
+</div>
+<div class="ficha">
+<dl>
+<dt>Período</dt>
+<dd>
+2022-2024
+</dd>
+</dl>
+</div>
+<p>Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário.</p>
 
 
 
@@ -606,6 +622,38 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
