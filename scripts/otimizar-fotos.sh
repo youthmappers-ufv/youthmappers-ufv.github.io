@@ -10,6 +10,10 @@
 #
 # É idempotente: uma foto já otimizada não é processada de novo,
 # então rodar o script várias vezes não degrada a qualidade.
+#
+# Atenção ao editar: com "set -e", evite a forma "[ teste ] && comando".
+# Quando o teste é falso, ela devolve código 1 e pode encerrar o script
+# com erro. Use sempre "if [ teste ]; then comando; fi".
 # =============================================================
 set -euo pipefail
 
@@ -96,7 +100,9 @@ otimizar() {
         rm -f "$tmp"
         erros=$((erros + 1)); continue
       fi
-      [ -n "$saida" ] && echo "    aviso do ImageMagick em ${foto}: ${saida}"
+      if [ -n "$saida" ]; then
+        echo "    aviso do ImageMagick em ${foto}: ${saida}"
+      fi
       # Remove o atributo "somente leitura" (comum no Windows) e substitui
       chmod u+w "$foto" 2> /dev/null || true
       if ! saida=$(mv -f "$tmp" "$foto" 2>&1); then
@@ -140,6 +146,20 @@ if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
     echo "- Fotos otimizadas: **${processadas}**"
     echo "- Erros: **${erros}**"
     echo "- Espaço economizado: **${economia_kb} KB**"
-    [ -n "$heic" ] && echo "- ⚠️ Há fotos em HEIC, que precisam ser convertidas para JPG."
+    if [ -n "$heic" ]; then
+      echo "- ⚠️ Há fotos em HEIC, que precisam ser convertidas para JPG."
+    fi
   } >> "$GITHUB_STEP_SUMMARY"
+
+  # Alertas visíveis no topo da página da execução no GitHub
+  if [ "$erros" -gt 0 ]; then
+    echo "::warning title=Otimização de fotos::${erros} foto(s) com erro; veja o log deste passo."
+  fi
+  if [ -n "$heic" ]; then
+    echo "::warning title=Fotos em HEIC::Há fotos em HEIC, que a maioria dos navegadores não exibe."
+  fi
 fi
+
+# Erros em fotos individuais não impedem a publicação do site:
+# eles aparecem no log e como alerta na página da execução.
+exit 0
