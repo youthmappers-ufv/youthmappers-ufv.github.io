@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -203,13 +238,35 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="fotos-regras-importantes" class="level2">
 <h2 class="anchored" data-anchor-id="fotos-regras-importantes">Fotos: regras importantes</h2>
-<p>O repositório tem limite de tamanho. Fotos de celular são grandes demais.</p>
+<p><strong>O redimensionamento é automático.</strong> A cada envio, o GitHub reduz as fotos grandes, corrige a rotação e remove os metadados (inclusive a localização GPS que o celular grava). Isso aparece no histórico como um commit “Otimiza fotos (automático)”. Limites usados:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pasta</th>
+<th>Lado maior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>eventos/</code> e <code>projetos/</code></td>
+<td>1600 px</td>
+</tr>
+<tr class="even">
+<td><code>equipe/fotos/</code></td>
+<td>600 px</td>
+</tr>
+</tbody>
+</table>
+<p>Mesmo assim, siga estas regras:</p>
 <ul>
-<li>Reduza cada foto para <strong>no máximo 1600 px</strong> no lado maior antes de enviar (ex.: <a href="https://squoosh.app">squoosh.app</a>, direto no navegador).</li>
+<li><strong>Prefira abrir um pull request</strong> em vez de enviar direto para a <code>main</code>. As fotos são otimizadas na branch do PR e, com “Squash and merge”, a versão original pesada nunca entra no histórico da <code>main</code>.</li>
 <li>Envie <strong>no máximo 12 fotos por evento</strong>. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.</li>
+<li><strong>Não envie fotos em HEIC</strong> (formato padrão do iPhone): a maioria dos navegadores não as exibe. No iPhone, use <em>Ajustes &gt; Câmera &gt; Formatos &gt; Mais Compatível</em>, ou converta para JPG antes de enviar.</li>
 <li>Use nomes sem espaços e sem acentos: <code>01.jpg</code>, <code>02.jpg</code>…</li>
 <li>Peça autorização de uso de imagem das pessoas fotografadas.</li>
 </ul>
+<p>Quem trabalha no computador pode otimizar antes de enviar, com o mesmo script usado pelo GitHub (requer ImageMagick):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> scripts/otimizar-fotos.sh</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="mapas" class="level2">
 <h2 class="anchored" data-anchor-id="mapas">Mapas</h2>

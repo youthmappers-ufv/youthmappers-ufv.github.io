@@ -41,7 +41,7 @@ Universidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV
 <dt>Site oficial</dt>
 <dd>
 <!-- inclua o link oficial do evento -->
-(link do evento)
+<a href="https://sotm-br.github.io/2026/">https://sotm-br.github.io/2026/</a>
 </dd>
 </dl>
 </div>
@@ -54,43 +54,41 @@ Universidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV
   <category>comunidade OSM</category>
   <guid>https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/</guid>
   <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/capa.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/capa.png" medium="image" type="image/png" height="100" width="144"/>
 </item>
 <item>
-  <title>Mapathon de calçadas no centro</title>
-  <link>https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/</link>
+  <title>Mapatona Angra dos Reis</title>
+  <link>https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/</link>
   <description><![CDATA[ 
 
 
 
 
-<!-- EVENTO DE EXEMPLO: mostra todos os recursos disponíveis.
-     Para criar um evento novo, copie a pasta _modelos/evento/. -->
 <div class="ficha">
 <dl>
 <dt>Data</dt>
 <dd>
-20/08/2026, das 14h às 18h
+09/07/2022, das 21h às 23h
 </dd>
 <dt>Local</dt>
 <dd>
-Laboratório de Informática, UFV campus Rio Paranaíba
+Transmissão online via google meet
 </dd>
 <dt>Participantes</dt>
 <dd>
-25 estudantes
+10 estudantes
 </dd>
 <dt>Parceiros</dt>
 <dd>
-Prefeitura Municipal (exemplo)
+Grupo Meninas da Geo, Mapeadores Livres UFPR
 </dd>
 <dt>Links</dt>
 <dd>
-<a href="https://tasks.hotosm.org">Projeto no Tasking Manager</a> e <a href="https://example.com">álbum completo</a>
+<a href="https://tasks.hotosm.org/projects/12411/">Projeto no Tasking Manager</a>
 </dd>
 </dl>
 </div>
-<p>Texto de exemplo descrevendo a ação: o que foi feito, quem participou, que dados foram produzidos e o que aconteceu depois. Escreva para quem não conhece o OpenStreetMap.</p>
+<p>O Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap.</p>
 <section id="área-mapeada" class="level2">
 <h2 class="anchored" data-anchor-id="área-mapeada">Área mapeada</h2>
 <!-- Mapa interativo com Leaflet. Troque as coordenadas pelo centro
@@ -104,9 +102,15 @@ Prefeitura Municipal (exemplo)
     maxZoom: 19,
     attribution: '&copy; colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(mapa);
-  // Retângulo de exemplo marcando a área do mapathon
-  L.rectangle([[-19.197, -46.251], [-19.191, -46.243]],
-              {color: '#7a1f21', weight: 2, fillOpacity: 0.15}).addTo(mapa);
+
+  fetch('area.geojson')
+  .then(r => r.json())
+  .then(dados => {
+    const area = L.geoJSON(dados, {
+      style: { color: '#2e7d5b', weight: 2, fillOpacity: 0.15 }
+    }).addTo(mapa);
+    mapa.fitBounds(area.getBounds());
+  });
 </script>
 </section>
 <section id="fotos" class="level2">
@@ -115,38 +119,20 @@ Prefeitura Municipal (exemplo)
 <div class="galeria">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fotos/01.jpg" class="lightbox" data-gallery="mapathon" title="Abertura da atividade"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/01.jpg" class="img-fluid figure-img" alt="Abertura da atividade"></a></p>
+<p><a href="fotos/01.jpg" class="lightbox" data-gallery="mapathon" title="Abertura da atividade"><img src="https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/fotos/01.jpg" class="img-fluid figure-img" alt="Abertura da atividade"></a></p>
 <figcaption>Abertura da atividade</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fotos/02.jpg" class="lightbox" data-gallery="mapathon" title="Equipe em campo"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/02.jpg" class="img-fluid figure-img" alt="Equipe em campo"></a></p>
-<figcaption>Equipe em campo</figcaption>
+<p><a href="fotos/02.jpg" class="lightbox" data-gallery="mapathon" title="Equipe"><img src="https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/fotos/02.jpg" class="img-fluid figure-img" alt="Equipe"></a></p>
+<figcaption>Equipe</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fotos/03.jpg" class="lightbox" data-gallery="mapathon" title="Coleta de dados nas calçadas"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/03.jpg" class="img-fluid figure-img" alt="Coleta de dados nas calçadas"></a></p>
-<figcaption>Coleta de dados nas calçadas</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fotos/04.jpg" class="lightbox" data-gallery="mapathon" title="Edição no OpenStreetMap"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/04.jpg" class="img-fluid figure-img" alt="Edição no OpenStreetMap"></a></p>
-<figcaption>Edição no OpenStreetMap</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fotos/05.jpg" class="lightbox" data-gallery="mapathon" title="Validação dos dados"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/05.jpg" class="img-fluid figure-img" alt="Validação dos dados"></a></p>
-<figcaption>Validação dos dados</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fotos/06.jpg" class="lightbox" data-gallery="mapathon" title="Foto do grupo"><img src="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/fotos/06.jpg" class="img-fluid figure-img" alt="Foto do grupo"></a></p>
-<figcaption>Foto do grupo</figcaption>
+<p><a href="fotos/03.jpg" class="lightbox" data-gallery="mapathon" title="Equipe"><img src="https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/fotos/03.jpg" class="img-fluid figure-img" alt="Equipe"></a></p>
+<figcaption>Equipe</figcaption>
 </figure>
 </div>
 </div>
@@ -156,10 +142,9 @@ Prefeitura Municipal (exemplo)
 
  ]]></description>
   <category>mapathon</category>
-  <category>acessibilidade</category>
-  <guid>https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/</guid>
-  <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/capa.jpg" medium="image" type="image/jpeg"/>
+  <guid>https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/</guid>
+  <pubDate>Sat, 09 Jul 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/capa.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

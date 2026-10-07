@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Estudantes mapearam a acessibilidade das calçadas do centro da cidade. (Evento de exemplo.)">
+<meta name="dcterms.date" content="2022-09-07">
+<meta name="description" content="O projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de Janeiro, como os deslizamentos que aconteceram em Angra dos Reis em abril de 2022, com maior atenção ao bairro Monsuaba, que foi o mais atingido e que vitimou, fatalmente, 11 pessoas.">
 
-<title>Mapathon de calçadas no centro – YouthMappers UFV</title>
+<title>Mapatona Angra dos Reis – YouthMappers UFV</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -81,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="apple-touch-icon" href="../../imagens/apple-touch-icon.png">
 
 
-<meta property="og:title" content="Mapathon de calçadas no centro – YouthMappers UFV">
-<meta property="og:description" content="Estudantes mapearam a acessibilidade das calçadas do centro da cidade. (Evento de exemplo.)">
-<meta property="og:image" content="https://youthmappers-ufv.github.io/eventos/2026-08-20-mapathon-calcadas/capa.jpg">
+<meta property="og:title" content="Mapatona Angra dos Reis – YouthMappers UFV">
+<meta property="og:description" content="O projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de Janeiro, como os deslizamentos que aconteceram em Angra dos Reis em abril de 2022, com maior atenção ao bairro Monsuaba, que foi o mais atingido e que vitimou, fatalmente, 11 pessoas.">
+<meta property="og:image" content="https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/capa.jpg">
 <meta property="og:site_name" content="YouthMappers UFV">
 </head>
 
@@ -163,16 +164,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mapathon de calçadas no centro</h1>
+<h1 class="title">Mapatona Angra dos Reis</h1>
   <div class="quarto-categories">
     <div class="quarto-category">mapathon</div>
-    <div class="quarto-category">acessibilidade</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Estudantes mapearam a acessibilidade das calçadas do centro da cidade. (Evento de exemplo.)
+    O projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de Janeiro, como os deslizamentos que aconteceram em Angra dos Reis em abril de 2022, com maior atenção ao bairro Monsuaba, que foi o mais atingido e que vitimou, fatalmente, 11 pessoas.
   </div>
 </div>
 
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Data</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">20/08/2026</p>
+      <p class="date">09/07/2022</p>
     </div>
   </div>
   
@@ -195,33 +195,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- EVENTO DE EXEMPLO: mostra todos os recursos disponíveis.
-     Para criar um evento novo, copie a pasta _modelos/evento/. -->
 <div class="ficha">
 <dl>
 <dt>Data</dt>
 <dd>
-20/08/2026, das 14h às 18h
+09/07/2022, das 21h às 23h
 </dd>
 <dt>Local</dt>
 <dd>
-Laboratório de Informática, UFV campus Rio Paranaíba
+Transmissão online via google meet
 </dd>
 <dt>Participantes</dt>
 <dd>
-25 estudantes
+10 estudantes
 </dd>
 <dt>Parceiros</dt>
 <dd>
-Prefeitura Municipal (exemplo)
+Grupo Meninas da Geo, Mapeadores Livres UFPR
 </dd>
 <dt>Links</dt>
 <dd>
-<a href="https://tasks.hotosm.org">Projeto no Tasking Manager</a> e <a href="https://example.com">álbum completo</a>
+<a href="https://tasks.hotosm.org/projects/12411/">Projeto no Tasking Manager</a>
 </dd>
 </dl>
 </div>
-<p>Texto de exemplo descrevendo a ação: o que foi feito, quem participou, que dados foram produzidos e o que aconteceu depois. Escreva para quem não conhece o OpenStreetMap.</p>
+<p>O Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap.</p>
 <section id="área-mapeada" class="level2">
 <h2 class="anchored" data-anchor-id="área-mapeada">Área mapeada</h2>
 <!-- Mapa interativo com Leaflet. Troque as coordenadas pelo centro
@@ -235,9 +233,15 @@ Prefeitura Municipal (exemplo)
     maxZoom: 19,
     attribution: '&copy; colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(mapa);
-  // Retângulo de exemplo marcando a área do mapathon
-  L.rectangle([[-19.197, -46.251], [-19.191, -46.243]],
-              {color: '#7a1f21', weight: 2, fillOpacity: 0.15}).addTo(mapa);
+
+  fetch('area.geojson')
+  .then(r => r.json())
+  .then(dados => {
+    const area = L.geoJSON(dados, {
+      style: { color: '#2e7d5b', weight: 2, fillOpacity: 0.15 }
+    }).addTo(mapa);
+    mapa.fitBounds(area.getBounds());
+  });
 </script>
 </section>
 <section id="fotos" class="level2">
@@ -252,32 +256,14 @@ Prefeitura Municipal (exemplo)
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fotos/02.jpg" class="lightbox" data-gallery="mapathon" title="Equipe em campo"><img src="fotos/02.jpg" class="img-fluid figure-img" alt="Equipe em campo"></a></p>
-<figcaption>Equipe em campo</figcaption>
+<p><a href="fotos/02.jpg" class="lightbox" data-gallery="mapathon" title="Equipe"><img src="fotos/02.jpg" class="img-fluid figure-img" alt="Equipe"></a></p>
+<figcaption>Equipe</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fotos/03.jpg" class="lightbox" data-gallery="mapathon" title="Coleta de dados nas calçadas"><img src="fotos/03.jpg" class="img-fluid figure-img" alt="Coleta de dados nas calçadas"></a></p>
-<figcaption>Coleta de dados nas calçadas</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fotos/04.jpg" class="lightbox" data-gallery="mapathon" title="Edição no OpenStreetMap"><img src="fotos/04.jpg" class="img-fluid figure-img" alt="Edição no OpenStreetMap"></a></p>
-<figcaption>Edição no OpenStreetMap</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fotos/05.jpg" class="lightbox" data-gallery="mapathon" title="Validação dos dados"><img src="fotos/05.jpg" class="img-fluid figure-img" alt="Validação dos dados"></a></p>
-<figcaption>Validação dos dados</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fotos/06.jpg" class="lightbox" data-gallery="mapathon" title="Foto do grupo"><img src="fotos/06.jpg" class="img-fluid figure-img" alt="Foto do grupo"></a></p>
-<figcaption>Foto do grupo</figcaption>
+<p><a href="fotos/03.jpg" class="lightbox" data-gallery="mapathon" title="Equipe"><img src="fotos/03.jpg" class="img-fluid figure-img" alt="Equipe"></a></p>
+<figcaption>Equipe</figcaption>
 </figure>
 </div>
 </div>
