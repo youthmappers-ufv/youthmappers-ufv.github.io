@@ -1,0 +1,35 @@
+---
+title: "Tradução e Localização do Software MapComplete para Português Brasileiro"
+date: 2025-10-01
+description: "Projeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade OpenStreetMap."
+image: capa.png
+categories: [extensão, acessibilidade]
+#bibliography: ../../publicacoes.bib
+#csl: ../../abnt.csl
+---
+
+::: {.ficha}
+Tipo
+:   Projeto de extensão
+
+Período
+:   2025 em diante
+
+Coordenação
+:   [Rodrigo Smarzaro](../../equipe/rodrigo-smarzaro.qmd)
+
+Situação
+:   Em andamento
+
+Parceiros
+:   [tomtom](https://www.instagram.com/tomtomglobal/)
+
+:::
+
+## Objetivo
+
+O projeto promove a interação universidade-sociedade por meio da tradução e adaptação do software MapComplete1, disponibilizando a ferramenta para comunidades e colaboradores internacionais de mapeamento colaborativo. A ação vai além da mera tradução, incluindo testes de funcionalidade, revisão linguística e integração com a comunidade OSM, garantindo que o conhecimento técnico produzido na universidade seja socializado e utilizado por diferentes grupos.
+
+## Resultados
+
+Foram traduzidas 6.416 frases, 42315 palavras e 259,498 caracteres. Em Dezembro de 2025, o software foi completamente traduzido e localizado para o português brasileiro, com a versão final publicada no repositório oficial do MapComplete. 

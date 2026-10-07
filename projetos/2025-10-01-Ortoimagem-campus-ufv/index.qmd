@@ -1,0 +1,21 @@
+---
+title: "Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial"
+date: 2025-10-01
+description: "Projeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando ortoimagens do campus e áreas urbanas próximas."
+image: capa.jpg
+categories: [extensão]
+---
+
+::: {.ficha}
+Tipo
+:   Projeto de extensão
+
+Situação
+:   Finalizado
+:::
+
+A ação extensionista deste projeto busca promover uma interação efetiva entre a Universidade Federal de Viçosa e a sociedade, de modo a socializar o conhecimento acadêmico em geotecnologias para além do ambiente universitário. A proposta vai além da simples transferência de saberes ou da prestação pontual de serviços: pretende-se desenvolver um processo dialógico, no qual universidade e comunidade atuem como parceiros na construção de soluções.
+
+A geração de ortoimagens do campus e de áreas urbanas próximas será utilizada como meio para que os discentes aprendam e apliquem técnicas avançadas de coleta, processamento e análise de dados geoespaciais, ao mesmo tempo em que a comunidade terá acesso a produtos cartográficos de alta qualidade, úteis para planejamento urbano, gestão territorial e apoio à tomada de decisão. Essa troca permite que demandas reais da sociedade orientem o processo de ensino-aprendizagem, fortalecendo o caráter educativo e transformador da extensão.
+
+Dessa forma, a ação extensionista constitui um espaço de cooperação, onde o conhecimento científico produzido na universidade é ressignificado a partir das necessidades locais, contribuindo para o desenvolvimento sustentável e para a formação crítica e cidadã dos estudantes envolvidos.
