@@ -55,6 +55,7 @@ jobs:
 
       - name: Salvar fotos otimizadas
         run: |
+          set -e
           if [ -z "$(git status --porcelain -- eventos projetos equipe)" ]; then
             echo "Nenhuma foto precisou de ajuste."
             exit 0
@@ -64,7 +65,6 @@ jobs:
           git add -- eventos projetos equipe
           git commit -m "Otimiza fotos (automático)"
           git push
-
   # ---------------------------------------------------------------
   # 2. Renderizar e publicar (nunca em pull requests)
   # ---------------------------------------------------------------
