@@ -58,14 +58,35 @@ e use `[@chave]` no texto.
 
 ## Fotos: regras importantes
 
-O repositório tem limite de tamanho. Fotos de celular são grandes demais.
+**O redimensionamento é automático.** A cada envio, o GitHub reduz as fotos
+grandes, corrige a rotação e remove os metadados (inclusive a localização
+GPS que o celular grava). Isso aparece no histórico como um commit
+"Otimiza fotos (automático)". Limites usados:
 
-- Reduza cada foto para **no máximo 1600 px** no lado maior antes de enviar
-  (ex.: [squoosh.app](https://squoosh.app), direto no navegador).
+| Pasta | Lado maior |
+|---|---|
+| `eventos/` e `projetos/` | 1600 px |
+| `equipe/fotos/` | 600 px |
+
+Mesmo assim, siga estas regras:
+
+- **Prefira abrir um pull request** em vez de enviar direto para a `main`.
+  As fotos são otimizadas na branch do PR e, com "Squash and merge", a
+  versão original pesada nunca entra no histórico da `main`.
 - Envie **no máximo 12 fotos por evento**. O álbum completo fica no
   Google Drive/Flickr do programa, com o link na ficha do evento.
+- **Não envie fotos em HEIC** (formato padrão do iPhone): a maioria dos
+  navegadores não as exibe. No iPhone, use *Ajustes > Câmera > Formatos >
+  Mais Compatível*, ou converta para JPG antes de enviar.
 - Use nomes sem espaços e sem acentos: `01.jpg`, `02.jpg`...
 - Peça autorização de uso de imagem das pessoas fotografadas.
+
+Quem trabalha no computador pode otimizar antes de enviar, com o mesmo
+script usado pelo GitHub (requer ImageMagick):
+
+```bash
+bash scripts/otimizar-fotos.sh
+```
 
 ## Mapas
 

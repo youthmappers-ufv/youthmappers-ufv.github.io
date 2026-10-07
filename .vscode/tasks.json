@@ -1,0 +1,23 @@
+{
+  // Tarefas do VS Code: Ctrl+Shift+P > "Tasks: Run Task" > escolha a tarefa.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Otimizar fotos",
+      "detail": "Reduz as fotos, corrige a rotação e remove metadados (GPS)",
+      "type": "shell",
+      "command": "bash scripts/otimizar-fotos.sh",
+      "windows": {
+        // No Windows, usa o bash do Git for Windows (e não o do WSL)
+        "options": {
+          "shell": {
+            "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["-c"]
+          }
+        }
+      },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    }
+  ]
+}

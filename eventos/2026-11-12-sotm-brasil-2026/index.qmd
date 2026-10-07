@@ -2,7 +2,7 @@
 title: "State of the Map Brasil 2026"
 date: 2026-11-12
 description: "Conferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV."
-image: capa.jpg
+image: capa.png
 categories: [conferência, comunidade OSM]
 ---
 
@@ -17,7 +17,7 @@ Organização
 :   Universidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV)
 
 Site oficial
-:   <!-- inclua o link oficial do evento --> (link do evento)
+:   <!-- inclua o link oficial do evento --> [https://sotm-br.github.io/2026/](https://sotm-br.github.io/2026/)
 :::
 
 O State of the Map Brasil é o encontro anual da comunidade brasileira do OpenStreetMap. <!-- Descreva a participação do programa: organização, trabalhos apresentados, oficinas. -->

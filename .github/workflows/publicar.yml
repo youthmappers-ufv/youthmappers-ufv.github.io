@@ -1,50 +1,90 @@
-# Publica o site automaticamente:
-#  - a cada alteração na branch main;
-#  - toda segunda-feira às 6h (horário de Brasília), mesmo sem alterações,
-#    para atualizar os contadores (eventos que já aconteceram, edições no OSM);
+# Otimiza as fotos e publica o site.
+#
+# Quando roda:
+#  - a cada alteração na branch main: otimiza as fotos e publica;
+#  - em pull requests: só otimiza as fotos (na própria branch do PR);
+#  - toda segunda-feira às 6h (Brasília): republica para atualizar os contadores;
 #  - manualmente, pelo botão "Run workflow" na aba Actions.
 name: Publicar site
 
 on:
   push:
     branches: main
+  pull_request:
   schedule:
     - cron: "0 9 * * 1"   # 9h UTC = 6h em Brasília, às segundas
   workflow_dispatch:
 
 env:
   # Hashtag usada nos changesets do programa (sem o #).
+  # Lida pelo script scripts/atualizar-osm.ts, que roda antes da renderização.
   HASHTAG: youthmappersufv
+  # Na publicação, sempre consulta a API (ignora o cache de 12 horas).
+  OSM_FORCAR: "1"
+
+# Evita duas publicações simultâneas da mesma branch
+concurrency:
+  group: publicar-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  publicar:
+  # ---------------------------------------------------------------
+  # 1. Otimizar fotos e, se algo mudou, salvar no repositório
+  # ---------------------------------------------------------------
+  otimizar-fotos:
+    # Roda em push e em PRs vindos do próprio repositório
+    if: >
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request' &&
+       github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Baixar o repositório
         uses: actions/checkout@v4
+        with:
+          # Em PRs, trabalha na branch do PR (e não no commit de mesclagem)
+          ref: ${{ github.head_ref || github.ref_name }}
 
-      - name: Atualizar estatísticas do OpenStreetMap
-        # Se a API estiver fora do ar, o site é publicado assim mesmo,
-        # com os valores de dados/osm.json que estão no repositório.
-        continue-on-error: true
+      - name: Instalar o ImageMagick
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+
+      - name: Otimizar fotos
+        run: bash scripts/otimizar-fotos.sh
+
+      - name: Salvar fotos otimizadas
         run: |
-          RESPOSTA=$(curl -sf --max-time 30 "https://stats.now.ohsome.org/api/stats/${HASHTAG}")
-          echo "$RESPOSTA" | jq '{
-            edicoes:     (.result.edits     // empty),
-            mapeadores:  (.result.users     // empty),
-            edificacoes: (.result.buildings // empty),
-            km_vias:     (.result.roads     // empty | floor),
-            fonte:       "ohsomeNow stats, hashtag #\(env.HASHTAG)"
-          }' > /tmp/osm.json
-          # Só substitui o arquivo se veio um número válido
-          if jq -e '.edicoes | numbers' /tmp/osm.json > /dev/null; then
-            mv /tmp/osm.json dados/osm.json
-            cat dados/osm.json
-          else
-            echo "Resposta inesperada da API; mantendo dados/osm.json"
+          if [ -z "$(git status --porcelain -- eventos projetos equipe)" ]; then
+            echo "Nenhuma foto precisou de ajuste."
+            exit 0
           fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
+          git add -- eventos projetos equipe
+          git commit -m "Otimiza fotos (automático)"
+          git push
+
+  # ---------------------------------------------------------------
+  # 2. Renderizar e publicar (nunca em pull requests)
+  # ---------------------------------------------------------------
+  publicar:
+    needs: otimizar-fotos
+    # Roda mesmo quando a otimização foi pulada (agendamento, botão manual),
+    # mas não se ela falhou.
+    if: >
+      !cancelled() &&
+      github.event_name != 'pull_request' &&
+      needs.otimizar-fotos.result != 'failure'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+        with:
+          # Pega a main atualizada, incluindo o commit das fotos otimizadas
+          ref: main
 
       - name: Instalar o Quarto
         uses: quarto-dev/quarto-actions/setup@v2

@@ -1,0 +1,4 @@
+# Scripts de shell sempre com fim de linha LF (padrão Unix), mesmo no Windows.
+# Sem isto, o Git no Windows pode convertê-los para CRLF e o bash falha
+# com erros como "$'\r': command not found".
+*.sh text eol=lf
