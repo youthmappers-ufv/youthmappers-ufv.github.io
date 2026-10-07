@@ -1,0 +1,16 @@
+---
+title: "Júlia Mendonça Silva"
+image: fotos/julia-mendonca.jpeg
+description: "Membra fundadora do projeto YouthmappersUFV"
+situacao: egresso
+---
+
+![](fotos/julia-mendonca.jpeg){width=200px fig-align="center"}
+
+::: {.ficha}
+Período
+:   2022-2024
+
+:::
+
+Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário.

@@ -1,8 +1,0 @@
----
-title: "Egressa de Exemplo"
-image: fotos/egressa-exemplo.svg
-description: "Bolsista de 2025 a 2026, Sistemas de Informação"
-situacao: egresso
----
-
-Pessoa de exemplo. Ao sair do programa, basta trocar a situação para egresso: a página dela continua no site.
