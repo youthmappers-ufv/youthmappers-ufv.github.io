@@ -6,6 +6,15 @@ image: capa.jpg
 categories: [mapathon]
 resources:
   - area.geojson
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: mapathon                       # mapathon, oficina, palestra, campo, conferencia
+modalidade: hibrida               # presencial, remota, hibrida
+municipio: Rio Paranaíba
+carga_horaria: 4                     # horas
+publico: 25                          # total de participantes
+publico_externo: 15                  # quantos não eram da UFV
+equipe: [rodrigo-smarzaro,julia-mendonca]             # nomes dos arquivos em equipe/ (sem .qmd)
+parceiros: []                        # ids de _data/parceiros.yml
 ---
 
 ::: {.ficha}

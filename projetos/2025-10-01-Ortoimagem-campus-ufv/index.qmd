@@ -4,6 +4,14 @@ date: 2025-10-01
 description: "Projeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando ortoimagens do campus e áreas urbanas próximas."
 image: capa.jpg
 categories: [extensão]
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: extensao                       # ensino, pesquisa, extensao, tcc
+inicio: 2025-07                      # AAAA-MM
+fim: 2025-12                         # AAAA-MM; deixe comentado enquanto estiver em andamento
+coordenacao: [rodrigo-smarzaro]        # nomes dos arquivos em equipe/
+equipe: [rodrigo-smarzaro]             # estudantes participantes
+parceiros: []                        # ids de _data/parceiros.yml
+ods: [11]                            # números dos ODS (1 a 17)
 ---
 
 ::: {.ficha}

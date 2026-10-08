@@ -6,6 +6,14 @@ image: capa.png
 categories: [extensão, acessibilidade]
 #bibliography: ../../publicacoes.bib
 #csl: ../../abnt.csl
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: extensao                       # ensino, pesquisa, extensao, tcc
+inicio: 2025-07                      # AAAA-MM
+fim: 2025-12                         # AAAA-MM; deixe comentado enquanto estiver em andamento
+coordenacao: [rodrigo-smarzaro]        # nomes dos arquivos em equipe/
+equipe: [rodrigo-smarzaro]             # estudantes participantes
+parceiros: []                        # ids de _data/parceiros.yml
+ods: [11]                            # números dos ODS (1 a 17)
 ---
 
 ::: {.ficha}

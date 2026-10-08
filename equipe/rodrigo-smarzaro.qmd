@@ -12,8 +12,14 @@ about:
     - icon: geo-alt
       text: OpenStreetMap
       href: https://www.openstreetmap.org/user/Smarzaro
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+#curso: SIN                           # código do curso (obrigatório para estudantes)
+vinculo: docente                     # graduacao, pos-graduacao, docente, tecnico, externo
+osm: usuario                         # usuário no OpenStreetMap (opcional)
+periodos:                            # um item por função exercida, em ordem
+  - funcao: coordenacao              # coordenacao, bolsista, voluntario, colaborador
+    inicio: 2022-06                  # AAAA-MM
 ---
-
 Professor da UFV e atual coordenador do programa YouthMappers UFV. Tem experiência na área de Ciência da Computação, com ênfase em Banco de Dados, atuando principalmente nos seguintes temas: bancos de dados geográficos, urban computing, VGI e integração de dados espaciais. Mapeador OSM desde 2008, membro da comunidade YouthMappers desde 2024, membro da OSGEO Brasil.
 
 

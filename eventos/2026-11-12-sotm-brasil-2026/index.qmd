@@ -4,8 +4,16 @@ date: 2026-11-12
 description: "Conferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV."
 image: capa.png
 categories: [conferência, comunidade OSM]
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: conferencia                       # mapathon, oficina, palestra, campo, conferencia
+modalidade: presencial               # presencial, remota, hibrida
+municipio: Uberlândia
+#carga_horaria: 4                     # horas
+#publico: 25                          # total de participantes
+#publico_externo: 15                  # quantos não eram da UFV
+equipe: [rodrigo-smarzaro]             # nomes dos arquivos em equipe/ (sem .qmd)
+parceiros: []                        # ids de _data/parceiros.yml
 ---
-
 ::: {.ficha}
 Data
 :   12 e 13 de novembro de 2026

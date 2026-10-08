@@ -7,7 +7,7 @@
     {{< contar acoes >}}        eventos já realizados (pasta com data <= hoje)
     {{< contar estudantes >}}   pessoas com situacao: atual ou egresso
     {{< contar equipe-atual >}} pessoas com situacao: atual
-    {{< contar parceiros >}}    logos em imagens/parceiros/
+    {{< contar parceiros >}}    parceiros em _data/parceiros.yml
     {{< osm edits >}}           campo do arquivo dados/osm.json
     {{< atualizado >}}          data da última renderização
 
@@ -68,15 +68,12 @@ local function contar_pessoas(situacoes)
   return n
 end
 
--- Parceiros: um arquivo de logo por parceiro.
+-- Parceiros: entradas "- id:" em _data/parceiros.yml
 local function contar_parceiros()
+  local texto = ler(raiz() .. "/_data/parceiros.yml") or ""
   local n = 0
-  for _, nome in ipairs(listar(raiz() .. "/imagens/parceiros")) do
-    local ext = nome:lower():match("%.(%w+)$")
-    if ext == "svg" or ext == "png" or ext == "jpg" or ext == "jpeg" or ext == "webp" then
-      n = n + 1
-    end
-  end
+  for _ in texto:gmatch("\n%s*%-%s+id:") do n = n + 1 end
+  if texto:match("^%s*%-%s+id:") then n = n + 1 end
   return n
 end
 

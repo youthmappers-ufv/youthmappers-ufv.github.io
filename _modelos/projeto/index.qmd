@@ -4,6 +4,14 @@ date: 2026-01-31                     # data de início
 description: "Uma frase que resume o projeto."
 image: capa.jpg
 categories: [extensão]               # ensino, pesquisa, extensão, TCC...
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: extensao                       # ensino, pesquisa, extensao, tcc
+inicio: 2026-01                      # AAAA-MM
+# fim: 2026-12                       # AAAA-MM; deixe comentado enquanto estiver em andamento
+coordenacao: [nome-sobrenome]        # nomes dos arquivos em equipe/
+equipe: [nome-sobrenome]             # estudantes participantes
+parceiros: []                        # ids de _data/parceiros.yml
+ods: [11]                            # números dos ODS (1 a 17)
 ---
 
 ::: {.ficha}

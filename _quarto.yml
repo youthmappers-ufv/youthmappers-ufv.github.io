@@ -6,12 +6,16 @@
 project:
   type: website
   output-dir: _site
+  # Antes de gerar o site: 1) busca as estatísticas do OSM;
+  # 2) confere os dados e gera as tabelas do painel (veja os scripts).
+  pre-render:
+    - scripts/atualizar-osm.ts
+    - scripts/gerar-dados.ts
   # Arquivos e pastas que começam com "_" (como _modelos/) são
   # ignorados automaticamente pelo Quarto e não viram páginas.
   resources:
     - imagens/
-  # Antes de gerar o site, busca as estatísticas do OSM (veja o script).
-  pre-render: scripts/atualizar-osm.ts
+    - dados/painel/
 
 lang: pt
 language:
@@ -44,15 +48,14 @@ website:
         text: Equipe
       - href: publicacoes.qmd
         text: Publicações
+      - href: painel.qmd
+        text: Painel
     right:
-      - icon: instagram
-        href: https://instagram.com/youthmappers.ufv
-        aria-label: Instagram do programa
       - icon: github
         href: https://github.com/youthmappers-ufv
         aria-label: GitHub do programa
       - icon: envelope
-        href: mailto:youthmapperschapter@ufv.br
+        href: mailto:smarzaro@ufv.br
         aria-label: Contato por e-mail
   page-footer:
     left: "Programa de Extensão YouthMappers UFV, campus Rio Paranaíba"

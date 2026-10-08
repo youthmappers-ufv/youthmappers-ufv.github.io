@@ -1,6 +1,22 @@
 {
   "edicoes": 53826,
+  "edificacoes": 15114,
+  "edificacoes_criados": 16197,
+  "edificacoes_modificados": 8346,
+  "edificacoes_removidos": 1083,
+  "pois": 412,
+  "pois_criados": 455,
+  "pois_modificados": 480,
+  "pois_removidos": 43,
+  "vias_km": 1858.247,
+  "vias_km_criados": 2175.164,
+  "vias_km_modificados": 9654,
+  "vias_km_removidos": 371.608,
+  "cursos_agua_km": 132.274,
+  "cursos_agua_km_criados": 227.571,
+  "cursos_agua_km_modificados": 320,
+  "cursos_agua_km_removidos": 38.404,
   "hashtag": "youthmappersufv",
   "fonte": "ohsomeNow stats (HeiGIT), https://ohsome.org/copyrights",
-  "consultado_em": "2026-10-08T14:47:45.347Z"
+  "consultado_em": "2026-10-08T20:36:24.069Z"
 }

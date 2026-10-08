@@ -1,0 +1,12 @@
+# =============================================================
+# Parceiros do programa. Cada parceiro tem um "id" (sem espaços
+# nem acentos), usado nos campos "parceiros:" de eventos e projetos.
+# O campo "tipo" deve ser um dos tipos_parceiro do vocabulário.
+# PARCEIRO DE EXEMPLO: substitua pelos reais.
+# =============================================================
+
+- id: ufv-crp
+  nome: Universidade Federal de Viçosa - Campus Rio Paranaíba
+  tipo: universidade
+  desde: 2022
+  # logo: imagens/parceiros/prefeitura-exemplo.png

@@ -28,12 +28,19 @@ a coordenação revisa antes de publicar.
 
 O evento aparece sozinho na página de eventos e na página inicial.
 
+Preencha também os **dados para o painel** no cabeçalho (`tipo`,
+`modalidade`, `municipio`, `carga_horaria`, `publico`, `publico_externo`,
+`equipe`, `parceiros`). Para eventos futuros, os números podem ficar em
+branco e ser preenchidos depois que o evento acontecer.
+
 **Categorias:** reutilize as que já existem (veja a página de eventos)
 para que os filtros continuem úteis. Escreva sempre em minúsculas.
 
 ## Adicionar um projeto
 
-Mesmo processo: copie `_modelos/projeto/` para `projetos/nome-do-projeto/`.
+Mesmo processo: copie `_modelos/projeto/` para `projetos/nome-do-projeto/`
+e preencha os dados para o painel (`tipo`, `inicio`, `fim`, `coordenacao`,
+`equipe`, `parceiros`, `ods`).
 
 ## Adicionar uma pessoa à equipe
 
@@ -48,6 +55,11 @@ Mesmo processo: copie `_modelos/projeto/` para `projetos/nome-do-projeto/`.
    não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco
    `about:` inteiro.
 
+5. Preencha os **dados para o painel**: `curso` (código do curso),
+   `vinculo` e `periodos`. Cada período tem a `funcao`, o mês de `inicio`
+   e, se já terminou, o mês de `fim`, sempre no formato `AAAA-MM`. Quem
+   foi voluntário e depois virou bolsista tem dois períodos.
+
 **Atenção:** sempre que o arquivo tiver um bloco `about:`, ele precisa
 conter a linha `template: trestles`. Sem ela, o Quarto recusa o arquivo
 com o erro *"object is missing required property template"*.
@@ -56,15 +68,17 @@ com o erro *"object is missing required property template"*.
 (Lattes), `linkedin`, `envelope` (e-mail), `globe` (site pessoal).
 
 **Quando alguém sai do programa**, não apague o arquivo: troque
-`situacao: atual` por `situacao: egresso` e atualize a descrição
-(ex.: "Bolsista de 2026 a 2027, Sistemas de Informação").
+`situacao: atual` por `situacao: egresso`, acrescente o `fim` do último
+período e atualize a descrição (ex.: "Bolsista de 2026 a 2027, Sistemas
+de Informação").
 
 O layout das páginas de perfil e o avatar padrão são definidos em
 `equipe/_metadata.yml`, que vale para todos os arquivos da pasta.
 
 ## Adicionar uma publicação
 
-Acrescente a entrada BibTeX em `publicacoes.bib`. A página de publicações
+Acrescente a entrada BibTeX em `publicacoes.bib`, com o campo
+`tipopub` (artigo, resumo, capitulo, tcc ou apresentacao), usado pelo painel. A página de publicações
 formata tudo em ABNT. Para trabalhos em eventos, preencha também
 `eventtitle`, `eventdate` e `venue`.
 
@@ -143,3 +157,26 @@ atualizar as edições do OSM e passar a contar eventos que já aconteceram.
 comentário do changeset. Nos projetos do Tasking Manager criados pelo
 programa, coloque a hashtag no comentário padrão do projeto: assim ela
 entra automaticamente em toda edição feita por ele.
+
+## Painel de estatísticas e validação dos dados
+
+A página **Painel** é gerada a partir dos cabeçalhos das páginas de
+equipe, eventos e projetos, do `publicacoes.bib` e de dois arquivos de dados:
+
+- `_data/vocabulario.yml`: os **únicos valores aceitos** em `curso`,
+  `vinculo`, `funcao`, `tipo`, `modalidade`, `tipopub` etc.
+  Para acrescentar um tipo novo, fale com a coordenação.
+- `_data/parceiros.yml`: a lista de parceiros. Eventos e projetos citam
+  parceiros pelo `id`.
+
+Antes de cada renderização, o script `scripts/gerar-dados.ts` confere tudo:
+valores fora do vocabulário, datas fora do formato `AAAA-MM`, nomes em
+`equipe:` que não correspondem a nenhum arquivo, `situacao` incoerente com
+os períodos, entre outros. Os problemas aparecem no terminal do
+`quarto preview` e como alertas na página da execução no GitHub, com o nome
+do arquivo e o campo. **Corrija-os assim que aparecerem**: um dado com
+problema fica fora do painel.
+
+Os números do mapeamento vêm do `scripts/atualizar-osm.ts`, que consulta o
+ohsomeNow pela hashtag do programa. Não edite os arquivos em `dados/`: eles
+são gerados automaticamente.

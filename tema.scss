@@ -191,3 +191,38 @@ body div.quarto-about-jolla .description { text-align: center; }
   }
   body div.quarto-about-trestles .about-entity .about-image { margin-top: 1.5rem !important; }
 }
+
+// ---------- Painel (dashboard) ----------
+body.quarto-dashboard {
+  .card-header {
+    background: #fff; color: $marinho;
+    font-family: $headings-font-family; font-weight: 600; font-size: 1.05rem;
+    border-bottom: 2px solid $nevoa;
+  }
+  .card { border-color: rgba($marinho, .18); }
+  .toolbar { background: $nevoa; border-bottom: 1px solid rgba($marinho, .15); }
+  .toolbar label { font-weight: 600; color: $marinho; }
+  .toolbar select {
+    font-size: 1rem; padding: .3rem 2rem .3rem .7rem; min-width: 9rem;
+    border: 1px solid rgba($marinho, .35); border-radius: $border-radius; background-color: #fff;
+  }
+  .bslib-value-box {
+    color: #fff;
+    .value-box-title, .value-box-value, .value-box-showcase { color: #fff; }
+    .value-box-title { font-size: .95rem; font-weight: 600; }
+    // O número calculado pelo Observable JS fica num bloco próprio, após o título
+    .value-box-area .cell-output-display, .value-box-area .observablehq {
+      font-family: $headings-font-family; font-weight: 700;
+      font-size: 2.3rem; line-height: 1.1; color: #fff;
+    }
+    // Linha de detalhe (criados · modificados · removidos)
+    .value-box-area .vb-detalhe {
+      font-family: $font-family-sans-serif; font-weight: 400;
+      font-size: .78rem; line-height: 1.3; margin-top: .3rem; opacity: .9;
+    }
+  }
+  .painel-vazio {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 160px; color: $cinza; font-style: italic; text-align: center;
+  }
+}
