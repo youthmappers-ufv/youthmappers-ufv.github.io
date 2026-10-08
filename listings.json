@@ -7,10 +7,12 @@
     ]
   },
   {
-    "listing": "/projetos.html",
+    "listing": "/equipe.html",
     "items": [
-      "/projetos/2025-10-01-traducao-mapcomplete/index.html",
-      "/projetos/2025-10-01-Ortoimagem-campus-ufv/index.html"
+      "/equipe/rodrigo-smarzaro.html",
+      "/equipe/bolsista-exemplo.html",
+      "/equipe/voluntario-exemplo.html",
+      "/equipe/julia-mendonca.html"
     ]
   },
   {
@@ -23,12 +25,10 @@
     ]
   },
   {
-    "listing": "/equipe.html",
+    "listing": "/projetos.html",
     "items": [
-      "/equipe/rodrigo-smarzaro.html",
-      "/equipe/bolsista-exemplo.html",
-      "/equipe/voluntario-exemplo.html",
-      "/equipe/julia-mendonca.html"
+      "/projetos/2025-10-01-traducao-mapcomplete/index.html",
+      "/projetos/2025-10-01-Ortoimagem-campus-ufv/index.html"
     ]
   }
 ]

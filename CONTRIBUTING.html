@@ -81,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b6464bff5878a15b9d44412efb74d242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd2a405d179a9b772b311edcc16f21ef.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -160,20 +160,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./publicacoes.html"> 
 <span class="menu-text">Publicações</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./painel.html"> 
+<span class="menu-text">Painel</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://instagram.com/youthmappers.ufv"> <i class="bi bi-instagram" role="img" aria-label="Instagram do programa">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/youthmappers-ufv"> <i class="bi bi-github" role="img" aria-label="GitHub do programa">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:youthmapperschapter@ufv.br"> <i class="bi bi-envelope" role="img" aria-label="Contato por e-mail">
+    <a class="nav-link" href="mailto:smarzaro@ufv.br"> <i class="bi bi-envelope" role="img" aria-label="Contato por e-mail">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -216,28 +215,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Coloque a foto de capa como <code>capa.jpg</code> e as demais em <code>fotos/</code>.</li>
 </ol>
 <p>O evento aparece sozinho na página de eventos e na página inicial.</p>
+<p>Preencha também os <strong>dados para o painel</strong> no cabeçalho (<code>tipo</code>, <code>modalidade</code>, <code>municipio</code>, <code>carga_horaria</code>, <code>publico</code>, <code>publico_externo</code>, <code>equipe</code>, <code>parceiros</code>). Para eventos futuros, os números podem ficar em branco e ser preenchidos depois que o evento acontecer.</p>
 <p><strong>Categorias:</strong> reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas.</p>
 </section>
 <section id="adicionar-um-projeto" class="level2">
 <h2 class="anchored" data-anchor-id="adicionar-um-projeto">Adicionar um projeto</h2>
-<p>Mesmo processo: copie <code>_modelos/projeto/</code> para <code>projetos/nome-do-projeto/</code>.</p>
+<p>Mesmo processo: copie <code>_modelos/projeto/</code> para <code>projetos/nome-do-projeto/</code> e preencha os dados para o painel (<code>tipo</code>, <code>inicio</code>, <code>fim</code>, <code>coordenacao</code>, <code>equipe</code>, <code>parceiros</code>, <code>ods</code>).</p>
 </section>
 <section id="adicionar-uma-pessoa-à-equipe" class="level2">
 <h2 class="anchored" data-anchor-id="adicionar-uma-pessoa-à-equipe">Adicionar uma pessoa à equipe</h2>
 <ol type="1">
-<li>Copie <code>_modelos/membro.qmd</code> para <code>equipe/nome-sobrenome.qmd</code>.</li>
-<li>Se houver foto, coloque-a em <code>equipe/fotos/nome-sobrenome.jpg</code> (quadrada, com o rosto centralizado). <strong>Sem foto?</strong> Apague a linha <code>image:</code> do arquivo: o site usa o avatar genérico automaticamente.</li>
-<li>Preencha o arquivo. O campo <code>situacao</code> decide a seção da página Equipe: <code>coordenacao</code>, <code>atual</code> ou <code>egresso</code>.</li>
-<li>Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de <code>about: links:</code>, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco <code>about:</code> inteiro.</li>
+<li><p>Copie <code>_modelos/membro.qmd</code> para <code>equipe/nome-sobrenome.qmd</code>.</p></li>
+<li><p>Se houver foto, coloque-a em <code>equipe/fotos/nome-sobrenome.jpg</code> (quadrada, com o rosto centralizado). <strong>Sem foto?</strong> Apague a linha <code>image:</code> do arquivo: o site usa o avatar genérico automaticamente.</p></li>
+<li><p>Preencha o arquivo. O campo <code>situacao</code> decide a seção da página Equipe: <code>coordenacao</code>, <code>atual</code> ou <code>egresso</code>.</p></li>
+<li><p>Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de <code>about: links:</code>, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco <code>about:</code> inteiro.</p></li>
+<li><p>Preencha os <strong>dados para o painel</strong>: <code>curso</code> (código do curso), <code>vinculo</code> e <code>periodos</code>. Cada período tem a <code>funcao</code>, o mês de <code>inicio</code> e, se já terminou, o mês de <code>fim</code>, sempre no formato <code>AAAA-MM</code>. Quem foi voluntário e depois virou bolsista tem dois períodos.</p></li>
 </ol>
 <p><strong>Atenção:</strong> sempre que o arquivo tiver um bloco <code>about:</code>, ele precisa conter a linha <code>template: trestles</code>. Sem ela, o Quarto recusa o arquivo com o erro <em>“object is missing required property template”</em>.</p>
 <p>Ícones úteis para os links: <code>geo-alt</code> (OSM), <code>github</code>, <code>mortarboard</code> (Lattes), <code>linkedin</code>, <code>envelope</code> (e-mail), <code>globe</code> (site pessoal).</p>
-<p><strong>Quando alguém sai do programa</strong>, não apague o arquivo: troque <code>situacao: atual</code> por <code>situacao: egresso</code> e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”).</p>
+<p><strong>Quando alguém sai do programa</strong>, não apague o arquivo: troque <code>situacao: atual</code> por <code>situacao: egresso</code>, acrescente o <code>fim</code> do último período e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”).</p>
 <p>O layout das páginas de perfil e o avatar padrão são definidos em <code>equipe/_metadata.yml</code>, que vale para todos os arquivos da pasta.</p>
 </section>
 <section id="adicionar-uma-publicação" class="level2">
 <h2 class="anchored" data-anchor-id="adicionar-uma-publicação">Adicionar uma publicação</h2>
-<p>Acrescente a entrada BibTeX em <code>publicacoes.bib</code>. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também <code>eventtitle</code>, <code>eventdate</code> e <code>venue</code>.</p>
+<p>Acrescente a entrada BibTeX em <code>publicacoes.bib</code>, com o campo <code>tipopub</code> (artigo, resumo, capitulo, tcc ou apresentacao), usado pelo painel. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também <code>eventtitle</code>, <code>eventdate</code> e <code>venue</code>.</p>
 <p>Para citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas <code>bibliography</code> e <code>csl</code> (veja <code>projetos/mapeamento-calcadas/</code>) e use <code>[@chave]</code> no texto.</p>
 </section>
 <section id="fotos-regras-importantes" class="level2">
@@ -327,6 +328,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>As edições do OSM são consultadas pelo script <code>scripts/atualizar-osm.ts</code>, que roda sozinho antes de cada renderização, inclusive no <code>quarto preview</code> (no máximo uma consulta a cada 12 horas). Ele grava o resultado em <code>dados/osm.json</code>; tudo bem fazer commit desse arquivo junto com suas alterações.</p>
 <p>O site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.</p>
 <p><strong>A hashtag nas edições.</strong> No JOSM ou no iD, inclua <code>#youthmappersufv</code> no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele.</p>
+</section>
+<section id="painel-de-estatísticas-e-validação-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="painel-de-estatísticas-e-validação-dos-dados">Painel de estatísticas e validação dos dados</h2>
+<p>A página <strong>Painel</strong> é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do <code>publicacoes.bib</code> e de dois arquivos de dados:</p>
+<ul>
+<li><code>_data/vocabulario.yml</code>: os <strong>únicos valores aceitos</strong> em <code>curso</code>, <code>vinculo</code>, <code>funcao</code>, <code>tipo</code>, <code>modalidade</code>, <code>tipopub</code> etc. Para acrescentar um tipo novo, fale com a coordenação.</li>
+<li><code>_data/parceiros.yml</code>: a lista de parceiros. Eventos e projetos citam parceiros pelo <code>id</code>.</li>
+</ul>
+<p>Antes de cada renderização, o script <code>scripts/gerar-dados.ts</code> confere tudo: valores fora do vocabulário, datas fora do formato <code>AAAA-MM</code>, nomes em <code>equipe:</code> que não correspondem a nenhum arquivo, <code>situacao</code> incoerente com os períodos, entre outros. Os problemas aparecem no terminal do <code>quarto preview</code> e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. <strong>Corrija-os assim que aparecerem</strong>: um dado com problema fica fora do painel.</p>
+<p>Os números do mapeamento vêm do <code>scripts/atualizar-osm.ts</code>, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em <code>dados/</code>: eles são gerados automaticamente.</p>
 
 
 </section>
