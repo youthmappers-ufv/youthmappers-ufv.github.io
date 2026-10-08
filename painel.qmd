@@ -275,7 +275,7 @@ html`${fmt(d3.sum(osmF, m => m.edicoes))}`
 ```{ojs}
 //| title: "Ações por ano e tipo"
 eventosF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 40, marginBottom: 36, height: 280,
+  marginLeft: 40, marginBottom: 36, height: 240,
   x: {label: null, type: "band"}, y: {label: "ações", grid: true, tickFormat: inteiro},
   color: {domain: Object.keys(vocab.tipos_evento), range: paleta, legend: true, tickFormat: d => vocab.tipos_evento[d]},
   marks: [Plot.barY(eventosF, Plot.groupX({y: "count"}, {x: e => e.data.slice(0, 4), fill: "tipo", tip: true})), Plot.ruleY([0])]
@@ -285,7 +285,7 @@ eventosF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Edições no OpenStreetMap (acumulado)"
 osmMensal.length === 0 ? semDados("Estatísticas do OpenStreetMap ainda não disponíveis.") : Plot.plot({
-  marginLeft: 60, marginBottom: 36, height: 280,
+  marginLeft: 70, marginBottom: 40, height: 280,
   x: {type: "utc", label: null},
   y: {label: "edições", grid: true, tickFormat: d => d.toLocaleString("pt-BR")},
   marks: [
@@ -297,7 +297,7 @@ osmMensal.length === 0 ? semDados("Estatísticas do OpenStreetMap ainda não dis
 })
 ```
 
-## Row {height=170px}
+## Row {height=240px}
 
 ::: {.card title="Sobre os dados"}
 Calculados automaticamente a partir das páginas da equipe, das ações, dos projetos e das publicações do site, a cada publicação. Mapeamento: edições com a hashtag #youthmappersufv, via [ohsomeNow stats](https://ohsome-now.heigit.org/dashboard#hashtag=youthmappersufv) (HeiGIT), © [colaboradores do OpenStreetMap](https://www.openstreetmap.org/copyright).
@@ -342,7 +342,7 @@ html`${new Set(estudantes.map(m => m.curso).filter(c => c)).size}`
 ```{ojs}
 //| title: "Equipe por semestre"
 ativosPorSemestre.length === 0 ? semDados("Nenhum período de participação registrado.") : Plot.plot({
-  marginLeft: 40, marginBottom: 36, height: 300,
+  marginLeft: 40, marginBottom: 36, height: 275,
   x: {label: null, domain: semestres},
   y: {label: "pessoas", grid: true, tickFormat: inteiro},
   color: {domain: ["bolsista", "voluntario", "colaborador", "coordenacao"],
@@ -358,7 +358,7 @@ ativosPorSemestre.length === 0 ? semDados("Nenhum período de participação reg
 ```{ojs}
 //| title: "Cursos de origem dos estudantes"
 estudantes.length === 0 ? semDados("Nenhum estudante registrado.") : Plot.plot({
-  marginLeft: 280, marginBottom: 36, height: 300,
+  marginLeft: 310, marginBottom: 40, height: 290,
   x: {label: "estudantes", grid: true, tickFormat: inteiro}, y: {label: null},
   marks: [
     Plot.barX(estudantes.filter(m => m.curso),
@@ -405,7 +405,7 @@ html`${new Set(eventosF.map(e => e.municipio).filter(m => m)).size}`
 ```{ojs}
 //| title: "Ações por ano e tipo"
 eventosF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 40, marginBottom: 36, height: 280,
+  marginLeft: 40, marginBottom: 36, height: 240,
   x: {label: null, type: "band"}, y: {label: "ações", grid: true, tickFormat: inteiro},
   color: {domain: Object.keys(vocab.tipos_evento), range: paleta, legend: true, tickFormat: d => vocab.tipos_evento[d]},
   marks: [Plot.barY(eventosF, Plot.groupX({y: "count"}, {x: e => e.data.slice(0, 4), fill: "tipo", tip: true})), Plot.ruleY([0])]
@@ -415,7 +415,7 @@ eventosF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Público alcançado por ano"
 publicoAno.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 50, marginBottom: 36, height: 280,
+  marginLeft: 50, marginBottom: 36, height: 240,
   x: {label: null, type: "band"}, y: {label: "pessoas", grid: true, tickFormat: inteiro},
   color: {domain: ["Comunidade externa", "Comunidade da UFV"], range: [cores.vinho, cores.nevoa], legend: true},
   marks: [Plot.barY(publicoAno, {x: "ano", y: "n", fill: "tipo", tip: true}), Plot.ruleY([0])]
@@ -427,7 +427,7 @@ publicoAno.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Onde atuamos"
 eventosF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 150, marginBottom: 36, height: 250,
+  marginLeft: 170, marginBottom: 40, height: 240,
   x: {label: "ações", grid: true, tickFormat: inteiro}, y: {label: null},
   marks: [Plot.barX(eventosF.filter(e => e.municipio),
     Plot.groupY({x: "count"}, {y: "municipio", fill: cores.ouro, sort: {y: "-x"}, tip: true})), Plot.ruleX([0])]
@@ -437,7 +437,7 @@ eventosF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Modalidade das ações"
 eventosF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 100, marginBottom: 36, height: 250,
+  marginLeft: 110, marginBottom: 40, height: 240,
   x: {label: "ações", grid: true, tickFormat: inteiro}, y: {label: null},
   marks: [Plot.barX(eventosF.filter(e => e.modalidade), Plot.groupY({x: "count"},
     {y: e => vocab.modalidades[e.modalidade], fill: cores.marinho, sort: {y: "-x"}, tip: true})), Plot.ruleX([0])]
@@ -481,7 +481,7 @@ html`${publicacoesF.length}`
 ```{ojs}
 //| title: "Projetos ativos por ano e tipo"
 projetosF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 40, marginBottom: 36, height: 280,
+  marginLeft: 40, marginBottom: 36, height: 240,
   x: {label: null, type: "band"}, y: {label: "projetos", grid: true, tickFormat: inteiro},
   color: {domain: Object.keys(vocab.tipos_projeto), range: [cores.marinho, cores.vinho, cores.ouro, cores.cinza],
           legend: true, tickFormat: d => vocab.tipos_projeto[d]},
@@ -493,7 +493,7 @@ projetosF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Publicações por ano e tipo"
 publicacoesF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 40, marginBottom: 36, height: 280,
+  marginLeft: 40, marginBottom: 36, height: 240,
   x: {label: null, type: "band"}, y: {label: "publicações", grid: true, tickFormat: inteiro},
   color: {domain: Object.keys(vocab.tipos_publicacao), range: paleta, legend: true, tickFormat: d => vocab.tipos_publicacao[d]},
   marks: [Plot.barY(publicacoesF, Plot.groupX({y: "count"}, {x: p => String(p.ano), fill: "tipo", tip: true})), Plot.ruleY([0])]
@@ -505,7 +505,7 @@ publicacoesF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Objetivos de Desenvolvimento Sustentável dos projetos"
 projetosF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 300, marginBottom: 36, height: 270,
+  marginLeft: 340, marginBottom: 40, height: 260,
   x: {label: "projetos", grid: true, tickFormat: inteiro}, y: {label: null},
   marks: [Plot.barX(projetosF.flatMap(p => p.ods.map(o => ({ods: `${o}. ${vocab.ods[o]}`}))),
     Plot.groupY({x: "count"}, {y: "ods", fill: cores.marinho, sort: {y: "-x"}, tip: true})), Plot.ruleX([0])]
@@ -556,7 +556,7 @@ indicadorOsm("cursos_agua_km", 1)
 ```{ojs}
 //| title: "Edições no OpenStreetMap (acumulado)"
 osmMensal.length === 0 ? semDados("Estatísticas do OpenStreetMap ainda não disponíveis.") : Plot.plot({
-  marginLeft: 60, marginBottom: 36, height: 280,
+  marginLeft: 70, marginBottom: 40, height: 280,
   x: {type: "utc", label: null},
   y: {label: "edições", grid: true, tickFormat: d => d.toLocaleString("pt-BR")},
   marks: [
@@ -573,7 +573,7 @@ osmMensal.length === 0 ? semDados("Estatísticas do OpenStreetMap ainda não dis
 ```{ojs}
 //| title: "Edificações por mês"
 osmF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 50, marginBottom: 30, height: 190,
+  marginLeft: 56, marginBottom: 30, height: 185,
   x: {type: "band", label: null, tickFormat: rotuloMes, tickSize: 0},
   y: {label: "saldo", grid: true, tickFormat: d => d.toLocaleString("pt-BR")},
   marks: [Plot.barY(osmF, {x: "mes", y: "edificacoes", fill: cores.vinho, fillOpacity: m => m.parcial ? 0.4 : 1,
@@ -585,7 +585,7 @@ osmF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Vias por mês (km)"
 osmF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 50, marginBottom: 30, height: 190,
+  marginLeft: 56, marginBottom: 30, height: 185,
   x: {type: "band", label: null, tickFormat: rotuloMes, tickSize: 0},
   y: {label: "saldo (km)", grid: true, tickFormat: d => d.toLocaleString("pt-BR")},
   marks: [Plot.barY(osmF, {x: "mes", y: "vias_km", fill: cores.marinho, fillOpacity: m => m.parcial ? 0.4 : 1,
@@ -597,7 +597,7 @@ osmF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Pontos de interesse por mês"
 osmF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 50, marginBottom: 30, height: 190,
+  marginLeft: 56, marginBottom: 30, height: 185,
   x: {type: "band", label: null, tickFormat: rotuloMes, tickSize: 0},
   y: {label: "saldo", grid: true, tickFormat: d => d.toLocaleString("pt-BR")},
   marks: [Plot.barY(osmF, {x: "mes", y: "pois", fill: cores.ouro, fillOpacity: m => m.parcial ? 0.4 : 1,
@@ -609,7 +609,7 @@ osmF.length === 0 ? semDados() : Plot.plot({
 ```{ojs}
 //| title: "Cursos d'água por mês (km)"
 osmF.length === 0 ? semDados() : Plot.plot({
-  marginLeft: 50, marginBottom: 30, height: 190,
+  marginLeft: 56, marginBottom: 30, height: 185,
   x: {type: "band", label: null, tickFormat: rotuloMes, tickSize: 0},
   y: {label: "saldo (km)", grid: true, tickFormat: d => d.toLocaleString("pt-BR")},
   marks: [Plot.barY(osmF, {x: "mes", y: "cursos_agua_km", fill: cores.cinza, fillOpacity: m => m.parcial ? 0.4 : 1,
@@ -618,7 +618,7 @@ osmF.length === 0 ? semDados() : Plot.plot({
 })
 ```
 
-## Row {height=230px}
+## Row {height=300px}
 
 ::: {.card title="Como ler os números do mapeamento"}
 Edificações, vias, pontos de interesse e cursos d'água são **saldos**: o que foi criado menos o que foi removido (para vias e cursos d'água, também alongamentos menos encurtamentos). Por isso um mês pode ficar **negativo**: acontece em meses de validação, quando o trabalho é corrigir mapeamentos anteriores. As modificações não entram no saldo e aparecem à parte nos indicadores. Vias incluem tudo o que é mapeado como `highway`, inclusive calçadas e trilhas; cursos d'água são rios, canais, córregos e valas. Barras mais claras indicam o mês em andamento. Definições completas na ajuda do [painel ohsomeNow](https://ohsome-now.heigit.org/dashboard#hashtag=youthmappersufv).
