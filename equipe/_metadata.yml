@@ -1,0 +1,26 @@
+# =============================================================
+# Valores padrão para TODAS as páginas da pasta equipe/
+# (cada arquivo de membro pode sobrescrever qualquer um deles).
+# =============================================================
+
+# Foto padrão para quem não tem foto própria.
+# Quem tem foto declara "image: fotos/nome.jpg" no próprio arquivo.
+image: fotos/avatar.svg
+
+# Layout da página de perfil: foto, nome e links à esquerda;
+# biografia à direita (no celular, tudo em uma coluna).
+about:
+  template: trestles
+  image-shape: round
+  image-width: 12em
+
+# Texto alternativo da foto (o modelo do Quarto não o gera sozinho):
+# leitores de tela anunciam "Foto de <nome da pessoa>".
+include-after-body:
+  text: |
+    <script>
+      document.querySelectorAll('.about-image:not([alt])').forEach(function (img) {
+        var nome = document.querySelector('h1.title');
+        img.alt = 'Foto de ' + (nome ? nome.textContent.trim() : 'membro da equipe');
+      });
+    </script>

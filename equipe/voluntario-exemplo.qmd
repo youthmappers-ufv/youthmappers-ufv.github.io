@@ -1,6 +1,6 @@
 ---
 title: "Voluntário de Exemplo"
-image: fotos/voluntario-exemplo.svg
+#image: fotos/voluntario-exemplo.svg
 description: "Voluntário, Ciência de Dados e IA"
 situacao: atual
 ---

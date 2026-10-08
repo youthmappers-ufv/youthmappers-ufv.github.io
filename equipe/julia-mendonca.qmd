@@ -5,8 +5,6 @@ description: "Membra fundadora do projeto YouthmappersUFV"
 situacao: egresso
 ---
 
-![](fotos/julia-mendonca.jpeg){width=200px fig-align="center"}
-
 ::: {.ficha}
 Período
 :   2022-2024

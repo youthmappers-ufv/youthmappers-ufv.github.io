@@ -1,6 +1,6 @@
 ---
 title: "Bolsista de Exemplo"
-image: fotos/bolsista-exemplo.svg
+#image: fotos/bolsista-exemplo.svg
 description: "Bolsista, Sistemas de Informação"
 situacao: atual
 ---

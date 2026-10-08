@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Pessoa sem foto">
+  <rect width="400" height="400" fill="#e3e7f1"/>
+  <circle cx="200" cy="158" r="74" fill="#324170" opacity=".55"/>
+  <path d="M60 400c0-86 63-140 140-140s140 54 140 140z" fill="#324170" opacity=".55"/>
+</svg>

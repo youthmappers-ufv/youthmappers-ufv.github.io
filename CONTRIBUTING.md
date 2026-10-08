@@ -38,13 +38,29 @@ Mesmo processo: copie `_modelos/projeto/` para `projetos/nome-do-projeto/`.
 ## Adicionar uma pessoa à equipe
 
 1. Copie `_modelos/membro.qmd` para `equipe/nome-sobrenome.qmd`.
-2. Coloque a foto em `equipe/fotos/nome-sobrenome.jpg` (quadrada, ~400 px).
-3. Preencha o arquivo. O campo `situacao` decide a seção da página:
+2. Se houver foto, coloque-a em `equipe/fotos/nome-sobrenome.jpg`
+   (quadrada, com o rosto centralizado). **Sem foto?** Apague a linha
+   `image:` do arquivo: o site usa o avatar genérico automaticamente.
+3. Preencha o arquivo. O campo `situacao` decide a seção da página Equipe:
    `coordenacao`, `atual` ou `egresso`.
+4. Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho,
+   dentro de `about: links:`, e viram botões abaixo do nome. Apague os que
+   não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco
+   `about:` inteiro.
+
+**Atenção:** sempre que o arquivo tiver um bloco `about:`, ele precisa
+conter a linha `template: trestles`. Sem ela, o Quarto recusa o arquivo
+com o erro *"object is missing required property template"*.
+
+Ícones úteis para os links: `geo-alt` (OSM), `github`, `mortarboard`
+(Lattes), `linkedin`, `envelope` (e-mail), `globe` (site pessoal).
 
 **Quando alguém sai do programa**, não apague o arquivo: troque
 `situacao: atual` por `situacao: egresso` e atualize a descrição
 (ex.: "Bolsista de 2026 a 2027, Sistemas de Informação").
+
+O layout das páginas de perfil e o avatar padrão são definidos em
+`equipe/_metadata.yml`, que vale para todos os arquivos da pasta.
 
 ## Adicionar uma publicação
 

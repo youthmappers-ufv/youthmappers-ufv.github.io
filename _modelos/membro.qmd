@@ -1,11 +1,26 @@
 ---
 title: "Nome Completo"
-image: fotos/nome-completo.jpg       # foto quadrada, ~400 x 400 px
+# Foto quadrada (será otimizada para 600 px). Sem foto? Apague a linha
+# abaixo: o site usa o avatar genérico automaticamente.
+image: fotos/nome-completo.jpg
 description: "Bolsista, Sistemas de Informação"
 situacao: atual                      # coordenacao, atual ou egresso
+about:
+  template: trestles                 # obrigatório quando há "about:"; não altere
+  links:                             # apague os que não se aplicam
+    - icon: geo-alt
+      text: OpenStreetMap
+      href: https://www.openstreetmap.org/user/usuario
+    - icon: github
+      text: GitHub
+      href: https://github.com/usuario
+    - icon: mortarboard
+      text: Lattes
+      href: http://lattes.cnpq.br/0000000000000000
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/usuario
 ---
 
-Breve apresentação: interesses e projetos em que atua.
-
-- OpenStreetMap: [usuario](https://www.openstreetmap.org/user/usuario)
-- GitHub: [usuario](https://github.com/usuario)
+Breve apresentação: curso, desde quando participa do programa,
+interesses e projetos em que atua.

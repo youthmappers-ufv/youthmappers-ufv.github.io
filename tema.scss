@@ -105,14 +105,31 @@ a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
 .quarto-grid-item .card-title { font-family: $headings-font-family; }
 .quarto-grid-item img, .quarto-grid-item .card-img-top { object-fit: cover; }
 
-// Cartões de pessoas: fotos redondas e centralizadas
+// Cartões de pessoas na página Equipe: mesma identidade das páginas
+// de perfil (foto redonda com anel dourado; nome em azul-marinho)
 #listing-coordenacao, #listing-atuais, #listing-egressos {
-  .card-img-top { text-align: center; margin: 1.2rem 0 0; }
+  .card-img-top {
+    text-align: center;
+    margin: 1.4rem 0 0;
+    overflow: visible;                // não cortar o anel dourado
+  }
   img.card-img {
     width: 140px !important; height: 140px !important;
     border-radius: 50%; object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px $ouro;      // mesmo anel da página de perfil
   }
-  .card-body { text-align: center; }
+  .card-body { text-align: center; padding-top: 1.1rem; }
+  .card-title.listing-title {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    color: $marinho;
+    opacity: 1;                       // o Quarto clareia o título dos cartões
+    font-size: 1.3rem;                // versão menor do título da página de perfil
+    line-height: 1.2;
+    margin-bottom: .35rem;
+  }
+  .listing-description { color: $cinza; font-size: .95rem; }
 }
 
 // Data de atualização dos números
@@ -148,4 +165,29 @@ a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
 @media (max-width: 575.98px) {
   .navbar-brand img { max-height: 32px; }
   .destaque { padding: 2.25rem 1.25rem 2rem; }
+}
+
+// ---------- Páginas de perfil da equipe ----------
+// Seletores longos de propósito: precisam vencer as regras do próprio Quarto
+body div[class^="quarto-about-"] {
+  .about-image {
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 3px $ouro;      // anel dourado, como a borda do logo circular
+  }
+  .description { color: $cinza; font-size: 1.05rem; }
+  .about-entity .about-link, .about-link {
+    color: $vinho; border-color: rgba($vinho, .4); font-weight: 700;
+    &:hover, &:focus { background: $vinho; color: #fff; border-color: $vinho; }
+  }
+}
+body div.quarto-about-jolla .description { text-align: center; }
+
+// Celular: foto centralizada e afastada do menu em todos os modelos
+@media (max-width: 991.98px) {
+  body div[class^="quarto-about-"] {
+    padding-top: 1.5rem;
+    .about-entity .about-image, .about-image { align-self: center; margin-left: auto; margin-right: auto; }
+  }
+  body div.quarto-about-trestles .about-entity .about-image { margin-top: 1.5rem !important; }
 }
