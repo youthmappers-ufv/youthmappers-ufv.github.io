@@ -81,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-65c44abcf812af18095c7927f0742fbc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b6464bff5878a15b9d44412efb74d242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -226,10 +226,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="adicionar-uma-pessoa-à-equipe">Adicionar uma pessoa à equipe</h2>
 <ol type="1">
 <li>Copie <code>_modelos/membro.qmd</code> para <code>equipe/nome-sobrenome.qmd</code>.</li>
-<li>Coloque a foto em <code>equipe/fotos/nome-sobrenome.jpg</code> (quadrada, ~400 px).</li>
-<li>Preencha o arquivo. O campo <code>situacao</code> decide a seção da página: <code>coordenacao</code>, <code>atual</code> ou <code>egresso</code>.</li>
+<li>Se houver foto, coloque-a em <code>equipe/fotos/nome-sobrenome.jpg</code> (quadrada, com o rosto centralizado). <strong>Sem foto?</strong> Apague a linha <code>image:</code> do arquivo: o site usa o avatar genérico automaticamente.</li>
+<li>Preencha o arquivo. O campo <code>situacao</code> decide a seção da página Equipe: <code>coordenacao</code>, <code>atual</code> ou <code>egresso</code>.</li>
+<li>Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de <code>about: links:</code>, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco <code>about:</code> inteiro.</li>
 </ol>
+<p><strong>Atenção:</strong> sempre que o arquivo tiver um bloco <code>about:</code>, ele precisa conter a linha <code>template: trestles</code>. Sem ela, o Quarto recusa o arquivo com o erro <em>“object is missing required property template”</em>.</p>
+<p>Ícones úteis para os links: <code>geo-alt</code> (OSM), <code>github</code>, <code>mortarboard</code> (Lattes), <code>linkedin</code>, <code>envelope</code> (e-mail), <code>globe</code> (site pessoal).</p>
 <p><strong>Quando alguém sai do programa</strong>, não apague o arquivo: troque <code>situacao: atual</code> por <code>situacao: egresso</code> e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”).</p>
+<p>O layout das páginas de perfil e o avatar padrão são definidos em <code>equipe/_metadata.yml</code>, que vale para todos os arquivos da pasta.</p>
 </section>
 <section id="adicionar-uma-publicação" class="level2">
 <h2 class="anchored" data-anchor-id="adicionar-uma-publicação">Adicionar uma publicação</h2>
