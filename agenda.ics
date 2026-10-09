@@ -15,7 +15,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2022-07-09-mapatona-angra@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;TZID=America/Sao_Paulo:20220709T210000
 DTEND;TZID=America/Sao_Paulo:20220709T230000
 SUMMARY:Mapatona Angra dos Reis
@@ -33,7 +33,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2022-07-19-oficina-importacao-dados-osm-postgis@youthmappers-ufv.github
  .io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20220719
 DTEND;VALUE=DATE:20220720
 SUMMARY:Oficina de Importação de Dados do OSM para o PostGIS usando o Osm
@@ -48,7 +48,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2022-10-15-mapatona-noroeste-de-rio-paranaiba@youthmappers-ufv.github.i
  o
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20221015
 DTEND;VALUE=DATE:20221016
 SUMMARY:Mapatona Noroeste de Rio Paranaíba
@@ -63,7 +63,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2023-08-09-mapatona-quississana-aniversario-osm@youthmappers-ufv.github
  .io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20230809
 DTEND;VALUE=DATE:20230810
 SUMMARY:Mapatona Quississana - aniversário OSM
@@ -78,7 +78,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario@youthmapp
  ers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;TZID=America/Sao_Paulo:20230825T100000
 DTEND;TZID=America/Sao_Paulo:20230825T120000
 SUMMARY:Youthmappers Mapeamento colaborativo e humanitário
@@ -94,7 +94,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos@youthmapper
  s-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20230913
 DTEND;VALUE=DATE:20230914
 SUMMARY:Capacitação em Mapeamento Colaborativo - Conceitos Iniciais para 
@@ -110,7 +110,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento@youthmappe
  rs-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20230928
 DTEND;VALUE=DATE:20230929
 SUMMARY:Configuração e uso do software JOSM no mapeamento colaborativo
@@ -124,7 +124,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes@youthmappers-uf
  v.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20230928
 DTEND;VALUE=DATE:20230929
 SUMMARY:Mapatona Região Sul atingida pelas enchentes
@@ -139,7 +139,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap@youth
  mappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20231019
 DTEND;VALUE=DATE:20231020
 SUMMARY:Mapeamento de limites administrativos no OpenStreetMap
@@ -153,7 +153,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01@youthmappers-
  ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20240423
 DTEND;VALUE=DATE:20240424
 SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 01
@@ -167,7 +167,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-04-30-capacitacao-em-mapeamento-colaborativo-aula-02@youthmappers-
  ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20240430
 DTEND;VALUE=DATE:20240501
 SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 02
@@ -181,7 +181,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-05-07-capacitacao-em-mapeamento-colaborativo-aula-03@youthmappers-
  ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20240507
 DTEND;VALUE=DATE:20240508
 SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 03
@@ -195,7 +195,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-05-14-capacitacao-em-mapeamento-colaborativo-mapatona@youthmappers
  -ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20240514
 DTEND;VALUE=DATE:20240515
 SUMMARY:Capacitação em Mapeamento Colaborativo - Mapatona
@@ -208,7 +208,7 @@ URL:https://youthmappers-ufv.github.io/eventos/2024-05-14-capacitacao-em-ma
 END:VEVENT
 BEGIN:VEVENT
 UID:2024-05-21-capacitacao-editor-id-esalq@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20240521
 DTEND;VALUE=DATE:20240522
 SUMMARY:Capacitação Editor iD - Esalq
@@ -222,7 +222,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-08-09-mapatona-tres-coroas-rs-aniversario-osm@youthmappers-ufv.git
  hub.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20240809
 DTEND;VALUE=DATE:20240810
 SUMMARY:Mapatona Três Coroas - RS - Aniversário OSM
@@ -236,7 +236,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear@yout
  hmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20241017
 DTEND;VALUE=DATE:20241018
 SUMMARY:Introdução ao mapeamento Colaborativo e Mapatona - SEMEAR
@@ -249,7 +249,7 @@ URL:https://youthmappers-ufv.github.io/eventos/2024-10-17-introducao-ao-map
 END:VEVENT
 BEGIN:VEVENT
 UID:2024-10-25-plugin-buildings-tools@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20241025
 DTEND;VALUE=DATE:20241026
 SUMMARY:Plugin buildings-tools
@@ -263,7 +263,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-11-01-mapatona-zona-urbana-de-rio-paranaiba@youthmappers-ufv.githu
  b.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
 SUMMARY:Mapatona Zona Urbana de Rio Paranaíba
@@ -277,7 +277,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2024-11-14-mapatona-zona-urbana-de-rio-paranaiba-parte-2@youthmappers-u
  fv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20241114
 DTEND;VALUE=DATE:20241115
 SUMMARY:Mapatona Zona Urbana de Rio Paranaíba - Parte 2
@@ -290,7 +290,7 @@ URL:https://youthmappers-ufv.github.io/eventos/2024-11-14-mapatona-zona-urb
 END:VEVENT
 BEGIN:VEVENT
 UID:2024-11-23-mostra-de-profissoes@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20241123
 DTEND;VALUE=DATE:20241124
 SUMMARY:Mostra de Profissões
@@ -303,7 +303,7 @@ URL:https://youthmappers-ufv.github.io/eventos/2024-11-23-mostra-de-profiss
 END:VEVENT
 BEGIN:VEVENT
 UID:2025-03-18-mostra-de-projetos-de-extensao@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250318
 DTEND;VALUE=DATE:20250319
 SUMMARY:Mostra de projetos de extensão
@@ -317,7 +317,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem@youthmappers-
  ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250328
 DTEND;VALUE=DATE:20250329
 SUMMARY:Mapatona Open Data Day - Áreas da COP30 em Belém
@@ -331,7 +331,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos@youthmapper
  s-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250602
 DTEND;VALUE=DATE:20250603
 SUMMARY:Capacitação em Mapeamento Colaborativo - Conceitos Básicos
@@ -345,7 +345,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-06-09-capacitacao-em-mapeamento-colaborativo-editor-id@youthmapper
  s-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
 SUMMARY:Capacitação em Mapeamento colaborativo - Editor iD
@@ -359,7 +359,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-06-16-capacitacao-em-mapeamento-colaborativo-editor-josm@youthmapp
  ers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250616
 DTEND;VALUE=DATE:20250617
 SUMMARY:Capacitação em Mapeamento Colaborativo - Editor JOSM
@@ -373,7 +373,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona@youthmappers
  -ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250623
 DTEND;VALUE=DATE:20250624
 SUMMARY:Capacitação em Mapeamento Colaborativo - Mapatona
@@ -387,7 +387,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis@youthmappers-
  ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250918
 DTEND;VALUE=DATE:20250919
 SUMMARY:Mapeamento Colaborativo com Aplicativos Móveis
@@ -401,7 +401,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-09-24-introducao-ao-mapeamento-colaborativo@youthmappers-ufv.githu
  b.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250924
 DTEND;VALUE=DATE:20250925
 SUMMARY:Introdução ao Mapeamento Colaborativo
@@ -415,7 +415,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-09-25-mapeamento-colaborativo-com-editor-josm@youthmappers-ufv.git
  hub.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20250925
 DTEND;VALUE=DATE:20250926
 SUMMARY:Mapeamento Colaborativo com Editor JOSM
@@ -429,7 +429,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba@youth
  mappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20251009
 DTEND;VALUE=DATE:20251010
 SUMMARY:Mapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região
@@ -443,7 +443,7 @@ URL:https://youthmappers-ufv.github.io/eventos/2025-10-09-mapatona-youthmap
 END:VEVENT
 BEGIN:VEVENT
 UID:2025-11-06-tradutona-mapcomplete@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20251106
 DTEND;VALUE=DATE:20251107
 SUMMARY:Tradutona Mapcomplete
@@ -456,7 +456,7 @@ URL:https://youthmappers-ufv.github.io/eventos/2025-11-06-tradutona-mapcomp
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-12-sotm-brasil-2026@youthmappers-ufv.github.io
-DTSTAMP:20261009T133636Z
+DTSTAMP:20261009T135839Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:State of the Map Brasil 2026
