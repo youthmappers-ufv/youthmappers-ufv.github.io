@@ -16,7 +16,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario@youthmapp
  ers-ufv.github.io
-DTSTAMP:20261009T135341Z
+DTSTAMP:20261009T141826Z
 DTSTART;TZID=America/Sao_Paulo:20230825T100000
 DTEND;TZID=America/Sao_Paulo:20230825T120000
 SUMMARY:Youthmappers Mapeamento colaborativo e humanitário

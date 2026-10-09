@@ -1,17 +1,25 @@
 ---
 title: "YouthMappers UFV participa do State of the Map Brasil 2023, em Curitiba"
 date: 2023-10-02
+image: capa.jpg
 description: "Integrantes do programa participaram da conferência nacional da comunidade OpenStreetMap."   # PROVISÓRIA: ajuste o resumo
 categories: [participação]
 municipio: Curitiba
 local: UFPR
 # equipe: []                         # quem do programa esteve presente
-# links:
-#   - texto: Site do evento
-#     url: https://...
+links:
+   - texto: Site do evento
+     url: https://sotm-br.github.io/2023/
 ---
 
 {{< ficha >}}
 
 <!-- Conte como foi a participação: quem foi, o que apresentou ou aprendeu,
      contatos e parcerias que surgiram. -->
+
+::: {.galeria}
+![](fotos/01.jpg)
+
+![](fotos/02.jpg)
+
+:::

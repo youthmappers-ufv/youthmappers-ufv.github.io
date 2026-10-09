@@ -127,10 +127,11 @@ echo "Projeto: $(pwd)"
 echo "ImageMagick: $("${CONVERTER[@]}" -version 2>&1 | head -n 1 | tr -d '\r')"
 otimizar eventos      1600   # capas e galerias de eventos
 otimizar projetos     1600   # capas de projetos
+otimizar noticias     1600   # capas e fotos de notícias
 otimizar equipe/fotos  600   # fotos da equipe (exibidas com 140 px)
 
 # Formato de foto do iPhone que a maioria dos navegadores não exibe
-heic=$(find eventos projetos equipe -type f \( -iname '*.heic' -o -iname '*.heif' \) 2>/dev/null || true)
+heic=$(find eventos projetos noticias equipe -type f \( -iname '*.heic' -o -iname '*.heif' \) 2>/dev/null || true)
 if [ -n "$heic" ]; then
   echo "ATENÇÃO: fotos em HEIC não aparecem na maioria dos navegadores."
   echo "Converta para JPG antes de enviar:"

@@ -56,13 +56,13 @@ jobs:
 
       - name: Salvar fotos otimizadas
         run: |
-          if [ -z "$(git status --porcelain -- eventos projetos equipe)" ]; then
+          if [ -z "$(git status --porcelain -- eventos projetos noticias equipe)" ]; then
             echo "Nenhuma foto precisou de ajuste."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
-          git add -- eventos projetos equipe
+          git add -- eventos projetos noticias equipe
           git commit -m "Otimiza fotos (automático)"
           git push
 
