@@ -7,7 +7,5 @@ nocite: |
   @*
 ---
 
-As referências abaixo são geradas automaticamente a partir do arquivo `publicacoes.bib`, no padrão ABNT. Para incluir uma publicação, basta acrescentar a entrada BibTeX nesse arquivo.
-
 ::: {#refs}
 :::
