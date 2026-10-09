@@ -382,6 +382,6 @@
     "href": "publicacoes.html",
     "title": "Publicações",
     "section": "",
-    "text": "As referências abaixo são geradas automaticamente a partir do arquivo publicacoes.bib, no padrão ABNT. Para incluir uma publicação, basta acrescentar a entrada BibTeX nesse arquivo.\n\n\nSMARZARO, Rodrigo. Título de exemplo: introdução ao OpenStreetMap. Oficina. Universidade Federal de Viçosa, campus Rio Paranaíba, 2026.\n\n\nSOBRENOME, Nome; SMARZARO, Rodrigo. Título de exemplo: mapeamento colaborativo de calçadas com estudantes. Em: STATE OF THE MAP BRASIL. Anais do State of the Map Brasil 2026. Uberlândia, MG: 2026."
+    "text": "As referências abaixo são geradas automaticamente a partir do arquivo publicacoes.bib, no padrão ABNT. Para incluir uma publicação, basta acrescentar a entrada BibTeX nesse arquivo.\n\n\nMACIEL, Paulo Roberto Ferreira; SMARZARO, Rodrigo. Georeferencing and Classification of Urban Trees Using Aerial and Street-Level Images, and Machine Learning. Em: FOSS4G 2024 – Academic Track, 2 dez. 2024. Disponível em: &lt;https://zenodo.org/doi/10.5281/zenodo.14250604&gt;. Acesso em: 17 dez. 2024"
   }
 ]
