@@ -48,7 +48,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7be3de461ab90016a9af889f229a7d99.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-16f7a50f7521e5bef66f932b323c1d46.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/agenda-ym-1.0.0/agenda.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,6 +95,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-ultimos-eventos'] = new List('listing-ultimos-eventos', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ultimas-noticias .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ultimas-noticias'] = new List('listing-ultimas-noticias', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -168,10 +197,8 @@ window.Quarto = {
 
 <meta property="og:title" content="YouthMappers UFV">
 <meta property="og:description" content="Capítulo YouthMappers da Universidade Federal de Viçosa, campus Rio Paranaíba: mapeamento colaborativo e ferramentas abertas com OpenStreetMap.">
-<meta property="og:image" content="https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/capa.png">
+<meta property="og:image" content="https://youthmappers-ufv.github.io/projetos/2025-10-01-Ortoimagem-campus-ufv/capa.jpg">
 <meta property="og:site_name" content="YouthMappers UFV">
-<meta property="og:image:height" content="517">
-<meta property="og:image:width" content="746">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -200,9 +227,24 @@ window.Quarto = {
     <a class="nav-link" href="./sobre.html"> 
 <span class="menu-text">O programa</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ações" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ações</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ações">    
+        <li>
+    <a class="dropdown-item" href="./eventos.html">
+ <span class="dropdown-text">Todas as ações</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./agenda.html">
+ <span class="dropdown-text">Agenda</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./eventos.html"> 
-<span class="menu-text">Ações e eventos</span></a>
+    <a class="nav-link" href="./noticias.html"> 
+<span class="menu-text">Notícias</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./projetos.html"> 
@@ -252,9 +294,9 @@ window.Quarto = {
 
 <div class="destaque" style="background-image: url(imagens/malha-urbana.svg);">
 <p class="titulo-destaque" role="heading" aria-level="1">
-Estudantes mapeando a própria cidade
+Estudantes mapeando o mundo
 </p>
-<p><span class="lead">O capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.</span></p>
+<p><span class="lead">O capítulo YouthMappers da UFV, <em>campus</em> Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.</span></p>
 <div class="acoes">
 <p><a href="./eventos.html" class="btn-mapa">Conheça as ações</a> <a href="./sobre.html#como-participar" class="btn-contorno">Participe do programa</a></p>
 </div>
@@ -267,7 +309,7 @@ Estudantes mapeando a própria cidade
 <p><strong>2</strong> <span>estudantes envolvidos</span></p>
 </div>
 <div>
-<p><strong>32</strong> <span>ações realizadas</span></p>
+<p><strong>31</strong> <span>ações realizadas</span></p>
 </div>
 <div>
 <p><strong>53.826</strong> <span>edições no OpenStreetMap</span></p>
@@ -277,32 +319,15 @@ Estudantes mapeando a própria cidade
 </div>
 </div>
 <p><span class="atualizacao">Números atualizados em 09/10/2026.</span></p>
+<section id="proximas-acoes" class="level2 proximos" data-proximos="">
+<h2 class="anchored" data-anchor-id="proximas-acoes">Próximas ações</h2>
+<div class="proximos-grade"><article class="proximo" data-inicio="2026-11-12" data-termina="2026-11-12"><div class="proximo-data" style="background:#b9c2dc;color:#1d2b36" aria-hidden="true"><span class="dia">12</span><span class="mes">nov</span></div><div class="proximo-corpo"><span class="proximo-tipo">Conferência</span><h3 class="proximo-titulo anchored"><a href="eventos/2026-11-12-sotm-brasil-2026/">State of the Map Brasil 2026</a></h3><p class="proximo-quando">12 de novembro de 2026 · Uberlândia</p><p class="proximo-contagem" data-contagem=""></p><div class="proximo-acoes"><a class="btn-contorno" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=State+of+the+Map+Brasil+2026&amp;dates=20261112%2F20261113&amp;details=Confer%C3%AAncia+nacional+da+comunidade+OpenStreetMap%2C+em+Uberl%C3%A2ndia%2C+organizada+pela+UFU+e+pela+UFV.%0A%0Ahttps%3A%2F%2Fyouthmappers-ufv.github.io%2Feventos%2F2026-11-12-sotm-brasil-2026%2F&amp;location=Uberl%C3%A2ndia&amp;ctz=America%2FSao_Paulo">Adicionar à agenda</a></div></div></article></div>
+</section>
 <section id="ações-recentes" class="level2">
 <h2 class="anchored" data-anchor-id="ações-recentes">Ações recentes</h2>
 <div id="listing-ultimos-eventos" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Y29uZmVyJUMzJUFBbmNpYSUyQ2NvbXVuaWRhZGUlMjBPU00=" data-listing-date-sort="1794441600000" data-listing-file-modified-sort="1791521819870" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
-<a href="./eventos/2026-11-12-sotm-brasil-2026/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./eventos/2026-11-12-sotm-brasil-2026/capa.png" class="thumbnail-image card-img" style="height: 180px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-State of the Map Brasil 2026
-</h5>
-<div class="card-text listing-description delink">
-<p>Conferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-12/11/2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="ZXZlbnRv" data-listing-date-sort="1762387200000" data-listing-file-modified-sort="1791521819869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="g-col-1" data-index="0" data-categories="ZXZlbnRv" data-listing-date-sort="1762387200000" data-listing-file-modified-sort="1791552980638" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
 <a href="./eventos/2025-11-06-tradutona-mapcomplete/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img loading='lazy' src="imagens/sem-capa-evento.svg" style="height: 180px;"  class="thumbnail-image card-img"/></p>
@@ -321,7 +346,7 @@ Tradutona Mapcomplete
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="bWFwYXRvbmE=" data-listing-date-sort="1759968000000" data-listing-file-modified-sort="1791521819869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="g-col-1" data-index="1" data-categories="bWFwYXRvbmE=" data-listing-date-sort="1759968000000" data-listing-file-modified-sort="1791552980638" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
 <a href="./eventos/2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img loading='lazy' src="imagens/sem-capa-evento.svg" style="height: 180px;"  class="thumbnail-image card-img"/></p>
@@ -340,16 +365,63 @@ Mapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste
 </div>
 </div></a>
 </div>
+<div class="g-col-1" data-index="2" data-categories="b2ZpY2luYQ==" data-listing-date-sort="1758758400000" data-listing-file-modified-sort="1791552980638" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./eventos/2025-09-25-mapeamento-colaborativo-com-editor-josm/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img loading='lazy' src="imagens/sem-capa-evento.svg" style="height: 180px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Mapeamento Colaborativo com Editor JOSM
+</h5>
+<div class="card-text listing-description delink">
+<p>Oficina de mapeamento colaborativo do YouthMappers UFV.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+25/09/2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
 </div>
 <p><a href="./eventos.html">Ver todas as ações e eventos</a></p>
 </section>
+<section id="últimas-notícias" class="level2">
+<h2 class="anchored" data-anchor-id="últimas-notícias">Últimas notícias</h2>
+<div id="listing-ultimas-noticias" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="cGFydGljaXBhJUMzJUE3JUMzJUEzbw==" data-listing-date-sort="1696204800000" data-listing-file-modified-sort="1791552980641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<a href="./noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img loading='lazy' src="imagens/sem-capa-evento.svg" style="height: 180px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+YouthMappers UFV participa do State of the Map Brasil 2023, em Curitiba
+</h5>
+<div class="card-text listing-description delink">
+<p>Integrantes do programa participaram da conferência nacional da comunidade OpenStreetMap.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+02/10/2023
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">Nenhum item correspondente</div>
+</div>
+<p><a href="./noticias.html">Ver todas as notícias</a></p>
+</section>
 <section id="projetos-em-andamento" class="level2">
 <h2 class="anchored" data-anchor-id="projetos-em-andamento">Projetos em andamento</h2>
 <div id="listing-projetos-destaque" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="ZXh0ZW5zJUMzJUEzbw==" data-listing-date-sort="1759276800000" data-listing-file-modified-sort="1791521819872" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
+<div class="g-col-1" data-index="0" data-categories="ZXh0ZW5zJUMzJUEzbw==" data-listing-date-sort="1759276800000" data-listing-file-modified-sort="1791552980641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
 <a href="./projetos/2025-10-01-Ortoimagem-campus-ufv/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -365,7 +437,7 @@ Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias 
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="ZXh0ZW5zJUMzJUEzbyUyQ2FjZXNzaWJpbGlkYWRl" data-listing-date-sort="1759276800000" data-listing-file-modified-sort="1791521819873" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="117">
+<div class="g-col-1" data-index="1" data-categories="ZXh0ZW5zJUMzJUEzbyUyQ2FjZXNzaWJpbGlkYWRl" data-listing-date-sort="1759276800000" data-listing-file-modified-sort="1791552980642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="117">
 <a href="./projetos/2025-10-01-traducao-mapcomplete/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">

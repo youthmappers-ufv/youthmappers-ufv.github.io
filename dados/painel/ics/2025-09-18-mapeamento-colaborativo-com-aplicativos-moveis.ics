@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Mapeamento Colaborativo com Aplicativos Móveis
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250918
+DTEND;VALUE=DATE:20250919
+SUMMARY:Mapeamento Colaborativo com Aplicativos Móveis
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2025-09-18-mapeam
+ ento-colaborativo-com-aplicativos-moveis/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2025-09-18-mapeamento-colabo
+ rativo-com-aplicativos-moveis/
+END:VEVENT
+END:VCALENDAR

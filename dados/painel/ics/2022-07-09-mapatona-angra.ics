@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Mapatona Angra dos Reis
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2022-07-09-mapatona-angra@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;TZID=America/Sao_Paulo:20220709T210000
+DTEND;TZID=America/Sao_Paulo:20220709T230000
+SUMMARY:Mapatona Angra dos Reis
+DESCRIPTION:O projeto foi criado para priorizar o mapeamento de feições e
+ m áreas de risco geológico\, considerando os frequentes desastres ocorri
+ dos nesta região do estado do Rio de Janeiro\, como os deslizamentos que 
+ aconteceram em Angra dos Reis em abril de 2022\, com maior atenção ao ba
+ irro Monsuaba\, que foi o mais atingido e que vitimou\, fatalmente\, 11 pe
+ ssoas.\nMais informações: https://youthmappers-ufv.github.io/eventos/202
+ 2-07-09-mapatona-angra/
+LOCATION:Transmissão online pelo Google Meet
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/
+END:VEVENT
+END:VCALENDAR

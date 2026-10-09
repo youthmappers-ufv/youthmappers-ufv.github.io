@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Configuração e uso do software JOSM no mapeamento colaborati
+ vo
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento@youthmappe
+ rs-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20230928
+DTEND;VALUE=DATE:20230929
+SUMMARY:Configuração e uso do software JOSM no mapeamento colaborativo
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2023-09-28-config
+ uracao-e-uso-do-software-josm-no-mapeamento/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2023-09-28-configuracao-e-us
+ o-do-software-josm-no-mapeamento/
+END:VEVENT
+END:VCALENDAR

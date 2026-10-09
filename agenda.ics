@@ -1,0 +1,470 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:YouthMappers UFV
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2022-07-09-mapatona-angra@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;TZID=America/Sao_Paulo:20220709T210000
+DTEND;TZID=America/Sao_Paulo:20220709T230000
+SUMMARY:Mapatona Angra dos Reis
+DESCRIPTION:O projeto foi criado para priorizar o mapeamento de feições e
+ m áreas de risco geológico\, considerando os frequentes desastres ocorri
+ dos nesta região do estado do Rio de Janeiro\, como os deslizamentos que 
+ aconteceram em Angra dos Reis em abril de 2022\, com maior atenção ao ba
+ irro Monsuaba\, que foi o mais atingido e que vitimou\, fatalmente\, 11 pe
+ ssoas.\nMais informações: https://youthmappers-ufv.github.io/eventos/202
+ 2-07-09-mapatona-angra/
+LOCATION:Transmissão online pelo Google Meet
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2022-07-09-mapatona-angra/
+END:VEVENT
+BEGIN:VEVENT
+UID:2022-07-19-oficina-importacao-dados-osm-postgis@youthmappers-ufv.github
+ .io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20220719
+DTEND;VALUE=DATE:20220720
+SUMMARY:Oficina de Importação de Dados do OSM para o PostGIS usando o Osm
+ osis
+DESCRIPTION:Mais informações: https://youthmappers-ufv.github.io/eventos/
+ 2022-07-19-oficina-importacao-dados-osm-postgis/
+LOCATION:Online
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2022-07-19-oficina-importaca
+ o-dados-osm-postgis/
+END:VEVENT
+BEGIN:VEVENT
+UID:2022-10-15-mapatona-noroeste-de-rio-paranaiba@youthmappers-ufv.github.i
+ o
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20221015
+DTEND;VALUE=DATE:20221016
+SUMMARY:Mapatona Noroeste de Rio Paranaíba
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2022-10-15-mapatona-noroeste-de
+ -rio-paranaiba/
+LOCATION:Rio Paranaíba
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2022-10-15-mapatona-noroeste
+ -de-rio-paranaiba/
+END:VEVENT
+BEGIN:VEVENT
+UID:2023-08-09-mapatona-quississana-aniversario-osm@youthmappers-ufv.github
+ .io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20230809
+DTEND;VALUE=DATE:20230810
+SUMMARY:Mapatona Quississana - aniversário OSM
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2023-08-09-mapatona-quississana
+ -aniversario-osm/
+LOCATION:Quississana
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2023-08-09-mapatona-quississ
+ ana-aniversario-osm/
+END:VEVENT
+BEGIN:VEVENT
+UID:2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario@youthmapp
+ ers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;TZID=America/Sao_Paulo:20230825T100000
+DTEND;TZID=America/Sao_Paulo:20230825T120000
+SUMMARY:Youthmappers Mapeamento colaborativo e humanitário
+DESCRIPTION:Apresentação dos conceitos\, ferramentas e comunidades envolv
+ idas em mapeamento colaborativo e humanitário\nMais informações: https:
+ //youthmappers-ufv.github.io/eventos/2023-08-25-youthmappers-mapeamento-co
+ laborativo-e-humanitario/
+LOCATION:PVA226\, Rio Paranaíba
+CATEGORIES:Palestra
+URL:https://youthmappers-ufv.github.io/eventos/2023-08-25-youthmappers-mape
+ amento-colaborativo-e-humanitario/
+END:VEVENT
+BEGIN:VEVENT
+UID:2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos@youthmapper
+ s-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20230913
+DTEND;VALUE=DATE:20230914
+SUMMARY:Capacitação em Mapeamento Colaborativo - Conceitos Iniciais para 
+ o OpenStreetMap e editor iD
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2023-09-13-capaci
+ tacao-em-mapeamento-colaborativo-conceitos/
+LOCATION:Online
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2023-09-13-capacitacao-em-ma
+ peamento-colaborativo-conceitos/
+END:VEVENT
+BEGIN:VEVENT
+UID:2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento@youthmappe
+ rs-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20230928
+DTEND;VALUE=DATE:20230929
+SUMMARY:Configuração e uso do software JOSM no mapeamento colaborativo
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2023-09-28-config
+ uracao-e-uso-do-software-josm-no-mapeamento/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2023-09-28-configuracao-e-us
+ o-do-software-josm-no-mapeamento/
+END:VEVENT
+BEGIN:VEVENT
+UID:2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes@youthmappers-uf
+ v.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20230928
+DTEND;VALUE=DATE:20230929
+SUMMARY:Mapatona Região Sul atingida pelas enchentes
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2023-09-28-mapatona-regiao-sul-
+ atingida-pelas-enchentes/
+LOCATION:Rio Paranaíba
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2023-09-28-mapatona-regiao-s
+ ul-atingida-pelas-enchentes/
+END:VEVENT
+BEGIN:VEVENT
+UID:2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap@youth
+ mappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20231019
+DTEND;VALUE=DATE:20231020
+SUMMARY:Mapeamento de limites administrativos no OpenStreetMap
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2023-10-19-mapeam
+ ento-de-limites-administrativos-no-openstreetmap/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2023-10-19-mapeamento-de-lim
+ ites-administrativos-no-openstreetmap/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20240423
+DTEND;VALUE=DATE:20240424
+SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 01
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-04-23-capaci
+ tacao-em-mapeamento-colaborativo-aula-01/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-04-23-capacitacao-em-ma
+ peamento-colaborativo-aula-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-04-30-capacitacao-em-mapeamento-colaborativo-aula-02@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20240430
+DTEND;VALUE=DATE:20240501
+SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 02
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-04-30-capaci
+ tacao-em-mapeamento-colaborativo-aula-02/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-04-30-capacitacao-em-ma
+ peamento-colaborativo-aula-02/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-05-07-capacitacao-em-mapeamento-colaborativo-aula-03@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20240507
+DTEND;VALUE=DATE:20240508
+SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 03
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-05-07-capaci
+ tacao-em-mapeamento-colaborativo-aula-03/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-05-07-capacitacao-em-ma
+ peamento-colaborativo-aula-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-05-14-capacitacao-em-mapeamento-colaborativo-mapatona@youthmappers
+ -ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20240514
+DTEND;VALUE=DATE:20240515
+SUMMARY:Capacitação em Mapeamento Colaborativo - Mapatona
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2024-05-14-capacitacao-em-mapea
+ mento-colaborativo-mapatona/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2024-05-14-capacitacao-em-ma
+ peamento-colaborativo-mapatona/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-05-21-capacitacao-editor-id-esalq@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20240521
+DTEND;VALUE=DATE:20240522
+SUMMARY:Capacitação Editor iD - Esalq
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-05-21-capaci
+ tacao-editor-id-esalq/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-05-21-capacitacao-edito
+ r-id-esalq/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-08-09-mapatona-tres-coroas-rs-aniversario-osm@youthmappers-ufv.git
+ hub.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20240809
+DTEND;VALUE=DATE:20240810
+SUMMARY:Mapatona Três Coroas - RS - Aniversário OSM
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2024-08-09-mapatona-tres-coroas
+ -rs-aniversario-osm/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2024-08-09-mapatona-tres-cor
+ oas-rs-aniversario-osm/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear@yout
+ hmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20241017
+DTEND;VALUE=DATE:20241018
+SUMMARY:Introdução ao mapeamento Colaborativo e Mapatona - SEMEAR
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-10-17-introd
+ ucao-ao-mapeamento-colaborativo-e-mapatona-semear/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-10-17-introducao-ao-map
+ eamento-colaborativo-e-mapatona-semear/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-10-25-plugin-buildings-tools@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20241025
+DTEND;VALUE=DATE:20241026
+SUMMARY:Plugin buildings-tools
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-10-25-plugin
+ -buildings-tools/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-10-25-plugin-buildings-
+ tools/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-11-01-mapatona-zona-urbana-de-rio-paranaiba@youthmappers-ufv.githu
+ b.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20241101
+DTEND;VALUE=DATE:20241102
+SUMMARY:Mapatona Zona Urbana de Rio Paranaíba
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2024-11-01-mapatona-zona-urbana
+ -de-rio-paranaiba/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2024-11-01-mapatona-zona-urb
+ ana-de-rio-paranaiba/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-11-14-mapatona-zona-urbana-de-rio-paranaiba-parte-2@youthmappers-u
+ fv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20241114
+DTEND;VALUE=DATE:20241115
+SUMMARY:Mapatona Zona Urbana de Rio Paranaíba - Parte 2
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2024-11-14-mapatona-zona-urbana
+ -de-rio-paranaiba-parte-2/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2024-11-14-mapatona-zona-urb
+ ana-de-rio-paranaiba-parte-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:2024-11-23-mostra-de-profissoes@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20241123
+DTEND;VALUE=DATE:20241124
+SUMMARY:Mostra de Profissões
+DESCRIPTION:Evento com participação do YouthMappers UFV.\nMais informaç
+ ões: https://youthmappers-ufv.github.io/eventos/2024-11-23-mostra-de-prof
+ issoes/
+CATEGORIES:Evento
+URL:https://youthmappers-ufv.github.io/eventos/2024-11-23-mostra-de-profiss
+ oes/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-03-18-mostra-de-projetos-de-extensao@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250318
+DTEND;VALUE=DATE:20250319
+SUMMARY:Mostra de projetos de extensão
+DESCRIPTION:Evento com participação do YouthMappers UFV.\nMais informaç
+ ões: https://youthmappers-ufv.github.io/eventos/2025-03-18-mostra-de-proj
+ etos-de-extensao/
+CATEGORIES:Evento
+URL:https://youthmappers-ufv.github.io/eventos/2025-03-18-mostra-de-projeto
+ s-de-extensao/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250328
+DTEND;VALUE=DATE:20250329
+SUMMARY:Mapatona Open Data Day - Áreas da COP30 em Belém
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2025-03-28-mapatona-open-data-d
+ ay-areas-da-cop30-em-belem/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2025-03-28-mapatona-open-dat
+ a-day-areas-da-cop30-em-belem/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos@youthmapper
+ s-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250602
+DTEND;VALUE=DATE:20250603
+SUMMARY:Capacitação em Mapeamento Colaborativo - Conceitos Básicos
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2025-06-02-capaci
+ tacao-em-mapeamento-colaborativo-conceitos/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2025-06-02-capacitacao-em-ma
+ peamento-colaborativo-conceitos/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-06-09-capacitacao-em-mapeamento-colaborativo-editor-id@youthmapper
+ s-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250609
+DTEND;VALUE=DATE:20250610
+SUMMARY:Capacitação em Mapeamento colaborativo - Editor iD
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2025-06-09-capaci
+ tacao-em-mapeamento-colaborativo-editor-id/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2025-06-09-capacitacao-em-ma
+ peamento-colaborativo-editor-id/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-06-16-capacitacao-em-mapeamento-colaborativo-editor-josm@youthmapp
+ ers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250616
+DTEND;VALUE=DATE:20250617
+SUMMARY:Capacitação em Mapeamento Colaborativo - Editor JOSM
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2025-06-16-capaci
+ tacao-em-mapeamento-colaborativo-editor-josm/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2025-06-16-capacitacao-em-ma
+ peamento-colaborativo-editor-josm/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona@youthmappers
+ -ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250623
+DTEND;VALUE=DATE:20250624
+SUMMARY:Capacitação em Mapeamento Colaborativo - Mapatona
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2025-06-23-capacitacao-em-mapea
+ mento-colaborativo-mapatona/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2025-06-23-capacitacao-em-ma
+ peamento-colaborativo-mapatona/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250918
+DTEND;VALUE=DATE:20250919
+SUMMARY:Mapeamento Colaborativo com Aplicativos Móveis
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2025-09-18-mapeam
+ ento-colaborativo-com-aplicativos-moveis/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2025-09-18-mapeamento-colabo
+ rativo-com-aplicativos-moveis/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-09-24-introducao-ao-mapeamento-colaborativo@youthmappers-ufv.githu
+ b.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250924
+DTEND;VALUE=DATE:20250925
+SUMMARY:Introdução ao Mapeamento Colaborativo
+DESCRIPTION:Palestra do YouthMappers UFV sobre mapeamento colaborativo.\nMa
+ is informações: https://youthmappers-ufv.github.io/eventos/2025-09-24-in
+ troducao-ao-mapeamento-colaborativo/
+CATEGORIES:Palestra
+URL:https://youthmappers-ufv.github.io/eventos/2025-09-24-introducao-ao-map
+ eamento-colaborativo/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-09-25-mapeamento-colaborativo-com-editor-josm@youthmappers-ufv.git
+ hub.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20250925
+DTEND;VALUE=DATE:20250926
+SUMMARY:Mapeamento Colaborativo com Editor JOSM
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2025-09-25-mapeam
+ ento-colaborativo-com-editor-josm/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2025-09-25-mapeamento-colabo
+ rativo-com-editor-josm/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba@youth
+ mappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20251009
+DTEND;VALUE=DATE:20251010
+SUMMARY:Mapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região
+  Sudeste
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2025-10-09-mapatona-youthmapper
+ s-estradas-rurais-de-rio-paranaiba/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2025-10-09-mapatona-youthmap
+ pers-estradas-rurais-de-rio-paranaiba/
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-11-06-tradutona-mapcomplete@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20251106
+DTEND;VALUE=DATE:20251107
+SUMMARY:Tradutona Mapcomplete
+DESCRIPTION:Evento com participação do YouthMappers UFV.\nMais informaç
+ ões: https://youthmappers-ufv.github.io/eventos/2025-11-06-tradutona-mapc
+ omplete/
+CATEGORIES:Evento
+URL:https://youthmappers-ufv.github.io/eventos/2025-11-06-tradutona-mapcomp
+ lete/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-12-sotm-brasil-2026@youthmappers-ufv.github.io
+DTSTAMP:20261009T133636Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:State of the Map Brasil 2026
+DESCRIPTION:Conferência nacional da comunidade OpenStreetMap\, em Uberlân
+ dia\, organizada pela UFU e pela UFV.\nMais informações: https://youthma
+ ppers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/
+LOCATION:Uberlândia
+CATEGORIES:Conferência
+URL:https://youthmappers-ufv.github.io/eventos/2026-11-12-sotm-brasil-2026/
+END:VEVENT
+END:VCALENDAR

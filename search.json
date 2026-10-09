@@ -56,18 +56,39 @@
     "text": "Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\n\nextensão\n\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\n\nextensão\n\nacessibilidade\n\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\nNenhum item correspondente"
   },
   {
+    "objectID": "noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html",
+    "href": "noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html",
+    "title": "YouthMappers UFV participa do State of the Map Brasil 2023, em Curitiba",
+    "section": "",
+    "text": "Data\n\n02/10/2023\n\nCategoria\n\nParticipação\n\nLocal\n\nUFPR, Curitiba"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "YouthMappers UFV",
     "section": "",
-    "text": "Estudantes mapeando a própria cidade\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 09/10/2026."
+    "text": "Estudantes mapeando o mundo\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 09/10/2026."
+  },
+  {
+    "objectID": "index.html#proximas-acoes",
+    "href": "index.html#proximas-acoes",
+    "title": "YouthMappers UFV",
+    "section": "Próximas ações",
+    "text": "Próximas ações\n12novConferênciaState of the Map Brasil 202612 de novembro de 2026 · UberlândiaAdicionar à agenda"
   },
   {
     "objectID": "index.html#ações-recentes",
     "href": "index.html#ações-recentes",
     "title": "YouthMappers UFV",
     "section": "Ações recentes",
-    "text": "Ações recentes\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\nTradutona Mapcomplete\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n06/11/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/10/2025\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
+    "text": "Ações recentes\n\n\n\n\n\n\n\n\nTradutona Mapcomplete\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n06/11/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/10/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Editor JOSM\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/09/2025\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
+  },
+  {
+    "objectID": "index.html#últimas-notícias",
+    "href": "index.html#últimas-notícias",
+    "title": "YouthMappers UFV",
+    "section": "Últimas notícias",
+    "text": "Últimas notícias\n\n\n\n\n\n\n\n\nYouthMappers UFV participa do State of the Map Brasil 2023, em Curitiba\n\n\nIntegrantes do programa participaram da conferência nacional da comunidade OpenStreetMap.\n\n\n\n02/10/2023\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as notícias"
   },
   {
     "objectID": "index.html#projetos-em-andamento",
@@ -161,46 +182,60 @@
     "text": "Data\n\n19/10/2023\n\nFormato\n\nOficina"
   },
   {
-    "objectID": "eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
-    "href": "eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
-    "title": "Mapatona Região Sul atingida pelas enchentes",
+    "objectID": "eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
+    "href": "eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
+    "title": "Configuração e uso do software JOSM no mapeamento colaborativo",
     "section": "",
-    "text": "Data\n\n28/09/2023\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nRegião Sul atingida pelas enchentes"
+    "text": "Data\n\n28/09/2023\n\nFormato\n\nOficina"
   },
   {
-    "objectID": "eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
-    "href": "eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
-    "title": "Capacitação em Mapeamento Colaborativo - Conceitos Iniciais para o OpenStreetMap e editor iD",
+    "objectID": "eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
+    "href": "eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
+    "title": "Youthmappers Mapeamento colaborativo e humanitário",
     "section": "",
-    "text": "Data\n\n13/09/2023\n\nFormato\n\nOficina"
+    "text": "Data\n\n25/08/2023, das 10h às 12h\n\nFormato\n\nPalestra, híbrida\n\nLocal\n\nPVA226, Rio Paranaíba\n\nCarga horária\n\n2 horas\n\nParticipantes\n\n10 pessoas\n\nEquipe do programa\n\nRodrigo Smarzaro"
   },
   {
-    "objectID": "eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
-    "href": "eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
-    "title": "Mapatona Quississana - aniversário OSM",
+    "objectID": "eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
+    "href": "eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
+    "title": "Mapatona Noroeste de Rio Paranaíba",
     "section": "",
-    "text": "Data\n\n09/08/2023\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nQuississana"
+    "text": "Data\n\n15/10/2022\n\nFormato\n\nMapatona, híbrida\n\nLocal\n\nRio Paranaíba\n\nÁrea mapeada\n\nNoroeste de Rio Paranaíba"
   },
   {
-    "objectID": "eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
-    "href": "eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
-    "title": "Oficina de Importação de Dados do OSM para o PostGIS usando o Osmosis",
+    "objectID": "eventos/2022-07-09-mapatona-angra/index.html",
+    "href": "eventos/2022-07-09-mapatona-angra/index.html",
+    "title": "Mapatona Angra dos Reis",
     "section": "",
-    "text": "Data\n\n19/07/2022\n\nFormato\n\nOficina, remota\n\nCarga horária\n\n2 horas\n\nParticipantes\n\n15 pessoas, das quais 10 da comunidade externa\n\nEquipe do programa\n\nRodrigo Smarzaro e Júlia Mendonça Silva\n\n\n\nConteúdo Programado: - Download de dados do OpenStreetMap no site Geofabrik - Criação de arquivo com dados do OpenStreetMap para uma área de interesse - Importação dos dados para o PostGIS - Criação de consultas simples envolvendo os dados do OpenStreetMap - Ligação entre o PostGIS e o QGIS - Exemplos de visualizações dos dados usando o QGIS."
+    "text": "Data\n\n09/07/2022, das 21h às 23h\n\nFormato\n\nMapatona, remota\n\nLocal\n\nTransmissão online pelo Google Meet\n\nÁrea mapeada\n\nAngra dos Reis (RJ), com prioridade para o bairro Monsuaba\n\nCarga horária\n\n4 horas\n\nParticipantes\n\n10 pessoas\n\nEquipe do programa\n\nRodrigo Smarzaro e Júlia Mendonça Silva\n\nLinks\n\nProjeto 12411 no Tasking Manager\nO Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap."
   },
   {
-    "objectID": "eventos.html",
-    "href": "eventos.html",
-    "title": "Ações e eventos",
-    "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Título\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\n\nconferência\n\ncomunidade OSM\n\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\nTradutona Mapcomplete\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n06/11/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/10/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Editor JOSM\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/09/2025\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Mapeamento Colaborativo\n\n\n\npalestra\n\n\n\nPalestra do YouthMappers UFV sobre mapeamento colaborativo.\n\n\n\n24/09/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Aplicativos Móveis\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n18/09/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Mapatona\n\n\n\nmapatona\n\ncapacitação\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n23/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Editor JOSM\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n16/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento colaborativo - Editor iD\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n09/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Conceitos Básicos\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n02/06/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Open Data Day - Áreas da COP30 em Belém\n\n\n\nmapatona\n\nOpen Data Day\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n28/03/2025\n\n\n\n\n\n\n\n\n\n\n\nMostra de projetos de extensão\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n18/03/2025\n\n\n\n\n\n\n\n\n\n\n\nMostra de Profissões\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n23/11/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Zona Urbana de Rio Paranaíba - Parte 2\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n14/11/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Zona Urbana de Rio Paranaíba\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n01/11/2024\n\n\n\n\n\n\n\n\n\n\n\nPlugin buildings-tools\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/10/2024\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao mapeamento Colaborativo e Mapatona - SEMEAR\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n17/10/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Três Coroas - RS - Aniversário OSM\n\n\n\nmapatona\n\naniversário OSM\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/08/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação Editor iD - Esalq\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n21/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Mapatona\n\n\n\nmapatona\n\ncapacitação\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n14/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 03\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n07/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 02\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n30/04/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 01\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n23/04/2024\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de limites administrativos no OpenStreetMap\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n19/10/2023\n\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil Curitiba 2023\n\n\n\nconferência\n\n\n\nParticipação do YouthMappers UFV na conferência.\n\n\n\n02/10/2023\n\n\n\n\n\n\n\n\n\n\n\nConfiguração e uso do software JOSM no mapeamento colaborativo\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n28/09/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Região Sul atingida pelas enchentes\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n28/09/2023\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Conceitos Iniciais para o OpenStreetMap e editor iD\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n13/09/2023\n\n\n\n\n\n\n\n\n\n\n\nYouthmappers Mapeamento colaborativo e humanitário\n\n\n\npalestra\n\ncapacitação\n\n\n\nApresentação dos conceitos, ferramentas e comunidades envolvidas em mapeamento colaborativo e humanitário\n\n\n\n25/08/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Quississana - aniversário OSM\n\n\n\nmapatona\n\naniversário OSM\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/08/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Noroeste de Rio Paranaíba\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n15/10/2022\n\n\n\n\n\n\n\n\n\n\n\nOficina de Importação de Dados do OSM para o PostGIS usando o Osmosis\n\n\n\noficina\n\n\n\n\n\n\n\n19/07/2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\n\nmapatona\n\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente"
+    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
+    "href": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
+    "title": "Mapatona Angra dos Reis",
+    "section": "Área mapeada",
+    "text": "Área mapeada"
   },
   {
-    "objectID": "equipe/julia-mendonca.html",
-    "href": "equipe/julia-mendonca.html",
-    "title": "Júlia Mendonça Silva",
+    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
+    "href": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
+    "title": "Mapatona Angra dos Reis",
+    "section": "Fotos",
+    "text": "Fotos\nClique em uma foto para ampliar e use as setas para navegar.\n\n\n\n\nAbertura da atividade\n\n\n\n\n\nEquipe\n\n\n\n\n\nEquipe"
+  },
+  {
+    "objectID": "equipe/rodrigo-smarzaro.html",
+    "href": "equipe/rodrigo-smarzaro.html",
+    "title": "Rodrigo Smarzaro",
     "section": "",
-    "text": "Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário."
+    "text": "Professor da UFV e atual coordenador do programa YouthMappers UFV. Tem experiência na área de Ciência da Computação, com ênfase em Banco de Dados, atuando principalmente nos seguintes temas: bancos de dados geográficos, urban computing, VGI e integração de dados espaciais. Mapeador OSM desde 2008, membro da comunidade YouthMappers desde 2024, membro da OSGEO Brasil."
+  },
+  {
+    "objectID": "agenda.html",
+    "href": "agenda.html",
+    "title": "Agenda",
+    "section": "",
+    "text": "Receba os eventos do programa na sua agenda. Ao assinar, cada novo evento publicado no site aparece sozinho no seu calendário.Assinar no Google AgendaCopiar o endereço da agenda"
   },
   {
     "objectID": "equipe.html",
@@ -231,60 +266,60 @@
     "text": "Egressos\nPessoas que passaram pelo programa e ajudaram a construí-lo.\nJúlia Mendonça SilvaVoluntário de 2022 a 2024, Sistemas de Informação"
   },
   {
-    "objectID": "equipe/rodrigo-smarzaro.html",
-    "href": "equipe/rodrigo-smarzaro.html",
-    "title": "Rodrigo Smarzaro",
+    "objectID": "equipe/julia-mendonca.html",
+    "href": "equipe/julia-mendonca.html",
+    "title": "Júlia Mendonça Silva",
     "section": "",
-    "text": "Professor da UFV e atual coordenador do programa YouthMappers UFV. Tem experiência na área de Ciência da Computação, com ênfase em Banco de Dados, atuando principalmente nos seguintes temas: bancos de dados geográficos, urban computing, VGI e integração de dados espaciais. Mapeador OSM desde 2008, membro da comunidade YouthMappers desde 2024, membro da OSGEO Brasil."
+    "text": "Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário."
   },
   {
-    "objectID": "eventos/2022-07-09-mapatona-angra/index.html",
-    "href": "eventos/2022-07-09-mapatona-angra/index.html",
-    "title": "Mapatona Angra dos Reis",
+    "objectID": "eventos.html",
+    "href": "eventos.html",
+    "title": "Ações e eventos",
     "section": "",
-    "text": "Data\n\n09/07/2022, das 21h às 23h\n\nFormato\n\nMapatona, remota\n\nLocal\n\nTransmissão online pelo Google Meet\n\nÁrea mapeada\n\nAngra dos Reis (RJ), com prioridade para o bairro Monsuaba\n\nCarga horária\n\n4 horas\n\nParticipantes\n\n10 pessoas\n\nEquipe do programa\n\nRodrigo Smarzaro e Júlia Mendonça Silva\n\nLinks\n\nProjeto 12411 no Tasking Manager\nO Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap."
+    "text": "12novConferência12 de novembro de 2026 · UberlândiaAdicionar à agenda"
   },
   {
-    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
-    "href": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
-    "title": "Mapatona Angra dos Reis",
-    "section": "Área mapeada",
-    "text": "Área mapeada"
-  },
-  {
-    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
-    "href": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
-    "title": "Mapatona Angra dos Reis",
-    "section": "Fotos",
-    "text": "Fotos\nClique em uma foto para ampliar e use as setas para navegar.\n\n\n\n\nAbertura da atividade\n\n\n\n\n\nEquipe\n\n\n\n\n\nEquipe"
-  },
-  {
-    "objectID": "eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
-    "href": "eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
-    "title": "Mapatona Noroeste de Rio Paranaíba",
+    "objectID": "eventos.html#proximas-acoes",
+    "href": "eventos.html#proximas-acoes",
+    "title": "Ações e eventos",
     "section": "",
-    "text": "Data\n\n15/10/2022\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nNoroeste de Rio Paranaíba"
+    "text": "12novConferência12 de novembro de 2026 · UberlândiaAdicionar à agenda"
   },
   {
-    "objectID": "eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
-    "href": "eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
-    "title": "Youthmappers Mapeamento colaborativo e humanitário",
-    "section": "",
-    "text": "Data\n\n25/08/2023, das 10h às 12h\n\nFormato\n\nPalestra, híbrida\n\nLocal\n\nPVA226, Rio Paranaíba\n\nCarga horária\n\n2 horas\n\nParticipantes\n\n10 pessoas\n\nEquipe do programa\n\nRodrigo Smarzaro"
+    "objectID": "eventos.html#todas-as-ações",
+    "href": "eventos.html#todas-as-ações",
+    "title": "Ações e eventos",
+    "section": "Todas as ações",
+    "text": "Todas as ações\nVer em formato de calendário\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Título\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\n\nconferência\n\ncomunidade OSM\n\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\nTradutona Mapcomplete\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n06/11/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/10/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Editor JOSM\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/09/2025\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Mapeamento Colaborativo\n\n\n\npalestra\n\n\n\nPalestra do YouthMappers UFV sobre mapeamento colaborativo.\n\n\n\n24/09/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Aplicativos Móveis\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n18/09/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Mapatona\n\n\n\nmapatona\n\ncapacitação\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n23/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Editor JOSM\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n16/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento colaborativo - Editor iD\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n09/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Conceitos Básicos\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n02/06/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Open Data Day - Áreas da COP30 em Belém\n\n\n\nmapatona\n\nOpen Data Day\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n28/03/2025\n\n\n\n\n\n\n\n\n\n\n\nMostra de projetos de extensão\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n18/03/2025\n\n\n\n\n\n\n\n\n\n\n\nMostra de Profissões\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n23/11/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Zona Urbana de Rio Paranaíba - Parte 2\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n14/11/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Zona Urbana de Rio Paranaíba\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n01/11/2024\n\n\n\n\n\n\n\n\n\n\n\nPlugin buildings-tools\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/10/2024\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao mapeamento Colaborativo e Mapatona - SEMEAR\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n17/10/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Três Coroas - RS - Aniversário OSM\n\n\n\nmapatona\n\naniversário OSM\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/08/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação Editor iD - Esalq\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n21/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Mapatona\n\n\n\nmapatona\n\ncapacitação\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n14/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 03\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n07/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 02\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n30/04/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 01\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n23/04/2024\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de limites administrativos no OpenStreetMap\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n19/10/2023\n\n\n\n\n\n\n\n\n\n\n\nConfiguração e uso do software JOSM no mapeamento colaborativo\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n28/09/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Região Sul atingida pelas enchentes\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n28/09/2023\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Conceitos Iniciais para o OpenStreetMap e editor iD\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n13/09/2023\n\n\n\n\n\n\n\n\n\n\n\nYouthmappers Mapeamento colaborativo e humanitário\n\n\n\npalestra\n\ncapacitação\n\n\n\nApresentação dos conceitos, ferramentas e comunidades envolvidas em mapeamento colaborativo e humanitário\n\n\n\n25/08/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Quississana - aniversário OSM\n\n\n\nmapatona\n\naniversário OSM\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/08/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Noroeste de Rio Paranaíba\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n15/10/2022\n\n\n\n\n\n\n\n\n\n\n\nOficina de Importação de Dados do OSM para o PostGIS usando o Osmosis\n\n\n\noficina\n\n\n\n\n\n\n\n19/07/2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\n\nmapatona\n\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
-    "href": "eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
-    "title": "Configuração e uso do software JOSM no mapeamento colaborativo",
+    "objectID": "eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
+    "href": "eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
+    "title": "Oficina de Importação de Dados do OSM para o PostGIS usando o Osmosis",
     "section": "",
-    "text": "Data\n\n28/09/2023\n\nFormato\n\nOficina"
+    "text": "Data\n\n19/07/2022\n\nFormato\n\nOficina, remota\n\nCarga horária\n\n2 horas\n\nParticipantes\n\n15 pessoas, das quais 10 da comunidade externa\n\nEquipe do programa\n\nRodrigo Smarzaro e Júlia Mendonça Silva\n\n\n\nConteúdo Programado: - Download de dados do OpenStreetMap no site Geofabrik - Criação de arquivo com dados do OpenStreetMap para uma área de interesse - Importação dos dados para o PostGIS - Criação de consultas simples envolvendo os dados do OpenStreetMap - Ligação entre o PostGIS e o QGIS - Exemplos de visualizações dos dados usando o QGIS."
   },
   {
-    "objectID": "eventos/2023-10-02-state-of-the-map-brasil-curitiba-2023/index.html",
-    "href": "eventos/2023-10-02-state-of-the-map-brasil-curitiba-2023/index.html",
-    "title": "State of the Map Brasil Curitiba 2023",
+    "objectID": "eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
+    "href": "eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
+    "title": "Mapatona Quississana - aniversário OSM",
     "section": "",
-    "text": "Data\n\n02/10/2023\n\nFormato\n\nConferência\n\nLocal\n\nCuritiba"
+    "text": "Data\n\n09/08/2023\n\nFormato\n\nMapatona, híbrida\n\nLocal\n\nQuississana\n\nÁrea mapeada\n\nQuississana"
+  },
+  {
+    "objectID": "eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+    "href": "eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Conceitos Iniciais para o OpenStreetMap e editor iD",
+    "section": "",
+    "text": "Data\n\n13/09/2023\n\nFormato\n\nOficina, remota\n\nCarga horária\n\n4 horas"
+  },
+  {
+    "objectID": "eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
+    "href": "eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
+    "title": "Mapatona Região Sul atingida pelas enchentes",
+    "section": "",
+    "text": "Data\n\n28/09/2023\n\nFormato\n\nMapatona, híbrida\n\nLocal\n\nRio Paranaíba\n\nÁrea mapeada\n\nRegião Sul atingida pelas enchentes\n\nCarga horária\n\n4 horas"
   },
   {
     "objectID": "eventos/2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01/index.html",
@@ -369,6 +404,13 @@
     "title": "State of the Map Brasil 2026",
     "section": "",
     "text": "Data\n\n12 e 13 de novembro de 2026\n\nLocal\n\nUberlândia, MG\n\nOrganização\n\nUniversidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV)\n\nSite oficial\n\n\nhttps://sotm-br.github.io/2026/\n\n\n\nO State of the Map Brasil é o encontro anual da comunidade brasileira do OpenStreetMap."
+  },
+  {
+    "objectID": "noticias.html",
+    "href": "noticias.html",
+    "title": "Notícias",
+    "section": "",
+    "text": "YouthMappers UFV participa do State of the Map Brasil 2023, em Curitiba\n\n\n\nparticipação\n\n\n\nIntegrantes do programa participaram da conferência nacional da comunidade OpenStreetMap.\n\n\n\n\n\n02/10/2023\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
