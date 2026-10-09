@@ -18,7 +18,7 @@ listing:
     max-items: 3
     fields: [image, date, title, description]
     image-height: 180px
-    image-placeholder: imagens/sem-capa-evento.svg
+    image-placeholder: imagens/sem-capa-noticia.svg
   - id: projetos-destaque
     contents: projetos
     image-placeholder: imagens/sem-capa-projeto.svg

@@ -9,7 +9,7 @@ listing:
   categories: true
   filter-ui: true
   fields: [image, date, title, description, categories]
-  image-placeholder: imagens/sem-capa-evento.svg
+  image-placeholder: imagens/sem-capa-noticia.svg
   feed: true
 page-layout: full
 ---
