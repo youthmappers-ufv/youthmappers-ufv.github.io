@@ -6,7 +6,7 @@
 # =============================================================
 
 - id: ufv-crp
-  nome: Universidade Federal de Viçosa - Campus Rio Paranaíba
+  nome: Universidade Federal de Viçosa - _Campus_ Rio Paranaíba
   tipo: universidade
   desde: 2022
   # logo: imagens/parceiros/prefeitura-exemplo.png

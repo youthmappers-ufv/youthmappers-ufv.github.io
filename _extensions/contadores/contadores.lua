@@ -5,8 +5,8 @@
   próprios arquivos do projeto. Uso no .qmd:
 
     {{< contar acoes >}}        eventos já realizados (pasta com data <= hoje)
-    {{< contar estudantes >}}   pessoas com situacao: atual ou egresso
-    {{< contar equipe-atual >}} pessoas com situacao: atual
+    {{< contar estudantes >}}   estudantes (graduação ou pós) que já participaram
+    {{< contar equipe-atual >}} pessoas em atividade, exceto a coordenação
     {{< contar parceiros >}}    parceiros em _data/parceiros.yml
     {{< osm edits >}}           campo do arquivo dados/osm.json
     {{< atualizado >}}          data da última renderização
@@ -54,18 +54,14 @@ local function contar_acoes()
   return n
 end
 
--- Equipe: lê o campo "situacao:" do cabeçalho de cada arquivo.
-local function contar_pessoas(situacoes)
-  local dir = raiz() .. "/equipe"
-  local n = 0
-  for _, nome in ipairs(listar(dir)) do
-    if nome:match("%.qmd$") then
-      local texto = ler(dir .. "/" .. nome) or ""
-      local sit = texto:match("\nsituacao:%s*([%w_]+)")
-      if sit and situacoes[sit] then n = n + 1 end
-    end
-  end
-  return n
+-- Equipe: números calculados por scripts/gerar-dados.ts a partir dos
+-- períodos e do vínculo de cada pessoa (a mesma fonte da página Equipe e do painel)
+local function contador_gerado(chave)
+  local texto = ler(raiz() .. "/dados/painel/contadores.json")
+  if not texto then return 0 end
+  local ok, dados = pcall(pandoc.json.decode, texto, false)
+  if not ok or type(dados) ~= "table" then return 0 end
+  return tonumber(dados[chave]) or 0
 end
 
 -- Parceiros: entradas "- id:" em _data/parceiros.yml
@@ -79,8 +75,8 @@ end
 
 local contadores = {
   ["acoes"]        = contar_acoes,
-  ["estudantes"]   = function() return contar_pessoas({ atual = true, egresso = true }) end,
-  ["equipe-atual"] = function() return contar_pessoas({ atual = true }) end,
+  ["estudantes"]   = function() return contador_gerado("estudantes") end,
+  ["equipe-atual"] = function() return contador_gerado("equipe_atual") end,
   ["parceiros"]    = contar_parceiros,
 }
 

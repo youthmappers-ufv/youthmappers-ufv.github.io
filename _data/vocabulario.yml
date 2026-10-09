@@ -28,16 +28,29 @@ vinculos:
   tecnico:       Técnico-administrativo
   externo:       Externo à UFV
 
+# Função no programa de extensão (vínculo exigido pela UFV), por período.
+# A situação de cada pessoa (coordenação, equipe atual, egresso) não é
+# informada: é calculada a partir dos períodos.
 funcoes:
   coordenacao: Coordenação
   bolsista:    Bolsista
   voluntario:  Voluntário
   colaborador: Colaborador
 
-situacoes:
-  coordenacao: Coordenação
-  atual:       Equipe atual
-  egresso:     Egresso
+# Cargos na organização do capítulo (opcionais, com mandatos próprios).
+# Para criar, renomear ou reordenar cargos, basta editar esta lista:
+#   nome      texto exibido no site (prefira o nome do cargo: "Presidência")
+#   ordem     posição na seção "Diretoria do capítulo"
+#   historico true = gera a seção de mandatos anteriores (titulo_historico)
+#   ativo     false = cargo extinto: o histórico continua válido, mas não
+#             pode haver mandato em aberto. Nunca apague um cargo já usado.
+cargos:
+  presidencia:
+    nome: Presidência
+    ordem: 1
+    historico: true
+    titulo_historico: Presidências anteriores
+    ativo: true
 
 tipos_evento:
   mapathon:    Mapathon

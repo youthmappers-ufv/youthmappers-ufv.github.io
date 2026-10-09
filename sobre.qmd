@@ -6,7 +6,7 @@ description: "O que é o YouthMappers UFV, o que fazemos e como participar."
 <!-- TEXTO DE EXEMPLO: adapte a partir da proposta registrada na
      Pró-Reitoria de Extensão e Cultura (fundamentação, objetivos, ODS). -->
 
-O **YouthMappers UFV** é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional [YouthMappers](https://www.youthmappers.org), que reúne estudantes universitários em torno do mapeamento colaborativo.
+O **YouthMappers UFV** é um programa de extensão da Universidade Federal de Viçosa, _campus_ Rio Paranaíba, e um capítulo da rede internacional [YouthMappers](https://www.youthmappers.org), que reúne estudantes universitários em torno do mapeamento colaborativo.
 
 O programa atua em duas frentes:
 

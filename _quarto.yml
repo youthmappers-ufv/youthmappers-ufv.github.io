@@ -15,6 +15,7 @@ project:
   # ignorados automaticamente pelo Quarto e não viram páginas.
   resources:
     - imagens/
+    - equipe/fotos/
     - dados/painel/
 
 lang: pt

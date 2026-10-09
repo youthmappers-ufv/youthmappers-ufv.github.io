@@ -1,8 +1,6 @@
 ---
 title: "Rodrigo Smarzaro"
 image: fotos/rodrigo-smarzaro.png
-description: "Coordenador do programa"
-situacao: coordenacao
 about:
     template: trestles
     links:
@@ -15,7 +13,7 @@ about:
 # --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
 #curso: SIN                           # código do curso (obrigatório para estudantes)
 vinculo: docente                     # graduacao, pos-graduacao, docente, tecnico, externo
-osm: usuario                         # usuário no OpenStreetMap (opcional)
+osm: Smarzaro                        # usuário no OpenStreetMap (opcional)
 periodos:                            # um item por função exercida, em ordem
   - funcao: coordenacao              # coordenacao, bolsista, voluntario, colaborador
     inicio: 2022-06                  # AAAA-MM

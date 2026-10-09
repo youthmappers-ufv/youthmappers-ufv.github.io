@@ -4,7 +4,9 @@
  *
  *   Fontes                                  Saídas (dados/painel/)
  *   _data/vocabulario.yml, _data/parceiros.yml
- *   equipe/*.qmd (cabeçalho)          ->   membros.json, periodos.json
+ *   equipe/*.qmd (cabeçalho)          ->   membros.json, periodos.json, cargos.json,
+ *                                          equipe.json (seções da página Equipe),
+ *                                          contadores.json (página inicial)
  *   eventos/* /index.qmd               ->   eventos.json, participacoes.json
  *   projetos/* /index.qmd              ->   projetos.json
  *   publicacoes.bib                    ->   publicacoes.json
@@ -72,7 +74,7 @@ const semestreAtual = `${hoje.slice(0, 4)}.${Number(hoje.slice(5, 7)) <= 7 ? 1 :
 
 // ---------- vocabulário e parceiros ----------
 const vocab = ((await lerYaml("_data/vocabulario.yml")) ?? {}) as Record<string, Obj>;
-for (const chave of ["cursos", "vinculos", "funcoes", "situacoes", "tipos_evento", "modalidades",
+for (const chave of ["cursos", "vinculos", "funcoes", "cargos", "tipos_evento", "modalidades",
                      "tipos_projeto", "tipos_publicacao", "tipos_parceiro", "ods"]) {
   if (!vocab[chave]) { problema("_data/vocabulario.yml", `lista "${chave}" ausente`); vocab[chave] = {}; }
 }
@@ -90,41 +92,86 @@ for (const p of ((await lerYaml("_data/parceiros.yml")) ?? []) as Obj[]) {
   parceiros.push({ id, tipo, desde: p.desde ?? null });
 }
 
-// ---------- membros e períodos ----------
+// ---------- membros, períodos e cargos ----------
+// A situação (coordenação, atual, egresso) não é informada: é calculada.
+type Periodo = { inicio: string; fim: string | null };
+const aberto = (p: Periodo) => p.fim === null;
+const ano = (mes: string) => mes.slice(0, 4);
+const intervaloAnos = (ini: string, fim: string) => ano(ini) === ano(fim) ? ano(ini) : `${ano(ini)} a ${ano(fim)}`;
+const estudante = (vinculo: unknown) => vinculo === "graduacao" || vinculo === "pos-graduacao";
+const cargosVocab = vocab.cargos as Record<string, Obj>;
+
+/** Lê e valida uma lista de períodos (de função ou de cargo) */
+function lerPeriodos(arq: string, rotulo: string, lista: unknown, campo: string, dominio: Obj) {
+  const saida: (Periodo & { valor: string })[] = [];
+  for (const [i, p] of ((Array.isArray(lista) ? lista : []) as Obj[]).entries()) {
+    const ref = `${arq} (${rotulo} ${i + 1})`;
+    const valor = noVocabulario(ref, campo, texto(p[campo]), dominio);
+    const inicio = texto(p.inicio);
+    const fim = texto(p.fim);
+    if (!ehMes(inicio)) { problema(ref, `"inicio" deve ser AAAA-MM (encontrado: ${inicio})`); continue; }
+    if (fim !== null && !ehMes(fim)) { problema(ref, `"fim" deve ser AAAA-MM (encontrado: ${fim})`); continue; }
+    if (fim !== null && fim < inicio!) problema(ref, `"fim" (${fim}) é anterior ao "inicio" (${inicio})`);
+    if (inicio! > mesAtual) problema(ref, `"inicio" (${inicio}) está no futuro`);
+    if (valor) saida.push({ valor, inicio: inicio!, fim });
+  }
+  return saida;
+}
+
 const membros: Obj[] = [];
 const periodos: Obj[] = [];
+const mandatos: Obj[] = [];   // períodos de cargo
+const pessoas: Obj[] = [];    // dados completos, para montar a página Equipe
 for (const e of await listar("equipe")) {
   if (!e.isFile || !e.name.endsWith(".qmd")) continue;
   const arq = `equipe/${e.name}`;
   const fm = await cabecalho(arq);
   if (!fm) continue;
   const id = e.name.replace(/\.qmd$/, "");
-  const situacao = noVocabulario(arq, "situacao", texto(fm.situacao), vocab.situacoes);
+  const nome = texto(fm.title) ?? id;
+  if (fm.situacao !== undefined) problema(arq, `o campo "situacao" não é mais usado (é calculado pelos períodos) e pode ser apagado`);
+  if (fm.description !== undefined) problema(arq, `o campo "description" não é mais usado (é gerado pela função e pelo curso) e pode ser apagado`);
   const vinculo = noVocabulario(arq, "vinculo", texto(fm.vinculo), vocab.vinculos);
-  const exigeCurso = vinculo === "graduacao" || vinculo === "pos-graduacao";
-  const curso = noVocabulario(arq, "curso", texto(fm.curso), vocab.cursos, exigeCurso);
+  const curso = noVocabulario(arq, "curso", texto(fm.curso), vocab.cursos, estudante(vinculo));
 
-  const ps = Array.isArray(fm.periodos) ? fm.periodos as Obj[] : [];
-  if (ps.length === 0) problema(arq, `sem "periodos": a pessoa não aparece nos gráficos da equipe`);
-  let aberto = false;
-  for (const [i, p] of ps.entries()) {
-    const ref = `${arq} (período ${i + 1})`;
-    const funcao = noVocabulario(ref, "funcao", texto(p.funcao), vocab.funcoes);
-    const inicio = texto(p.inicio);
-    const fim = texto(p.fim);
-    if (!ehMes(inicio)) { problema(ref, `"inicio" deve ser AAAA-MM (encontrado: ${inicio})`); continue; }
-    if (fim !== null && !ehMes(fim)) { problema(ref, `"fim" deve ser AAAA-MM (encontrado: ${fim})`); continue; }
-    if (fim !== null && fim < inicio) problema(ref, `"fim" (${fim}) é anterior ao "inicio" (${inicio})`);
-    if (inicio > mesAtual) problema(ref, `"inicio" (${inicio}) está no futuro`);
-    if (fim === null) aberto = true;
-    if (funcao) periodos.push({ membro: id, funcao, inicio, fim });
+  const ps = lerPeriodos(arq, "período", fm.periodos, "funcao", vocab.funcoes);
+  if (ps.length === 0) {
+    problema(arq, `sem "periodos": a pessoa não aparece na página Equipe nem no painel`);
+    membros.push({ id, situacao: null, vinculo, curso });
+    continue;
   }
-  // Consistência entre "situacao" (usada pelas listagens) e os períodos
-  if (ps.length > 0 && situacao === "egresso" && aberto) problema(arq, `"situacao: egresso", mas há período sem "fim"`);
-  if (ps.length > 0 && (situacao === "atual" || situacao === "coordenacao") && !aberto)
-    problema(arq, `"situacao: ${situacao}", mas todos os períodos têm "fim" (deveria ser egresso?)`);
+  if (ps.filter(aberto).length > 1) problema(arq, `mais de um período sem "fim": só o último deveria estar em aberto`);
+  const cs = lerPeriodos(arq, "cargo", fm.cargos, "cargo", cargosVocab);
+
+  // Mandatos precisam caber no tempo de participação
+  const inicioParticipacao = ps.reduce((m, p) => p.inicio < m ? p.inicio : m, ps[0].inicio);
+  const fimParticipacao = ps.some(aberto) ? null : ps.reduce((m, p) => p.fim! > m ? p.fim! : m, ps[0].fim!);
+  for (const c of cs) {
+    if (c.inicio < inicioParticipacao || (fimParticipacao !== null && (c.fim === null || c.fim > fimParticipacao)))
+      problema(arq, `mandato de "${c.valor}" (${c.inicio} a ${c.fim ?? "atual"}) fora do período de participação`);
+    if (aberto(c) && cargosVocab[c.valor]?.ativo === false)
+      problema(arq, `o cargo "${c.valor}" está desativado no vocabulário e não pode ter mandato em aberto`);
+  }
+
+  const ultimo = ps.reduce((u, p) => p.inicio > u.inicio ? p : u, ps[0]);
+  const situacao = !aberto(ultimo) ? "egresso" : ultimo.valor === "coordenacao" ? "coordenacao" : "atual";
+  for (const p of ps) periodos.push({ membro: id, funcao: p.valor, inicio: p.inicio, fim: p.fim });
+  for (const c of cs) mandatos.push({ membro: id, cargo: c.valor, inicio: c.inicio, fim: c.fim });
   membros.push({ id, situacao, vinculo, curso });
+  pessoas.push({ id, nome, imagem: texto(fm.image), vinculo, curso, situacao, ultimo, periodos: ps, cargos: cs });
 }
+
+// Duas pessoas no mesmo cargo ao mesmo tempo
+for (const cargo of Object.keys(cargosVocab)) {
+  const ms = mandatos.filter((m) => m.cargo === cargo) as unknown as (Periodo & { membro: string })[];
+  for (let i = 0; i < ms.length; i++) for (let j = i + 1; j < ms.length; j++) {
+    const [a, b] = [ms[i], ms[j]];
+    const sobrepoe = a.inicio <= (b.fim ?? "9999-12") && b.inicio <= (a.fim ?? "9999-12");
+    if (sobrepoe && a.membro !== b.membro)
+      problema("equipe/", `mandatos simultâneos de "${cargo}": ${a.membro} e ${b.membro}`);
+  }
+}
+
 const idsMembros = new Set(membros.map((m) => m.id as string));
 
 function referencias(arq: string, campo: string, ids: string[], validos: Set<string>, origem: string) {
@@ -219,6 +266,79 @@ const publicacoes: Obj[] = [];
 // ---------- mapeamento (gerado por scripts/atualizar-osm.ts) ----------
 const osm = (JSON.parse((await lerTexto("dados/osm-mensal.json")) ?? "{}")?.meses ?? []) as Obj[];
 
+// ---------- página Equipe ----------
+// Seções e textos dos cartões, todos calculados a partir dos dados acima.
+type Pessoa = { id: string; nome: string; imagem: string | null; vinculo: string | null; curso: string | null;
+                situacao: string; ultimo: Periodo & { valor: string };
+                periodos: (Periodo & { valor: string })[]; cargos: (Periodo & { valor: string })[] };
+const ps = pessoas as unknown as Pessoa[];
+const nomeDe = (dom: string, v: string | null) => (v && (vocab[dom] as Obj)[v] ? String((vocab[dom] as Obj)[v]) : "");
+const porNome = (a: Obj, b: Obj) => String(a.nome).localeCompare(String(b.nome), "pt");
+const anos = (p: Periodo) => { const [a, b] = [ano(p.inicio), ano(p.fim ?? mesAtual)]; return a === b ? a : `${a}–${b}`; };
+
+function complemento(p: Pessoa) {
+  // Curso para estudantes; para os demais, o vínculo (ex.: "Docente")
+  return estudante(p.vinculo) ? nomeDe("cursos", p.curso) : nomeDe("vinculos", p.vinculo);
+}
+function descricaoAtual(p: Pessoa) {
+  if (p.situacao === "coordenacao") return nomeDe("vinculos", p.vinculo);
+  return [nomeDe("funcoes", p.ultimo.valor), complemento(p)].filter((x) => x).join(", ");
+}
+function descricaoEgresso(p: Pessoa) {
+  const inicio = p.periodos.reduce((m, q) => q.inicio < m ? q.inicio : m, p.periodos[0].inicio);
+  const fim = p.periodos.reduce((m, q) => (q.fim ?? m) > m ? q.fim! : m, p.periodos[0].fim ?? inicio);
+  const c = complemento(p);
+  return `${nomeDe("funcoes", p.ultimo.valor)} de ${intervaloAnos(inicio, fim)}${c ? `, ${c}` : ""}`;
+}
+const cartao = (p: Pessoa, descricao: string, selo: string | null = null) =>
+  ({ id: p.id, nome: p.nome, imagem: p.imagem, selo, descricao });
+
+// Cargos em aberto de cada pessoa, na ordem do vocabulário
+const ordemCargo = (c: string) => Number(cargosVocab[c]?.ordem ?? 99);
+const cargosAtuais = (p: Pessoa) => p.cargos.filter(aberto).map((c) => c.valor).sort((a, b) => ordemCargo(a) - ordemCargo(b));
+const seloCargos = (p: Pessoa) => cargosAtuais(p).map((c) => String(cargosVocab[c]?.nome ?? c)).join(" · ");
+
+const atuais = ps.filter((p) => p.situacao === "atual");
+const diretoria = atuais.filter((p) => cargosAtuais(p).length > 0)
+  .sort((a, b) => ordemCargo(cargosAtuais(a)[0]) - ordemCargo(cargosAtuais(b)[0]) || porNome(a, b));
+const secoes: Obj[] = [
+  { id: "coordenacao", titulo: "Coordenação", estilo: "destaque",
+    pessoas: ps.filter((p) => p.situacao === "coordenacao").sort(porNome).map((p) => cartao(p, descricaoAtual(p), "Coordenação")) },
+  { id: "diretoria", titulo: "Diretoria do capítulo", estilo: "destaque",
+    pessoas: diretoria.map((p) => cartao(p, descricaoAtual(p), seloCargos(p))) },
+  { id: "equipe-atual", titulo: "Equipe atual", estilo: "normal",
+    pessoas: atuais.filter((p) => cargosAtuais(p).length === 0).sort(porNome).map((p) => cartao(p, descricaoAtual(p))) },
+  // Egressos: estudantes e colaboradores que saíram; quem saiu da coordenação
+  // aparece só em "Coordenações anteriores"
+  { id: "egressos", titulo: "Egressos", estilo: "normal", texto: "Pessoas que passaram pelo programa e ajudaram a construí-lo.",
+    pessoas: ps.filter((p) => p.situacao === "egresso" && p.ultimo.valor !== "coordenacao").sort(porNome)
+               .map((p) => cartao(p, descricaoEgresso(p))) },
+];
+// Mandatos encerrados: coordenação (pelos períodos) e cada cargo com "historico: true"
+const anteriores = (titulo: string, id: string, lista: { p: Pessoa; periodo: Periodo }[]) => ({
+  id, titulo, estilo: "compacto",
+  pessoas: lista.sort((a, b) => String(b.periodo.fim).localeCompare(String(a.periodo.fim)))
+                .map(({ p, periodo }) => cartao(p, anos(periodo))),
+});
+secoes.push(anteriores("Coordenações anteriores", "coordenacoes-anteriores",
+  ps.flatMap((p) => p.periodos.filter((q) => q.valor === "coordenacao" && !aberto(q)).map((periodo) => ({ p, periodo })))));
+for (const [cargo, def] of Object.entries(cargosVocab).sort((a, b) => ordemCargo(a[0]) - ordemCargo(b[0]))) {
+  if (def.historico !== true) continue;
+  secoes.push(anteriores(String(def.titulo_historico ?? `${def.nome}: mandatos anteriores`), `${cargo}-anteriores`,
+    ps.flatMap((p) => p.cargos.filter((c) => c.valor === cargo && !aberto(c)).map((periodo) => ({ p, periodo })))));
+}
+// Texto exibido abaixo do nome na página de perfil de cada pessoa
+const perfis: Obj = {};
+for (const p of ps) {
+  const desc = p.situacao === "egresso" ? descricaoEgresso(p) : descricaoAtual(p);
+  const selo = p.situacao === "coordenacao" ? "Coordenação" : seloCargos(p);
+  perfis[p.id] = { descricao: [selo, desc].filter((x) => x).join(" · ") };
+}
+const contadores = {
+  estudantes: ps.filter((p) => estudante(p.vinculo) && p.situacao !== "coordenacao").length,
+  equipe_atual: atuais.length,
+};
+
 // ---------- gravação ----------
 function csv(linhas: Obj[]): string {
   if (linhas.length === 0) return "";
@@ -229,16 +349,18 @@ function csv(linhas: Obj[]): string {
   };
   return [colunas.join(","), ...linhas.map((l) => colunas.map((c) => celula(l[c])).join(","))].join("\n") + "\n";
 }
-const tabelas: Record<string, Obj[]> = { membros, periodos, eventos, participacoes, projetos, publicacoes, parceiros, "osm-mensal": osm };
+const tabelas: Record<string, Obj[]> = { membros, periodos, cargos: mandatos, eventos, participacoes, projetos, publicacoes, parceiros, "osm-mensal": osm };
 await Deno.mkdir(`${SAIDA}/csv`, { recursive: true });
 for (const [nome, linhas] of Object.entries(tabelas)) {
   await Deno.writeTextFile(`${SAIDA}/${nome}.json`, JSON.stringify(linhas) + "\n");
   await Deno.writeTextFile(`${SAIDA}/csv/${nome}.csv`, csv(linhas));
 }
 await Deno.writeTextFile(`${SAIDA}/vocabulario.json`, JSON.stringify(vocab) + "\n");
+await Deno.writeTextFile(`${SAIDA}/equipe.json`, JSON.stringify({ secoes, perfis }) + "\n");
+await Deno.writeTextFile(`${SAIDA}/contadores.json`, JSON.stringify(contadores) + "\n");
 await Deno.writeTextFile(`${SAIDA}/meta.json`, JSON.stringify({ gerado_em: new Date().toISOString(), hoje, semestre_atual: semestreAtual }) + "\n");
 
-console.log(`[dados] ${membros.length} membros, ${periodos.length} períodos, ${eventos.length} eventos, ` +
+console.log(`[dados] ${membros.length} membros, ${periodos.length} períodos, ${mandatos.length} mandatos, ${eventos.length} eventos, ` +
             `${projetos.length} projetos, ${publicacoes.length} publicações, ${parceiros.length} parceiros, ${osm.length} meses de OSM`);
 
 // ---------- relatório de problemas ----------

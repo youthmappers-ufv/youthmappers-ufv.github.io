@@ -1,46 +1,10 @@
 ---
 title: "Equipe"
-description: "Coordenação, bolsistas, voluntários e egressos do programa."
-listing:
-  - id: coordenacao
-    contents: equipe
-    type: grid
-    include:
-      situacao: coordenacao
-    fields: [image, title, description]
-    sort: title
-    image-height: 160px
-  - id: atuais
-    contents: equipe
-    type: grid
-    include:
-      situacao: atual
-    fields: [image, title, description]
-    sort: title
-    image-height: 160px
-  - id: egressos
-    contents: equipe
-    type: grid
-    include:
-      situacao: egresso
-    fields: [image, title, description]
-    sort: title
-    image-height: 160px
+description: "Coordenação, diretoria, equipe atual, egressos e mandatos anteriores do programa."
 ---
 
-## Coordenação
+<!-- As seções abaixo são montadas automaticamente a partir dos arquivos
+     em equipe/ (períodos e cargos de cada pessoa). Para mudar quem aparece
+     em cada seção, edite os períodos e cargos nos arquivos dos membros. -->
 
-::: {#coordenacao}
-:::
-
-## Equipe atual
-
-::: {#atuais}
-:::
-
-## Egressos
-
-Estudantes que passaram pelo programa e ajudaram a construí-lo.
-
-::: {#egressos}
-:::
+{{< equipe >}}

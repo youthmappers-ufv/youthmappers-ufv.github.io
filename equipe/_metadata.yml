@@ -3,6 +3,11 @@
 # (cada arquivo de membro pode sobrescrever qualquer um deles).
 # =============================================================
 
+# Texto abaixo do nome (cargo, função e curso), calculado a partir dos
+# períodos pela extensão _extensions/equipe.
+filters:
+  - equipe
+
 # Foto padrão para quem não tem foto própria.
 # Quem tem foto declara "image: fotos/nome.jpg" no próprio arquivo.
 image: fotos/avatar.svg

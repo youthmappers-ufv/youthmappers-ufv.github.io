@@ -3,8 +3,6 @@ title: "Nome Completo"
 # Foto quadrada (será otimizada para 600 px). Sem foto? Apague a linha
 # abaixo: o site usa o avatar genérico automaticamente.
 image: fotos/nome-completo.jpg
-description: "Bolsista, Sistemas de Informação"
-situacao: atual                      # coordenacao, atual ou egresso
 about:
   template: trestles                 # obrigatório quando há "about:"; não altere
   links:                             # apague os que não se aplicam
@@ -30,6 +28,10 @@ periodos:                            # um item por função exercida, em ordem
     fim: 2026-07                     # AAAA-MM; apague a linha se ainda participa
   - funcao: bolsista
     inicio: 2026-08
+cargos:                              # opcional: posições no capítulo
+  - cargo: presidencia               # códigos em _data/vocabulario.yml (cargos)
+    inicio: 2026-08                  # AAAA-MM
+    # fim: 2027-07                   # AAAA-MM, quando o mandato terminar
 ---
 
 Breve apresentação: curso, desde quando participa do programa,

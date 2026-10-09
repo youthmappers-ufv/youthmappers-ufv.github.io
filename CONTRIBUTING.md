@@ -48,17 +48,27 @@ e preencha os dados para o painel (`tipo`, `inicio`, `fim`, `coordenacao`,
 2. Se houver foto, coloque-a em `equipe/fotos/nome-sobrenome.jpg`
    (quadrada, com o rosto centralizado). **Sem foto?** Apague a linha
    `image:` do arquivo: o site usa o avatar genérico automaticamente.
-3. Preencha o arquivo. O campo `situacao` decide a seção da página Equipe:
-   `coordenacao`, `atual` ou `egresso`.
-4. Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho,
+3. Preencha `curso` (código do curso), `vinculo` e `periodos`. Cada período
+   tem a `funcao` (coordenacao, bolsista, voluntario ou colaborador), o mês
+   de `inicio` e, se já terminou, o mês de `fim`, sempre no formato
+   `AAAA-MM`. Quem foi voluntário e depois virou bolsista tem dois períodos.
+4. Se a pessoa ocupa um **cargo** no capítulo (por exemplo, a presidência),
+   acrescente a lista `cargos`, com o cargo, o `inicio` e, ao fim do mandato,
+   o `fim`. O mandato precisa estar dentro do período de participação.
+5. Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho,
    dentro de `about: links:`, e viram botões abaixo do nome. Apague os que
    não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco
    `about:` inteiro.
 
-5. Preencha os **dados para o painel**: `curso` (código do curso),
-   `vinculo` e `periodos`. Cada período tem a `funcao`, o mês de `inicio`
-   e, se já terminou, o mês de `fim`, sempre no formato `AAAA-MM`. Quem
-   foi voluntário e depois virou bolsista tem dois períodos.
+**O que não precisa ser preenchido:** a seção da página Equipe em que a
+pessoa aparece (Coordenação, Diretoria, Equipe atual ou Egressos) e o texto
+abaixo do nome ("Bolsista, Sistemas de Informação") são **calculados** a
+partir dos períodos, dos cargos e do curso. Os campos antigos `situacao` e
+`description` não são mais usados.
+
+**Quando alguém sai do programa**, não apague o arquivo: preencha o `fim`
+do último período (e do mandato, se houver). A pessoa passa sozinha para
+"Egressos"; quem presidiu aparece também em "Presidências anteriores".
 
 **Atenção:** sempre que o arquivo tiver um bloco `about:`, ele precisa
 conter a linha `template: trestles`. Sem ela, o Quarto recusa o arquivo
@@ -67,13 +77,21 @@ com o erro *"object is missing required property template"*.
 Ícones úteis para os links: `geo-alt` (OSM), `github`, `mortarboard`
 (Lattes), `linkedin`, `envelope` (e-mail), `globe` (site pessoal).
 
-**Quando alguém sai do programa**, não apague o arquivo: troque
-`situacao: atual` por `situacao: egresso`, acrescente o `fim` do último
-período e atualize a descrição (ex.: "Bolsista de 2026 a 2027, Sistemas
-de Informação").
+### Cargos do capítulo
 
-O layout das páginas de perfil e o avatar padrão são definidos em
-`equipe/_metadata.yml`, que vale para todos os arquivos da pasta.
+Os cargos ficam em `_data/vocabulario.yml`, na lista `cargos`. Para criar,
+renomear ou reordenar um cargo, **basta editar essa lista**: a página
+Equipe se ajusta sozinha. Cada cargo tem:
+
+- `nome`: o texto exibido (prefira o nome do cargo, como "Secretaria");
+- `ordem`: a posição na seção "Diretoria do capítulo";
+- `historico`: `true` cria a seção de mandatos anteriores, com o título
+  de `titulo_historico`;
+- `ativo`: `false` para um cargo extinto. **Nunca apague um cargo já
+  usado**: desative-o, para o histórico continuar válido.
+
+Mudar o **código** de um cargo (a chave, como `presidencia`) exige
+atualizar também os arquivos de quem o ocupou; a validação lista quais são.
 
 ## Adicionar uma publicação
 
@@ -140,7 +158,7 @@ publicação. Ninguém precisa editá-los, mas eles dependem de convenções:
 
 | Número | De onde vem | O que manter |
 |---|---|---|
-| Estudantes envolvidos | Arquivos em `equipe/` com `situacao: atual` ou `egresso` | Cadastrar toda pessoa que participa |
+| Estudantes envolvidos | Arquivos em `equipe/` com `vinculo` de graduação ou pós | Cadastrar toda pessoa que participa, com seus períodos |
 | Ações realizadas | Pastas em `eventos/` cuja data já passou | Nome da pasta começando por `AAAA-MM-DD` |
 | Edições no OpenStreetMap | Estatísticas da hashtag `#youthmappersufv` | **Usar a hashtag em todo changeset do programa** |
 | Parceiros | Arquivos de logo em `imagens/parceiros/` | Um logo por parceiro |
@@ -164,15 +182,15 @@ A página **Painel** é gerada a partir dos cabeçalhos das páginas de
 equipe, eventos e projetos, do `publicacoes.bib` e de dois arquivos de dados:
 
 - `_data/vocabulario.yml`: os **únicos valores aceitos** em `curso`,
-  `vinculo`, `funcao`, `tipo`, `modalidade`, `tipopub` etc.
+  `vinculo`, `funcao`, `cargo`, `tipo`, `modalidade`, `tipopub` etc.
   Para acrescentar um tipo novo, fale com a coordenação.
 - `_data/parceiros.yml`: a lista de parceiros. Eventos e projetos citam
   parceiros pelo `id`.
 
 Antes de cada renderização, o script `scripts/gerar-dados.ts` confere tudo:
 valores fora do vocabulário, datas fora do formato `AAAA-MM`, nomes em
-`equipe:` que não correspondem a nenhum arquivo, `situacao` incoerente com
-os períodos, entre outros. Os problemas aparecem no terminal do
+`equipe:` que não correspondem a nenhum arquivo, mandatos fora do período
+de participação, duas pessoas no mesmo cargo ao mesmo tempo, entre outros. Os problemas aparecem no terminal do
 `quarto preview` e como alertas na página da execução no GitHub, com o nome
 do arquivo e o campo. **Corrija-os assim que aparecerem**: um dado com
 problema fica fora do painel.

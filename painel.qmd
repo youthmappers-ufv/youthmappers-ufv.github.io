@@ -66,7 +66,8 @@ eventos = todosEventos.filter(e => e.realizado)
 
 ```{ojs}
 //| output: false
-estudantes = membros.filter(m => m.situacao !== "coordenacao")
+// Estudante é definido pelo vínculo (graduação ou pós), não pela função
+estudantes = membros.filter(m => m.vinculo === "graduacao" || m.vinculo === "pos-graduacao")
 ```
 
 ```{ojs}

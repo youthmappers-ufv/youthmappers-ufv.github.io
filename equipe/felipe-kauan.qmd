@@ -1,18 +1,16 @@
 ---
-title: "Voluntário de Exemplo"
-#image: fotos/voluntario-exemplo.svg
-description: "Voluntário, Ciência de Dados e IA"
-situacao: atual
+title: "Felipe Kauan"
+image: fotos/felipe-kauan.png
 # --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
 curso: SIN                           # código do curso (obrigatório para estudantes)
 vinculo: graduacao                   # graduacao, pos-graduacao, docente, tecnico, externo
 osm: usuario                         # usuário no OpenStreetMap (opcional)
 periodos:                            # um item por função exercida, em ordem
-  - funcao: bolsista               # coordenacao, bolsista, voluntario, colaborador
-    inicio: 2026-03                  # AAAA-MM
-    fim: 2026-07                     # AAAA-MM; apague a linha se ainda participa
-  - funcao: voluntario
-    inicio: 2026-08
+  - funcao: voluntario              # coordenacao, bolsista, voluntario, colaborador
+    inicio: 2025-10                  # AAAA-MM
+#    fim: 2026-07                     # AAAA-MM; apague a linha se ainda participa
+cargos:
+  - cargo: presidencia
+    inicio: 2025-10
 ---
 
-Pessoa de exemplo.

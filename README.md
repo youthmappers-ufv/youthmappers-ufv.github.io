@@ -1,7 +1,7 @@
 # Site do Programa YouthMappers UFV
 
 Site do capítulo YouthMappers da Universidade Federal de Viçosa,
-campus Rio Paranaíba. Feito com [Quarto](https://quarto.org) e
+_campus_ Rio Paranaíba. Feito com [Quarto](https://quarto.org) e
 publicado no GitHub Pages.
 
 - **Para atualizar o conteúdo**, veja [CONTRIBUTING.md](CONTRIBUTING.md).
