@@ -1,23 +1,31 @@
 # =============================================================
 # Parceiros do programa. Cada parceiro tem um "id" (sem espaços
 # nem acentos), usado nos campos "parceiros:" de eventos e projetos.
-# O campo "tipo" deve ser um dos tipos_parceiro do vocabulário.
-# PARCEIRO DE EXEMPLO: substitua pelos reais.
+#
+#   id      obrigatório
+#   nome    obrigatório
+#   tipo    obrigatório; um dos tipos_parceiro do vocabulário
+#   site    opcional; vira link no nome
+#   logo    opcional; caminho da imagem (ex.: imagens/parceiros/ufv-crp.png)
+#   ativo   opcional; padrão true. Com "ativo: false" o parceiro deixa de
+#           aparecer na página "O programa", na página inicial e no contador,
+#           mas continua nas fichas das ações e projetos em que atuou.
 # =============================================================
 
 - id: ufv-crp
-  nome: Universidade Federal de Viçosa - _Campus_ Rio Paranaíba
+  nome: Universidade Federal de Viçosa - Campus Rio Paranaíba
   tipo: universidade
-  desde: 2022
   logo: imagens/parceiros/ufv-crp.png
 
-- id: meninas-da-geo
-  nome: Grupo Meninas da Geo
-  tipo: comunidade
-  site: https://meninasdageo.com.br/
+- id: youthmappers
+  nome: YouthMappers
+  tipo: youthmappers
+  logo: imagens/parceiros/youthmappers.png
+  site: https://youthmappers.org/
 
 - id: mapeadores-livres-ufpr
   nome: Mapeadores Livres UFPR
-  tipo: universidade
+  tipo: youthmappers
+  logo: imagens/parceiros/mapeadores-livres-ufpr.png
   site: https://www.instagram.com/mapealivreufpr/
-
+  ativo: false

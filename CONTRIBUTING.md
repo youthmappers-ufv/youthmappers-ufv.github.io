@@ -297,7 +297,7 @@ publicação. Ninguém precisa editá-los, mas eles dependem de convenções:
 | Estudantes envolvidos | Arquivos em `equipe/` com `vinculo` de graduação ou pós | Cadastrar toda pessoa que participa, com seus períodos |
 | Ações realizadas | Pastas em `eventos/` cuja data já passou | Nome da pasta começando por `AAAA-MM-DD` |
 | Edições no OpenStreetMap | Estatísticas da hashtag `#youthmappersufv` | **Usar a hashtag em todo changeset do programa** |
-| Parceiros | Arquivos de logo em `imagens/parceiros/` | Um logo por parceiro |
+| Parceiros | Entradas de `_data/parceiros.yml` sem `ativo: false` | Marcar `ativo: false` quando a parceria terminar |
 
 As edições do OSM são consultadas pelo script `scripts/atualizar-osm.ts`,
 que roda sozinho antes de cada renderização, inclusive no `quarto preview`
@@ -322,7 +322,10 @@ equipe, eventos e projetos, do `publicacoes.bib` e de dois arquivos de dados:
   Para acrescentar um tipo novo, fale com a coordenação.
 - `_data/parceiros.yml`: a lista de parceiros. Eventos e projetos citam
   parceiros pelo `id`. O campo opcional `site` transforma o nome do
-  parceiro em link nas fichas.
+  parceiro em link nas fichas; `logo` (ex.: `imagens/parceiros/ufv-crp.png`)
+  aparece na página "O programa" e na faixa da página inicial. Com
+  `ativo: false` o parceiro some dessas páginas e do contador, mas continua
+  nas fichas das ações e projetos antigos.
 
 Antes de cada renderização, o script `scripts/gerar-dados.ts` confere tudo:
 valores fora do vocabulário, datas fora do formato `AAAA-MM`, nomes em

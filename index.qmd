@@ -86,3 +86,9 @@ listing:
 :::
 
 [Ver todos os projetos](projetos.qmd)
+
+## Parceiros
+
+{{< parceiros logos >}}
+
+[Conheça os parceiros](sobre.qmd#parceiros)

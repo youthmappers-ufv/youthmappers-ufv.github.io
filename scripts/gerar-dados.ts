@@ -90,9 +90,16 @@ for (const p of ((await lerYaml("_data/parceiros.yml")) ?? []) as Obj[]) {
   idsParceiros.add(id);
   if (!texto(p.nome)) problema(arq, `parceiro ${id} sem nome`);
   const tipo = noVocabulario(`${arq} (${id})`, "tipo", texto(p.tipo), vocab.tipos_parceiro);
-  parceiros.push({ id, tipo, desde: p.desde ?? null });
   const site = texto(p.site);
   if (site && !/^https?:\/\//.test(site)) problema(`${arq} (${id})`, `"site" deve começar com http:// ou https://`);
+  const logo = texto(p.logo);
+  if (logo) {
+    try { await Deno.stat(logo); } catch { problema(`${arq} (${id})`, `"logo" aponta para "${logo}", que não existe`); }
+  }
+  if (p.ativo !== undefined && typeof p.ativo !== "boolean") problema(`${arq} (${id})`, `"ativo" deve ser true ou false`);
+  const ativo = p.ativo !== false;
+  // ações e projetos são contados depois de lidos os eventos e projetos
+  parceiros.push({ id, nome: texto(p.nome) ?? id, tipo, ativo, site, logo, acoes: 0, projetos: 0 });
   parceirosCompletos.push({ id, nome: texto(p.nome) ?? id, site });
 }
 
@@ -431,7 +438,13 @@ for (const p of ps) {
   const selo = p.situacao === "coordenacao" ? "Coordenação" : seloCargos(p);
   perfis[p.id] = { descricao: [selo, desc].filter((x) => x).join(" · ") };
 }
+// Parceiros: ações realizadas e projetos em que cada um aparece
+for (const p of parceiros) {
+  p.acoes = eventos.filter((e) => e.realizado && (e.parceiros as string[]).includes(p.id as string)).length;
+  p.projetos = projetos.filter((j) => (j.parceiros as string[]).includes(p.id as string)).length;
+}
 const contadores = {
+  parceiros: parceiros.filter((p) => p.ativo).length,
   estudantes: ps.filter((p) => estudante(p.vinculo) && p.situacao !== "coordenacao").length,
   equipe_atual: atuais.length,
 };

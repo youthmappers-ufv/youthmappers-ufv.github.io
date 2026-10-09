@@ -7,7 +7,7 @@
     {{< contar acoes >}}        eventos já realizados (pasta com data <= hoje)
     {{< contar estudantes >}}   estudantes (graduação ou pós) que já participaram
     {{< contar equipe-atual >}} pessoas em atividade, exceto a coordenação
-    {{< contar parceiros >}}    parceiros em _data/parceiros.yml
+    {{< contar parceiros >}}    parceiros ativos em _data/parceiros.yml
     {{< osm edits >}}           campo do arquivo dados/osm.json
     {{< atualizado >}}          data da última renderização
 
@@ -64,20 +64,11 @@ local function contador_gerado(chave)
   return tonumber(dados[chave]) or 0
 end
 
--- Parceiros: entradas "- id:" em _data/parceiros.yml
-local function contar_parceiros()
-  local texto = ler(raiz() .. "/_data/parceiros.yml") or ""
-  local n = 0
-  for _ in texto:gmatch("\n%s*%-%s+id:") do n = n + 1 end
-  if texto:match("^%s*%-%s+id:") then n = n + 1 end
-  return n
-end
-
 local contadores = {
   ["acoes"]        = contar_acoes,
   ["estudantes"]   = function() return contador_gerado("estudantes") end,
   ["equipe-atual"] = function() return contador_gerado("equipe_atual") end,
-  ["parceiros"]    = contar_parceiros,
+  ["parceiros"]    = function() return contador_gerado("parceiros") end,
 }
 
 return {

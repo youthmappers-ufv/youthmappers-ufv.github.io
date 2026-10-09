@@ -21,10 +21,9 @@ Objetivo geral e objetivos específicos do programa.
 
 ## Parceiros
 
-<!-- Liste prefeituras, comunidades e instituições parceiras. -->
+Instituições, comunidades e capítulos YouthMappers que atuam conosco.
 
-- Comunidade OpenStreetMap Brasil
-- Prefeituras da região
+{{< parceiros >}}
 
 ## Como participar {#como-participar}
 
