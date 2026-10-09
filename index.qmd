@@ -4,6 +4,7 @@ page-layout: full
 listing:
   - id: ultimos-eventos
     contents: eventos
+    image-placeholder: imagens/sem-capa-evento.svg
     type: grid
     sort: "date desc"
     max-items: 3
@@ -11,6 +12,7 @@ listing:
     image-height: 180px
   - id: projetos-destaque
     contents: projetos
+    image-placeholder: imagens/sem-capa-projeto.svg
     type: grid
     sort: "date desc"
     max-items: 3
@@ -19,9 +21,9 @@ listing:
 ---
 
 ::: {.destaque style="background-image: url(imagens/malha-urbana.svg);"}
-<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando o mundo</p>
+<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando a própria cidade</p>
 
-[O capítulo YouthMappers da UFV, _campus_ Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.]{.lead}
+[O capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.]{.lead}
 
 ::: {.acoes}
 [Conheça as ações](eventos.qmd){.btn-mapa}

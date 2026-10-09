@@ -33,6 +33,44 @@ Preencha também os **dados para o painel** no cabeçalho (`tipo`,
 `equipe`, `parceiros`). Para eventos futuros, os números podem ficar em
 branco e ser preenchidos depois que o evento acontecer.
 
+### A ficha do evento é gerada sozinha
+
+O bloco cinza no topo da página (data, local, participantes, equipe...) é
+montado pelo comando `{{< ficha >}}` a partir do cabeçalho. **Não escreva
+essas informações no texto**: elas já estão no cabeçalho, e escrever duas
+vezes gera divergências entre a página e o painel. Linhas sem dados não
+aparecem.
+
+Campos opcionais, usados só pela ficha:
+
+| Campo | Exemplo | Observação |
+|---|---|---|
+| `horario` | `14h às 18h` | Aparece junto da data |
+| `local` | `Laboratório de Informática da UFV` | Onde a ação aconteceu; em ações remotas, por exemplo `Transmissão online pelo Google Meet` |
+| `area_mapeada` | `Angra dos Reis (RJ)` | O território mapeado, quando diferente do município |
+| `tasking_manager` | `12411` | Número do projeto; vira link automaticamente |
+| `links` | lista de `texto` e `url` | Álbum, apresentação, notícia etc. |
+
+**`municipio` × `area_mapeada`:** `municipio` é onde a ação aconteceu (de
+onde a equipe trabalhou) e alimenta o gráfico "Onde atuamos" do painel.
+`area_mapeada` é o território mapeado, que numa mapatona remota pode estar
+em outro estado.
+
+Para **personalizar** a ficha de um evento específico, use o campo `ficha`:
+
+```yaml
+ficha:
+  ocultar: [carga_horaria]          # esconde linhas
+  extras:                           # acrescenta linhas (aceita Markdown)
+    - rotulo: Inscrições
+      valor: "[Formulário](https://...)"
+```
+
+Linhas que podem ser ocultadas: `data`, `tipo`, `local`, `area_mapeada`,
+`carga_horaria`, `publico`, `equipe`, `parceiros`, `links`. Em casos
+realmente especiais, apague o `{{< ficha >}}` e escreva um bloco
+`::: {.ficha}` à mão, como antes.
+
 **Categorias:** reutilize as que já existem (veja a página de eventos)
 para que os filtros continuem úteis. Escreva sempre em minúsculas.
 
@@ -41,6 +79,13 @@ para que os filtros continuem úteis. Escreva sempre em minúsculas.
 Mesmo processo: copie `_modelos/projeto/` para `projetos/nome-do-projeto/`
 e preencha os dados para o painel (`tipo`, `inicio`, `fim`, `coordenacao`,
 `equipe`, `parceiros`, `ods`).
+
+A ficha do projeto também é gerada pelo `{{< ficha >}}`: tipo, período,
+situação (calculada pelo `fim`), coordenação, equipe, ODS, parceiros e
+`links` (repositório, dados, demonstração). A personalização pelo campo
+`ficha` funciona como nos eventos; as linhas que podem ser ocultadas são
+`tipo`, `periodo`, `situacao`, `coordenacao`, `equipe`, `ods`, `parceiros`
+e `links`.
 
 ## Adicionar uma pessoa à equipe
 
@@ -138,8 +183,53 @@ bash scripts/otimizar-fotos.sh
 
 ## Mapas
 
-A página de exemplo `eventos/2026-08-20-mapathon-calcadas/` tem um mapa
-interativo. Copie o bloco e troque as coordenadas.
+Para mostrar um mapa interativo numa página de evento ou projeto, use o
+comando `{{< mapa >}}` de uma das duas formas:
+
+**Com a área mapeada (arquivo GeoJSON).** Coloque o arquivo na pasta do
+evento (por exemplo, `area.geojson`) e escreva:
+
+```markdown
+{{< mapa area.geojson >}}
+```
+
+O mapa se ajusta sozinho à área. Para obter o arquivo, baixe a área do
+projeto no Tasking Manager ou desenhe-a em [geojson.io](https://geojson.io).
+Se as feições tiverem a propriedade `nome` (ou `name`), ela aparece ao
+passar o mouse.
+
+**Com uma coordenada.** No [openstreetmap.org](https://www.openstreetmap.org),
+clique com o botão direito no local e escolha "Mostrar endereço"; copie a
+"latitude, longitude":
+
+```markdown
+{{< mapa centro="-19.1940, -46.2470" zoom="16" >}}
+```
+
+O `zoom` vai de 1 (mundo) a 19 (rua). O local recebe o marcador com o logo
+do capítulo; para não marcar, acrescente `marcador="nao"`.
+
+**Trocar o marcador do site.** O marcador é o mesmo em todos os mapas e é
+escolhido no `_quarto.yml`, pelo nome do arquivo:
+
+```yaml
+mapa:
+  marcador: marcador-b.svg
+```
+
+As opções ficam em `_extensions/mapa/marcadores/`: `marcador-a.svg` (gota
+vinho), `marcador-b.svg` (gota marinho com borda dourada, o padrão) e
+`marcador-c.svg` (selo circular do logo). Para criar um novo, coloque o SVG
+nessa pasta, com 48 × 64 e a ponta no ponto (24, 62), e escreva o nome dele
+no `_quarto.yml`.
+
+Outras opções: `altura="500px"` e `descricao="..."` (texto lido por
+leitores de tela). Os arquivos `.geojson` de eventos e projetos são
+publicados automaticamente; não é preciso declará-los em `resources`.
+
+Se algo estiver errado (arquivo inexistente, coordenada em formato
+inválido), o terminal mostra um aviso com o nome da página, e a página exibe
+"Mapa indisponível" no lugar do mapa.
 
 Mapas gerados com Python (ex.: `folium`) também funcionam: como o projeto
 usa `freeze: auto`, rode `quarto render` no seu computador e faça commit
@@ -185,7 +275,8 @@ equipe, eventos e projetos, do `publicacoes.bib` e de dois arquivos de dados:
   `vinculo`, `funcao`, `cargo`, `tipo`, `modalidade`, `tipopub` etc.
   Para acrescentar um tipo novo, fale com a coordenação.
 - `_data/parceiros.yml`: a lista de parceiros. Eventos e projetos citam
-  parceiros pelo `id`.
+  parceiros pelo `id`. O campo opcional `site` transforma o nome do
+  parceiro em link nas fichas.
 
 Antes de cada renderização, o script `scripts/gerar-dados.ts` confere tudo:
 valores fora do vocabulário, datas fora do formato `AAAA-MM`, nomes em

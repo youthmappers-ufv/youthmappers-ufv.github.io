@@ -5,6 +5,11 @@
 # =============================================================
 project:
   type: website
+  # Só os arquivos .qmd viram páginas. Assim o CONTRIBUTING.md (guia dos
+  # bolsistas, com exemplos de comandos como {{</* mapa */>}}) não é publicado
+  # nem tem seus exemplos executados.
+  render:
+    - "*.qmd"
   output-dir: _site
   # Antes de gerar o site: 1) busca as estatísticas do OSM;
   # 2) confere os dados e gera as tabelas do painel (veja os scripts).
@@ -17,6 +22,9 @@ project:
     - imagens/
     - equipe/fotos/
     - dados/painel/
+    # arquivos de mapa usados por {{< mapa >}} (não precisam de "resources" na página)
+    - "eventos/**/*.geojson"
+    - "projetos/**/*.geojson"
 
 lang: pt
 language:
@@ -52,11 +60,11 @@ website:
       - href: painel.qmd
         text: Painel
     right:
-      - icon: github
-        href: https://github.com/youthmappers-ufv
-        aria-label: GitHub do programa
+      - icon: instagram
+        href: https://instagram.com/youthmappers.ufv
+        aria-label: Instagram do programa
       - icon: envelope
-        href: mailto:smarzaro@ufv.br
+        href: mailto:youthmapperschapter@ufv.br
         aria-label: Contato por e-mail
   page-footer:
     left: "Programa de Extensão YouthMappers UFV, campus Rio Paranaíba"
@@ -71,6 +79,14 @@ format:
     date-format: "DD/MM/YYYY"
     include-in-header:
       text: '<link rel="apple-touch-icon" href="/imagens/apple-touch-icon.png">'
+
+# Mapas ({{< mapa >}}): marcador usado em todo o site. Para trocar, escreva
+# o nome de outro arquivo de _extensions/mapa/marcadores/:
+#   marcador-a.svg  gota vinho
+#   marcador-b.svg  gota marinho com borda dourada (padrão)
+#   marcador-c.svg  selo circular do logo
+mapa:
+  marcador: marcador-b.svg
 
 execute:
   # Código Python/R (mapas, gráficos) roda na máquina de quem edita

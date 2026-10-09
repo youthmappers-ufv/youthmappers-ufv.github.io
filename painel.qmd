@@ -77,7 +77,8 @@ cores = Object.freeze({vinho: "#7a1f21", marinho: "#324170", ouro: "#bfa13c", ci
 
 ```{ojs}
 //| output: false
-paleta = [cores.vinho, cores.marinho, cores.ouro, cores.cinza, cores.nevoa]
+// Uma cor por tipo (na ordem do vocabulário); acrescente cores se surgirem tipos novos
+paleta = [cores.vinho, cores.marinho, cores.ouro, cores.cinza, cores.nevoa, "#d9c38a", "#8c4a4c", "#7f8bb3"]
 ```
 
 ```{ojs}

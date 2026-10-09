@@ -12,18 +12,12 @@ coordenacao: [nome-sobrenome]        # nomes dos arquivos em equipe/
 equipe: [nome-sobrenome]             # estudantes participantes
 parceiros: []                        # ids de _data/parceiros.yml
 ods: [11]                            # números dos ODS (1 a 17)
+links:                               # opcional: repositório, dados, demonstração
+  - texto: Repositório no GitHub
+    url: https://github.com/youthmappers-ufv/...
 ---
 
-::: {.ficha}
-Tipo
-:   Projeto de extensão
-
-Período
-:   2026 em diante
-
-Situação
-:   Em andamento
-:::
+{{< ficha >}}
 
 ## Objetivo
 

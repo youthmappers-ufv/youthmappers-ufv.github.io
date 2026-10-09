@@ -1,0 +1,25 @@
+---
+title: "Mapatona Zona Urbana de Rio Paranaíba"
+date: 2024-11-01
+description: "Mapatona realizada pelo YouthMappers UFV."   # PROVISÓRIA: troque por um resumo do evento
+# image: capa.jpg                    # sem capa: o site usa a imagem genérica
+categories: [mapatona]
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: mapatona
+modalidade:                          # presencial, remota, hibrida
+municipio:
+carga_horaria:                       # horas
+publico:                             # total de participantes
+publico_externo:                     # quantos não eram da UFV
+equipe: []                           # nomes dos arquivos em equipe/
+parceiros: []                        # ids de _data/parceiros.yml
+# --- dados exibidos só na ficha (opcionais) ---
+# horario: 14h às 18h
+# local: 
+area_mapeada: Zona Urbana de Rio Paranaíba
+# tasking_manager: 
+---
+
+{{< ficha >}}
+
+<!-- Relato do evento: o que foi feito, quem participou, que dados foram produzidos. -->

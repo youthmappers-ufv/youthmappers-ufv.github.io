@@ -9,4 +9,15 @@
   nome: Universidade Federal de Viçosa - _Campus_ Rio Paranaíba
   tipo: universidade
   desde: 2022
-  # logo: imagens/parceiros/prefeitura-exemplo.png
+  logo: imagens/parceiros/ufv-crp.png
+
+- id: meninas-da-geo
+  nome: Grupo Meninas da Geo
+  tipo: comunidade
+  site: https://meninasdageo.com.br/
+
+- id: mapeadores-livres-ufpr
+  nome: Mapeadores Livres UFPR
+  tipo: universidade
+  site: https://www.instagram.com/mapealivreufpr/
+

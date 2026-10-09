@@ -1,8 +1,9 @@
 ---
 title: "Ações e eventos"
-description: "Mapathons, oficinas, palestras e participações em eventos."
+description: "Mapatonas, oficinas, palestras e participações em eventos."
 listing:
   contents: eventos
+  image-placeholder: imagens/sem-capa-evento.svg   # para eventos sem "image"
   type: grid
   sort: "date desc"
   categories: true

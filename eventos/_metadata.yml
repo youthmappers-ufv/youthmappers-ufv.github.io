@@ -1,0 +1,6 @@
+# =============================================================
+# Valores padrão para todas as páginas da pasta eventos/.
+# A classe abaixo esconde a data do topo da página: ela já aparece,
+# mais completa (com o horário), na ficha gerada por {{< ficha >}}.
+# =============================================================
+body-classes: pagina-evento

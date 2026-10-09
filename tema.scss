@@ -155,7 +155,10 @@ a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
 // Data de atualização dos números
 .atualizacao { display: block; margin: -1.25rem 0 2rem; font-size: .85rem; color: $cinza; }
 
-// Bloco de ficha técnica dos eventos e projetos
+// Páginas de eventos: a data do topo se repete na ficha, que é mais completa
+body.pagina-evento .quarto-title-meta { display: none !important; }
+
+// Bloco de ficha técnica dos eventos e projetos (gerado por {{< ficha >}})
 .ficha {
   background: $nevoa; border-radius: $border-radius;
   padding: 1rem 1.25rem; margin: 1rem 0 1.75rem;
@@ -172,7 +175,14 @@ a:focus-visible, .btn-mapa:focus-visible, .btn-contorno:focus-visible {
   img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: $border-radius; }
 }
 
-.mapa { height: 380px; border-radius: $border-radius; margin: 1rem 0 2rem; }
+.mapa { height: 380px; border-radius: $border-radius; margin: 1rem 0 2rem; position: relative; }
+// Marcador do mapa ({{< mapa >}}): o desenho vem em SVG, sem fundo nem borda
+.mapa-marcador { background: none; border: none; }
+.mapa-erro, .mapa-erro-carga {
+  padding: .75rem 1rem; border-radius: $border-radius;
+  background: $nevoa; color: $tinta; font-style: italic;
+}
+.mapa-erro-carga { position: absolute; z-index: 1000; left: 1rem; bottom: 1rem; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }

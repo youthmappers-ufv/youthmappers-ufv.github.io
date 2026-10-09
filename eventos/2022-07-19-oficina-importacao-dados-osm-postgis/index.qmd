@@ -1,0 +1,27 @@
+---
+title: "Oficina de Importação de Dados do OSM para o PostGIS usando o Osmosis"
+date: 2022-07-19                     # AAAA-MM-DD
+#description: "Uma frase que resume a ação (aparece no cartão da listagem)."
+#image: capa.jpg                      # foto horizontal, ~1600 px de largura
+categories: [oficina]               # ex.: mapathon, oficina, palestra, conferência
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: oficina                         # mapathon, oficina, palestra, campo, conferencia
+modalidade: remota              # presencial, remota, hibrida
+municipio: Rio Paranaíba
+carga_horaria: 2                     # horas
+publico: 15                          # total de participantes
+publico_externo: 10                  # quantos não eram da UFV
+equipe: [rodrigo-smarzaro, julia-mendonca]             # nomes dos arquivos em equipe/ (sem .qmd)
+parceiros: []                        # ids de _data/parceiros.yml
+---
+
+{{< ficha >}}
+
+Conteúdo Programado:
+- Download de dados do OpenStreetMap no site Geofabrik
+- Criação de arquivo com dados do OpenStreetMap para uma área de interesse
+- Importação dos dados para o PostGIS
+- Criação de consultas simples envolvendo os dados do OpenStreetMap
+- Ligação entre o PostGIS e o QGIS
+- Exemplos de visualizações dos dados usando o QGIS.
+

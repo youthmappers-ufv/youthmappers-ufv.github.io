@@ -3,6 +3,7 @@ title: "Projetos"
 description: "Projetos de ensino, pesquisa, extensão e TCC vinculados ao programa."
 listing:
   contents: projetos
+  image-placeholder: imagens/sem-capa-projeto.svg  # para projetos sem "image"
   type: grid
   sort: "date desc"
   categories: true

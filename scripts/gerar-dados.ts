@@ -80,6 +80,7 @@ for (const chave of ["cursos", "vinculos", "funcoes", "cargos", "tipos_evento", 
 }
 
 const parceiros: Obj[] = [];
+const parceirosCompletos: Obj[] = [];
 const idsParceiros = new Set<string>();
 for (const p of ((await lerYaml("_data/parceiros.yml")) ?? []) as Obj[]) {
   const arq = "_data/parceiros.yml";
@@ -90,6 +91,9 @@ for (const p of ((await lerYaml("_data/parceiros.yml")) ?? []) as Obj[]) {
   if (!texto(p.nome)) problema(arq, `parceiro ${id} sem nome`);
   const tipo = noVocabulario(`${arq} (${id})`, "tipo", texto(p.tipo), vocab.tipos_parceiro);
   parceiros.push({ id, tipo, desde: p.desde ?? null });
+  const site = texto(p.site);
+  if (site && !/^https?:\/\//.test(site)) problema(`${arq} (${id})`, `"site" deve começar com http:// ou https://`);
+  parceirosCompletos.push({ id, nome: texto(p.nome) ?? id, site });
 }
 
 // ---------- membros, períodos e cargos ----------
@@ -179,6 +183,36 @@ function referencias(arq: string, campo: string, ids: string[], validos: Set<str
   return ids.filter((id) => validos.has(id));
 }
 
+// ---------- campos usados só pela ficha ({{< ficha >}}) ----------
+const LINHAS_FICHA = {
+  evento: ["data", "tipo", "local", "area_mapeada", "carga_horaria", "publico", "equipe", "parceiros", "links"],
+  projeto: ["tipo", "periodo", "situacao", "coordenacao", "equipe", "ods", "parceiros", "links"],
+};
+function validarFicha(arq: string, fm: Obj, tipo: "evento" | "projeto") {
+  for (const campo of ["horario", "local", "area_mapeada"]) {
+    if (fm[campo] !== undefined && fm[campo] !== null && typeof fm[campo] !== "string")
+      problema(arq, `"${campo}" deve ser um texto`);
+  }
+  const tm = fm.tasking_manager;
+  if (tm !== undefined && tm !== null && !(Number.isInteger(tm) && (tm as number) > 0))
+    problema(arq, `"tasking_manager" deve ser o número do projeto (ex.: 12411)`);
+  if (fm.links !== undefined && fm.links !== null) {
+    if (!Array.isArray(fm.links)) problema(arq, `"links" deve ser uma lista de itens com "texto" e "url"`);
+    else for (const [i, l] of (fm.links as Obj[]).entries()) {
+      if (!texto(l?.texto) || !texto(l?.url)) problema(arq, `link ${i + 1}: informe "texto" e "url"`);
+      else if (!/^https?:\/\//.test(texto(l.url)!)) problema(arq, `link ${i + 1}: a "url" deve começar com http:// ou https://`);
+    }
+  }
+  const f = fm.ficha as Obj | undefined;
+  if (f && typeof f === "object") {
+    for (const k of lista(f.ocultar))
+      if (!LINHAS_FICHA[tipo].includes(k)) problema(arq, `"ficha.ocultar" não reconhece "${k}" (válidos: ${LINHAS_FICHA[tipo].join(", ")})`);
+    if (f.extras !== undefined && !Array.isArray(f.extras)) problema(arq, `"ficha.extras" deve ser uma lista`);
+    for (const [i, x] of ((Array.isArray(f.extras) ? f.extras : []) as Obj[]).entries())
+      if (!texto(x?.rotulo) || !texto(x?.valor)) problema(arq, `"ficha.extras" item ${i + 1}: informe "rotulo" e "valor"`);
+  }
+}
+
 // ---------- eventos e participações ----------
 const eventos: Obj[] = [];
 const participacoes: Obj[] = [];
@@ -210,8 +244,10 @@ for (const e of await listar("eventos")) {
     problema(arq, `"publico_externo" (${externo}) maior que "publico" (${publico})`);
   const equipe = referencias(arq, "equipe", lista(fm.equipe), idsMembros, "equipe/");
   const parc = referencias(arq, "parceiros", lista(fm.parceiros), idsParceiros, "_data/parceiros.yml");
+  validarFicha(arq, fm, "evento");
   if (!tipo) continue;
   eventos.push({ id: e.name, data: data!.slice(0, 10), realizado, tipo, modalidade, municipio,
+                 area_mapeada: texto(fm.area_mapeada),
                  carga_horaria: horas, publico, publico_externo: externo, parceiros: parc });
   for (const m of equipe) participacoes.push({ evento: e.name, membro: m });
 }
@@ -235,6 +271,7 @@ for (const e of await listar("projetos")) {
   const coordenacao = referencias(arq, "coordenacao", lista(fm.coordenacao), idsMembros, "equipe/");
   const equipe = referencias(arq, "equipe", lista(fm.equipe), idsMembros, "equipe/");
   const parc = referencias(arq, "parceiros", lista(fm.parceiros), idsParceiros, "_data/parceiros.yml");
+  validarFicha(arq, fm, "projeto");
   if (!tipo) continue;
   projetos.push({ id: e.name, tipo, inicio, fim: ehMes(fim) ? fim : null,
                   ods: ods.filter((o) => String(o) in vocab.ods), coordenacao, equipe, parceiros: parc });
@@ -358,6 +395,11 @@ for (const [nome, linhas] of Object.entries(tabelas)) {
 await Deno.writeTextFile(`${SAIDA}/vocabulario.json`, JSON.stringify(vocab) + "\n");
 await Deno.writeTextFile(`${SAIDA}/equipe.json`, JSON.stringify({ secoes, perfis }) + "\n");
 await Deno.writeTextFile(`${SAIDA}/contadores.json`, JSON.stringify(contadores) + "\n");
+// Nomes usados pelas fichas de eventos e projetos (links para perfis e parceiros)
+await Deno.writeTextFile(`${SAIDA}/referencias.json`, JSON.stringify({
+  membros: Object.fromEntries(ps.map((p) => [p.id, p.nome])),
+  parceiros: Object.fromEntries(parceirosCompletos.map((p) => [p.id, { nome: p.nome, site: p.site ?? null }])),
+}) + "\n");
 await Deno.writeTextFile(`${SAIDA}/meta.json`, JSON.stringify({ gerado_em: new Date().toISOString(), hoje, semestre_atual: semestreAtual }) + "\n");
 
 console.log(`[dados] ${membros.length} membros, ${periodos.length} períodos, ${mandatos.length} mandatos, ${eventos.length} eventos, ` +

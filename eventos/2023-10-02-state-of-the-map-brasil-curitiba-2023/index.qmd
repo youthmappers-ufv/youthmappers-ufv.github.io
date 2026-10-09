@@ -1,0 +1,25 @@
+---
+title: "State of the Map Brasil Curitiba 2023"
+date: 2023-10-02
+description: "Participação do YouthMappers UFV na conferência."   # PROVISÓRIA: troque por um resumo do evento
+# image: capa.jpg                    # sem capa: o site usa a imagem genérica
+categories: [conferência]
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: conferencia
+modalidade:                          # presencial, remota, hibrida
+municipio: Curitiba
+carga_horaria:                       # horas
+publico:                             # total de participantes
+publico_externo:                     # quantos não eram da UFV
+equipe: []                           # nomes dos arquivos em equipe/
+parceiros: []                        # ids de _data/parceiros.yml
+# --- dados exibidos só na ficha (opcionais) ---
+# horario: 14h às 18h
+# local: 
+# area_mapeada: 
+# tasking_manager: 
+---
+
+{{< ficha >}}
+
+<!-- Relato do evento: o que foi feito, quem participou, que dados foram produzidos. -->

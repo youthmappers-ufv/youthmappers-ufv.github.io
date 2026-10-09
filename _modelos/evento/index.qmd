@@ -3,9 +3,9 @@ title: "Título do evento"
 date: 2026-01-31                     # AAAA-MM-DD
 description: "Uma frase que resume a ação (aparece no cartão da listagem)."
 image: capa.jpg                      # foto horizontal, ~1600 px de largura
-categories: [mapathon]               # ex.: mapathon, oficina, palestra, conferência
+categories: [mapatona]               # ex.: mapatona, oficina, palestra, conferência
 # --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
-tipo: mapathon                       # mapathon, oficina, palestra, campo, conferencia
+tipo: mapatona                       # mapatona, oficina, palestra, campo, conferencia
 modalidade: presencial               # presencial, remota, hibrida
 municipio: Rio Paranaíba
 carga_horaria: 4                     # horas
@@ -13,23 +13,37 @@ publico: 25                          # total de participantes
 publico_externo: 18                  # quantos não eram da UFV
 equipe: [nome-sobrenome]             # nomes dos arquivos em equipe/ (sem .qmd)
 parceiros: []                        # ids de _data/parceiros.yml
+# --- dados exibidos só na ficha (opcionais) ---
+horario: 14h às 18h
+local: Laboratório de Informática da UFV   # onde aconteceu (ou "Transmissão online...")
+area_mapeada: Bairro Centro, Rio Paranaíba # território mapeado, se diferente do município
+tasking_manager: 12345               # nº do projeto no HOT Tasking Manager
+links:                               # outros links (álbum, apresentação...)
+  - texto: Álbum completo
+    url: https://...
+# ficha:                             # personalização da ficha (raramente necessária)
+#   ocultar: [carga_horaria]
+#   extras:
+#     - rotulo: Inscrições
+#       valor: "[Formulário](https://...)"
 ---
 
-::: {.ficha}
-Data
-:   31/01/2026, das 14h às 18h
-
-Local
-:   Onde aconteceu
-
-Participantes
-:   Quantas pessoas
-
-Links
-:   [Projeto no Tasking Manager](https://tasks.hotosm.org)
-:::
+{{< ficha >}}
 
 Conte o que aconteceu: o que foi feito, quem participou, que dados foram produzidos.
+
+## Área mapeada
+
+<!-- Mapa: use UMA das formas e apague a outra (ou a seção inteira).
+     1) Arquivo GeoJSON na pasta do evento (desenhe em https://geojson.io
+        ou baixe a área do projeto no Tasking Manager):
+     2) Coordenada "latitude, longitude" (openstreetmap.org: botão direito
+        no mapa > "Mostrar endereço"); zoom de 1 a 19. -->
+
+{{< mapa area.geojson >}}
+
+<!-- Para usar a coordenada, troque a linha acima por:
+     {{</* mapa centro="-19.1940, -46.2470" zoom="16" */>}}  (sem os asteriscos) -->
 
 ## Fotos
 

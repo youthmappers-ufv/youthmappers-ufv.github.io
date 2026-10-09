@@ -53,11 +53,12 @@ cargos:
     ativo: true
 
 tipos_evento:
-  mapathon:    Mapathon
+  mapatona:    Mapatona
   oficina:     Oficina
   palestra:    Palestra
   campo:       Mapeamento de campo
   conferencia: Conferência
+  evento:      Evento                 # genérico: mostras, tradutonas e outros
 
 modalidades:
   presencial: Presencial

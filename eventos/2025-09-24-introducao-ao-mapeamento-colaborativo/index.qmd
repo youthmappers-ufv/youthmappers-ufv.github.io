@@ -1,0 +1,25 @@
+---
+title: "Introdução ao Mapeamento Colaborativo"
+date: 2025-09-24
+description: "Palestra do YouthMappers UFV sobre mapeamento colaborativo."   # PROVISÓRIA: troque por um resumo do evento
+# image: capa.jpg                    # sem capa: o site usa a imagem genérica
+categories: [palestra]
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: palestra
+modalidade:                          # presencial, remota, hibrida
+municipio:
+carga_horaria:                       # horas
+publico:                             # total de participantes
+publico_externo:                     # quantos não eram da UFV
+equipe: []                           # nomes dos arquivos em equipe/
+parceiros: []                        # ids de _data/parceiros.yml
+# --- dados exibidos só na ficha (opcionais) ---
+# horario: 14h às 18h
+# local: 
+# area_mapeada: 
+# tasking_manager: 
+---
+
+{{< ficha >}}
+
+<!-- Relato do evento: o que foi feito, quem participou, que dados foram produzidos. -->
