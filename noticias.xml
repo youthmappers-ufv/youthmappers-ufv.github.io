@@ -38,10 +38,18 @@ Participação
 <dd>
 UFPR, Curitiba
 </dd>
+<dt>Links</dt>
+<dd>
+<a href="https://sotm-br.github.io/2023/">Site do evento</a>
+</dd>
 </dl>
 </div>
 <!-- Conte como foi a participação: quem foi, o que apresentou ou aprendeu,
      contatos e parcerias que surgiram. -->
+<div class="galeria">
+<p><a href="fotos/01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/fotos/01.jpg" class="img-fluid"></a></p>
+<p><a href="fotos/02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/fotos/02.jpg" class="img-fluid"></a></p>
+</div>
 
 
 
@@ -49,6 +57,7 @@ UFPR, Curitiba
   <category>participação</category>
   <guid>https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/</guid>
   <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/capa.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
