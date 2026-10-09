@@ -46,98 +46,35 @@
     "href": "equipe.html",
     "title": "Equipe",
     "section": "",
-    "text": "Coordenador do programa\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Rodrigo SmarzaroCoordenaçãoDocente"
   },
   {
-    "objectID": "equipe.html#coordenação",
-    "href": "equipe.html#coordenação",
+    "objectID": "equipe.html#coordenacao",
+    "href": "equipe.html#coordenacao",
     "title": "Equipe",
     "section": "",
-    "text": "Coordenador do programa\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Rodrigo SmarzaroCoordenaçãoDocente"
   },
   {
-    "objectID": "equipe.html#equipe-atual",
-    "href": "equipe.html#equipe-atual",
+    "objectID": "equipe.html#diretoria",
+    "href": "equipe.html#diretoria",
     "title": "Equipe",
-    "section": "Equipe atual",
-    "text": "Equipe atual\n\n\n\n\n\n\n\n\n\n\nBolsista de Exemplo\n\n\nBolsista, Sistemas de Informação\n\n\n\n\n\n\n\n\n\n\n\n\nVoluntário de Exemplo\n\n\nVoluntário, Ciência de Dados e IA\n\n\n\n\n\nNenhum item correspondente"
+    "section": "Diretoria do capítulo",
+    "text": "Diretoria do capítulo\nFelipe KauanPresidênciaVoluntário, Sistemas de Informação"
   },
   {
     "objectID": "equipe.html#egressos",
     "href": "equipe.html#egressos",
     "title": "Equipe",
     "section": "Egressos",
-    "text": "Egressos\nEstudantes que passaram pelo programa e ajudaram a construí-lo.\n\n\n\n\n\n\n\n\n\n\nJúlia Mendonça Silva\n\n\nMembra fundadora do projeto YouthmappersUFV\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "equipe/voluntario-exemplo.html",
-    "href": "equipe/voluntario-exemplo.html",
-    "title": "Voluntário de Exemplo",
-    "section": "",
-    "text": "Pessoa de exemplo."
-  },
-  {
-    "objectID": "equipe/bolsista-exemplo.html",
-    "href": "equipe/bolsista-exemplo.html",
-    "title": "Bolsista de Exemplo",
-    "section": "",
-    "text": "Pessoa de exemplo. Substitua pelo texto real: interesses, projetos em que atua e links (GitHub, usuário do OSM, Lattes)."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "YouthMappers UFV",
-    "section": "",
-    "text": "Estudantes mapeando o mundo\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 08/10/2026."
-  },
-  {
-    "objectID": "index.html#ações-recentes",
-    "href": "index.html#ações-recentes",
-    "title": "YouthMappers UFV",
-    "section": "Ações recentes",
-    "text": "Ações recentes\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
-  },
-  {
-    "objectID": "index.html#projetos-em-andamento",
-    "href": "index.html#projetos-em-andamento",
-    "title": "YouthMappers UFV",
-    "section": "Projetos em andamento",
-    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
-  },
-  {
-    "objectID": "sobre.html",
-    "href": "sobre.html",
-    "title": "O programa",
-    "section": "",
-    "text": "O YouthMappers UFV é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional YouthMappers, que reúne estudantes universitários em torno do mapeamento colaborativo.\nO programa atua em duas frentes:"
-  },
-  {
-    "objectID": "sobre.html#objetivos",
-    "href": "sobre.html#objetivos",
-    "title": "O programa",
-    "section": "Objetivos",
-    "text": "Objetivos\n\nObjetivo geral e objetivos específicos do programa."
-  },
-  {
-    "objectID": "sobre.html#parceiros",
-    "href": "sobre.html#parceiros",
-    "title": "O programa",
-    "section": "Parceiros",
-    "text": "Parceiros\n\n\nComunidade OpenStreetMap Brasil\nPrefeituras da região"
-  },
-  {
-    "objectID": "sobre.html#como-participar",
-    "href": "sobre.html#como-participar",
-    "title": "O programa",
-    "section": "Como participar",
-    "text": "Como participar\nEstudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.\nPara entrar no programa, escreva para youthmapperschapter@ufv.br informando seu nome, curso e período."
+    "text": "Egressos\nPessoas que passaram pelo programa e ajudaram a construí-lo.\nJúlia Mendonça SilvaVoluntário de 2022 a 2024, Sistemas de Informação"
   },
   {
     "objectID": "CONTRIBUTING.html",
     "href": "CONTRIBUTING.html",
     "title": "Como atualizar o site do YouthMappers UFV",
     "section": "",
-    "text": "Este guia é para bolsistas e voluntários. Você não precisa saber programar: todo o conteúdo do site são arquivos de texto em Markdown (.qmd).\nAo salvar uma alteração na branch main, o site é republicado sozinho em 2 ou 3 minutos. Acompanhe na aba Actions do repositório.\n\n\n\nPelo navegador (mais simples). Abra o arquivo no GitHub, clique no lápis, edite e clique em Commit changes. Para enviar fotos, entre na pasta e use Add file &gt; Upload files.\nNo seu computador. Instale o Quarto, clone o repositório e rode quarto preview na pasta do projeto. O site abre no navegador e se atualiza a cada arquivo salvo.\n\nSe você ainda está aprendendo, crie uma branch e abra um pull request: a coordenação revisa antes de publicar.\n\n\n\n\nCopie a pasta _modelos/evento/ para dentro de eventos/.\nRenomeie a pasta no formato AAAA-MM-DD-nome-curto, por exemplo eventos/2027-03-15-oficina-josm/.\nEdite o index.qmd: título, data, descrição, categorias e o texto.\nColoque a foto de capa como capa.jpg e as demais em fotos/.\n\nO evento aparece sozinho na página de eventos e na página inicial.\nPreencha também os dados para o painel no cabeçalho (tipo, modalidade, municipio, carga_horaria, publico, publico_externo, equipe, parceiros). Para eventos futuros, os números podem ficar em branco e ser preenchidos depois que o evento acontecer.\nCategorias: reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas.\n\n\n\nMesmo processo: copie _modelos/projeto/ para projetos/nome-do-projeto/ e preencha os dados para o painel (tipo, inicio, fim, coordenacao, equipe, parceiros, ods).\n\n\n\n\nCopie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nSe houver foto, coloque-a em equipe/fotos/nome-sobrenome.jpg (quadrada, com o rosto centralizado). Sem foto? Apague a linha image: do arquivo: o site usa o avatar genérico automaticamente.\nPreencha o arquivo. O campo situacao decide a seção da página Equipe: coordenacao, atual ou egresso.\nOs links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de about: links:, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco about: inteiro.\nPreencha os dados para o painel: curso (código do curso), vinculo e periodos. Cada período tem a funcao, o mês de inicio e, se já terminou, o mês de fim, sempre no formato AAAA-MM. Quem foi voluntário e depois virou bolsista tem dois períodos.\n\nAtenção: sempre que o arquivo tiver um bloco about:, ele precisa conter a linha template: trestles. Sem ela, o Quarto recusa o arquivo com o erro “object is missing required property template”.\nÍcones úteis para os links: geo-alt (OSM), github, mortarboard (Lattes), linkedin, envelope (e-mail), globe (site pessoal).\nQuando alguém sai do programa, não apague o arquivo: troque situacao: atual por situacao: egresso, acrescente o fim do último período e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”).\nO layout das páginas de perfil e o avatar padrão são definidos em equipe/_metadata.yml, que vale para todos os arquivos da pasta.\n\n\n\nAcrescente a entrada BibTeX em publicacoes.bib, com o campo tipopub (artigo, resumo, capitulo, tcc ou apresentacao), usado pelo painel. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também eventtitle, eventdate e venue.\nPara citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas bibliography e csl (veja projetos/mapeamento-calcadas/) e use [@chave] no texto.\n\n\n\nO redimensionamento é automático. A cada envio, o GitHub reduz as fotos grandes, corrige a rotação e remove os metadados (inclusive a localização GPS que o celular grava). Isso aparece no histórico como um commit “Otimiza fotos (automático)”. Limites usados:\n\n\n\nPasta\nLado maior\n\n\n\n\neventos/ e projetos/\n1600 px\n\n\nequipe/fotos/\n600 px\n\n\n\nMesmo assim, siga estas regras:\n\nPrefira abrir um pull request em vez de enviar direto para a main. As fotos são otimizadas na branch do PR e, com “Squash and merge”, a versão original pesada nunca entra no histórico da main.\nEnvie no máximo 12 fotos por evento. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.\nNão envie fotos em HEIC (formato padrão do iPhone): a maioria dos navegadores não as exibe. No iPhone, use Ajustes &gt; Câmera &gt; Formatos &gt; Mais Compatível, ou converta para JPG antes de enviar.\nUse nomes sem espaços e sem acentos: 01.jpg, 02.jpg…\nPeça autorização de uso de imagem das pessoas fotografadas.\n\nQuem trabalha no computador pode otimizar antes de enviar, com o mesmo script usado pelo GitHub (requer ImageMagick):\nbash scripts/otimizar-fotos.sh\n\n\n\nA página de exemplo eventos/2026-08-20-mapathon-calcadas/ tem um mapa interativo. Copie o bloco e troque as coordenadas.\nMapas gerados com Python (ex.: folium) também funcionam: como o projeto usa freeze: auto, rode quarto render no seu computador e faça commit da pasta _freeze/ junto com a página.\n\n\n\n\n_quarto.yml: menu, rodapé e opções gerais.\ntema.scss: cores e fontes.\n.github/workflows/publicar.yml: publicação automática.\n\n\n\n\nOs quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:\n\n\n\n\n\n\n\n\nNúmero\nDe onde vem\nO que manter\n\n\n\n\nEstudantes envolvidos\nArquivos em equipe/ com situacao: atual ou egresso\nCadastrar toda pessoa que participa\n\n\nAções realizadas\nPastas em eventos/ cuja data já passou\nNome da pasta começando por AAAA-MM-DD\n\n\nEdições no OpenStreetMap\nEstatísticas da hashtag #youthmappersufv\nUsar a hashtag em todo changeset do programa\n\n\nParceiros\nArquivos de logo em imagens/parceiros/\nUm logo por parceiro\n\n\n\nAs edições do OSM são consultadas pelo script scripts/atualizar-osm.ts, que roda sozinho antes de cada renderização, inclusive no quarto preview (no máximo uma consulta a cada 12 horas). Ele grava o resultado em dados/osm.json; tudo bem fazer commit desse arquivo junto com suas alterações.\nO site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.\nA hashtag nas edições. No JOSM ou no iD, inclua #youthmappersufv no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele.\n\n\n\nA página Painel é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do publicacoes.bib e de dois arquivos de dados:\n\n_data/vocabulario.yml: os únicos valores aceitos em curso, vinculo, funcao, tipo, modalidade, tipopub etc. Para acrescentar um tipo novo, fale com a coordenação.\n_data/parceiros.yml: a lista de parceiros. Eventos e projetos citam parceiros pelo id.\n\nAntes de cada renderização, o script scripts/gerar-dados.ts confere tudo: valores fora do vocabulário, datas fora do formato AAAA-MM, nomes em equipe: que não correspondem a nenhum arquivo, situacao incoerente com os períodos, entre outros. Os problemas aparecem no terminal do quarto preview e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. Corrija-os assim que aparecerem: um dado com problema fica fora do painel.\nOs números do mapeamento vêm do scripts/atualizar-osm.ts, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em dados/: eles são gerados automaticamente."
+    "text": "Este guia é para bolsistas e voluntários. Você não precisa saber programar: todo o conteúdo do site são arquivos de texto em Markdown (.qmd).\nAo salvar uma alteração na branch main, o site é republicado sozinho em 2 ou 3 minutos. Acompanhe na aba Actions do repositório.\n\n\n\nPelo navegador (mais simples). Abra o arquivo no GitHub, clique no lápis, edite e clique em Commit changes. Para enviar fotos, entre na pasta e use Add file &gt; Upload files.\nNo seu computador. Instale o Quarto, clone o repositório e rode quarto preview na pasta do projeto. O site abre no navegador e se atualiza a cada arquivo salvo.\n\nSe você ainda está aprendendo, crie uma branch e abra um pull request: a coordenação revisa antes de publicar.\n\n\n\n\nCopie a pasta _modelos/evento/ para dentro de eventos/.\nRenomeie a pasta no formato AAAA-MM-DD-nome-curto, por exemplo eventos/2027-03-15-oficina-josm/.\nEdite o index.qmd: título, data, descrição, categorias e o texto.\nColoque a foto de capa como capa.jpg e as demais em fotos/.\n\nO evento aparece sozinho na página de eventos e na página inicial.\nPreencha também os dados para o painel no cabeçalho (tipo, modalidade, municipio, carga_horaria, publico, publico_externo, equipe, parceiros). Para eventos futuros, os números podem ficar em branco e ser preenchidos depois que o evento acontecer.\nCategorias: reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas.\n\n\n\nMesmo processo: copie _modelos/projeto/ para projetos/nome-do-projeto/ e preencha os dados para o painel (tipo, inicio, fim, coordenacao, equipe, parceiros, ods).\n\n\n\n\nCopie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nSe houver foto, coloque-a em equipe/fotos/nome-sobrenome.jpg (quadrada, com o rosto centralizado). Sem foto? Apague a linha image: do arquivo: o site usa o avatar genérico automaticamente.\nPreencha curso (código do curso), vinculo e periodos. Cada período tem a funcao (coordenacao, bolsista, voluntario ou colaborador), o mês de inicio e, se já terminou, o mês de fim, sempre no formato AAAA-MM. Quem foi voluntário e depois virou bolsista tem dois períodos.\nSe a pessoa ocupa um cargo no capítulo (por exemplo, a presidência), acrescente a lista cargos, com o cargo, o inicio e, ao fim do mandato, o fim. O mandato precisa estar dentro do período de participação.\nOs links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de about: links:, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco about: inteiro.\n\nO que não precisa ser preenchido: a seção da página Equipe em que a pessoa aparece (Coordenação, Diretoria, Equipe atual ou Egressos) e o texto abaixo do nome (“Bolsista, Sistemas de Informação”) são calculados a partir dos períodos, dos cargos e do curso. Os campos antigos situacao e description não são mais usados.\nQuando alguém sai do programa, não apague o arquivo: preencha o fim do último período (e do mandato, se houver). A pessoa passa sozinha para “Egressos”; quem presidiu aparece também em “Presidências anteriores”.\nAtenção: sempre que o arquivo tiver um bloco about:, ele precisa conter a linha template: trestles. Sem ela, o Quarto recusa o arquivo com o erro “object is missing required property template”.\nÍcones úteis para os links: geo-alt (OSM), github, mortarboard (Lattes), linkedin, envelope (e-mail), globe (site pessoal).\n\n\nOs cargos ficam em _data/vocabulario.yml, na lista cargos. Para criar, renomear ou reordenar um cargo, basta editar essa lista: a página Equipe se ajusta sozinha. Cada cargo tem:\n\nnome: o texto exibido (prefira o nome do cargo, como “Secretaria”);\nordem: a posição na seção “Diretoria do capítulo”;\nhistorico: true cria a seção de mandatos anteriores, com o título de titulo_historico;\nativo: false para um cargo extinto. Nunca apague um cargo já usado: desative-o, para o histórico continuar válido.\n\nMudar o código de um cargo (a chave, como presidencia) exige atualizar também os arquivos de quem o ocupou; a validação lista quais são.\n\n\n\n\nAcrescente a entrada BibTeX em publicacoes.bib, com o campo tipopub (artigo, resumo, capitulo, tcc ou apresentacao), usado pelo painel. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também eventtitle, eventdate e venue.\nPara citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas bibliography e csl (veja projetos/mapeamento-calcadas/) e use [@chave] no texto.\n\n\n\nO redimensionamento é automático. A cada envio, o GitHub reduz as fotos grandes, corrige a rotação e remove os metadados (inclusive a localização GPS que o celular grava). Isso aparece no histórico como um commit “Otimiza fotos (automático)”. Limites usados:\n\n\n\nPasta\nLado maior\n\n\n\n\neventos/ e projetos/\n1600 px\n\n\nequipe/fotos/\n600 px\n\n\n\nMesmo assim, siga estas regras:\n\nPrefira abrir um pull request em vez de enviar direto para a main. As fotos são otimizadas na branch do PR e, com “Squash and merge”, a versão original pesada nunca entra no histórico da main.\nEnvie no máximo 12 fotos por evento. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.\nNão envie fotos em HEIC (formato padrão do iPhone): a maioria dos navegadores não as exibe. No iPhone, use Ajustes &gt; Câmera &gt; Formatos &gt; Mais Compatível, ou converta para JPG antes de enviar.\nUse nomes sem espaços e sem acentos: 01.jpg, 02.jpg…\nPeça autorização de uso de imagem das pessoas fotografadas.\n\nQuem trabalha no computador pode otimizar antes de enviar, com o mesmo script usado pelo GitHub (requer ImageMagick):\nbash scripts/otimizar-fotos.sh\n\n\n\nA página de exemplo eventos/2026-08-20-mapathon-calcadas/ tem um mapa interativo. Copie o bloco e troque as coordenadas.\nMapas gerados com Python (ex.: folium) também funcionam: como o projeto usa freeze: auto, rode quarto render no seu computador e faça commit da pasta _freeze/ junto com a página.\n\n\n\n\n_quarto.yml: menu, rodapé e opções gerais.\ntema.scss: cores e fontes.\n.github/workflows/publicar.yml: publicação automática.\n\n\n\n\nOs quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:\n\n\n\n\n\n\n\n\nNúmero\nDe onde vem\nO que manter\n\n\n\n\nEstudantes envolvidos\nArquivos em equipe/ com vinculo de graduação ou pós\nCadastrar toda pessoa que participa, com seus períodos\n\n\nAções realizadas\nPastas em eventos/ cuja data já passou\nNome da pasta começando por AAAA-MM-DD\n\n\nEdições no OpenStreetMap\nEstatísticas da hashtag #youthmappersufv\nUsar a hashtag em todo changeset do programa\n\n\nParceiros\nArquivos de logo em imagens/parceiros/\nUm logo por parceiro\n\n\n\nAs edições do OSM são consultadas pelo script scripts/atualizar-osm.ts, que roda sozinho antes de cada renderização, inclusive no quarto preview (no máximo uma consulta a cada 12 horas). Ele grava o resultado em dados/osm.json; tudo bem fazer commit desse arquivo junto com suas alterações.\nO site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.\nA hashtag nas edições. No JOSM ou no iD, inclua #youthmappersufv no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele.\n\n\n\nA página Painel é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do publicacoes.bib e de dois arquivos de dados:\n\n_data/vocabulario.yml: os únicos valores aceitos em curso, vinculo, funcao, cargo, tipo, modalidade, tipopub etc. Para acrescentar um tipo novo, fale com a coordenação.\n_data/parceiros.yml: a lista de parceiros. Eventos e projetos citam parceiros pelo id.\n\nAntes de cada renderização, o script scripts/gerar-dados.ts confere tudo: valores fora do vocabulário, datas fora do formato AAAA-MM, nomes em equipe: que não correspondem a nenhum arquivo, mandatos fora do período de participação, duas pessoas no mesmo cargo ao mesmo tempo, entre outros. Os problemas aparecem no terminal do quarto preview e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. Corrija-os assim que aparecerem: um dado com problema fica fora do painel.\nOs números do mapeamento vêm do scripts/atualizar-osm.ts, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em dados/: eles são gerados automaticamente."
   },
   {
     "objectID": "CONTRIBUTING.html#duas-formas-de-editar",
@@ -165,7 +102,7 @@
     "href": "CONTRIBUTING.html#adicionar-uma-pessoa-à-equipe",
     "title": "Como atualizar o site do YouthMappers UFV",
     "section": "",
-    "text": "Copie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nSe houver foto, coloque-a em equipe/fotos/nome-sobrenome.jpg (quadrada, com o rosto centralizado). Sem foto? Apague a linha image: do arquivo: o site usa o avatar genérico automaticamente.\nPreencha o arquivo. O campo situacao decide a seção da página Equipe: coordenacao, atual ou egresso.\nOs links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de about: links:, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco about: inteiro.\nPreencha os dados para o painel: curso (código do curso), vinculo e periodos. Cada período tem a funcao, o mês de inicio e, se já terminou, o mês de fim, sempre no formato AAAA-MM. Quem foi voluntário e depois virou bolsista tem dois períodos.\n\nAtenção: sempre que o arquivo tiver um bloco about:, ele precisa conter a linha template: trestles. Sem ela, o Quarto recusa o arquivo com o erro “object is missing required property template”.\nÍcones úteis para os links: geo-alt (OSM), github, mortarboard (Lattes), linkedin, envelope (e-mail), globe (site pessoal).\nQuando alguém sai do programa, não apague o arquivo: troque situacao: atual por situacao: egresso, acrescente o fim do último período e atualize a descrição (ex.: “Bolsista de 2026 a 2027, Sistemas de Informação”).\nO layout das páginas de perfil e o avatar padrão são definidos em equipe/_metadata.yml, que vale para todos os arquivos da pasta."
+    "text": "Copie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nSe houver foto, coloque-a em equipe/fotos/nome-sobrenome.jpg (quadrada, com o rosto centralizado). Sem foto? Apague a linha image: do arquivo: o site usa o avatar genérico automaticamente.\nPreencha curso (código do curso), vinculo e periodos. Cada período tem a funcao (coordenacao, bolsista, voluntario ou colaborador), o mês de inicio e, se já terminou, o mês de fim, sempre no formato AAAA-MM. Quem foi voluntário e depois virou bolsista tem dois períodos.\nSe a pessoa ocupa um cargo no capítulo (por exemplo, a presidência), acrescente a lista cargos, com o cargo, o inicio e, ao fim do mandato, o fim. O mandato precisa estar dentro do período de participação.\nOs links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de about: links:, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco about: inteiro.\n\nO que não precisa ser preenchido: a seção da página Equipe em que a pessoa aparece (Coordenação, Diretoria, Equipe atual ou Egressos) e o texto abaixo do nome (“Bolsista, Sistemas de Informação”) são calculados a partir dos períodos, dos cargos e do curso. Os campos antigos situacao e description não são mais usados.\nQuando alguém sai do programa, não apague o arquivo: preencha o fim do último período (e do mandato, se houver). A pessoa passa sozinha para “Egressos”; quem presidiu aparece também em “Presidências anteriores”.\nAtenção: sempre que o arquivo tiver um bloco about:, ele precisa conter a linha template: trestles. Sem ela, o Quarto recusa o arquivo com o erro “object is missing required property template”.\nÍcones úteis para os links: geo-alt (OSM), github, mortarboard (Lattes), linkedin, envelope (e-mail), globe (site pessoal).\n\n\nOs cargos ficam em _data/vocabulario.yml, na lista cargos. Para criar, renomear ou reordenar um cargo, basta editar essa lista: a página Equipe se ajusta sozinha. Cada cargo tem:\n\nnome: o texto exibido (prefira o nome do cargo, como “Secretaria”);\nordem: a posição na seção “Diretoria do capítulo”;\nhistorico: true cria a seção de mandatos anteriores, com o título de titulo_historico;\nativo: false para um cargo extinto. Nunca apague um cargo já usado: desative-o, para o histórico continuar válido.\n\nMudar o código de um cargo (a chave, como presidencia) exige atualizar também os arquivos de quem o ocupou; a validação lista quais são."
   },
   {
     "objectID": "CONTRIBUTING.html#adicionar-uma-publicação",
@@ -200,14 +137,63 @@
     "href": "CONTRIBUTING.html#números-da-página-inicial-automáticos",
     "title": "Como atualizar o site do YouthMappers UFV",
     "section": "",
-    "text": "Os quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:\n\n\n\n\n\n\n\n\nNúmero\nDe onde vem\nO que manter\n\n\n\n\nEstudantes envolvidos\nArquivos em equipe/ com situacao: atual ou egresso\nCadastrar toda pessoa que participa\n\n\nAções realizadas\nPastas em eventos/ cuja data já passou\nNome da pasta começando por AAAA-MM-DD\n\n\nEdições no OpenStreetMap\nEstatísticas da hashtag #youthmappersufv\nUsar a hashtag em todo changeset do programa\n\n\nParceiros\nArquivos de logo em imagens/parceiros/\nUm logo por parceiro\n\n\n\nAs edições do OSM são consultadas pelo script scripts/atualizar-osm.ts, que roda sozinho antes de cada renderização, inclusive no quarto preview (no máximo uma consulta a cada 12 horas). Ele grava o resultado em dados/osm.json; tudo bem fazer commit desse arquivo junto com suas alterações.\nO site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.\nA hashtag nas edições. No JOSM ou no iD, inclua #youthmappersufv no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele."
+    "text": "Os quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:\n\n\n\n\n\n\n\n\nNúmero\nDe onde vem\nO que manter\n\n\n\n\nEstudantes envolvidos\nArquivos em equipe/ com vinculo de graduação ou pós\nCadastrar toda pessoa que participa, com seus períodos\n\n\nAções realizadas\nPastas em eventos/ cuja data já passou\nNome da pasta começando por AAAA-MM-DD\n\n\nEdições no OpenStreetMap\nEstatísticas da hashtag #youthmappersufv\nUsar a hashtag em todo changeset do programa\n\n\nParceiros\nArquivos de logo em imagens/parceiros/\nUm logo por parceiro\n\n\n\nAs edições do OSM são consultadas pelo script scripts/atualizar-osm.ts, que roda sozinho antes de cada renderização, inclusive no quarto preview (no máximo uma consulta a cada 12 horas). Ele grava o resultado em dados/osm.json; tudo bem fazer commit desse arquivo junto com suas alterações.\nO site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.\nA hashtag nas edições. No JOSM ou no iD, inclua #youthmappersufv no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele."
   },
   {
     "objectID": "CONTRIBUTING.html#painel-de-estatísticas-e-validação-dos-dados",
     "href": "CONTRIBUTING.html#painel-de-estatísticas-e-validação-dos-dados",
     "title": "Como atualizar o site do YouthMappers UFV",
     "section": "",
-    "text": "A página Painel é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do publicacoes.bib e de dois arquivos de dados:\n\n_data/vocabulario.yml: os únicos valores aceitos em curso, vinculo, funcao, tipo, modalidade, tipopub etc. Para acrescentar um tipo novo, fale com a coordenação.\n_data/parceiros.yml: a lista de parceiros. Eventos e projetos citam parceiros pelo id.\n\nAntes de cada renderização, o script scripts/gerar-dados.ts confere tudo: valores fora do vocabulário, datas fora do formato AAAA-MM, nomes em equipe: que não correspondem a nenhum arquivo, situacao incoerente com os períodos, entre outros. Os problemas aparecem no terminal do quarto preview e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. Corrija-os assim que aparecerem: um dado com problema fica fora do painel.\nOs números do mapeamento vêm do scripts/atualizar-osm.ts, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em dados/: eles são gerados automaticamente."
+    "text": "A página Painel é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do publicacoes.bib e de dois arquivos de dados:\n\n_data/vocabulario.yml: os únicos valores aceitos em curso, vinculo, funcao, cargo, tipo, modalidade, tipopub etc. Para acrescentar um tipo novo, fale com a coordenação.\n_data/parceiros.yml: a lista de parceiros. Eventos e projetos citam parceiros pelo id.\n\nAntes de cada renderização, o script scripts/gerar-dados.ts confere tudo: valores fora do vocabulário, datas fora do formato AAAA-MM, nomes em equipe: que não correspondem a nenhum arquivo, mandatos fora do período de participação, duas pessoas no mesmo cargo ao mesmo tempo, entre outros. Os problemas aparecem no terminal do quarto preview e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. Corrija-os assim que aparecerem: um dado com problema fica fora do painel.\nOs números do mapeamento vêm do scripts/atualizar-osm.ts, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em dados/: eles são gerados automaticamente."
+  },
+  {
+    "objectID": "sobre.html",
+    "href": "sobre.html",
+    "title": "O programa",
+    "section": "",
+    "text": "O YouthMappers UFV é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional YouthMappers, que reúne estudantes universitários em torno do mapeamento colaborativo.\nO programa atua em duas frentes:"
+  },
+  {
+    "objectID": "sobre.html#objetivos",
+    "href": "sobre.html#objetivos",
+    "title": "O programa",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nObjetivo geral e objetivos específicos do programa."
+  },
+  {
+    "objectID": "sobre.html#parceiros",
+    "href": "sobre.html#parceiros",
+    "title": "O programa",
+    "section": "Parceiros",
+    "text": "Parceiros\n\n\nComunidade OpenStreetMap Brasil\nPrefeituras da região"
+  },
+  {
+    "objectID": "sobre.html#como-participar",
+    "href": "sobre.html#como-participar",
+    "title": "O programa",
+    "section": "Como participar",
+    "text": "Como participar\nEstudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.\nPara entrar no programa, escreva para youthmapperschapter@ufv.br informando seu nome, curso e período."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "YouthMappers UFV",
+    "section": "",
+    "text": "Estudantes mapeando o mundo\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 09/10/2026."
+  },
+  {
+    "objectID": "index.html#ações-recentes",
+    "href": "index.html#ações-recentes",
+    "title": "YouthMappers UFV",
+    "section": "Ações recentes",
+    "text": "Ações recentes\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
+  },
+  {
+    "objectID": "index.html#projetos-em-andamento",
+    "href": "index.html#projetos-em-andamento",
+    "title": "YouthMappers UFV",
+    "section": "Projetos em andamento",
+    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
   },
   {
     "objectID": "equipe/julia-mendonca.html",

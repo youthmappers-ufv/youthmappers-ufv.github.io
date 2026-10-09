@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Coordenação, bolsistas, voluntários e egressos do programa.">
+<meta name="description" content="Coordenação, diretoria, equipe atual, egressos e mandatos anteriores do programa.">
 
 <title>Equipe – YouthMappers UFV</title>
 <style>
@@ -38,8 +38,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./imagens/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -49,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-820c74e1c63103e7200de11a89ff7834.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3769fec067e52c24f34970df09c8392d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,127 +75,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-coordenacao .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-coordenacao'] = new List('listing-coordenacao', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-atuais .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-atuais'] = new List('listing-atuais', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-egressos .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-egressos'] = new List('listing-egressos', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="apple-touch-icon" href="./imagens/apple-touch-icon.png">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta property="og:title" content="Equipe – YouthMappers UFV">
-<meta property="og:description" content="Coordenação, bolsistas, voluntários e egressos do programa.">
+<meta property="og:description" content="Coordenação, diretoria, equipe atual, egressos e mandatos anteriores do programa.">
 <meta property="og:image" content="https://youthmappers-ufv.github.io/equipe/fotos/rodrigo-smarzaro.png">
 <meta property="og:site_name" content="YouthMappers UFV">
+<meta property="og:image:alt" content="Foto de Rodrigo Smarzaro">
 <meta property="og:image:height" content="600">
 <meta property="og:image:width" content="600">
 </head>
@@ -282,7 +167,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Coordenação, bolsistas, voluntários e egressos do programa.
+    Coordenação, diretoria, equipe atual, egressos e mandatos anteriores do programa.
   </div>
 </div>
 
@@ -299,95 +184,21 @@ window.Quarto = {
 </header>
 
 
-<section id="coordenação" class="level2">
-<h2 class="anchored" data-anchor-id="coordenação">Coordenação</h2>
-<div id="listing-coordenacao" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1791502991374" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
-<a href="./equipe/rodrigo-smarzaro.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./equipe/fotos/rodrigo-smarzaro.png" class="thumbnail-image card-img" style="height: 160px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Rodrigo Smarzaro
-</h5>
-<div class="card-text listing-description delink">
-<p>Coordenador do programa</p>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">Nenhum item correspondente</div>
-</div>
+<!-- As seções abaixo são montadas automaticamente a partir dos arquivos
+     em equipe/ (períodos e cargos de cada pessoa). Para mudar quem aparece
+     em cada seção, edite os períodos e cargos nos arquivos dos membros. -->
+<section id="coordenacao" class="level2">
+<h2 class="anchored" data-anchor-id="coordenacao">Coordenação</h2>
+<div class="equipe-grade equipe-destaque"><a class="pessoa" href="equipe/rodrigo-smarzaro.html"><img class="pessoa-foto" src="equipe/fotos/rodrigo-smarzaro.png" alt="Foto de Rodrigo Smarzaro" loading="lazy"><span class="pessoa-nome">Rodrigo Smarzaro</span><span class="pessoa-selo">Coordenação</span><span class="pessoa-desc">Docente</span></a></div>
 </section>
-<section id="equipe-atual" class="level2">
-<h2 class="anchored" data-anchor-id="equipe-atual">Equipe atual</h2>
-<div id="listing-atuais" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1791502991372" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
-<a href="./equipe/bolsista-exemplo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./equipe/fotos/avatar.svg" class="thumbnail-image card-img" style="height: 160px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bolsista de Exemplo
-</h5>
-<div class="card-text listing-description delink">
-<p>Bolsista, Sistemas de Informação</p>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1791502991374" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<a href="./equipe/voluntario-exemplo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./equipe/fotos/avatar.svg" class="thumbnail-image card-img" style="height: 160px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Voluntário de Exemplo
-</h5>
-<div class="card-text listing-description delink">
-<p>Voluntário, Ciência de Dados e IA</p>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">Nenhum item correspondente</div>
-</div>
+<section id="diretoria" class="level2">
+<h2 class="anchored" data-anchor-id="diretoria">Diretoria do capítulo</h2>
+<div class="equipe-grade equipe-destaque"><a class="pessoa" href="equipe/felipe-kauan.html"><img class="pessoa-foto" src="equipe/fotos/felipe-kauan.png" alt="Foto de Felipe Kauan" loading="lazy"><span class="pessoa-nome">Felipe Kauan</span><span class="pessoa-selo">Presidência</span><span class="pessoa-desc">Voluntário, Sistemas de Informação</span></a></div>
 </section>
 <section id="egressos" class="level2">
 <h2 class="anchored" data-anchor-id="egressos">Egressos</h2>
-<p>Estudantes que passaram pelo programa e ajudaram a construí-lo.</p>
-<div id="listing-egressos" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1791502991374" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
-<a href="./equipe/julia-mendonca.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./equipe/fotos/julia-mendonca.jpeg" class="thumbnail-image card-img" style="height: 160px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Júlia Mendonça Silva
-</h5>
-<div class="card-text listing-description delink">
-<p>Membra fundadora do projeto YouthmappersUFV</p>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">Nenhum item correspondente</div>
-</div>
-
+<p>Pessoas que passaram pelo programa e ajudaram a construí-lo.</p>
+<div class="equipe-grade equipe-normal"><a class="pessoa" href="equipe/julia-mendonca.html"><img class="pessoa-foto" src="equipe/fotos/julia-mendonca.jpeg" alt="Foto de Júlia Mendonça Silva" loading="lazy"><span class="pessoa-nome">Júlia Mendonça Silva</span><span class="pessoa-desc">Voluntário de 2022 a 2024, Sistemas de Informação</span></a></div>
 
 
 </section>
