@@ -48,7 +48,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3769fec067e52c24f34970df09c8392d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7be3de461ab90016a9af889f229a7d99.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/leaflet-1.9.4/leaflet.js"></script>
+<link href="../../site_libs/quarto-contrib/leaflet-1.9.4/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/mapa-ym-1.1.0/mapa.js"></script>
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -88,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:site_name" content="YouthMappers UFV">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed pagina-evento fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,12 +140,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/youthmappers-ufv"> <i class="bi bi-github" role="img" aria-label="GitHub do programa">
+    <a class="nav-link" href="https://instagram.com/youthmappers.ufv"> <i class="bi bi-instagram" role="img" aria-label="Instagram do programa">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:smarzaro@ufv.br"> <i class="bi bi-envelope" role="img" aria-label="Contato por e-mail">
+    <a class="nav-link" href="mailto:youthmapperschapter@ufv.br"> <i class="bi bi-envelope" role="img" aria-label="Contato por e-mail">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -165,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Mapatona Angra dos Reis</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">mapathon</div>
+    <div class="quarto-category">mapatona</div>
   </div>
   </div>
 
@@ -200,48 +203,40 @@ ul.task-list li input[type="checkbox"] {
 <dd>
 09/07/2022, das 21h às 23h
 </dd>
+<dt>Formato</dt>
+<dd>
+Mapatona, remota
+</dd>
 <dt>Local</dt>
 <dd>
-Transmissão online via google meet
+Transmissão online pelo Google Meet
+</dd>
+<dt>Área mapeada</dt>
+<dd>
+Angra dos Reis (RJ), com prioridade para o bairro Monsuaba
+</dd>
+<dt>Carga horária</dt>
+<dd>
+4 horas
 </dd>
 <dt>Participantes</dt>
 <dd>
-10 estudantes
+10 pessoas
 </dd>
-<dt>Parceiros</dt>
+<dt>Equipe do programa</dt>
 <dd>
-Grupo Meninas da Geo, Mapeadores Livres UFPR
+<a href="../../equipe/rodrigo-smarzaro.html">Rodrigo Smarzaro</a> e <a href="../../equipe/julia-mendonca.html">Júlia Mendonça Silva</a>
 </dd>
 <dt>Links</dt>
 <dd>
-<a href="https://tasks.hotosm.org/projects/12411/">Projeto no Tasking Manager</a>
+<a href="https://tasks.hotosm.org/projects/12411">Projeto 12411 no Tasking Manager</a>
 </dd>
 </dl>
 </div>
 <p>O Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap.</p>
 <section id="área-mapeada" class="level2">
 <h2 class="anchored" data-anchor-id="área-mapeada">Área mapeada</h2>
-<!-- Mapa interativo com Leaflet. Troque as coordenadas pelo centro
-     da área mapeada (copie do openstreetmap.org: botão direito > Mostrar endereço). -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<div id="mapa-evento" class="mapa" role="img" aria-label="Mapa da área mapeada no evento"></div>
-<script>
-  const mapa = L.map('mapa-evento').setView([-19.194, -46.247], 16);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mapa);
-
-  fetch('area.geojson')
-  .then(r => r.json())
-  .then(dados => {
-    const area = L.geoJSON(dados, {
-      style: { color: '#2e7d5b', weight: 2, fillOpacity: 0.15 }
-    }).addTo(mapa);
-    mapa.fitBounds(area.getBounds());
-  });
-</script>
+<div id="mapa-1" class="mapa" role="region" aria-label="Mapa da área mapeada" style="height: 380px" data-zoom="15" data-marcador="sim" data-icone="marcador-b.svg" data-geojson="area.geojson"></div>
 </section>
 <section id="fotos" class="level2">
 <h2 class="anchored" data-anchor-id="fotos">Fotos</h2>

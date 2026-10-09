@@ -1,45 +1,206 @@
 [
   {
+    "objectID": "sobre.html",
+    "href": "sobre.html",
+    "title": "O programa",
+    "section": "",
+    "text": "O YouthMappers UFV é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional YouthMappers, que reúne estudantes universitários em torno do mapeamento colaborativo.\nO programa atua em duas frentes:"
+  },
+  {
+    "objectID": "sobre.html#objetivos",
+    "href": "sobre.html#objetivos",
+    "title": "O programa",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nObjetivo geral e objetivos específicos do programa."
+  },
+  {
+    "objectID": "sobre.html#parceiros",
+    "href": "sobre.html#parceiros",
+    "title": "O programa",
+    "section": "Parceiros",
+    "text": "Parceiros\n\n\nComunidade OpenStreetMap Brasil\nPrefeituras da região"
+  },
+  {
+    "objectID": "sobre.html#como-participar",
+    "href": "sobre.html#como-participar",
+    "title": "O programa",
+    "section": "Como participar",
+    "text": "Como participar\nEstudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.\nPara entrar no programa, escreva para youthmapperschapter@ufv.br informando seu nome, curso e período."
+  },
+  {
+    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html",
+    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html",
+    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
+    "section": "",
+    "text": "Tipo\n\nProjeto de extensão\n\nPeríodo\n\n2025 em diante\n\nCoordenação\n\nRodrigo Smarzaro\n\nSituação\n\nEm andamento\n\nParceiros\n\ntomtom"
+  },
+  {
+    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html#objetivo",
+    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html#objetivo",
+    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
+    "section": "Objetivo",
+    "text": "Objetivo\nO projeto promove a interação universidade-sociedade por meio da tradução e adaptação do software MapComplete1, disponibilizando a ferramenta para comunidades e colaboradores internacionais de mapeamento colaborativo. A ação vai além da mera tradução, incluindo testes de funcionalidade, revisão linguística e integração com a comunidade OSM, garantindo que o conhecimento técnico produzido na universidade seja socializado e utilizado por diferentes grupos."
+  },
+  {
+    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html#resultados",
+    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html#resultados",
+    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
+    "section": "Resultados",
+    "text": "Resultados\nForam traduzidas 6.416 frases, 42315 palavras e 259,498 caracteres. Em Dezembro de 2025, o software foi completamente traduzido e localizado para o português brasileiro, com a versão final publicada no repositório oficial do MapComplete."
+  },
+  {
+    "objectID": "projetos.html",
+    "href": "projetos.html",
+    "title": "Projetos",
+    "section": "",
+    "text": "Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\n\nextensão\n\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\n\nextensão\n\nacessibilidade\n\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "YouthMappers UFV",
+    "section": "",
+    "text": "Estudantes mapeando a própria cidade\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 09/10/2026."
+  },
+  {
+    "objectID": "index.html#ações-recentes",
+    "href": "index.html#ações-recentes",
+    "title": "YouthMappers UFV",
+    "section": "Ações recentes",
+    "text": "Ações recentes\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\nTradutona Mapcomplete\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n06/11/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/10/2025\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
+  },
+  {
+    "objectID": "index.html#projetos-em-andamento",
+    "href": "index.html#projetos-em-andamento",
+    "title": "YouthMappers UFV",
+    "section": "Projetos em andamento",
+    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
+  },
+  {
+    "objectID": "eventos/2025-11-06-tradutona-mapcomplete/index.html",
+    "href": "eventos/2025-11-06-tradutona-mapcomplete/index.html",
+    "title": "Tradutona Mapcomplete",
+    "section": "",
+    "text": "Data\n\n06/11/2025\n\nFormato\n\nEvento"
+  },
+  {
+    "objectID": "eventos/2025-09-25-mapeamento-colaborativo-com-editor-josm/index.html",
+    "href": "eventos/2025-09-25-mapeamento-colaborativo-com-editor-josm/index.html",
+    "title": "Mapeamento Colaborativo com Editor JOSM",
+    "section": "",
+    "text": "Data\n\n25/09/2025\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis/index.html",
+    "href": "eventos/2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis/index.html",
+    "title": "Mapeamento Colaborativo com Aplicativos Móveis",
+    "section": "",
+    "text": "Data\n\n18/09/2025\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2025-06-16-capacitacao-em-mapeamento-colaborativo-editor-josm/index.html",
+    "href": "eventos/2025-06-16-capacitacao-em-mapeamento-colaborativo-editor-josm/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Editor JOSM",
+    "section": "",
+    "text": "Data\n\n16/06/2025\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+    "href": "eventos/2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Conceitos Básicos",
+    "section": "",
+    "text": "Data\n\n02/06/2025\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2025-03-18-mostra-de-projetos-de-extensao/index.html",
+    "href": "eventos/2025-03-18-mostra-de-projetos-de-extensao/index.html",
+    "title": "Mostra de projetos de extensão",
+    "section": "",
+    "text": "Data\n\n18/03/2025\n\nFormato\n\nEvento"
+  },
+  {
+    "objectID": "eventos/2024-11-14-mapatona-zona-urbana-de-rio-paranaiba-parte-2/index.html",
+    "href": "eventos/2024-11-14-mapatona-zona-urbana-de-rio-paranaiba-parte-2/index.html",
+    "title": "Mapatona Zona Urbana de Rio Paranaíba - Parte 2",
+    "section": "",
+    "text": "Data\n\n14/11/2024\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nZona Urbana de Rio Paranaíba"
+  },
+  {
+    "objectID": "eventos/2024-10-25-plugin-buildings-tools/index.html",
+    "href": "eventos/2024-10-25-plugin-buildings-tools/index.html",
+    "title": "Plugin buildings-tools",
+    "section": "",
+    "text": "Data\n\n25/10/2024\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2024-08-09-mapatona-tres-coroas-rs-aniversario-osm/index.html",
+    "href": "eventos/2024-08-09-mapatona-tres-coroas-rs-aniversario-osm/index.html",
+    "title": "Mapatona Três Coroas - RS - Aniversário OSM",
+    "section": "",
+    "text": "Data\n\n09/08/2024\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nTrês Coroas - RS"
+  },
+  {
+    "objectID": "eventos/2024-05-14-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
+    "href": "eventos/2024-05-14-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Mapatona",
+    "section": "",
+    "text": "Data\n\n14/05/2024\n\nFormato\n\nMapatona"
+  },
+  {
+    "objectID": "eventos/2024-04-30-capacitacao-em-mapeamento-colaborativo-aula-02/index.html",
+    "href": "eventos/2024-04-30-capacitacao-em-mapeamento-colaborativo-aula-02/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Aula 02",
+    "section": "",
+    "text": "Data\n\n30/04/2024\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap/index.html",
+    "href": "eventos/2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap/index.html",
+    "title": "Mapeamento de limites administrativos no OpenStreetMap",
+    "section": "",
+    "text": "Data\n\n19/10/2023\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
+    "href": "eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
+    "title": "Mapatona Região Sul atingida pelas enchentes",
+    "section": "",
+    "text": "Data\n\n28/09/2023\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nRegião Sul atingida pelas enchentes"
+  },
+  {
+    "objectID": "eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+    "href": "eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Conceitos Iniciais para o OpenStreetMap e editor iD",
+    "section": "",
+    "text": "Data\n\n13/09/2023\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
+    "href": "eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
+    "title": "Mapatona Quississana - aniversário OSM",
+    "section": "",
+    "text": "Data\n\n09/08/2023\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nQuississana"
+  },
+  {
+    "objectID": "eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
+    "href": "eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
+    "title": "Oficina de Importação de Dados do OSM para o PostGIS usando o Osmosis",
+    "section": "",
+    "text": "Data\n\n19/07/2022\n\nFormato\n\nOficina, remota\n\nCarga horária\n\n2 horas\n\nParticipantes\n\n15 pessoas, das quais 10 da comunidade externa\n\nEquipe do programa\n\nRodrigo Smarzaro e Júlia Mendonça Silva\n\n\n\nConteúdo Programado: - Download de dados do OpenStreetMap no site Geofabrik - Criação de arquivo com dados do OpenStreetMap para uma área de interesse - Importação dos dados para o PostGIS - Criação de consultas simples envolvendo os dados do OpenStreetMap - Ligação entre o PostGIS e o QGIS - Exemplos de visualizações dos dados usando o QGIS."
+  },
+  {
     "objectID": "eventos.html",
     "href": "eventos.html",
     "title": "Ações e eventos",
     "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Título\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\n\nconferência\n\ncomunidade OSM\n\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\n\nmapathon\n\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Título\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\n\nconferência\n\ncomunidade OSM\n\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\nTradutona Mapcomplete\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n06/11/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/10/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Editor JOSM\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/09/2025\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Mapeamento Colaborativo\n\n\n\npalestra\n\n\n\nPalestra do YouthMappers UFV sobre mapeamento colaborativo.\n\n\n\n24/09/2025\n\n\n\n\n\n\n\n\n\n\n\nMapeamento Colaborativo com Aplicativos Móveis\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n18/09/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Mapatona\n\n\n\nmapatona\n\ncapacitação\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n23/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Editor JOSM\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n16/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento colaborativo - Editor iD\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n09/06/2025\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Conceitos Básicos\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n02/06/2025\n\n\n\n\n\n\n\n\n\n\n\nMapatona Open Data Day - Áreas da COP30 em Belém\n\n\n\nmapatona\n\nOpen Data Day\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n28/03/2025\n\n\n\n\n\n\n\n\n\n\n\nMostra de projetos de extensão\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n18/03/2025\n\n\n\n\n\n\n\n\n\n\n\nMostra de Profissões\n\n\n\nevento\n\n\n\nEvento com participação do YouthMappers UFV.\n\n\n\n23/11/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Zona Urbana de Rio Paranaíba - Parte 2\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n14/11/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Zona Urbana de Rio Paranaíba\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n01/11/2024\n\n\n\n\n\n\n\n\n\n\n\nPlugin buildings-tools\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n25/10/2024\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao mapeamento Colaborativo e Mapatona - SEMEAR\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n17/10/2024\n\n\n\n\n\n\n\n\n\n\n\nMapatona Três Coroas - RS - Aniversário OSM\n\n\n\nmapatona\n\naniversário OSM\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/08/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação Editor iD - Esalq\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n21/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Mapatona\n\n\n\nmapatona\n\ncapacitação\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n14/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 03\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n07/05/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 02\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n30/04/2024\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Aula 01\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n23/04/2024\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de limites administrativos no OpenStreetMap\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n19/10/2023\n\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil Curitiba 2023\n\n\n\nconferência\n\n\n\nParticipação do YouthMappers UFV na conferência.\n\n\n\n02/10/2023\n\n\n\n\n\n\n\n\n\n\n\nConfiguração e uso do software JOSM no mapeamento colaborativo\n\n\n\noficina\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n28/09/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Região Sul atingida pelas enchentes\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n28/09/2023\n\n\n\n\n\n\n\n\n\n\n\nCapacitação em Mapeamento Colaborativo - Conceitos Iniciais para o OpenStreetMap e editor iD\n\n\n\noficina\n\ncapacitação\n\n\n\nOficina de mapeamento colaborativo do YouthMappers UFV.\n\n\n\n13/09/2023\n\n\n\n\n\n\n\n\n\n\n\nYouthmappers Mapeamento colaborativo e humanitário\n\n\n\npalestra\n\ncapacitação\n\n\n\nApresentação dos conceitos, ferramentas e comunidades envolvidas em mapeamento colaborativo e humanitário\n\n\n\n25/08/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Quississana - aniversário OSM\n\n\n\nmapatona\n\naniversário OSM\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n09/08/2023\n\n\n\n\n\n\n\n\n\n\n\nMapatona Noroeste de Rio Paranaíba\n\n\n\nmapatona\n\n\n\nMapatona realizada pelo YouthMappers UFV.\n\n\n\n15/10/2022\n\n\n\n\n\n\n\n\n\n\n\nOficina de Importação de Dados do OSM para o PostGIS usando o Osmosis\n\n\n\noficina\n\n\n\n\n\n\n\n19/07/2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\n\nmapatona\n\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
-    "href": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
-    "title": "Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial",
+    "objectID": "equipe/julia-mendonca.html",
+    "href": "equipe/julia-mendonca.html",
+    "title": "Júlia Mendonça Silva",
     "section": "",
-    "text": "Tipo\n\nProjeto de extensão\n\nSituação\n\nFinalizado\n\n\n\nA ação extensionista deste projeto busca promover uma interação efetiva entre a Universidade Federal de Viçosa e a sociedade, de modo a socializar o conhecimento acadêmico em geotecnologias para além do ambiente universitário. A proposta vai além da simples transferência de saberes ou da prestação pontual de serviços: pretende-se desenvolver um processo dialógico, no qual universidade e comunidade atuem como parceiros na construção de soluções.\nA geração de ortoimagens do campus e de áreas urbanas próximas será utilizada como meio para que os discentes aprendam e apliquem técnicas avançadas de coleta, processamento e análise de dados geoespaciais, ao mesmo tempo em que a comunidade terá acesso a produtos cartográficos de alta qualidade, úteis para planejamento urbano, gestão territorial e apoio à tomada de decisão. Essa troca permite que demandas reais da sociedade orientem o processo de ensino-aprendizagem, fortalecendo o caráter educativo e transformador da extensão.\nDessa forma, a ação extensionista constitui um espaço de cooperação, onde o conhecimento científico produzido na universidade é ressignificado a partir das necessidades locais, contribuindo para o desenvolvimento sustentável e para a formação crítica e cidadã dos estudantes envolvidos."
-  },
-  {
-    "objectID": "eventos/2022-07-09-mapatona-angra/index.html",
-    "href": "eventos/2022-07-09-mapatona-angra/index.html",
-    "title": "Mapatona Angra dos Reis",
-    "section": "",
-    "text": "Data\n\n09/07/2022, das 21h às 23h\n\nLocal\n\nTransmissão online via google meet\n\nParticipantes\n\n10 estudantes\n\nParceiros\n\nGrupo Meninas da Geo, Mapeadores Livres UFPR\n\nLinks\n\nProjeto no Tasking Manager\nO Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap."
-  },
-  {
-    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
-    "href": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
-    "title": "Mapatona Angra dos Reis",
-    "section": "Área mapeada",
-    "text": "Área mapeada"
-  },
-  {
-    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
-    "href": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
-    "title": "Mapatona Angra dos Reis",
-    "section": "Fotos",
-    "text": "Fotos\nClique em uma foto para ampliar e use as setas para navegar.\n\n\n\n\nAbertura da atividade\n\n\n\n\n\nEquipe\n\n\n\n\n\nEquipe"
-  },
-  {
-    "objectID": "publicacoes.html",
-    "href": "publicacoes.html",
-    "title": "Publicações",
-    "section": "",
-    "text": "As referências abaixo são geradas automaticamente a partir do arquivo publicacoes.bib, no padrão ABNT. Para incluir uma publicação, basta acrescentar a entrada BibTeX nesse arquivo.\n\n\nSMARZARO, Rodrigo. Título de exemplo: introdução ao OpenStreetMap. Oficina. Universidade Federal de Viçosa, campus Rio Paranaíba, 2026.\n\n\nSOBRENOME, Nome; SMARZARO, Rodrigo. Título de exemplo: mapeamento colaborativo de calçadas com estudantes. Em: STATE OF THE MAP BRASIL. Anais do State of the Map Brasil 2026. Uberlândia, MG: 2026."
+    "text": "Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário."
   },
   {
     "objectID": "equipe.html",
@@ -70,139 +231,6 @@
     "text": "Egressos\nPessoas que passaram pelo programa e ajudaram a construí-lo.\nJúlia Mendonça SilvaVoluntário de 2022 a 2024, Sistemas de Informação"
   },
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Este guia é para bolsistas e voluntários. Você não precisa saber programar: todo o conteúdo do site são arquivos de texto em Markdown (.qmd).\nAo salvar uma alteração na branch main, o site é republicado sozinho em 2 ou 3 minutos. Acompanhe na aba Actions do repositório.\n\n\n\nPelo navegador (mais simples). Abra o arquivo no GitHub, clique no lápis, edite e clique em Commit changes. Para enviar fotos, entre na pasta e use Add file &gt; Upload files.\nNo seu computador. Instale o Quarto, clone o repositório e rode quarto preview na pasta do projeto. O site abre no navegador e se atualiza a cada arquivo salvo.\n\nSe você ainda está aprendendo, crie uma branch e abra um pull request: a coordenação revisa antes de publicar.\n\n\n\n\nCopie a pasta _modelos/evento/ para dentro de eventos/.\nRenomeie a pasta no formato AAAA-MM-DD-nome-curto, por exemplo eventos/2027-03-15-oficina-josm/.\nEdite o index.qmd: título, data, descrição, categorias e o texto.\nColoque a foto de capa como capa.jpg e as demais em fotos/.\n\nO evento aparece sozinho na página de eventos e na página inicial.\nPreencha também os dados para o painel no cabeçalho (tipo, modalidade, municipio, carga_horaria, publico, publico_externo, equipe, parceiros). Para eventos futuros, os números podem ficar em branco e ser preenchidos depois que o evento acontecer.\nCategorias: reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas.\n\n\n\nMesmo processo: copie _modelos/projeto/ para projetos/nome-do-projeto/ e preencha os dados para o painel (tipo, inicio, fim, coordenacao, equipe, parceiros, ods).\n\n\n\n\nCopie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nSe houver foto, coloque-a em equipe/fotos/nome-sobrenome.jpg (quadrada, com o rosto centralizado). Sem foto? Apague a linha image: do arquivo: o site usa o avatar genérico automaticamente.\nPreencha curso (código do curso), vinculo e periodos. Cada período tem a funcao (coordenacao, bolsista, voluntario ou colaborador), o mês de inicio e, se já terminou, o mês de fim, sempre no formato AAAA-MM. Quem foi voluntário e depois virou bolsista tem dois períodos.\nSe a pessoa ocupa um cargo no capítulo (por exemplo, a presidência), acrescente a lista cargos, com o cargo, o inicio e, ao fim do mandato, o fim. O mandato precisa estar dentro do período de participação.\nOs links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de about: links:, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco about: inteiro.\n\nO que não precisa ser preenchido: a seção da página Equipe em que a pessoa aparece (Coordenação, Diretoria, Equipe atual ou Egressos) e o texto abaixo do nome (“Bolsista, Sistemas de Informação”) são calculados a partir dos períodos, dos cargos e do curso. Os campos antigos situacao e description não são mais usados.\nQuando alguém sai do programa, não apague o arquivo: preencha o fim do último período (e do mandato, se houver). A pessoa passa sozinha para “Egressos”; quem presidiu aparece também em “Presidências anteriores”.\nAtenção: sempre que o arquivo tiver um bloco about:, ele precisa conter a linha template: trestles. Sem ela, o Quarto recusa o arquivo com o erro “object is missing required property template”.\nÍcones úteis para os links: geo-alt (OSM), github, mortarboard (Lattes), linkedin, envelope (e-mail), globe (site pessoal).\n\n\nOs cargos ficam em _data/vocabulario.yml, na lista cargos. Para criar, renomear ou reordenar um cargo, basta editar essa lista: a página Equipe se ajusta sozinha. Cada cargo tem:\n\nnome: o texto exibido (prefira o nome do cargo, como “Secretaria”);\nordem: a posição na seção “Diretoria do capítulo”;\nhistorico: true cria a seção de mandatos anteriores, com o título de titulo_historico;\nativo: false para um cargo extinto. Nunca apague um cargo já usado: desative-o, para o histórico continuar válido.\n\nMudar o código de um cargo (a chave, como presidencia) exige atualizar também os arquivos de quem o ocupou; a validação lista quais são.\n\n\n\n\nAcrescente a entrada BibTeX em publicacoes.bib, com o campo tipopub (artigo, resumo, capitulo, tcc ou apresentacao), usado pelo painel. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também eventtitle, eventdate e venue.\nPara citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas bibliography e csl (veja projetos/mapeamento-calcadas/) e use [@chave] no texto.\n\n\n\nO redimensionamento é automático. A cada envio, o GitHub reduz as fotos grandes, corrige a rotação e remove os metadados (inclusive a localização GPS que o celular grava). Isso aparece no histórico como um commit “Otimiza fotos (automático)”. Limites usados:\n\n\n\nPasta\nLado maior\n\n\n\n\neventos/ e projetos/\n1600 px\n\n\nequipe/fotos/\n600 px\n\n\n\nMesmo assim, siga estas regras:\n\nPrefira abrir um pull request em vez de enviar direto para a main. As fotos são otimizadas na branch do PR e, com “Squash and merge”, a versão original pesada nunca entra no histórico da main.\nEnvie no máximo 12 fotos por evento. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.\nNão envie fotos em HEIC (formato padrão do iPhone): a maioria dos navegadores não as exibe. No iPhone, use Ajustes &gt; Câmera &gt; Formatos &gt; Mais Compatível, ou converta para JPG antes de enviar.\nUse nomes sem espaços e sem acentos: 01.jpg, 02.jpg…\nPeça autorização de uso de imagem das pessoas fotografadas.\n\nQuem trabalha no computador pode otimizar antes de enviar, com o mesmo script usado pelo GitHub (requer ImageMagick):\nbash scripts/otimizar-fotos.sh\n\n\n\nA página de exemplo eventos/2026-08-20-mapathon-calcadas/ tem um mapa interativo. Copie o bloco e troque as coordenadas.\nMapas gerados com Python (ex.: folium) também funcionam: como o projeto usa freeze: auto, rode quarto render no seu computador e faça commit da pasta _freeze/ junto com a página.\n\n\n\n\n_quarto.yml: menu, rodapé e opções gerais.\ntema.scss: cores e fontes.\n.github/workflows/publicar.yml: publicação automática.\n\n\n\n\nOs quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:\n\n\n\n\n\n\n\n\nNúmero\nDe onde vem\nO que manter\n\n\n\n\nEstudantes envolvidos\nArquivos em equipe/ com vinculo de graduação ou pós\nCadastrar toda pessoa que participa, com seus períodos\n\n\nAções realizadas\nPastas em eventos/ cuja data já passou\nNome da pasta começando por AAAA-MM-DD\n\n\nEdições no OpenStreetMap\nEstatísticas da hashtag #youthmappersufv\nUsar a hashtag em todo changeset do programa\n\n\nParceiros\nArquivos de logo em imagens/parceiros/\nUm logo por parceiro\n\n\n\nAs edições do OSM são consultadas pelo script scripts/atualizar-osm.ts, que roda sozinho antes de cada renderização, inclusive no quarto preview (no máximo uma consulta a cada 12 horas). Ele grava o resultado em dados/osm.json; tudo bem fazer commit desse arquivo junto com suas alterações.\nO site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.\nA hashtag nas edições. No JOSM ou no iD, inclua #youthmappersufv no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele.\n\n\n\nA página Painel é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do publicacoes.bib e de dois arquivos de dados:\n\n_data/vocabulario.yml: os únicos valores aceitos em curso, vinculo, funcao, cargo, tipo, modalidade, tipopub etc. Para acrescentar um tipo novo, fale com a coordenação.\n_data/parceiros.yml: a lista de parceiros. Eventos e projetos citam parceiros pelo id.\n\nAntes de cada renderização, o script scripts/gerar-dados.ts confere tudo: valores fora do vocabulário, datas fora do formato AAAA-MM, nomes em equipe: que não correspondem a nenhum arquivo, mandatos fora do período de participação, duas pessoas no mesmo cargo ao mesmo tempo, entre outros. Os problemas aparecem no terminal do quarto preview e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. Corrija-os assim que aparecerem: um dado com problema fica fora do painel.\nOs números do mapeamento vêm do scripts/atualizar-osm.ts, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em dados/: eles são gerados automaticamente."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#duas-formas-de-editar",
-    "href": "CONTRIBUTING.html#duas-formas-de-editar",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Pelo navegador (mais simples). Abra o arquivo no GitHub, clique no lápis, edite e clique em Commit changes. Para enviar fotos, entre na pasta e use Add file &gt; Upload files.\nNo seu computador. Instale o Quarto, clone o repositório e rode quarto preview na pasta do projeto. O site abre no navegador e se atualiza a cada arquivo salvo.\n\nSe você ainda está aprendendo, crie uma branch e abra um pull request: a coordenação revisa antes de publicar."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#adicionar-um-evento-ou-ação",
-    "href": "CONTRIBUTING.html#adicionar-um-evento-ou-ação",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Copie a pasta _modelos/evento/ para dentro de eventos/.\nRenomeie a pasta no formato AAAA-MM-DD-nome-curto, por exemplo eventos/2027-03-15-oficina-josm/.\nEdite o index.qmd: título, data, descrição, categorias e o texto.\nColoque a foto de capa como capa.jpg e as demais em fotos/.\n\nO evento aparece sozinho na página de eventos e na página inicial.\nPreencha também os dados para o painel no cabeçalho (tipo, modalidade, municipio, carga_horaria, publico, publico_externo, equipe, parceiros). Para eventos futuros, os números podem ficar em branco e ser preenchidos depois que o evento acontecer.\nCategorias: reutilize as que já existem (veja a página de eventos) para que os filtros continuem úteis. Escreva sempre em minúsculas."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#adicionar-um-projeto",
-    "href": "CONTRIBUTING.html#adicionar-um-projeto",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Mesmo processo: copie _modelos/projeto/ para projetos/nome-do-projeto/ e preencha os dados para o painel (tipo, inicio, fim, coordenacao, equipe, parceiros, ods)."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#adicionar-uma-pessoa-à-equipe",
-    "href": "CONTRIBUTING.html#adicionar-uma-pessoa-à-equipe",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Copie _modelos/membro.qmd para equipe/nome-sobrenome.qmd.\nSe houver foto, coloque-a em equipe/fotos/nome-sobrenome.jpg (quadrada, com o rosto centralizado). Sem foto? Apague a linha image: do arquivo: o site usa o avatar genérico automaticamente.\nPreencha curso (código do curso), vinculo e periodos. Cada período tem a funcao (coordenacao, bolsista, voluntario ou colaborador), o mês de inicio e, se já terminou, o mês de fim, sempre no formato AAAA-MM. Quem foi voluntário e depois virou bolsista tem dois períodos.\nSe a pessoa ocupa um cargo no capítulo (por exemplo, a presidência), acrescente a lista cargos, com o cargo, o inicio e, ao fim do mandato, o fim. O mandato precisa estar dentro do período de participação.\nOs links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho, dentro de about: links:, e viram botões abaixo do nome. Apague os que não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco about: inteiro.\n\nO que não precisa ser preenchido: a seção da página Equipe em que a pessoa aparece (Coordenação, Diretoria, Equipe atual ou Egressos) e o texto abaixo do nome (“Bolsista, Sistemas de Informação”) são calculados a partir dos períodos, dos cargos e do curso. Os campos antigos situacao e description não são mais usados.\nQuando alguém sai do programa, não apague o arquivo: preencha o fim do último período (e do mandato, se houver). A pessoa passa sozinha para “Egressos”; quem presidiu aparece também em “Presidências anteriores”.\nAtenção: sempre que o arquivo tiver um bloco about:, ele precisa conter a linha template: trestles. Sem ela, o Quarto recusa o arquivo com o erro “object is missing required property template”.\nÍcones úteis para os links: geo-alt (OSM), github, mortarboard (Lattes), linkedin, envelope (e-mail), globe (site pessoal).\n\n\nOs cargos ficam em _data/vocabulario.yml, na lista cargos. Para criar, renomear ou reordenar um cargo, basta editar essa lista: a página Equipe se ajusta sozinha. Cada cargo tem:\n\nnome: o texto exibido (prefira o nome do cargo, como “Secretaria”);\nordem: a posição na seção “Diretoria do capítulo”;\nhistorico: true cria a seção de mandatos anteriores, com o título de titulo_historico;\nativo: false para um cargo extinto. Nunca apague um cargo já usado: desative-o, para o histórico continuar válido.\n\nMudar o código de um cargo (a chave, como presidencia) exige atualizar também os arquivos de quem o ocupou; a validação lista quais são."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#adicionar-uma-publicação",
-    "href": "CONTRIBUTING.html#adicionar-uma-publicação",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Acrescente a entrada BibTeX em publicacoes.bib, com o campo tipopub (artigo, resumo, capitulo, tcc ou apresentacao), usado pelo painel. A página de publicações formata tudo em ABNT. Para trabalhos em eventos, preencha também eventtitle, eventdate e venue.\nPara citar uma publicação em qualquer página, coloque no cabeçalho dela as linhas bibliography e csl (veja projetos/mapeamento-calcadas/) e use [@chave] no texto."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#fotos-regras-importantes",
-    "href": "CONTRIBUTING.html#fotos-regras-importantes",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "O redimensionamento é automático. A cada envio, o GitHub reduz as fotos grandes, corrige a rotação e remove os metadados (inclusive a localização GPS que o celular grava). Isso aparece no histórico como um commit “Otimiza fotos (automático)”. Limites usados:\n\n\n\nPasta\nLado maior\n\n\n\n\neventos/ e projetos/\n1600 px\n\n\nequipe/fotos/\n600 px\n\n\n\nMesmo assim, siga estas regras:\n\nPrefira abrir um pull request em vez de enviar direto para a main. As fotos são otimizadas na branch do PR e, com “Squash and merge”, a versão original pesada nunca entra no histórico da main.\nEnvie no máximo 12 fotos por evento. O álbum completo fica no Google Drive/Flickr do programa, com o link na ficha do evento.\nNão envie fotos em HEIC (formato padrão do iPhone): a maioria dos navegadores não as exibe. No iPhone, use Ajustes &gt; Câmera &gt; Formatos &gt; Mais Compatível, ou converta para JPG antes de enviar.\nUse nomes sem espaços e sem acentos: 01.jpg, 02.jpg…\nPeça autorização de uso de imagem das pessoas fotografadas.\n\nQuem trabalha no computador pode otimizar antes de enviar, com o mesmo script usado pelo GitHub (requer ImageMagick):\nbash scripts/otimizar-fotos.sh"
-  },
-  {
-    "objectID": "CONTRIBUTING.html#mapas",
-    "href": "CONTRIBUTING.html#mapas",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "A página de exemplo eventos/2026-08-20-mapathon-calcadas/ tem um mapa interativo. Copie o bloco e troque as coordenadas.\nMapas gerados com Python (ex.: folium) também funcionam: como o projeto usa freeze: auto, rode quarto render no seu computador e faça commit da pasta _freeze/ junto com a página."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#arquivos-que-só-a-coordenação-altera",
-    "href": "CONTRIBUTING.html#arquivos-que-só-a-coordenação-altera",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "_quarto.yml: menu, rodapé e opções gerais.\ntema.scss: cores e fontes.\n.github/workflows/publicar.yml: publicação automática."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#números-da-página-inicial-automáticos",
-    "href": "CONTRIBUTING.html#números-da-página-inicial-automáticos",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "Os quatro números da página inicial são calculados sozinhos a cada publicação. Ninguém precisa editá-los, mas eles dependem de convenções:\n\n\n\n\n\n\n\n\nNúmero\nDe onde vem\nO que manter\n\n\n\n\nEstudantes envolvidos\nArquivos em equipe/ com vinculo de graduação ou pós\nCadastrar toda pessoa que participa, com seus períodos\n\n\nAções realizadas\nPastas em eventos/ cuja data já passou\nNome da pasta começando por AAAA-MM-DD\n\n\nEdições no OpenStreetMap\nEstatísticas da hashtag #youthmappersufv\nUsar a hashtag em todo changeset do programa\n\n\nParceiros\nArquivos de logo em imagens/parceiros/\nUm logo por parceiro\n\n\n\nAs edições do OSM são consultadas pelo script scripts/atualizar-osm.ts, que roda sozinho antes de cada renderização, inclusive no quarto preview (no máximo uma consulta a cada 12 horas). Ele grava o resultado em dados/osm.json; tudo bem fazer commit desse arquivo junto com suas alterações.\nO site é republicado toda segunda-feira, mesmo sem alterações, para atualizar as edições do OSM e passar a contar eventos que já aconteceram.\nA hashtag nas edições. No JOSM ou no iD, inclua #youthmappersufv no comentário do changeset. Nos projetos do Tasking Manager criados pelo programa, coloque a hashtag no comentário padrão do projeto: assim ela entra automaticamente em toda edição feita por ele."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#painel-de-estatísticas-e-validação-dos-dados",
-    "href": "CONTRIBUTING.html#painel-de-estatísticas-e-validação-dos-dados",
-    "title": "Como atualizar o site do YouthMappers UFV",
-    "section": "",
-    "text": "A página Painel é gerada a partir dos cabeçalhos das páginas de equipe, eventos e projetos, do publicacoes.bib e de dois arquivos de dados:\n\n_data/vocabulario.yml: os únicos valores aceitos em curso, vinculo, funcao, cargo, tipo, modalidade, tipopub etc. Para acrescentar um tipo novo, fale com a coordenação.\n_data/parceiros.yml: a lista de parceiros. Eventos e projetos citam parceiros pelo id.\n\nAntes de cada renderização, o script scripts/gerar-dados.ts confere tudo: valores fora do vocabulário, datas fora do formato AAAA-MM, nomes em equipe: que não correspondem a nenhum arquivo, mandatos fora do período de participação, duas pessoas no mesmo cargo ao mesmo tempo, entre outros. Os problemas aparecem no terminal do quarto preview e como alertas na página da execução no GitHub, com o nome do arquivo e o campo. Corrija-os assim que aparecerem: um dado com problema fica fora do painel.\nOs números do mapeamento vêm do scripts/atualizar-osm.ts, que consulta o ohsomeNow pela hashtag do programa. Não edite os arquivos em dados/: eles são gerados automaticamente."
-  },
-  {
-    "objectID": "sobre.html",
-    "href": "sobre.html",
-    "title": "O programa",
-    "section": "",
-    "text": "O YouthMappers UFV é um programa de extensão da Universidade Federal de Viçosa, campus Rio Paranaíba, e um capítulo da rede internacional YouthMappers, que reúne estudantes universitários em torno do mapeamento colaborativo.\nO programa atua em duas frentes:"
-  },
-  {
-    "objectID": "sobre.html#objetivos",
-    "href": "sobre.html#objetivos",
-    "title": "O programa",
-    "section": "Objetivos",
-    "text": "Objetivos\n\nObjetivo geral e objetivos específicos do programa."
-  },
-  {
-    "objectID": "sobre.html#parceiros",
-    "href": "sobre.html#parceiros",
-    "title": "O programa",
-    "section": "Parceiros",
-    "text": "Parceiros\n\n\nComunidade OpenStreetMap Brasil\nPrefeituras da região"
-  },
-  {
-    "objectID": "sobre.html#como-participar",
-    "href": "sobre.html#como-participar",
-    "title": "O programa",
-    "section": "Como participar",
-    "text": "Como participar\nEstudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.\nPara entrar no programa, escreva para youthmapperschapter@ufv.br informando seu nome, curso e período."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "YouthMappers UFV",
-    "section": "",
-    "text": "Estudantes mapeando o mundo\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 09/10/2026."
-  },
-  {
-    "objectID": "index.html#ações-recentes",
-    "href": "index.html#ações-recentes",
-    "title": "YouthMappers UFV",
-    "section": "Ações recentes",
-    "text": "Ações recentes\n\n\n\n\n\n\n\n\n\n\nState of the Map Brasil 2026\n\n\nConferência nacional da comunidade OpenStreetMap, em Uberlândia, organizada pela UFU e pela UFV.\n\n\n\n12/11/2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapatona Angra dos Reis\n\n\nO projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de…\n\n\n\n09/07/2022\n\n\n\n\n\n\nNenhum item correspondente\n\nVer todas as ações e eventos"
-  },
-  {
-    "objectID": "index.html#projetos-em-andamento",
-    "href": "index.html#projetos-em-andamento",
-    "title": "YouthMappers UFV",
-    "section": "Projetos em andamento",
-    "text": "Projetos em andamento\n\n\n\n\n\n\n\n\n\n\nTradução e Localização do Software MapComplete para Português Brasileiro\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\nNenhum item correspondente\n\nVer todos os projetos"
-  },
-  {
-    "objectID": "equipe/julia-mendonca.html",
-    "href": "equipe/julia-mendonca.html",
-    "title": "Júlia Mendonça Silva",
-    "section": "",
-    "text": "Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário."
-  },
-  {
     "objectID": "equipe/rodrigo-smarzaro.html",
     "href": "equipe/rodrigo-smarzaro.html",
     "title": "Rodrigo Smarzaro",
@@ -210,11 +238,130 @@
     "text": "Professor da UFV e atual coordenador do programa YouthMappers UFV. Tem experiência na área de Ciência da Computação, com ênfase em Banco de Dados, atuando principalmente nos seguintes temas: bancos de dados geográficos, urban computing, VGI e integração de dados espaciais. Mapeador OSM desde 2008, membro da comunidade YouthMappers desde 2024, membro da OSGEO Brasil."
   },
   {
-    "objectID": "projetos.html",
-    "href": "projetos.html",
-    "title": "Projetos",
+    "objectID": "eventos/2022-07-09-mapatona-angra/index.html",
+    "href": "eventos/2022-07-09-mapatona-angra/index.html",
+    "title": "Mapatona Angra dos Reis",
     "section": "",
-    "text": "Tradução e Localização do Software MapComplete para Português Brasileiro\n\n\n\nextensão\n\nacessibilidade\n\n\n\nProjeto de extensão que visa traduzir e localizar o software MapComplete para o português brasileiro, promovendo a acessibilidade e a inclusão digital na comunidade…\n\n\n\n\n\n\n\n\n\n\n\n\nGeração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial\n\n\n\nextensão\n\n\n\nProjeto de extensão que visa promover a interação entre a Universidade Federal de Viçosa e a sociedade, socializando o conhecimento acadêmico em geotecnologias e gerando…\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Data\n\n09/07/2022, das 21h às 23h\n\nFormato\n\nMapatona, remota\n\nLocal\n\nTransmissão online pelo Google Meet\n\nÁrea mapeada\n\nAngra dos Reis (RJ), com prioridade para o bairro Monsuaba\n\nCarga horária\n\n4 horas\n\nParticipantes\n\n10 pessoas\n\nEquipe do programa\n\nRodrigo Smarzaro e Júlia Mendonça Silva\n\nLinks\n\nProjeto 12411 no Tasking Manager\nO Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap."
+  },
+  {
+    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
+    "href": "eventos/2022-07-09-mapatona-angra/index.html#área-mapeada",
+    "title": "Mapatona Angra dos Reis",
+    "section": "Área mapeada",
+    "text": "Área mapeada"
+  },
+  {
+    "objectID": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
+    "href": "eventos/2022-07-09-mapatona-angra/index.html#fotos",
+    "title": "Mapatona Angra dos Reis",
+    "section": "Fotos",
+    "text": "Fotos\nClique em uma foto para ampliar e use as setas para navegar.\n\n\n\n\nAbertura da atividade\n\n\n\n\n\nEquipe\n\n\n\n\n\nEquipe"
+  },
+  {
+    "objectID": "eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
+    "href": "eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
+    "title": "Mapatona Noroeste de Rio Paranaíba",
+    "section": "",
+    "text": "Data\n\n15/10/2022\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nNoroeste de Rio Paranaíba"
+  },
+  {
+    "objectID": "eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
+    "href": "eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
+    "title": "Youthmappers Mapeamento colaborativo e humanitário",
+    "section": "",
+    "text": "Data\n\n25/08/2023, das 10h às 12h\n\nFormato\n\nPalestra, híbrida\n\nLocal\n\nPVA226, Rio Paranaíba\n\nCarga horária\n\n2 horas\n\nParticipantes\n\n10 pessoas\n\nEquipe do programa\n\nRodrigo Smarzaro"
+  },
+  {
+    "objectID": "eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
+    "href": "eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
+    "title": "Configuração e uso do software JOSM no mapeamento colaborativo",
+    "section": "",
+    "text": "Data\n\n28/09/2023\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2023-10-02-state-of-the-map-brasil-curitiba-2023/index.html",
+    "href": "eventos/2023-10-02-state-of-the-map-brasil-curitiba-2023/index.html",
+    "title": "State of the Map Brasil Curitiba 2023",
+    "section": "",
+    "text": "Data\n\n02/10/2023\n\nFormato\n\nConferência\n\nLocal\n\nCuritiba"
+  },
+  {
+    "objectID": "eventos/2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01/index.html",
+    "href": "eventos/2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Aula 01",
+    "section": "",
+    "text": "Data\n\n23/04/2024\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2024-05-07-capacitacao-em-mapeamento-colaborativo-aula-03/index.html",
+    "href": "eventos/2024-05-07-capacitacao-em-mapeamento-colaborativo-aula-03/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Aula 03",
+    "section": "",
+    "text": "Data\n\n07/05/2024\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2024-05-21-capacitacao-editor-id-esalq/index.html",
+    "href": "eventos/2024-05-21-capacitacao-editor-id-esalq/index.html",
+    "title": "Capacitação Editor iD - Esalq",
+    "section": "",
+    "text": "Data\n\n21/05/2024\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear/index.html",
+    "href": "eventos/2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear/index.html",
+    "title": "Introdução ao mapeamento Colaborativo e Mapatona - SEMEAR",
+    "section": "",
+    "text": "Data\n\n17/10/2024\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2024-11-01-mapatona-zona-urbana-de-rio-paranaiba/index.html",
+    "href": "eventos/2024-11-01-mapatona-zona-urbana-de-rio-paranaiba/index.html",
+    "title": "Mapatona Zona Urbana de Rio Paranaíba",
+    "section": "",
+    "text": "Data\n\n01/11/2024\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nZona Urbana de Rio Paranaíba"
+  },
+  {
+    "objectID": "eventos/2024-11-23-mostra-de-profissoes/index.html",
+    "href": "eventos/2024-11-23-mostra-de-profissoes/index.html",
+    "title": "Mostra de Profissões",
+    "section": "",
+    "text": "Data\n\n23/11/2024\n\nFormato\n\nEvento"
+  },
+  {
+    "objectID": "eventos/2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem/index.html",
+    "href": "eventos/2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem/index.html",
+    "title": "Mapatona Open Data Day - Áreas da COP30 em Belém",
+    "section": "",
+    "text": "Data\n\n28/03/2025\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nÁreas da COP30 em Belém"
+  },
+  {
+    "objectID": "eventos/2025-06-09-capacitacao-em-mapeamento-colaborativo-editor-id/index.html",
+    "href": "eventos/2025-06-09-capacitacao-em-mapeamento-colaborativo-editor-id/index.html",
+    "title": "Capacitação em Mapeamento colaborativo - Editor iD",
+    "section": "",
+    "text": "Data\n\n09/06/2025\n\nFormato\n\nOficina"
+  },
+  {
+    "objectID": "eventos/2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
+    "href": "eventos/2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
+    "title": "Capacitação em Mapeamento Colaborativo - Mapatona",
+    "section": "",
+    "text": "Data\n\n23/06/2025\n\nFormato\n\nMapatona"
+  },
+  {
+    "objectID": "eventos/2025-09-24-introducao-ao-mapeamento-colaborativo/index.html",
+    "href": "eventos/2025-09-24-introducao-ao-mapeamento-colaborativo/index.html",
+    "title": "Introdução ao Mapeamento Colaborativo",
+    "section": "",
+    "text": "Data\n\n24/09/2025\n\nFormato\n\nPalestra"
+  },
+  {
+    "objectID": "eventos/2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba/index.html",
+    "href": "eventos/2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba/index.html",
+    "title": "Mapatona Youthmappers - Estradas Rurais de Rio Paranaíba - Região Sudeste",
+    "section": "",
+    "text": "Data\n\n09/10/2025\n\nFormato\n\nMapatona\n\nÁrea mapeada\n\nEstradas Rurais de Rio Paranaíba - Região Sudeste"
   },
   {
     "objectID": "eventos/2026-11-12-sotm-brasil-2026/index.html",
@@ -224,24 +371,17 @@
     "text": "Data\n\n12 e 13 de novembro de 2026\n\nLocal\n\nUberlândia, MG\n\nOrganização\n\nUniversidade Federal de Uberlândia (UFU) e Universidade Federal de Viçosa (UFV)\n\nSite oficial\n\n\nhttps://sotm-br.github.io/2026/\n\n\n\nO State of the Map Brasil é o encontro anual da comunidade brasileira do OpenStreetMap."
   },
   {
-    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html",
-    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html",
-    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
+    "objectID": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
+    "href": "projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
+    "title": "Geração de Ortoimagem do Campus da UFV: Formação Discente em Geotecnologias e Apoio ao Planejamento Territorial",
     "section": "",
-    "text": "Tipo\n\nProjeto de extensão\n\nPeríodo\n\n2025 em diante\n\nCoordenação\n\nRodrigo Smarzaro\n\nSituação\n\nEm andamento\n\nParceiros\n\ntomtom"
+    "text": "Tipo\n\nProjeto de extensão\n\nSituação\n\nFinalizado\n\n\n\nA ação extensionista deste projeto busca promover uma interação efetiva entre a Universidade Federal de Viçosa e a sociedade, de modo a socializar o conhecimento acadêmico em geotecnologias para além do ambiente universitário. A proposta vai além da simples transferência de saberes ou da prestação pontual de serviços: pretende-se desenvolver um processo dialógico, no qual universidade e comunidade atuem como parceiros na construção de soluções.\nA geração de ortoimagens do campus e de áreas urbanas próximas será utilizada como meio para que os discentes aprendam e apliquem técnicas avançadas de coleta, processamento e análise de dados geoespaciais, ao mesmo tempo em que a comunidade terá acesso a produtos cartográficos de alta qualidade, úteis para planejamento urbano, gestão territorial e apoio à tomada de decisão. Essa troca permite que demandas reais da sociedade orientem o processo de ensino-aprendizagem, fortalecendo o caráter educativo e transformador da extensão.\nDessa forma, a ação extensionista constitui um espaço de cooperação, onde o conhecimento científico produzido na universidade é ressignificado a partir das necessidades locais, contribuindo para o desenvolvimento sustentável e para a formação crítica e cidadã dos estudantes envolvidos."
   },
   {
-    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html#objetivo",
-    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html#objetivo",
-    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
-    "section": "Objetivo",
-    "text": "Objetivo\nO projeto promove a interação universidade-sociedade por meio da tradução e adaptação do software MapComplete1, disponibilizando a ferramenta para comunidades e colaboradores internacionais de mapeamento colaborativo. A ação vai além da mera tradução, incluindo testes de funcionalidade, revisão linguística e integração com a comunidade OSM, garantindo que o conhecimento técnico produzido na universidade seja socializado e utilizado por diferentes grupos."
-  },
-  {
-    "objectID": "projetos/2025-10-01-traducao-mapcomplete/index.html#resultados",
-    "href": "projetos/2025-10-01-traducao-mapcomplete/index.html#resultados",
-    "title": "Tradução e Localização do Software MapComplete para Português Brasileiro",
-    "section": "Resultados",
-    "text": "Resultados\nForam traduzidas 6.416 frases, 42315 palavras e 259,498 caracteres. Em Dezembro de 2025, o software foi completamente traduzido e localizado para o português brasileiro, com a versão final publicada no repositório oficial do MapComplete."
+    "objectID": "publicacoes.html",
+    "href": "publicacoes.html",
+    "title": "Publicações",
+    "section": "",
+    "text": "As referências abaixo são geradas automaticamente a partir do arquivo publicacoes.bib, no padrão ABNT. Para incluir uma publicação, basta acrescentar a entrada BibTeX nesse arquivo.\n\n\nSMARZARO, Rodrigo. Título de exemplo: introdução ao OpenStreetMap. Oficina. Universidade Federal de Viçosa, campus Rio Paranaíba, 2026.\n\n\nSOBRENOME, Nome; SMARZARO, Rodrigo. Título de exemplo: mapeamento colaborativo de calçadas com estudantes. Em: STATE OF THE MAP BRASIL. Anais do State of the Map Brasil 2026. Uberlândia, MG: 2026."
   }
 ]
