@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Capacitação em Mapeamento Colaborativo - Mapatona
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona@youthmappers
+ -ufv.github.io
+DTSTAMP:20261009T133320Z
+DTSTART;VALUE=DATE:20250623
+DTEND;VALUE=DATE:20250624
+SUMMARY:Capacitação em Mapeamento Colaborativo - Mapatona
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2025-06-23-capacitacao-em-mapea
+ mento-colaborativo-mapatona/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2025-06-23-capacitacao-em-ma
+ peamento-colaborativo-mapatona/
+END:VEVENT
+END:VCALENDAR

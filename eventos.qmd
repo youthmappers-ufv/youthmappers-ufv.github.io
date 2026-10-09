@@ -2,6 +2,7 @@
 title: "Ações e eventos"
 description: "Mapatonas, oficinas, palestras e participações em eventos."
 listing:
+  id: todas
   contents: eventos
   image-placeholder: imagens/sem-capa-evento.svg   # para eventos sem "image"
   type: grid
@@ -14,3 +15,12 @@ listing:
   feed: true
 page-layout: full
 ---
+
+{{< proximos limite=6 >}}
+
+## Todas as ações
+
+[Ver em formato de calendário](agenda.qmd)
+
+::: {#todas}
+:::

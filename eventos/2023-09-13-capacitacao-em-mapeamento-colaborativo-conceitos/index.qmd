@@ -6,9 +6,9 @@ description: "Oficina de mapeamento colaborativo do YouthMappers UFV."   # PROVI
 categories: [oficina, capacitação]
 # --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
 tipo: oficina
-modalidade:                          # presencial, remota, hibrida
-municipio:
-carga_horaria:                       # horas
+modalidade: remota                     # presencial, remota, hibrida
+municipio: Rio Paranaíba
+carga_horaria: 4                      # horas
 publico:                             # total de participantes
 publico_externo:                     # quantos não eram da UFV
 equipe: []                           # nomes dos arquivos em equipe/

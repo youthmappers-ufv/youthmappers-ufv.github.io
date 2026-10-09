@@ -6,8 +6,8 @@ description: "Mapatona realizada pelo YouthMappers UFV."   # PROVISÓRIA: troque
 categories: [mapatona, "aniversário OSM"]
 # --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
 tipo: mapatona
-modalidade:                          # presencial, remota, hibrida
-municipio:
+modalidade: hibrida                         # presencial, remota, hibrida
+municipio: Quississana
 carga_horaria:                       # horas
 publico:                             # total de participantes
 publico_externo:                     # quantos não eram da UFV

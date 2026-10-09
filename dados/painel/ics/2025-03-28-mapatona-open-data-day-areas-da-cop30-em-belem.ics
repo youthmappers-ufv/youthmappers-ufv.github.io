@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Mapatona Open Data Day - Áreas da COP30 em Belém
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem@youthmappers-
+ ufv.github.io
+DTSTAMP:20261009T133320Z
+DTSTART;VALUE=DATE:20250328
+DTEND;VALUE=DATE:20250329
+SUMMARY:Mapatona Open Data Day - Áreas da COP30 em Belém
+DESCRIPTION:Mapatona realizada pelo YouthMappers UFV.\nMais informações: 
+ https://youthmappers-ufv.github.io/eventos/2025-03-28-mapatona-open-data-d
+ ay-areas-da-cop30-em-belem/
+CATEGORIES:Mapatona
+URL:https://youthmappers-ufv.github.io/eventos/2025-03-28-mapatona-open-dat
+ a-day-areas-da-cop30-em-belem/
+END:VEVENT
+END:VCALENDAR

@@ -82,6 +82,7 @@ return {
     local parceiros = refs.parceiros or {}
     local entrada = quarto.doc.input_file or ""
     local eh_projeto = entrada:match("[/\\]projetos[/\\]") ~= nil
+    local eh_noticia = entrada:match("[/\\]noticias[/\\]") ~= nil
     -- páginas de eventos e projetos ficam em <pasta>/<item>/index.qmd
     local ate_raiz = "../../"
 
@@ -139,16 +140,43 @@ return {
       return #r > 0 and juntar(r, " · ") or nil
     end
 
-    if not eh_projeto then
+    if eh_noticia then
+      -- ---------------- notícia ----------------
+      local data = txt(meta.date)
+      if data then linha("data", "Data", pandoc.Inlines(data)) end
+      local cats = {}
+      for _, c in ipairs(lista(meta.categories)) do
+        table.insert(cats, pandoc.Inlines(pandoc.text.upper(pandoc.text.sub(c, 1, 1)) .. pandoc.text.sub(c, 2)))
+      end
+      if #cats > 0 then linha("categoria", "Categoria", juntar(cats)) end
+      local partes = {}
+      local lugar, mun = txt(meta["local"]), txt(meta.municipio)
+      if lugar then table.insert(partes, lugar) end
+      if mun then table.insert(partes, mun) end
+      if #partes > 0 then linha("local", "Local", pandoc.Inlines(table.concat(partes, ", "))) end
+      linha("equipe", "Equipe presente", pessoas(lista(meta.equipe)))
+    elseif not eh_projeto then
       -- ---------------- evento ----------------
       local data = data_extenso(txt(meta.date))
       local horario = txt(meta.horario)
-      if data then linha("data", "Data", pandoc.Inlines(data .. (horario and (", das " .. horario) or ""))) end
+      -- Eventos de mais de um dia: "12/11/2026 a 13/11/2026"
+      local d1 = txt(meta.data_fim)
+      local a1, m1, x1 = (d1 or ""):match("^(%d%d%d%d)%-(%d%d)%-(%d%d)")
+      if data and a1 then data = data .. " a " .. x1 .. "/" .. m1 .. "/" .. a1 end
+      if data then
+        local h = horario and (horario:match("^das") and (", " .. horario) or (", das " .. horario)) or ""
+        linha("data", "Data", pandoc.Inlines(data .. h))
+      end
 
       local tipo = nome_voc("tipos_evento", txt(meta.tipo))
       local modal = txt(meta.modalidade)
       if tipo then
         linha("tipo", "Formato", pandoc.Inlines(tipo .. (modal and (", " .. minusculas(nome_voc("modalidades", modal))) or "")))
+      end
+      -- Ações coorganizadas: "Coorganização"; organização própria não precisa de linha
+      local papel = txt(meta.papel)
+      if papel and papel ~= "organizacao" then
+        linha("realizacao", "Realização", pandoc.Inlines(nome_voc("papeis", papel)))
       end
 
       -- Em ações remotas, o município não descreve o local da atividade
@@ -172,6 +200,20 @@ return {
         linha("publico", "Participantes", pandoc.Inlines(s))
       end
       linha("equipe", "Equipe do programa", pessoas(lista(meta.equipe)))
+
+      -- Eventos futuros: inscrição e "adicionar à agenda" (dados de agenda.json)
+      local id = entrada:gsub("\\", "/"):match("/eventos/([^/]+)/index%.qmd$")
+      local ev = nil
+      for _, x in ipairs(ler_json("dados/painel/agenda.json")) do if x.id == id then ev = x end end
+      if ev and ev.termina >= os.date("%Y-%m-%d") then
+        local insc = txt(meta.inscricao)
+        if insc then
+          linha("inscricao", "Inscrições", pandoc.Inlines({ pandoc.Link("Formulário de inscrição", insc) }))
+        end
+        linha("agenda", "Agenda", pandoc.Inlines({
+          pandoc.Link("Adicionar à Agenda Google", ev.google), pandoc.Str(" · "),
+          pandoc.Link("outros calendários (.ics)", ate_raiz .. ev.ics) }))
+      end
     else
       -- ---------------- projeto ----------------
       local tipo = txt(meta.tipo)

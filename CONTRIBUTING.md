@@ -74,6 +74,52 @@ realmente especiais, apague o `{{< ficha >}}` e escreva um bloco
 **Categorias:** reutilize as que já existem (veja a página de eventos)
 para que os filtros continuem úteis. Escreva sempre em minúsculas.
 
+### Eventos futuros e agenda
+
+Eventos com data de hoje em diante aparecem sozinhos na seção **"Próximas
+ações"** da página inicial e da página de eventos, com contagem regressiva,
+e na página **Agenda**, em formato de calendário. Para que apareçam bem:
+
+- **`horario`** no formato `14h às 18h` (também valem `14h30 às 16h`,
+  `19:00 às 21:00` ou só `14h`). É ele que dá o horário certo nas agendas;
+  se não for reconhecido, o evento entra como dia inteiro e a validação avisa.
+- **`data_fim`** (AAAA-MM-DD) para eventos de mais de um dia.
+- **`inscricao`**: endereço do formulário de inscrição. Vira o botão
+  "Inscreva-se" nos cartões e uma linha na ficha, enquanto o evento não passa.
+
+Quem visita o site pode **assinar a agenda do programa** (página Agenda):
+cada evento novo publicado aparece sozinho no calendário da pessoa, sem
+cadastro de e-mail. O arquivo da agenda (`agenda.ics`) e os arquivos de
+cada evento são gerados pelo `scripts/gerar-dados.ts`; não os edite.
+
+O site é republicado todos os dias às 6h; além disso, os cartões de
+"Próximas ações" somem sozinhos no navegador assim que o evento passa.
+
+## Ação ou notícia?
+
+- **Ação** (pasta `eventos/`): atividade que o programa **organizou ou
+  coorganizou**, inclusive oficinas e palestras que o capítulo ministrou
+  em evento de outra instituição. Conta no painel (ações, público, horas).
+  Ações coorganizadas levam `papel: coorganizacao`, e a ficha mostra a
+  linha "Realização: Coorganização".
+- **Notícia** (pasta `noticias/`): o programa **só participou** de um
+  evento de terceiros, ou é um acontecimento que não é uma ação: prêmio,
+  trabalho aprovado, publicação lançada, parceria, chamada de voluntários.
+  Não conta como ação no painel; participações aparecem no indicador
+  "Participações externas".
+
+## Adicionar uma notícia
+
+1. Copie `_modelos/noticia/` para `noticias/AAAA-MM-DD-nome-curto/`.
+2. Preencha título, data, resumo (`description`) e a categoria em
+   `categories`: `participação`, `conquista`, `publicação`, `parceria`,
+   `chamada` ou `comunicado`.
+3. Opcionais: `local`, `municipio`, `equipe` (quem esteve presente), `links`
+   e `image`. A ficha da notícia é montada pelo `{{< ficha >}}`.
+
+A notícia aparece na página **Notícias** (com feed RSS) e nas "Últimas
+notícias" da página inicial.
+
 ## Adicionar um projeto
 
 Mesmo processo: copie `_modelos/projeto/` para `projetos/nome-do-projeto/`

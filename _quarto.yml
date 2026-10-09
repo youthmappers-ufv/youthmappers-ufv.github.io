@@ -25,6 +25,7 @@ project:
     # arquivos de mapa usados por {{< mapa >}} (não precisam de "resources" na página)
     - "eventos/**/*.geojson"
     - "projetos/**/*.geojson"
+    - agenda.ics
 
 lang: pt
 language:
@@ -49,8 +50,14 @@ website:
         text: Início
       - href: sobre.qmd
         text: O programa
-      - href: eventos.qmd
-        text: Ações e eventos
+      - text: Ações
+        menu:
+          - href: eventos.qmd
+            text: Todas as ações
+          - href: agenda.qmd
+            text: Agenda
+      - href: noticias.qmd
+        text: Notícias
       - href: projetos.qmd
         text: Projetos
       - href: equipe.qmd

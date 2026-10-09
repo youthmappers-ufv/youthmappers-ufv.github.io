@@ -44,6 +44,12 @@ h2 { margin-top: 2.2rem; }
 
 .navbar { border-bottom: 3px solid $ouro; }
 .navbar-brand img { max-height: 44px; }
+// Menu: itens em uma linha só; em telas médias, itens mais compactos
+.navbar-nav .nav-link { white-space: nowrap; }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-link { padding-left: .4rem !important; padding-right: .4rem !important; font-size: .95rem; }
+  .navbar-brand img { max-height: 36px; }
+}
 
 // ---------- Destaque da página inicial ----------
 // O único elemento "ousado" do site: um trecho de malha urbana
@@ -267,4 +273,73 @@ body.quarto-dashboard {
     display: flex; align-items: center; justify-content: center;
     min-height: 160px; color: $cinza; font-style: italic; text-align: center;
   }
+}
+
+// ---------- Próximas ações ({{< proximos >}}) ----------
+.proximos { margin-bottom: 2.5rem; }
+.proximos-grade {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.proximo {
+  display: flex; gap: 1rem; padding: 1rem;
+  background: #fff; border: 1px solid rgba($marinho, .15); border-left: 4px solid $ouro;
+  border-radius: $border-radius;
+}
+.proximo-iminente { border-left-color: $vinho; background: lighten($nevoa, 2%); }
+// Bloco da data, na cor do tipo de ação
+.proximo-data {
+  flex: 0 0 4.2rem; height: 4.6rem; border-radius: $border-radius;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #fff; font-family: $headings-font-family; line-height: 1;
+  .dia { font-size: 1.9rem; font-weight: 700; }
+  .mes { font-size: .9rem; text-transform: uppercase; letter-spacing: .05em; margin-top: .2rem; }
+}
+.proximo-corpo { min-width: 0; }
+.proximo-tipo { font-size: .8rem; font-weight: 700; color: $cinza; text-transform: uppercase; letter-spacing: .04em; }
+.proximo-titulo { font-size: 1.15rem; margin: .15rem 0 .3rem; a { color: $marinho; text-decoration: none; } a:hover { text-decoration: underline; } }
+.proximo-quando { font-size: .92rem; color: $tinta; margin: 0 0 .2rem; }
+.proximo-contagem { font-size: .9rem; font-weight: 700; color: $vinho; margin: 0 0 .6rem; &:empty { display: none; } }
+.proximo-acoes {
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  a { font-size: .88rem; padding: .3rem .75rem; }
+}
+
+// ---------- Página Agenda ({{< agenda >}}) ----------
+.agenda-assinar {
+  background: $nevoa; border-radius: $border-radius; padding: 1rem 1.25rem; margin-bottom: 1.5rem;
+  p { margin-bottom: .6rem; }
+}
+.agenda-botoes {
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  a, button { font-size: .92rem; padding: .35rem .8rem; cursor: pointer; }
+}
+.agenda-endereco { font-size: .85rem; color: $cinza; margin: .5rem 0 0; word-break: break-all; &:empty { display: none; } }
+// Cores da biblioteca FullCalendar alinhadas ao tema
+.calendario {
+  --fc-button-bg-color: #{$marinho};
+  --fc-button-border-color: #{$marinho};
+  --fc-button-hover-bg-color: #{darken($marinho, 8%)};
+  --fc-button-hover-border-color: #{darken($marinho, 8%)};
+  --fc-button-active-bg-color: #{$vinho};
+  --fc-button-active-border-color: #{$vinho};
+  --fc-today-bg-color: #{rgba($ouro, .15)};
+  --fc-border-color: #{rgba($marinho, .15)};
+  .fc-toolbar-title {
+    font-family: $headings-font-family; color: $marinho; font-size: 1.4rem;
+    border-bottom: none; margin: 0; padding: 0;     // é um h2: sem a linha dos títulos do site
+    &::first-letter { text-transform: uppercase; }  // "outubro de 2026" -> "Outubro de 2026"
+  }
+  .fc-col-header-cell-cushion, .fc-daygrid-day-number { color: $tinta; text-decoration: none; }
+  .fc-event { cursor: pointer; }
+  .fc-list-day-cushion a, .fc-list-day-text, .fc-list-day-side-text { color: $tinta; text-decoration: none; }
+  @media (max-width: 700px) {
+    .fc-header-toolbar { flex-wrap: wrap; gap: .5rem; }
+    .fc-toolbar-title { font-size: 1.15rem; }
+  }
+  .fc-list-event-title a { color: $tinta; }
+}
+.calendario-legenda {
+  display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: .8rem; font-size: .88rem; color: $cinza;
+  i { display: inline-block; width: .8rem; height: .8rem; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
 }

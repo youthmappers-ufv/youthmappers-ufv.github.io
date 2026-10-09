@@ -3,13 +3,22 @@ pagetitle: "YouthMappers UFV"
 page-layout: full
 listing:
   - id: ultimos-eventos
-    contents: eventos
+    # só ações já realizadas (as futuras aparecem em "Próximas ações")
+    contents: dados/painel/eventos-realizados.yml
     image-placeholder: imagens/sem-capa-evento.svg
     type: grid
     sort: "date desc"
     max-items: 3
     fields: [image, date, title, description]
     image-height: 180px
+  - id: ultimas-noticias
+    contents: noticias
+    type: grid
+    sort: "date desc"
+    max-items: 3
+    fields: [image, date, title, description]
+    image-height: 180px
+    image-placeholder: imagens/sem-capa-evento.svg
   - id: projetos-destaque
     contents: projetos
     image-placeholder: imagens/sem-capa-projeto.svg
@@ -21,9 +30,9 @@ listing:
 ---
 
 ::: {.destaque style="background-image: url(imagens/malha-urbana.svg);"}
-<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando a própria cidade</p>
+<p class="titulo-destaque" role="heading" aria-level="1">Estudantes mapeando o mundo</p>
 
-[O capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.]{.lead}
+[O capítulo YouthMappers da UFV, _campus_ Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.]{.lead}
 
 ::: {.acoes}
 [Conheça as ações](eventos.qmd){.btn-mapa}
@@ -55,12 +64,21 @@ listing:
 
 [Números atualizados em {{< atualizado >}}.]{.atualizacao}
 
+{{< proximos limite=3 >}}
+
 ## Ações recentes
 
 ::: {#ultimos-eventos}
 :::
 
 [Ver todas as ações e eventos](eventos.qmd)
+
+## Últimas notícias
+
+::: {#ultimas-noticias}
+:::
+
+[Ver todas as notícias](noticias.qmd)
 
 ## Projetos em andamento
 

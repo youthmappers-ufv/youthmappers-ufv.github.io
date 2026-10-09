@@ -1,0 +1,15 @@
+---
+title: "Notícias"
+description: "Participações em eventos, conquistas, publicações, parcerias e comunicados do programa."
+listing:
+  id: noticias
+  contents: noticias
+  type: default
+  sort: "date desc"
+  categories: true
+  filter-ui: true
+  fields: [image, date, title, description, categories]
+  image-placeholder: imagens/sem-capa-evento.svg
+  feed: true
+page-layout: full
+---

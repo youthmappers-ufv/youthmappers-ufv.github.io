@@ -52,6 +52,22 @@ cargos:
     titulo_historico: Presidências anteriores
     ativo: true
 
+# Papel do programa numa ação (campo "papel"; padrão: organizacao).
+# Se o programa apenas participou de um evento de terceiros, não é uma
+# ação: registre como notícia (pasta noticias/, categoria "participação").
+papeis:
+  organizacao:   Organização
+  coorganizacao: Coorganização
+
+# Categorias das notícias (campo "categories" de noticias/*/index.qmd)
+categorias_noticia:
+  participação: Participação em evento de terceiros
+  conquista:    Prêmios, aprovações e reconhecimentos
+  publicação:   Lançamento de publicação
+  parceria:     Parceria firmada
+  chamada:      Chamadas e vagas
+  comunicado:   Comunicados gerais
+
 tipos_evento:
   mapatona:    Mapatona
   oficina:     Oficina

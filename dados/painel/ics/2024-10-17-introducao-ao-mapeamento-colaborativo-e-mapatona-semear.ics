@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YouthMappers UFV//Agenda do site//PT
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Introdução ao mapeamento Colaborativo e Mapatona - SEMEAR
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear@yout
+ hmappers-ufv.github.io
+DTSTAMP:20261009T133320Z
+DTSTART;VALUE=DATE:20241017
+DTEND;VALUE=DATE:20241018
+SUMMARY:Introdução ao mapeamento Colaborativo e Mapatona - SEMEAR
+DESCRIPTION:Oficina de mapeamento colaborativo do YouthMappers UFV.\nMais i
+ nformações: https://youthmappers-ufv.github.io/eventos/2024-10-17-introd
+ ucao-ao-mapeamento-colaborativo-e-mapatona-semear/
+CATEGORIES:Oficina
+URL:https://youthmappers-ufv.github.io/eventos/2024-10-17-introducao-ao-map
+ eamento-colaborativo-e-mapatona-semear/
+END:VEVENT
+END:VCALENDAR

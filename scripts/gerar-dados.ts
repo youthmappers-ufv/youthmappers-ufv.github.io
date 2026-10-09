@@ -74,7 +74,7 @@ const semestreAtual = `${hoje.slice(0, 4)}.${Number(hoje.slice(5, 7)) <= 7 ? 1 :
 
 // ---------- vocabulário e parceiros ----------
 const vocab = ((await lerYaml("_data/vocabulario.yml")) ?? {}) as Record<string, Obj>;
-for (const chave of ["cursos", "vinculos", "funcoes", "cargos", "tipos_evento", "modalidades",
+for (const chave of ["cursos", "vinculos", "funcoes", "cargos", "papeis", "categorias_noticia", "tipos_evento", "modalidades",
                      "tipos_projeto", "tipos_publicacao", "tipos_parceiro", "ods"]) {
   if (!vocab[chave]) { problema("_data/vocabulario.yml", `lista "${chave}" ausente`); vocab[chave] = {}; }
 }
@@ -183,12 +183,31 @@ function referencias(arq: string, campo: string, ids: string[], validos: Set<str
   return ids.filter((id) => validos.has(id));
 }
 
+// ---------- horário e agenda ----------
+/** "14h às 18h", "14h30 às 16h", "19:00 às 21:00", "das 9h às 12h", "14h" -> ["14:00","18:00"] */
+function lerHorario(t: string | null): [string, string | null] | null {
+  if (!t) return null;
+  const hora = String.raw`(\d{1,2})(?:\s*[h:]\s*(\d{2})?)?\s*h?`;
+  const re = new RegExp(String.raw`^\s*(?:das\s+)?` + hora + String.raw`\s*(?:(?:às|as|a|até|-|–)\s*` + hora + String.raw`)?\s*$`, "i");
+  const m = t.match(re);
+  if (!m) return null;
+  const hh = (h: string, mi?: string) => {
+    const n = Number(h), mm = Number(mi ?? 0);
+    return n <= 23 && mm <= 59 ? `${String(n).padStart(2, "0")}:${String(mm).padStart(2, "0")}` : null;
+  };
+  const ini = hh(m[1], m[2]);
+  const fim = m[3] ? hh(m[3], m[4]) : null;
+  if (!ini || (m[3] && !fim)) return null;
+  return [ini, fim];
+}
+
 // ---------- campos usados só pela ficha ({{< ficha >}}) ----------
 const LINHAS_FICHA = {
-  evento: ["data", "tipo", "local", "area_mapeada", "carga_horaria", "publico", "equipe", "parceiros", "links"],
+  evento: ["data", "tipo", "realizacao", "local", "area_mapeada", "carga_horaria", "publico", "equipe", "parceiros", "links", "inscricao", "agenda"],
+  noticia: ["data", "categoria", "local", "equipe", "parceiros", "links"],
   projeto: ["tipo", "periodo", "situacao", "coordenacao", "equipe", "ods", "parceiros", "links"],
 };
-function validarFicha(arq: string, fm: Obj, tipo: "evento" | "projeto") {
+function validarFicha(arq: string, fm: Obj, tipo: "evento" | "projeto" | "noticia") {
   for (const campo of ["horario", "local", "area_mapeada"]) {
     if (fm[campo] !== undefined && fm[campo] !== null && typeof fm[campo] !== "string")
       problema(arq, `"${campo}" deve ser um texto`);
@@ -215,6 +234,7 @@ function validarFicha(arq: string, fm: Obj, tipo: "evento" | "projeto") {
 
 // ---------- eventos e participações ----------
 const eventos: Obj[] = [];
+const agenda: Obj[] = [];   // todos os eventos, com o necessário para agenda e próximos eventos
 const participacoes: Obj[] = [];
 for (const e of await listar("eventos")) {
   if (!e.isDirectory) continue;
@@ -245,11 +265,51 @@ for (const e of await listar("eventos")) {
   const equipe = referencias(arq, "equipe", lista(fm.equipe), idsMembros, "equipe/");
   const parc = referencias(arq, "parceiros", lista(fm.parceiros), idsParceiros, "_data/parceiros.yml");
   validarFicha(arq, fm, "evento");
+  const papel = noVocabulario(arq, "papel", texto(fm.papel) ?? "organizacao", vocab.papeis);
+  // Agenda: data final (eventos de vários dias), horário e inscrição
+  const dataFim = texto(fm.data_fim);
+  if (dataFim !== null && (!ehData(dataFim) || dataFim.slice(0, 10) < data!.slice(0, 10)))
+    problema(arq, `"data_fim" deve ser AAAA-MM-DD, igual ou posterior a "date"`);
+  const horario = texto(fm.horario);
+  const intervalo = lerHorario(horario);
+  if (horario && !intervalo)
+    problema(arq, `"horario: ${horario}" não foi reconhecido (use, por exemplo, "14h às 18h"); na agenda, o evento aparece como dia inteiro`);
+  const inscricao = texto(fm.inscricao);
+  if (inscricao && !/^https?:\/\//.test(inscricao)) problema(arq, `"inscricao" deve ser um endereço começando com http:// ou https://`);
+  agenda.push({
+    id: e.name, titulo: texto(fm.title) ?? e.name, descricao: texto(fm.description),
+    data: data!.slice(0, 10), data_fim: dataFim && ehData(dataFim) ? dataFim.slice(0, 10) : null,
+    horario, hora_inicio: intervalo?.[0] ?? null, hora_fim: intervalo?.[1] ?? null,
+    tipo: texto(fm.tipo), papel, modalidade: texto(fm.modalidade), local: texto(fm.local), municipio: texto(fm.municipio),
+    imagem: texto(fm.image) ? `eventos/${e.name}/${texto(fm.image)}` : null,
+    inscricao: inscricao && /^https?:\/\//.test(inscricao) ? inscricao : null,
+  });
   if (!tipo) continue;
-  eventos.push({ id: e.name, data: data!.slice(0, 10), realizado, tipo, modalidade, municipio,
+  eventos.push({ id: e.name, data: data!.slice(0, 10), realizado, tipo, papel, modalidade, municipio,
                  area_mapeada: texto(fm.area_mapeada),
                  carga_horaria: horas, publico, publico_externo: externo, parceiros: parc });
   for (const m of equipe) participacoes.push({ evento: e.name, membro: m });
+}
+
+// ---------- notícias ----------
+// Participações em eventos de terceiros, conquistas, publicações, parcerias...
+const noticias: Obj[] = [];
+for (const e of await listar("noticias")) {
+  if (!e.isDirectory) continue;
+  const arq = `noticias/${e.name}/index.qmd`;
+  const fm = await cabecalho(arq);
+  if (!fm) continue;
+  const data = texto(fm.date);
+  if (!ehData(data)) { problema(arq, `"date" ausente ou fora do formato AAAA-MM-DD`); continue; }
+  const cats = lista(fm.categories);
+  if (cats.length === 0) problema(arq, `informe ao menos uma categoria em "categories" (${Object.keys(vocab.categorias_noticia).join(", ")})`);
+  for (const c of cats) if (!(c in vocab.categorias_noticia))
+    problema(arq, `categoria "${c}" não está no vocabulário (válidas: ${Object.keys(vocab.categorias_noticia).join(", ")})`);
+  if (!texto(fm.description)) problema(arq, `sem "description": o resumo aparece na listagem de notícias`);
+  referencias(arq, "equipe", lista(fm.equipe), idsMembros, "equipe/");
+  validarFicha(arq, fm, "noticia");
+  noticias.push({ id: e.name, data: data!.slice(0, 10), categorias: cats, municipio: texto(fm.municipio),
+                  equipe: lista(fm.equipe).filter((m) => idsMembros.has(m)) });
 }
 
 // ---------- projetos ----------
@@ -386,7 +446,7 @@ function csv(linhas: Obj[]): string {
   };
   return [colunas.join(","), ...linhas.map((l) => colunas.map((c) => celula(l[c])).join(","))].join("\n") + "\n";
 }
-const tabelas: Record<string, Obj[]> = { membros, periodos, cargos: mandatos, eventos, participacoes, projetos, publicacoes, parceiros, "osm-mensal": osm };
+const tabelas: Record<string, Obj[]> = { membros, periodos, cargos: mandatos, eventos, participacoes, noticias, projetos, publicacoes, parceiros, "osm-mensal": osm };
 await Deno.mkdir(`${SAIDA}/csv`, { recursive: true });
 for (const [nome, linhas] of Object.entries(tabelas)) {
   await Deno.writeTextFile(`${SAIDA}/${nome}.json`, JSON.stringify(linhas) + "\n");
@@ -402,8 +462,129 @@ await Deno.writeTextFile(`${SAIDA}/referencias.json`, JSON.stringify({
 }) + "\n");
 await Deno.writeTextFile(`${SAIDA}/meta.json`, JSON.stringify({ gerado_em: new Date().toISOString(), hoje, semestre_atual: semestreAtual }) + "\n");
 
-console.log(`[dados] ${membros.length} membros, ${periodos.length} períodos, ${mandatos.length} mandatos, ${eventos.length} eventos, ` +
+console.log(`[dados] ${membros.length} membros, ${periodos.length} períodos, ${mandatos.length} mandatos, ${eventos.length} eventos, ${noticias.length} notícias, ` +
             `${projetos.length} projetos, ${publicacoes.length} publicações, ${parceiros.length} parceiros, ${osm.length} meses de OSM`);
+
+// ---------- agenda: arquivos de calendário (ICS), links e listas ----------
+// Endereço do site, para links absolutos na agenda (website.site-url no _quarto.yml)
+const configSite = ((await lerYaml("_quarto.yml")) ?? {}) as Obj;
+const siteUrl = String(((configSite.website ?? {}) as Obj)["site-url"] ?? "").replace(/\/$/, "");
+if (!siteUrl) problema("_quarto.yml", `"website: site-url" ausente: os links da agenda ficam incompletos`);
+const nomeTipo = (t: unknown) => String((vocab.tipos_evento as Obj)[String(t)] ?? t ?? "");
+// Cor de cada tipo na agenda, na ordem do vocabulário (a mesma paleta do painel)
+const PALETA = ["#7a1f21", "#324170", "#bfa13c", "#5f6170", "#b9c2dc", "#d9c38a", "#8c4a4c", "#7f8bb3"];
+const corTipo = (t: unknown) => PALETA[Math.max(0, Object.keys(vocab.tipos_evento as Obj).indexOf(String(t))) % PALETA.length];
+/** Texto legível sobre a cor: escuro em cores claras (dourado, azul-névoa), branco nas demais */
+function corTexto(hex: string) {
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
+    .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.3 ? "#1d2b36" : "#ffffff";
+}
+
+function diaSeguinte(d: string) {
+  const x = new Date(`${d}T12:00:00Z`); x.setUTCDate(x.getUTCDate() + 1); return x.toISOString().slice(0, 10);
+}
+function maisHoras(hhmm: string, h: number) {
+  const [a, b] = hhmm.split(":").map(Number); const t = Math.min(a * 60 + b + h * 60, 23 * 60 + 59);
+  return `${String(Math.floor(t / 60)).padStart(2, "0")}:${String(t % 60).padStart(2, "0")}`;
+}
+/** Início e fim do evento para calendários: com horário (fuso de Brasília) ou dia inteiro */
+function periodo(ev: Obj) {
+  const d0 = ev.data as string, d1 = (ev.data_fim as string | null) ?? d0;
+  if (ev.hora_inicio) {
+    const fim = (ev.hora_fim as string | null) ?? maisHoras(ev.hora_inicio as string, 2);
+    return { diaInteiro: false, inicio: `${d0}T${ev.hora_inicio}`, fim: `${d1}T${fim}` };
+  }
+  return { diaInteiro: true, inicio: d0, fim: diaSeguinte(d1) };   // no ICS, o fim de dia inteiro é exclusivo
+}
+const lugar = (ev: Obj) =>
+  [ev.local, ev.modalidade === "remota" ? null : ev.municipio].filter((x) => x).join(", ") ||
+  (ev.modalidade === "remota" ? "Online" : "");
+
+// Formato iCalendar (RFC 5545): textos escapados e linhas de até 75 bytes
+const icsTexto = (t: unknown) => String(t ?? "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+function dobrar(linha: string) {
+  const bytes = new TextEncoder().encode(linha);
+  if (bytes.length <= 75) return linha;
+  const partes: string[] = []; let atual = "", tam = 0, limite = 75;
+  for (const ch of linha) {
+    const n = new TextEncoder().encode(ch).length;
+    if (tam + n > limite) { partes.push(atual); atual = ""; tam = 0; limite = 74; }
+    atual += ch; tam += n;
+  }
+  partes.push(atual);
+  return partes.join("\r\n ");
+}
+const carimbo = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+const dominio = siteUrl.replace(/^https?:\/\//, "") || "youthmappers-ufv";
+function vevent(ev: Obj) {
+  const p = periodo(ev);
+  const dt = (v: string) => v.replace(/[-:]/g, "") + (p.diaInteiro ? "" : "00");
+  const url = `${siteUrl}/eventos/${ev.id}/`;
+  const desc = [ev.descricao, ev.inscricao ? `Inscrições: ${ev.inscricao}` : null, `Mais informações: ${url}`].filter((x) => x).join("\n");
+  return [
+    "BEGIN:VEVENT",
+    `UID:${ev.id}@${dominio}`,
+    `DTSTAMP:${carimbo}`,
+    p.diaInteiro ? `DTSTART;VALUE=DATE:${dt(p.inicio)}` : `DTSTART;TZID=America/Sao_Paulo:${dt(p.inicio)}`,
+    p.diaInteiro ? `DTEND;VALUE=DATE:${dt(p.fim)}` : `DTEND;TZID=America/Sao_Paulo:${dt(p.fim)}`,
+    `SUMMARY:${icsTexto(ev.titulo)}`,
+    `DESCRIPTION:${icsTexto(desc)}`,
+    lugar(ev) ? `LOCATION:${icsTexto(lugar(ev))}` : null,
+    `CATEGORIES:${icsTexto(nomeTipo(ev.tipo))}`,
+    `URL:${url}`,
+    "END:VEVENT",
+  ].filter((x) => x) as string[];
+}
+function calendario(nome: string, evs: Obj[]) {
+  const linhas = [
+    "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//YouthMappers UFV//Agenda do site//PT", "CALSCALE:GREGORIAN",
+    `X-WR-CALNAME:${icsTexto(nome)}`, "X-WR-TIMEZONE:America/Sao_Paulo",
+    // Fuso de Brasília: UTC−3, sem horário de verão desde 2019
+    "BEGIN:VTIMEZONE", "TZID:America/Sao_Paulo", "BEGIN:STANDARD", "DTSTART:19700101T000000",
+    "TZOFFSETFROM:-0300", "TZOFFSETTO:-0300", "TZNAME:-03", "END:STANDARD", "END:VTIMEZONE",
+    ...evs.flatMap(vevent), "END:VCALENDAR",
+  ];
+  return linhas.map(dobrar).join("\r\n") + "\r\n";
+}
+/** Link "adicionar à Agenda Google" de um evento */
+function linkGoogle(ev: Obj) {
+  const p = periodo(ev);
+  const dt = (v: string) => v.replace(/[-:]/g, "") + (p.diaInteiro ? "" : "00");
+  const q = new URLSearchParams({
+    action: "TEMPLATE", text: String(ev.titulo), dates: `${dt(p.inicio)}/${dt(p.fim)}`,
+    details: [ev.descricao, `${siteUrl}/eventos/${ev.id}/`].filter((x) => x).join("\n\n"),
+    location: lugar(ev), ctz: "America/Sao_Paulo",
+  });
+  return `https://calendar.google.com/calendar/render?${q}`;
+}
+
+agenda.sort((a, b) => String(a.data).localeCompare(String(b.data)));
+for (const ev of agenda) {
+  const p = periodo(ev);
+  Object.assign(ev, {
+    url: `eventos/${ev.id}/`, inicio: p.inicio, fim: p.fim, dia_inteiro: p.diaInteiro, lugar: lugar(ev),
+    tipo_nome: nomeTipo(ev.tipo), cor: corTipo(ev.tipo), cor_texto: corTexto(corTipo(ev.tipo)), google: linkGoogle(ev), ics: `dados/painel/ics/${ev.id}.ics`,
+    // último dia do evento: a partir do dia seguinte ele deixa de ser "próximo"
+    termina: (ev.data_fim as string | null) ?? ev.data,
+  });
+}
+await Deno.mkdir(`${SAIDA}/ics`, { recursive: true });
+for (const ev of agenda) await Deno.writeTextFile(`${SAIDA}/ics/${ev.id}.ics`, calendario(String(ev.titulo), [ev]));
+// Agenda completa para assinar: fica na raiz do site (https://.../agenda.ics)
+await Deno.writeTextFile("agenda.ics", calendario("YouthMappers UFV", agenda));
+await Deno.writeTextFile(`${SAIDA}/agenda.json`, JSON.stringify(agenda) + "\n");
+
+// Ações já realizadas, para a seção "Ações recentes" da página inicial.
+// Links são resolvidos a partir desta pasta; imagens, a partir da página que exibe a lista.
+const realizadas = agenda.filter((ev) => String(ev.termina) < hoje).reverse().map((ev) => {
+  const item: Obj = { title: ev.titulo, path: `../../eventos/${ev.id}/index.qmd`, date: ev.data };
+  if (ev.descricao) item.description = ev.descricao;
+  if (ev.imagem) item.image = ev.imagem;
+  return item;
+});
+const { stringify } = await import("npm:yaml@2.6.1");
+await Deno.writeTextFile(`${SAIDA}/eventos-realizados.yml`, stringify(realizadas));
 
 // ---------- relatório de problemas ----------
 if (problemas.length > 0) {

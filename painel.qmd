@@ -40,6 +40,11 @@ projetos = FileAttachment("dados/painel/projetos.json").json()
 
 ```{ojs}
 //| output: false
+noticias = FileAttachment("dados/painel/noticias.json").json()
+```
+
+```{ojs}
+//| output: false
 publicacoes = FileAttachment("dados/painel/publicacoes.json").json()
 ```
 
@@ -104,7 +109,8 @@ anos = Array.from(new Set([
   ...eventos.map(e => e.data.slice(0, 4)),
   ...publicacoes.map(p => String(p.ano)),
   ...projetos.map(p => p.inicio.slice(0, 4)),
-  ...osmMensal.map(m => m.mes.slice(0, 4))
+  ...osmMensal.map(m => m.mes.slice(0, 4)),
+  ...noticias.map(n => n.data.slice(0, 4))
 ])).sort().reverse()
 ```
 
@@ -157,6 +163,12 @@ ativoNoAno = (inicio, fim, a) => inicio <= `${a}-12` && (fim === null || fim >= 
 ```{ojs}
 //| output: false
 eventosF = ano === "Todos" ? eventos : eventos.filter(e => e.data.startsWith(ano))
+```
+
+```{ojs}
+//| output: false
+// Participações em eventos de terceiros (notícias da categoria "participação")
+participacoesF = noticias.filter(n => n.categorias.includes("participação") && (ano === "Todos" || n.data.startsWith(ano)))
 ```
 
 ```{ojs}
@@ -400,6 +412,13 @@ html`${fmt(d3.sum(eventosF, e => e.carga_horaria ?? 0))}`
 //| title: "Municípios atendidos"
 //| color: "#7a1f21"
 html`${new Set(eventosF.map(e => e.municipio).filter(m => m)).size}`
+```
+
+```{ojs}
+//| content: valuebox
+//| title: "Participações externas"
+//| color: "#324170"
+html`${participacoesF.length}`
 ```
 
 ## Row {height=400px}

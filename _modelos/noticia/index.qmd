@@ -1,0 +1,19 @@
+---
+title: "Título da notícia"
+date: 2026-01-31                     # AAAA-MM-DD
+description: "Resumo de uma frase (aparece na listagem de notícias)."
+image: capa.jpg                      # opcional; sem capa, o site usa a imagem genérica
+categories: [participação]           # participação, conquista, publicação, parceria, chamada, comunicado
+# --- opcionais, exibidos na ficha ---
+# local: Centro de Convenções
+# municipio: Curitiba
+# equipe: [nome-sobrenome]           # quem do programa esteve presente
+# links:
+#   - texto: Site do evento
+#     url: https://...
+---
+
+{{< ficha >}}
+
+Texto da notícia: o que aconteceu, quem participou, por que é importante
+para o programa.

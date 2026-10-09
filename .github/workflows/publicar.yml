@@ -3,7 +3,8 @@
 # Quando roda:
 #  - a cada alteração na branch main: otimiza as fotos e publica;
 #  - em pull requests: só otimiza as fotos (na própria branch do PR);
-#  - toda segunda-feira às 6h (Brasília): republica para atualizar os contadores;
+#  - todos os dias às 6h (Brasília): republica para atualizar os contadores,
+#    os próximos eventos e a agenda;
 #  - manualmente, pelo botão "Run workflow" na aba Actions.
 name: Publicar site
 
@@ -12,7 +13,7 @@ on:
     branches: main
   pull_request:
   schedule:
-    - cron: "0 9 * * 1"   # 9h UTC = 6h em Brasília, às segundas
+    - cron: "0 9 * * *"   # 9h UTC = 6h em Brasília, todos os dias
   workflow_dispatch:
 
 env:
@@ -55,7 +56,6 @@ jobs:
 
       - name: Salvar fotos otimizadas
         run: |
-          set -e
           if [ -z "$(git status --porcelain -- eventos projetos equipe)" ]; then
             echo "Nenhuma foto precisou de ajuste."
             exit 0
@@ -65,6 +65,7 @@ jobs:
           git add -- eventos projetos equipe
           git commit -m "Otimiza fotos (automático)"
           git push
+
   # ---------------------------------------------------------------
   # 2. Renderizar e publicar (nunca em pull requests)
   # ---------------------------------------------------------------
