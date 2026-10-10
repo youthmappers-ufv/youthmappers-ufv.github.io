@@ -16,7 +16,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap@youth
  mappers-ufv.github.io
-DTSTAMP:20261010T002839Z
+DTSTAMP:20261010T150855Z
 DTSTART;VALUE=DATE:20231019
 DTEND;VALUE=DATE:20231020
 SUMMARY:Mapeamento de limites administrativos no OpenStreetMap

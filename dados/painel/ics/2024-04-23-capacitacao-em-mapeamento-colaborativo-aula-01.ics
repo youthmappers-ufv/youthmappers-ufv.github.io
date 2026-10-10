@@ -16,7 +16,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01@youthmappers-
  ufv.github.io
-DTSTAMP:20261010T002839Z
+DTSTAMP:20261010T150855Z
 DTSTART;VALUE=DATE:20240423
 DTEND;VALUE=DATE:20240424
 SUMMARY:Capacitação em Mapeamento Colaborativo - Aula 01

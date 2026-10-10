@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento@youthmappe
  rs-ufv.github.io
-DTSTAMP:20261010T002839Z
+DTSTAMP:20261010T150855Z
 DTSTART;VALUE=DATE:20230928
 DTEND;VALUE=DATE:20230929
 SUMMARY:Configuração e uso do software JOSM no mapeamento colaborativo
