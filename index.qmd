@@ -80,7 +80,7 @@ listing:
 
 [Ver todas as notícias](noticias.qmd)
 
-## Projetos em andamento
+## Projetos
 
 ::: {#projetos-destaque}
 :::

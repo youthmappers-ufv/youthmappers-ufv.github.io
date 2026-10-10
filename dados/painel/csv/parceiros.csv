@@ -1,4 +1,4 @@
 id,nome,tipo,ativo,site,logo,acoes,projetos
 ufv-crp,Universidade Federal de Viçosa - Campus Rio Paranaíba,universidade,true,,imagens/parceiros/ufv-crp.png,0,0
 youthmappers,YouthMappers,youthmappers,true,https://youthmappers.org/,imagens/parceiros/youthmappers.png,0,0
-mapeadores-livres-ufpr,Mapeadores Livres UFPR,youthmappers,true,https://www.instagram.com/mapealivreufpr/,imagens/parceiros/mapeadores-livres-ufpr.png,0,0
+mapeadores-livres-ufpr,Mapeadores Livres UFPR,youthmappers,false,https://www.instagram.com/mapealivreufpr/,imagens/parceiros/mapeadores-livres-ufpr.png,0,0

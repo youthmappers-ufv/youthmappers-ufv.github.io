@@ -1,0 +1,26 @@
+---
+title: "Atlas Colaborativo do Município"
+date: 2026-01-31                     # data de início
+description: "O projeto produz um atlas temático e aberto do município a partir do OpenStreetMap, mede o quanto o mapa está completo em relação às bases oficiais, organiza a comunidade para preencher as lacunas e entrega o resultado à prefeitura, às escolas e à população. Este ciclo será repetido periodicamente, mantendo o atlas sempre atualizado."
+#image: capa.jpg
+categories: [extensão]               # ensino, pesquisa, extensão, TCC...
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+tipo: extensao                       # ensino, pesquisa, extensao, tcc
+inicio: 2026-11                      # AAAA-MM
+# fim: 2027-11                       # AAAA-MM; deixe comentado enquanto estiver em andamento
+coordenacao: [rodrigo-smarzaro]        # nomes dos arquivos em equipe/
+equipe: [raul-suzuki]             # estudantes participantes
+parceiros: []                        # ids de _data/parceiros.yml
+ods: [1,11,16,17]                            # números dos ODS (1 a 17)
+#links:                               # opcional: repositório, dados, demonstração
+#  - texto: Repositório no GitHub
+#    url: https://github.com/youthmappers-ufv/...
+---
+
+{{< ficha >}}
+
+## Objetivo
+Produzir e manter um atlas temático, aberto e colaborativo do município de Rio Paranaíba(MG), baseado no OpenStreetMap, que meça a completude do mapa em relação às bases oficiais, mobilize a comunidade para preencher as lacunas identificadas e disponibilize os resultados à prefeitura, às escolas e à população.
+
+## Resultados
+Em andamento. O atlas será publicado no site do projeto e atualizado periodicamente.

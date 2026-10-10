@@ -1,0 +1,14 @@
+---
+title: "Raul Suzuki Borges"
+#image: fotos/raul-suzuki.png
+# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+curso: SIN                           # código do curso (obrigatório para estudantes)
+vinculo: graduacao                   # graduacao, pos-graduacao, docente, tecnico, externo
+#osm: usuario                         # usuário no OpenStreetMap (opcional)
+periodos:                            # um item por função exercida, em ordem
+  - funcao: voluntario              # coordenacao, bolsista, voluntario, colaborador
+    inicio: 2026-11                  # AAAA-MM
+#    fim: 2026-07                     # AAAA-MM; apague a linha se ainda participa
+---
+
+Aluno de sistemas de informação na Universidade Federal de Viçosa (UFV), com interesse em mapeamento colaborativo, dados abertos e geotecnologias. Participa do YouthMappers UFV desde novembro de 2026, contribuindo para projetos de extensão e pesquisa relacionados ao OpenStreetMap e à produção de mapas temáticos do município de Rio Paranaíba (MG).
