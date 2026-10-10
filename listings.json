@@ -1,48 +1,8 @@
 [
   {
-    "listing": "/projetos.html",
+    "listing": "/noticias.html",
     "items": [
-      "/projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
-      "/projetos/2025-10-01-traducao-mapcomplete/index.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/eventos/2025-11-06-tradutona-mapcomplete/index.html",
-      "/eventos/2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba/index.html",
-      "/eventos/2025-09-25-mapeamento-colaborativo-com-editor-josm/index.html",
-      "/eventos/2025-09-24-introducao-ao-mapeamento-colaborativo/index.html",
-      "/eventos/2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis/index.html",
-      "/eventos/2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
-      "/eventos/2025-06-16-capacitacao-em-mapeamento-colaborativo-editor-josm/index.html",
-      "/eventos/2025-06-09-capacitacao-em-mapeamento-colaborativo-editor-id/index.html",
-      "/eventos/2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
-      "/eventos/2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem/index.html",
-      "/eventos/2025-03-18-mostra-de-projetos-de-extensao/index.html",
-      "/eventos/2024-11-23-mostra-de-profissoes/index.html",
-      "/eventos/2024-11-14-mapatona-zona-urbana-de-rio-paranaiba-parte-2/index.html",
-      "/eventos/2024-11-01-mapatona-zona-urbana-de-rio-paranaiba/index.html",
-      "/eventos/2024-10-25-plugin-buildings-tools/index.html",
-      "/eventos/2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear/index.html",
-      "/eventos/2024-08-09-mapatona-tres-coroas-rs-aniversario-osm/index.html",
-      "/eventos/2024-05-21-capacitacao-editor-id-esalq/index.html",
-      "/eventos/2024-05-14-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
-      "/eventos/2024-05-07-capacitacao-em-mapeamento-colaborativo-aula-03/index.html",
-      "/eventos/2024-04-30-capacitacao-em-mapeamento-colaborativo-aula-02/index.html",
-      "/eventos/2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01/index.html",
-      "/eventos/2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap/index.html",
-      "/eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
-      "/eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
-      "/eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
-      "/eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
-      "/eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
-      "/eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
-      "/eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
-      "/eventos/2022-07-09-mapatona-angra/index.html",
-      "/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html",
-      "/projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
-      "/projetos/2025-10-01-traducao-mapcomplete/index.html"
+      "/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html"
     ]
   },
   {
@@ -83,9 +43,51 @@
     ]
   },
   {
-    "listing": "/noticias.html",
+    "listing": "/index.html",
     "items": [
-      "/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html"
+      "/eventos/2025-11-06-tradutona-mapcomplete/index.html",
+      "/eventos/2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba/index.html",
+      "/eventos/2025-09-25-mapeamento-colaborativo-com-editor-josm/index.html",
+      "/eventos/2025-09-24-introducao-ao-mapeamento-colaborativo/index.html",
+      "/eventos/2025-09-18-mapeamento-colaborativo-com-aplicativos-moveis/index.html",
+      "/eventos/2025-06-23-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
+      "/eventos/2025-06-16-capacitacao-em-mapeamento-colaborativo-editor-josm/index.html",
+      "/eventos/2025-06-09-capacitacao-em-mapeamento-colaborativo-editor-id/index.html",
+      "/eventos/2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+      "/eventos/2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem/index.html",
+      "/eventos/2025-03-18-mostra-de-projetos-de-extensao/index.html",
+      "/eventos/2024-11-23-mostra-de-profissoes/index.html",
+      "/eventos/2024-11-14-mapatona-zona-urbana-de-rio-paranaiba-parte-2/index.html",
+      "/eventos/2024-11-01-mapatona-zona-urbana-de-rio-paranaiba/index.html",
+      "/eventos/2024-10-25-plugin-buildings-tools/index.html",
+      "/eventos/2024-10-17-introducao-ao-mapeamento-colaborativo-e-mapatona-semear/index.html",
+      "/eventos/2024-08-09-mapatona-tres-coroas-rs-aniversario-osm/index.html",
+      "/eventos/2024-05-21-capacitacao-editor-id-esalq/index.html",
+      "/eventos/2024-05-14-capacitacao-em-mapeamento-colaborativo-mapatona/index.html",
+      "/eventos/2024-05-07-capacitacao-em-mapeamento-colaborativo-aula-03/index.html",
+      "/eventos/2024-04-30-capacitacao-em-mapeamento-colaborativo-aula-02/index.html",
+      "/eventos/2024-04-23-capacitacao-em-mapeamento-colaborativo-aula-01/index.html",
+      "/eventos/2023-10-19-mapeamento-de-limites-administrativos-no-openstreetmap/index.html",
+      "/eventos/2023-09-28-mapatona-regiao-sul-atingida-pelas-enchentes/index.html",
+      "/eventos/2023-09-28-configuracao-e-uso-do-software-josm-no-mapeamento/index.html",
+      "/eventos/2023-09-13-capacitacao-em-mapeamento-colaborativo-conceitos/index.html",
+      "/eventos/2023-08-25-youthmappers-mapeamento-colaborativo-e-humanitario/index.html",
+      "/eventos/2023-08-09-mapatona-quississana-aniversario-osm/index.html",
+      "/eventos/2022-10-15-mapatona-noroeste-de-rio-paranaiba/index.html",
+      "/eventos/2022-07-19-oficina-importacao-dados-osm-postgis/index.html",
+      "/eventos/2022-07-09-mapatona-angra/index.html",
+      "/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/index.html",
+      "/projetos/2026-11-01-atlas-colaborativo/index.html",
+      "/projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
+      "/projetos/2025-10-01-traducao-mapcomplete/index.html"
+    ]
+  },
+  {
+    "listing": "/projetos.html",
+    "items": [
+      "/projetos/2026-11-01-atlas-colaborativo/index.html",
+      "/projetos/2025-10-01-Ortoimagem-campus-ufv/index.html",
+      "/projetos/2025-10-01-traducao-mapcomplete/index.html"
     ]
   }
 ]
