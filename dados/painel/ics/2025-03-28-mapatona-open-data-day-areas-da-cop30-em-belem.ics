@@ -16,7 +16,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:2025-03-28-mapatona-open-data-day-areas-da-cop30-em-belem@youthmappers-
  ufv.github.io
-DTSTAMP:20261010T000306Z
+DTSTAMP:20261010T002839Z
 DTSTART;VALUE=DATE:20250328
 DTEND;VALUE=DATE:20250329
 SUMMARY:Mapatona Open Data Day - Áreas da COP30 em Belém

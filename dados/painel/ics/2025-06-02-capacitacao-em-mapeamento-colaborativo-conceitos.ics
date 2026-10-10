@@ -16,7 +16,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:2025-06-02-capacitacao-em-mapeamento-colaborativo-conceitos@youthmapper
  s-ufv.github.io
-DTSTAMP:20261010T000306Z
+DTSTAMP:20261010T002839Z
 DTSTART;VALUE=DATE:20250602
 DTEND;VALUE=DATE:20250603
 SUMMARY:Capacitação em Mapeamento Colaborativo - Conceitos Básicos
