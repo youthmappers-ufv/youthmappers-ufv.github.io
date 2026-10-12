@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3212d0f091d27a1a98cfdbe6485e6cd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-376568b943a1d1e6b3e11a4920e95e9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -190,6 +190,18 @@ ul.task-list li input[type="checkbox"] {
 <p>Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário.</p>
 
 
+<script>
+window.addEventListener('load', function () {
+  var entidade = document.querySelector('.about-entity');
+  if (!entidade || entidade.querySelector('a[href*="openstreetmap.org"]')) return;
+  var caixa = entidade.querySelector('.about-links');
+  if (!caixa) { caixa = document.createElement('div'); caixa.className = 'about-links'; entidade.appendChild(caixa); }
+  var a = document.createElement('a');
+  a.className = 'about-link'; a.href = "https://www.openstreetmap.org/user/Juliamsa"; a.rel = 'noopener'; a.target = '_blank';
+  a.innerHTML = '<i class="bi bi-geo-alt"></i> <span class="about-link-text">OpenStreetMap</span>';
+  caixa.appendChild(a);
+});
+</script>
 </main></div>
 </div>
  <!-- /main -->

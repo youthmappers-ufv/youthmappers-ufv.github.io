@@ -1,5 +1,5 @@
-id,situacao,vinculo,curso
-felipe-kauan,atual,graduacao,SIN
-julia-mendonca,egresso,graduacao,SIN
-raul-suzuki,atual,graduacao,SIN
-rodrigo-smarzaro,coordenacao,docente,
+id,situacao,vinculo,curso,efetivo,estatisticas
+felipe-kauan,atual,graduacao,SIN,,true
+julia-mendonca,egresso,graduacao,SIN,,false
+raul-suzuki,atual,graduacao,SIN,,true
+rodrigo-smarzaro,coordenacao,docente,,,true

@@ -46,7 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3212d0f091d27a1a98cfdbe6485e6cd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-376568b943a1d1e6b3e11a4920e95e9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/estatisticas-osm-1.0.0/estatisticas.js"></script>
+<link href="../site_libs/quarto-contrib/estatisticas-osm-1.0.0/estatisticas.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -190,6 +192,19 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-contents"><main class="content" id="quarto-document-content">
 
 
+<script>
+window.addEventListener('load', function () {
+  var entidade = document.querySelector('.about-entity');
+  if (!entidade || entidade.querySelector('a[href*="openstreetmap.org"]')) return;
+  var caixa = entidade.querySelector('.about-links');
+  if (!caixa) { caixa = document.createElement('div'); caixa.className = 'about-links'; entidade.appendChild(caixa); }
+  var a = document.createElement('a');
+  a.className = 'about-link'; a.href = "https://www.openstreetmap.org/user/Felipe%20Kauan"; a.rel = 'noopener'; a.target = '_blank';
+  a.innerHTML = '<i class="bi bi-geo-alt"></i> <span class="about-link-text">OpenStreetMap</span>';
+  caixa.appendChild(a);
+});
+</script>
+<section class="estatisticas-osm" aria-labelledby="est-titulo"><h2 id="est-titulo">Estatísticas no OpenStreetMap</h2><div class="est-corpo"></div><script type="application/json" class="est-dados">{"gerado_em":"2026-10-12T17:38:28.635Z","hashtags":["youthmappersufv"],"membro":{"atualizado":"2026-10-12T17:38:29.069Z","id":"felipe-kauan","meses":[{"campo":0,"changesets":24,"criadas":1393,"edicoes":1848,"excluidas":37,"ferramentas":{"JOSM":389,"iD":1459},"hashtag_changesets":21,"hashtag_edicoes":1571,"m":"2023-09","modificadas":418},{"campo":0,"changesets":2,"criadas":36,"edicoes":57,"excluidas":1,"ferramentas":{"JOSM":57},"hashtag_changesets":2,"hashtag_edicoes":57,"m":"2023-10","modificadas":20},{"campo":0,"changesets":11,"criadas":74,"edicoes":160,"excluidas":0,"ferramentas":{"iD":160},"hashtag_changesets":11,"hashtag_edicoes":160,"m":"2024-08","modificadas":86},{"campo":0,"changesets":4,"criadas":191,"edicoes":212,"excluidas":0,"ferramentas":{"JOSM":212},"hashtag_changesets":4,"hashtag_edicoes":212,"m":"2024-10","modificadas":21},{"campo":0,"changesets":10,"criadas":2782,"edicoes":3473,"excluidas":167,"ferramentas":{"JOSM":3473},"hashtag_changesets":10,"hashtag_edicoes":3473,"m":"2024-11","modificadas":524},{"campo":0,"changesets":7,"criadas":1460,"edicoes":1774,"excluidas":10,"ferramentas":{"JOSM":1755,"iD":19},"hashtag_changesets":6,"hashtag_edicoes":1755,"m":"2025-02","modificadas":304},{"campo":0,"changesets":1,"criadas":1,"edicoes":11,"excluidas":0,"ferramentas":{"MapComplete":11},"hashtag_changesets":0,"hashtag_edicoes":0,"m":"2025-09","modificadas":10},{"campo":0,"changesets":5,"criadas":851,"edicoes":1167,"excluidas":15,"ferramentas":{"JOSM":1167},"hashtag_changesets":5,"hashtag_edicoes":1167,"m":"2025-10","modificadas":301}],"nome":"Felipe Kauan","osm":"Felipe Kauan","situacao":"atual"},"meses_recentes":12}</script></section>
 </main></div>
 </div>
  <!-- /main -->

@@ -15,9 +15,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-11-12-sotm-brasil-2026@youthmappers-ufv.github.io
-DTSTAMP:20261012T050014Z
+DTSTAMP:20261012T173830Z
 DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261115
 SUMMARY:State of the Map Brasil 2026
 DESCRIPTION:Conferência nacional da comunidade OpenStreetMap\, em Uberlân
  dia\, organizada pela UFU e pela UFV.\nMais informações: https://youthma
