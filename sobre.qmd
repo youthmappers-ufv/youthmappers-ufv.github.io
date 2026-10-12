@@ -42,17 +42,10 @@ Instituições, comunidades e capítulos YouthMappers que atuam conosco.
 
 ## Como participar {#como-participar}
 
-As ações abertas (mapatonas, oficinas e palestras) recebem qualquer pessoa, e não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap. Estudantes de qualquer curso da UFV Rio Paranaíba podem também atuar na extensão como voluntários e, depois de concluir o ciclo de capacitação e cumprir os critérios do regimento do capítulo, tornar-se **membros efetivos**.
-
-Para começar, escreva para [youthmapperschapter@ufv.br](mailto:youthmapperschapter@ufv.br) informando seu nome, curso e período.
-
-
-<!-- Ativar após a aprovação do regimento e a colocação dos PDFs finais em documentos/ -->
-<!--
-## Participe do capítulo
-
 As ações abertas ao público (mapatonas, oficinas e palestras) estão na página [Eventos](eventos.qmd), e qualquer pessoa pode participar. Quem quiser se envolver mais pode se tornar **membro efetivo** do capítulo, depois de concluir o ciclo de capacitação em mapeamento colaborativo. Os critérios de ingresso, os direitos e deveres, os cargos da diretoria e o funcionamento do capítulo estão no [Regimento Interno do Capítulo](documentos/regimento-interno.pdf) (PDF).
 
-Para formalizar o ingresso, use o [modelo do Termo de Adesão](documentos/termo-adesao.pdf) (PDF). Dúvidas: [youthmapperschapter@ufv.br](mailto:youthmapperschapter@ufv.br).
+Para formalizar o ingresso, use o [modelo do Termo de Adesão](documentos/termo-adesao.pdf) (PDF). 
 
--->
+Dúvidas: [youthmapperschapter@ufv.br](mailto:youthmapperschapter@ufv.br).
+
+
