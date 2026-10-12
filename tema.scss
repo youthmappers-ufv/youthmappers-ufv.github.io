@@ -360,7 +360,7 @@ body.quarto-dashboard {
   display: flex; align-items: center; justify-content: center;
   width: 100%; height: 90px; margin-bottom: .9rem;
 }
-.parceiro-logo { max-width: 100%; max-height: 90px; object-fit: contain; }
+.parceiro-logo { max-width: 100%; max-height: 100px; object-fit: contain; }
 .parceiro-inicial {
   display: flex; align-items: center; justify-content: center;
   width: 80px; height: 80px; border-radius: 50%;
@@ -370,10 +370,14 @@ body.quarto-dashboard {
 .parceiro-nome {
   font-family: $headings-font-family; font-weight: $headings-font-weight;
   color: $marinho; font-size: 1.15rem; line-height: 1.25; margin-bottom: .35rem;
-  a { color: $marinho; }
+  // com ou sem link, o nome tem a mesma aparência (o link só ganha sublinhado ao passar o mouse)
+  a { color: inherit; font: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
 }
-.parceiro-tipo { color: $cinza; font-size: .9rem; }
-.parceiro-conjunto { color: $cinza; font-size: .85rem; margin-top: .5rem; }
+// O tipo fica sempre centralizado na base do quadro, na mesma posição em todos os parceiros
+.parceiro-nome { order: 1; }
+.parceiro-conjunto { order: 2; color: $cinza; font-size: .85rem; margin-top: .5rem; }
+.parceiro-tipo { order: 3; margin-top: auto; padding-top: .6rem; color: $cinza; font-size: .9rem; }
 
 // Faixa de logos da página inicial
 .parceiros-faixa {
@@ -382,3 +386,60 @@ body.quarto-dashboard {
   a { display: inline-flex; }
 }
 .parceiro-faixa-logo { max-height: 100px; max-width: 200px; object-fit: contain; }
+
+// =============================================================
+// Identidade visual da página inicial (out/2026)
+// Tudo aqui só vale com "body-classes: pagina-inicial" no cabeçalho do index.qmd.
+// Para reverter: apague essa linha (ou este bloco). Cópia anterior em
+// _versoes-anteriores/identidade-visual-pagina-inicial/.
+// =============================================================
+body.pagina-inicial {
+  // Fita tricolor (vinho, marinho, ouro) no topo da página
+  #quarto-header {
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(90deg, $vinho 0 33.34%, $marinho 33.34% 66.67%, $ouro 66.67% 100%) 1;
+  }
+
+  // Abertura: o marcador do programa como símbolo, à direita do título
+  .destaque {
+    @media (min-width: 768px) { padding-right: min(34%, 300px); }
+    .destaque-marcador {
+      display: none;
+      position: absolute; right: 7%; top: 50%; transform: translateY(-50%);
+      height: min(80%, 250px); width: auto; pointer-events: none;
+      @media (min-width: 768px) { display: block; }
+    }
+  }
+
+  // Números do programa em faixa marinho, com valores dourados (texto grande: contraste 3,4:1)
+  .numeros {
+    background: $marinho; border-radius: $border-radius;
+    padding: 1.2rem 1.4rem; margin: 0 0 1rem; gap: 1rem 1.5rem;
+    div { border-left: 3px solid rgba($ouro, .7); }
+    strong { color: $ouro; }
+    span { color: #dfe3ef; }
+  }
+  .atualizacao { margin: .5rem 0 2rem; }
+
+  // Cada seção tem uma cor nos cartões: ações em vinho, notícias em marinho, projetos em ouro
+  #listing-ultimos-eventos .quarto-grid-item { border-top: 3px solid $vinho; }
+  #listing-ultimas-noticias .quarto-grid-item { border-top: 3px solid $marinho; }
+  #listing-projetos-destaque .quarto-grid-item { border-top: 3px solid $ouro; }
+}
+
+// Rodapé (todas as páginas): logo com borda branca, legível sobre o fundo marinho
+.rodape-logo { height: 60px; width: auto; display: block; }  // altura do logo no rodapé
+
+// Faixa azul: logo à esquerda e texto à direita, ambos centralizados na vertical.
+// Altura da faixa = altura do logo + o espaçamento (padding) abaixo. Seletor longo de
+// propósito: precisa vencer as regras do próprio Quarto/Bootstrap.
+footer.footer .nav-footer {
+  align-items: center;
+  min-height: 0;
+  padding-top: .4rem; padding-bottom: .4rem;    // ajuste aqui a altura da faixa
+  .nav-footer-left, .nav-footer-center, .nav-footer-right {
+    display: flex; align-items: center; min-height: 0;
+  }
+  .nav-footer-right { justify-content: flex-end; text-align: right; }   // texto colado à direita
+  p { margin: 0; }
+}

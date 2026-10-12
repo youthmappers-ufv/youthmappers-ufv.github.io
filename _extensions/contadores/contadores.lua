@@ -8,6 +8,7 @@
     {{< contar estudantes >}}   estudantes (graduação ou pós) que já participaram
     {{< contar equipe-atual >}} pessoas em atividade, exceto a coordenação
     {{< contar parceiros >}}    parceiros ativos em _data/parceiros.yml
+    {{< contar pessoas >}}      pessoas atendidas (soma do "publico" das ações realizadas)
     {{< osm edits >}}           campo do arquivo dados/osm.json
     {{< atualizado >}}          data da última renderização
 
@@ -69,6 +70,7 @@ local contadores = {
   ["estudantes"]   = function() return contador_gerado("estudantes") end,
   ["equipe-atual"] = function() return contador_gerado("equipe_atual") end,
   ["parceiros"]    = function() return contador_gerado("parceiros") end,
+  ["pessoas"]      = function() return contador_gerado("pessoas_atendidas") end,
 }
 
 return {

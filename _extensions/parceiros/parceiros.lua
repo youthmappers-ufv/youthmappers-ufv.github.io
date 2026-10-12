@@ -65,13 +65,17 @@ local function cartao(p)
   local site = valor(p.site)
   local midia
   if logo then
+    -- com logo: só o logo aparece (o nome fica no texto alternativo) e ele é o link, se houver site
     midia = logo_img(p, "parceiro-logo")
+    if site then midia = '<a href="' .. esc(site) .. '" rel="noopener" aria-label="' .. esc(p.nome) .. '">' .. midia .. "</a>" end
   else
     midia = '<span class="parceiro-inicial" aria-hidden="true">' .. esc(pandoc.text.upper(pandoc.text.sub(p.nome, 1, 1))) .. "</span>"
   end
+  -- sem logo, o nome aparece (com link, se houver site)
   local nome = site
     and ('<a href="' .. esc(site) .. '" rel="noopener">' .. esc(p.nome) .. "</a>")
     or esc(p.nome)
+  local texto_nome = logo and "" or ('<span class="parceiro-nome">' .. nome .. "</span>")
   local partes = {}
   local acoes, projetos = tonumber(p.acoes) or 0, tonumber(p.projetos) or 0
   if acoes > 0 then table.insert(partes, plural(acoes, "ação", "ações")) end
@@ -81,7 +85,7 @@ local function cartao(p)
   return table.concat({
     '<div class="parceiro">',
     '<div class="parceiro-midia">', midia, "</div>",
-    '<span class="parceiro-nome">', nome, "</span>",
+    texto_nome,
     '<span class="parceiro-tipo">', esc(p.tipo_nome), "</span>",
     conjunto,
     "</div>",

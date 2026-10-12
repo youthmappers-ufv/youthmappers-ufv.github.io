@@ -8,7 +8,7 @@ periodos:                            # um item por função exercida, em ordem
     inicio: 2026-10                  # AAAA-MM
 #    fim: 2026-07                     # AAAA-MM; apague a linha se ainda participa
 #osm: usuario                         # usuário no OpenStreetMap (opcional)
-estatisticas: true                   # exige osm: preencha o usuário acima
+estatisticas: false                   # exige osm: preencha o usuário acima
 ---
 
 Aluno de sistemas de informação na Universidade Federal de Viçosa (UFV), com interesse em mapeamento colaborativo, dados abertos e geotecnologias. Participa do YouthMappers UFV desde novembro de 2026, contribuindo para projetos de extensão e pesquisa relacionados ao OpenStreetMap e à produção de mapas temáticos do município de Rio Paranaíba (MG).

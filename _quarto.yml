@@ -75,7 +75,7 @@ website:
         href: mailto:youthmapperschapter@ufv.br
         aria-label: Contato por e-mail
   page-footer:
-    left: "Programa de Extensão YouthMappers UFV, campus Rio Paranaíba"
+    left: '<img class="rodape-logo" src="/imagens/logo-banner-borda-branca.webp" alt="YouthMappers UFV, Programa de Extensão, campus Rio Paranaíba">'
     right: "Dados de mapa © colaboradores do [OpenStreetMap](https://www.openstreetmap.org/copyright)"
 
 format:

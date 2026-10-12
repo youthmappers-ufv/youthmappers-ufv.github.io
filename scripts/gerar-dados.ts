@@ -480,6 +480,8 @@ const contadores = {
   parceiros: parceiros.filter((p) => p.ativo).length,
   estudantes: ps.filter((p) => estudante(p.vinculo) && p.situacao !== "coordenacao").length,
   equipe_atual: atuais.length,
+  // pessoas atendidas: soma do "publico" de todas as ações já realizadas
+  pessoas_atendidas: eventos.filter((e) => e.realizado).reduce((t, e) => t + (Number(e.publico) || 0), 0),
 };
 
 // ---------- gravação ----------
