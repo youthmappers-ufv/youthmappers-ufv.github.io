@@ -1,0 +1,36 @@
+# =====================================================================
+# Critérios de ingresso — usados por scripts/verificar-candidatos.ts
+# =====================================================================
+# Estes valores correspondem ao Regimento Interno do Capítulo (requisito
+# de edições do pedido de ingresso). Se o regimento mudar, altere aqui e
+# no bloco PARÂMETROS do regimento-corpo.tex (mantido fora deste repositório): o script imprime os critérios
+# usados em cada execução, então todo relatório documenta o que foi aplicado.
+#
+# Qualquer valor pode ser sobreposto na linha de comando
+# (--min-edicoes, --min-changesets, --hashtag, --amostra, --desde, --ate)
+# e as datas também por candidato, nas colunas "desde" e "ate" do CSV.
+
+# Hashtags aceitas, sem o "#" e sem diferenciar maiúsculas de minúsculas.
+# A hashtag é obrigatória: só changesets que a contenham (no comentário ou
+# na etiqueta "hashtags") contam para a elegibilidade.
+hashtags:
+  - youthmappersufv
+
+# Mínimos, contados desde o início do ciclo de capacitação.
+min_edicoes: 200
+min_changesets: 10
+
+# Quantos changesets o script sorteia para a revisão de qualidade
+# (quem aprova é uma pessoa; o script só escolhe e lista os links).
+amostra_revisao: 0
+
+# Início do período de contagem (AAAA-MM-DD). Normalmente é a data de
+# início do ciclo; costuma ser melhor informá-la na linha de comando ou
+# por candidato. Sem "ate", a contagem vai até hoje.
+# desde: 2026-03-01
+# ate: 2026-12-31
+
+# Boas maneiras com a API do OpenStreetMap: pausa entre consultas e um
+# contato no cabeçalho User-Agent.
+pausa_ms: 1000
+contato: youthmapperschapter@ufv.br

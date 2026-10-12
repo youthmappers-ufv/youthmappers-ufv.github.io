@@ -5,4 +5,12 @@ Thumbs.db
 **/*.quarto_ipynb
 /.luarc.json
 /agenda.ics
-claude.md
+
+# Dados de candidatos e relatórios de elegibilidade (dados pessoais: nunca publicar)
+privado/
+
+# Contexto local para o Claude Code: não vai para o repositório remoto
+/CLAUDE.md
+
+# Arquivos gerados a cada renderização (scripts/gerar-dados.ts)
+/dados/painel/

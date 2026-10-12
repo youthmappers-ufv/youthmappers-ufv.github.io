@@ -51,6 +51,18 @@ cargos:
     historico: true
     titulo_historico: Presidências anteriores
     ativo: true
+  
+  comunicacao:
+    nome: Comunicação e Mídias Sociais
+    ordem: 2
+    historico: false
+    ativo: true
+  
+  webmaster:
+    nome: Webmaster
+    ordem: 3
+    historico: false
+    ativo: true
 
 # Papel do programa numa ação (campo "papel"; padrão: organizacao).
 # Se o programa apenas participou de um evento de terceiros, não é uma

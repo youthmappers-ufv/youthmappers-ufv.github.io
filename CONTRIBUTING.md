@@ -90,7 +90,7 @@ e na página **Agenda**, em formato de calendário. Para que apareçam bem:
 Quem visita o site pode **assinar a agenda do programa** (página Agenda):
 cada evento novo publicado aparece sozinho no calendário da pessoa, sem
 cadastro de e-mail. O arquivo da agenda (`agenda.ics`) e os arquivos de
-cada evento são gerados pelo `scripts/gerar-dados.ts`; não os edite.
+cada evento são gerados pelo `scripts/gerar-dados.ts`; não os edite. Os arquivos `.ics` de cada evento só são gerados para eventos futuros.
 
 O site é republicado todos os dias às 6h; além disso, os cartões de
 "Próximas ações" somem sozinhos no navegador assim que o evento passa.
@@ -180,6 +180,8 @@ Equipe se ajusta sozinha. Cada cargo tem:
   de `titulo_historico`;
 - `ativo`: `false` para um cargo extinto. **Nunca apague um cargo já
   usado**: desative-o, para o histórico continuar válido.
+
+Hoje os cargos cadastrados são `presidencia`, `comunicacao` (Comunicação e Mídias Sociais) e `webmaster`, conforme o Regimento Interno do Capítulo.
 
 Mudar o **código** de um cargo (a chave, como `presidencia`) exige
 atualizar também os arquivos de quem o ocupou; a validação lista quais são.
@@ -281,11 +283,34 @@ Mapas gerados com Python (ex.: `folium`) também funcionam: como o projeto
 usa `freeze: auto`, rode `quarto render` no seu computador e faça commit
 da pasta `_freeze/` junto com a página.
 
+## Documentos oficiais do capítulo
+
+O **Regimento Interno do Capítulo** e o **modelo do Termo de Adesão** são publicados em `documentos/` (PDF) e divulgados na página "O programa". As fontes em LaTeX **não ficam neste repositório**: são mantidas pela coordenação, junto ao texto do programa de extensão (o regimento é anexo dele). Para atualizar um documento, a coordenação substitui o PDF correspondente. Os números do regimento (mínimos de edições, prazos) devem coincidir com os de `scripts/criterios-ingresso.yml`.
+
+## Verificar candidatos a membro efetivo (coordenação e presidência)
+
+Para ser membro efetivo, a pessoa precisa, entre outros requisitos, ter feito um mínimo de edições no OpenStreetMap **com a hashtag** `#youthmappersufv`. Em vez de contar à mão, use o script `scripts/verificar-candidatos.ts`, que consulta a API pública do OSM e informa quanto falta para cada candidato, além de sortear changesets para a revisão de qualidade.
+
+1. Crie a pasta `privado/` (ela já está no `.gitignore`) e, nela, um arquivo `candidatos.csv` com as colunas `nome;osm;desde;ate`. Veja o modelo em `scripts/candidatos-exemplo.csv`. `desde` é o início do ciclo de capacitação; `ate` é opcional (padrão: hoje).
+2. Rode, na raiz do repositório:
+
+   ```bash
+   quarto run scripts/verificar-candidatos.ts privado/candidatos.csv --saida privado/relatorio.csv
+   ```
+
+3. Os mínimos e a hashtag ficam em `scripts/criterios-ingresso.yml`, e podem ser sobrepostos na linha de comando (`--min-edicoes`, `--min-changesets`, `--hashtag`, `--desde`, `--ate`). Veja `--ajuda`.
+
+**Privacidade:** a lista de candidatos e o relatório contêm nomes e avaliações e **não podem ir para o repositório** (que é público). O mesmo vale para os termos de adesão assinados, que têm matrícula e e-mail.
+
+O script só conta edições. Continuam manuais: a frequência mínima no ciclo, a aprovação da amostra de changesets e o termo de adesão assinado.
+
 ## Arquivos que só a coordenação altera
 
 - `_quarto.yml`: menu, rodapé e opções gerais.
 - `tema.scss`: cores e fontes.
 - `.github/workflows/publicar.yml`: publicação automática.
+- `documentos/`: PDFs oficiais do regimento interno e do termo de adesão.
+- `scripts/criterios-ingresso.yml`: critérios de ingresso de membros efetivos.
 
 ## Números da página inicial (automáticos)
 
@@ -304,7 +329,7 @@ que roda sozinho antes de cada renderização, inclusive no `quarto preview`
 (no máximo uma consulta a cada 12 horas). Ele grava o resultado em
 `dados/osm.json`; tudo bem fazer commit desse arquivo junto com suas alterações.
 
-O site é republicado toda segunda-feira, mesmo sem alterações, para
+O site é republicado todos os dias às 6h (horário de Brasília), mesmo sem alterações, para
 atualizar as edições do OSM e passar a contar eventos que já aconteceram.
 
 **A hashtag nas edições.** No JOSM ou no iD, inclua `#youthmappersufv` no

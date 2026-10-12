@@ -572,20 +572,32 @@ function linkGoogle(ev: Obj) {
   return `https://calendar.google.com/calendar/render?${q}`;
 }
 
+/** Margem (em dias) para manter o .ics de um evento depois de encerrado: cobre o fuso e o intervalo entre republicações */
+const MARGEM_ICS_DIAS = 1;
+const diasAtras = (n: number) => { const x = new Date(`${hoje}T12:00:00Z`); x.setUTCDate(x.getUTCDate() - n); return x.toISOString().slice(0, 10); };
+const limiteIcs = diasAtras(MARGEM_ICS_DIAS);
+/** Janela do feed de assinatura agenda.ics: eventos futuros e os encerrados há até JANELA_FEED_DIAS dias */
+const JANELA_FEED_DIAS = 120;
+const limiteFeed = diasAtras(JANELA_FEED_DIAS);
+/** O .ics individual só existe para eventos que não encerraram há mais de MARGEM_ICS_DIAS dias */
+const temIcs = (ev: Obj) => String(ev.termina) >= limiteIcs;
+
 agenda.sort((a, b) => String(a.data).localeCompare(String(b.data)));
 for (const ev of agenda) {
   const p = periodo(ev);
   Object.assign(ev, {
     url: `eventos/${ev.id}/`, inicio: p.inicio, fim: p.fim, dia_inteiro: p.diaInteiro, lugar: lugar(ev),
-    tipo_nome: nomeTipo(ev.tipo), cor: corTipo(ev.tipo), cor_texto: corTexto(corTipo(ev.tipo)), google: linkGoogle(ev), ics: `dados/painel/ics/${ev.id}.ics`,
+    tipo_nome: nomeTipo(ev.tipo), cor: corTipo(ev.tipo), cor_texto: corTexto(corTipo(ev.tipo)), google: linkGoogle(ev),
     // último dia do evento: a partir do dia seguinte ele deixa de ser "próximo"
     termina: (ev.data_fim as string | null) ?? ev.data,
   });
+  if (temIcs(ev)) ev.ics = `dados/painel/ics/${ev.id}.ics`;
 }
+await Deno.remove(`${SAIDA}/ics`, { recursive: true }).catch(() => {});   // não deixa .ics de eventos antigos ou removidos
 await Deno.mkdir(`${SAIDA}/ics`, { recursive: true });
-for (const ev of agenda) await Deno.writeTextFile(`${SAIDA}/ics/${ev.id}.ics`, calendario(String(ev.titulo), [ev]));
-// Agenda completa para assinar: fica na raiz do site (https://.../agenda.ics)
-await Deno.writeTextFile("agenda.ics", calendario("YouthMappers UFV", agenda));
+for (const ev of agenda.filter(temIcs)) await Deno.writeTextFile(`${SAIDA}/ics/${ev.id}.ics`, calendario(String(ev.titulo), [ev]));
+// Agenda para assinar (futuros + últimos JANELA_FEED_DIAS dias): fica na raiz do site (https://.../agenda.ics)
+await Deno.writeTextFile("agenda.ics", calendario("YouthMappers UFV", agenda.filter((ev) => String(ev.termina) >= limiteFeed)));
 await Deno.writeTextFile(`${SAIDA}/agenda.json`, JSON.stringify(agenda) + "\n");
 
 // Ações já realizadas, para a seção "Ações recentes" da página inicial.

@@ -205,7 +205,7 @@ return {
       local id = entrada:gsub("\\", "/"):match("/eventos/([^/]+)/index%.qmd$")
       local ev = nil
       for _, x in ipairs(ler_json("dados/painel/agenda.json")) do if x.id == id then ev = x end end
-      if ev and ev.termina >= os.date("%Y-%m-%d") then
+      if ev and ev.ics and ev.termina >= os.date("%Y-%m-%d") then
         local insc = txt(meta.inscricao)
         if insc then
           linha("inscricao", "Inscrições", pandoc.Inlines({ pandoc.Link("Formulário de inscrição", insc) }))
