@@ -93,6 +93,14 @@ modalidades:
   remota:     Remota
   hibrida:    Híbrida
 
+# Ferramentas de gerenciamento de tarefas de mapeamento (campo "tarefas" de eventos e projetos)
+ferramentas_tarefas:
+  tasking-manager: Tasking Manager
+  teachosm:        TeachOSM
+  maproulette:     MapRoulette
+  mapswipe:        MapSwipe
+  outra:           Outra ferramenta     # use "texto" para dar o nome
+
 tipos_projeto:
   ensino:   Ensino
   pesquisa: Pesquisa

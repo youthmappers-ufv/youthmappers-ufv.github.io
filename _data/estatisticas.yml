@@ -1,0 +1,22 @@
+# =====================================================================
+# Estatísticas individuais dos membros (página do membro e aba "Mapeadores"
+# do painel). Só aparecem membros com "estatisticas: true" e "osm" no cabeçalho.
+# =====================================================================
+
+# Janela do filtro "Últimos N meses" (valor padrão exibido). Altere aqui.
+meses_recentes: 12
+
+# Início da contagem: nenhum dado anterior a esta data é buscado nem exibido. É o início do
+# programa; "Desde o início", na página do membro, parte daqui. Ao mudar este valor, os dados
+# são buscados de novo na próxima renderização.
+inicio: 2022-01-01
+
+# Hashtags que marcam um changeset como "com a hashtag" (sem o #).
+hashtags:
+  - youthmappersufv
+
+# Consulta à API do OSM: no máximo a cada N horas, com pausa entre consultas e
+# um contato no cabeçalho User-Agent (boas maneiras com a API pública).
+atualizar_a_cada_horas: 12
+pausa_ms: 700
+contato: youthmapperschapter@ufv.br

@@ -4,20 +4,21 @@ date: 2024-08-09
 description: "Mapatona realizada pelo YouthMappers UFV."   # PROVISÓRIA: troque por um resumo do evento
 # image: capa.jpg                    # sem capa: o site usa a imagem genérica
 categories: [mapatona, "aniversário OSM"]
-# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+# hora_inicio: "14:00"
+# hora_fim: "18:00"
 tipo: mapatona
-modalidade:                          # presencial, remota, hibrida
-municipio:
-carga_horaria:                       # horas
-publico:                             # total de participantes
-publico_externo:                     # quantos não eram da UFV
-equipe: []                           # nomes dos arquivos em equipe/
-parceiros: []                        # ids de _data/parceiros.yml
-# --- dados exibidos só na ficha (opcionais) ---
-# horario: 14h às 18h
+modalidade: hibrida   # presencial, remota, hibrida
+municipio: "Rio Paranaíba"
 # local: 
 area_mapeada: Três Coroas - RS
-# tasking_manager: 
+carga_horaria: 240                    # minutos
+publico: 10   # total de participantes
+publico_externo: 0   # quantos não eram da UFV
+equipe: []                           # nomes dos arquivos em equipe/
+parceiros: []                        # ids de _data/parceiros.yml
+# tarefas:
+#   - ferramenta: tasking-manager
+#     url: https://tasks.hotosm.org/projects/12345
 ---
 
 {{< ficha >}}

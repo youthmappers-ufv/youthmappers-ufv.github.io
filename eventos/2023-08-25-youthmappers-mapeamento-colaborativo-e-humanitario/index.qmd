@@ -4,20 +4,21 @@ date: 2023-08-25
 description: "Apresentação dos conceitos, ferramentas e comunidades envolvidas em mapeamento colaborativo e humanitário"   
 # image: capa.jpg                    # sem capa: o site usa a imagem genérica
 categories: [palestra,capacitação]               # ex.: mapathon, oficina, palestra, conferência
-# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+hora_inicio: "10:00"
+hora_fim: "12:00"
 tipo: palestra
 modalidade: hibrida                         # presencial, remota, hibrida
 municipio: Rio Paranaíba
-carga_horaria: 2                       # horas
+local: PVA226
+# area_mapeada: 
+carga_horaria: 120                    # minutos
 publico: 10                            # total de participantes
 publico_externo: 0                    # quantos não eram da UFV
 equipe: [rodrigo-smarzaro]     #otavio massanobu  # nomes dos arquivos em equipe/
 parceiros: []                        # ids de _data/parceiros.yml
-# --- dados exibidos só na ficha (opcionais) ---
-horario: 10h às 12h
-local: PVA226
-# area_mapeada: 
-# tasking_manager: 
+# tarefas:
+#   - ferramenta: tasking-manager
+#     url: https://tasks.hotosm.org/projects/12345
 ---
 
 {{< ficha >}}

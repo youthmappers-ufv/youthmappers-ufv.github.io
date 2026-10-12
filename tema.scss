@@ -378,7 +378,7 @@ body.quarto-dashboard {
 // Faixa de logos da página inicial
 .parceiros-faixa {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-  gap: 1.2rem 2.5rem; margin: 1rem 0 2rem;
+  gap: 1.2rem 3.0rem; margin: 1rem 0 2rem;
   a { display: inline-flex; }
 }
-.parceiro-faixa-logo { max-height: 56px; max-width: 180px; object-fit: contain; }
+.parceiro-faixa-logo { max-height: 100px; max-width: 200px; object-fit: contain; }

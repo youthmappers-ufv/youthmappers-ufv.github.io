@@ -15,6 +15,7 @@ project:
   # 2) confere os dados e gera as tabelas do painel (veja os scripts).
   pre-render:
     - scripts/atualizar-osm.ts
+    - scripts/atualizar-osm-membros.ts
     - scripts/gerar-dados.ts
   # Arquivos e pastas que começam com "_" (como _modelos/) são
   # ignorados automaticamente pelo Quarto e não viram páginas.

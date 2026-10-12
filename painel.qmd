@@ -404,7 +404,7 @@ html`${fmt(d3.sum(eventosF, e => e.publico ?? 0))}`
 //| content: valuebox
 //| title: "Horas de atividades"
 //| color: "#324170"
-html`${fmt(d3.sum(eventosF, e => e.carga_horaria ?? 0))}`
+html`${fmt(Math.round(d3.sum(eventosF, e => e.carga_horaria_min ?? 0) / 60))}`
 ```
 
 ```{ojs}
@@ -643,4 +643,23 @@ osmF.length === 0 ? semDados() : Plot.plot({
 
 ::: {.card title="Como ler os números do mapeamento"}
 Edificações, vias, pontos de interesse e cursos d'água são **saldos**: o que foi criado menos o que foi removido (para vias e cursos d'água, também alongamentos menos encurtamentos). Por isso um mês pode ficar **negativo**: acontece em meses de validação, quando o trabalho é corrigir mapeamentos anteriores. As modificações não entram no saldo e aparecem à parte nos indicadores. Vias incluem tudo o que é mapeado como `highway`, inclusive calçadas e trilhas; cursos d'água são rios, canais, córregos e valas. Barras mais claras indicam o mês em andamento. Definições completas na ajuda do [painel ohsomeNow](https://ohsome-now.heigit.org/dashboard#hashtag=youthmappersufv).
+:::
+
+
+# Mapeadores
+
+```{ojs}
+//| output: false
+// repassa o ano do filtro geral à aba Mapeadores (ver _extensions/equipe/estatisticas.js)
+estAno = {
+  window.__estAno = ano;
+  if (window.__estPainel) window.__estPainel.setAno(ano);
+  return ano;
+}
+```
+
+## Row {height=1000px}
+
+::: {.card title="Estatísticas de edição dos membros"}
+{{< estatisticas-painel >}}
 :::

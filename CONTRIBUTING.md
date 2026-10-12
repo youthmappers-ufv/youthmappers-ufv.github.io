@@ -45,10 +45,10 @@ Campos opcionais, usados só pela ficha:
 
 | Campo | Exemplo | Observação |
 |---|---|---|
-| `horario` | `14h às 18h` | Aparece junto da data |
+| `hora_inicio` e `hora_fim` | `"14:00"` e `"18:00"` | Sempre entre aspas, formato 24 h. Aparecem junto da data; sem `carga_horaria`, a duração é calculada deles |
 | `local` | `Laboratório de Informática da UFV` | Onde a ação aconteceu; em ações remotas, por exemplo `Transmissão online pelo Google Meet` |
 | `area_mapeada` | `Angra dos Reis (RJ)` | O território mapeado, quando diferente do município |
-| `tasking_manager` | `12411` | Número do projeto; vira link automaticamente |
+| `tarefas` | lista de `ferramenta` e `url` | Projetos de mapeamento. `ferramenta`: `tasking-manager`, `teachosm`, `maproulette`, `mapswipe` ou `outra` (com `texto` dando o nome) |
 | `links` | lista de `texto` e `url` | Álbum, apresentação, notícia etc. |
 
 **`municipio` × `area_mapeada`:** `municipio` é onde a ação aconteceu (de
@@ -67,7 +67,7 @@ ficha:
 ```
 
 Linhas que podem ser ocultadas: `data`, `tipo`, `local`, `area_mapeada`,
-`carga_horaria`, `publico`, `equipe`, `parceiros`, `links`. Em casos
+`carga_horaria`, `publico`, `equipe`, `links`. Os parceiros não ficam na ficha: aparecem numa seção "Parceiros" (logo e link) no fim da página. Em casos
 realmente especiais, apague o `{{< ficha >}}` e escreva um bloco
 `::: {.ficha}` à mão, como antes.
 
@@ -80,9 +80,9 @@ Eventos com data de hoje em diante aparecem sozinhos na seção **"Próximas
 ações"** da página inicial e da página de eventos, com contagem regressiva,
 e na página **Agenda**, em formato de calendário. Para que apareçam bem:
 
-- **`horario`** no formato `14h às 18h` (também valem `14h30 às 16h`,
-  `19:00 às 21:00` ou só `14h`). É ele que dá o horário certo nas agendas;
-  se não for reconhecido, o evento entra como dia inteiro e a validação avisa.
+- **`hora_inicio`** e **`hora_fim`** (`"14:00"`, `"18:00"`, sempre entre
+  aspas). Dão o horário certo nas agendas; sem eles, o evento entra como dia
+  inteiro. Só `hora_inicio`: a agenda assume 2 horas.
 - **`data_fim`** (AAAA-MM-DD) para eventos de mais de um dia.
 - **`inscricao`**: endereço do formulário de inscrição. Vira o botão
   "Inscreva-se" nos cartões e uma linha na ficha, enquanto o evento não passa.
@@ -127,10 +127,10 @@ e preencha os dados para o painel (`tipo`, `inicio`, `fim`, `coordenacao`,
 `equipe`, `parceiros`, `ods`).
 
 A ficha do projeto também é gerada pelo `{{< ficha >}}`: tipo, período,
-situação (calculada pelo `fim`), coordenação, equipe, ODS, parceiros e
-`links` (repositório, dados, demonstração). A personalização pelo campo
+situação (calculada pelo `fim`), coordenação, equipe, ODS, `tarefas` e
+`links` (repositório, dados, demonstração). Os parceiros aparecem numa seção própria no fim da página. A personalização pelo campo
 `ficha` funciona como nos eventos; as linhas que podem ser ocultadas são
-`tipo`, `periodo`, `situacao`, `coordenacao`, `equipe`, `ods`, `parceiros`
+`tipo`, `periodo`, `situacao`, `coordenacao`, `equipe`, `ods`, `tarefas`
 e `links`.
 
 ## Adicionar uma pessoa à equipe
@@ -146,10 +146,15 @@ e `links`.
 4. Se a pessoa ocupa um **cargo** no capítulo (por exemplo, a presidência),
    acrescente a lista `cargos`, com o cargo, o `inicio` e, ao fim do mandato,
    o `fim`. O mandato precisa estar dentro do período de participação.
-5. Os links (OpenStreetMap, GitHub, Lattes, LinkedIn) ficam no cabeçalho,
-   dentro de `about: links:`, e viram botões abaixo do nome. Apague os que
-   não se aplicam. Se a pessoa não tiver nenhum link, apague o bloco
-   `about:` inteiro.
+5. Se a pessoa é **membro efetivo** do capítulo (só estudantes), informe o mês de
+   ingresso em `efetivo` (`AAAA-MM`). Se ela consentiu, no termo de adesão, em
+   exibir estatísticas de edição, acrescente `estatisticas: true`; isso exige o
+   campo `osm`.
+6. O usuário do OpenStreetMap vai em `osm` e gera sozinho o botão
+   "OpenStreetMap". Os demais links (e-mail, GitHub, Lattes, LinkedIn) ficam
+   no cabeçalho, dentro de `about: links:`, e viram botões abaixo do nome.
+   Apague os que não se aplicam. Se a pessoa não tiver nenhum desses links,
+   apague o bloco `about:` inteiro.
 
 **O que não precisa ser preenchido:** a seção da página Equipe em que a
 pessoa aparece (Coordenação, Diretoria, Equipe atual ou Egressos) e o texto
@@ -234,14 +239,10 @@ bash scripts/otimizar-fotos.sh
 Para mostrar um mapa interativo numa página de evento ou projeto, use o
 comando `{{< mapa >}}` de uma das duas formas:
 
-**Com a área mapeada (arquivo GeoJSON).** Coloque o arquivo na pasta do
-evento (por exemplo, `area.geojson`) e escreva:
-
-```markdown
-{{< mapa area.geojson >}}
-```
-
-O mapa se ajusta sozinho à área. Para obter o arquivo, baixe a área do
+**Com a área mapeada (arquivo GeoJSON).** Coloque o arquivo `area.geojson` na pasta
+do evento ou projeto e liste-o em `resources:` no cabeçalho. **Não é preciso
+escrever nada na página**: a seção "Área mapeada" com o mapa é acrescentada
+sozinha no fim. O mapa se ajusta à área. Para obter o arquivo, baixe a área do
 projeto no Tasking Manager ou desenhe-a em [geojson.io](https://geojson.io).
 Se as feições tiverem a propriedade `nome` (ou `name`), ela aparece ao
 passar o mouse.
@@ -363,3 +364,13 @@ problema fica fora do painel.
 Os números do mapeamento vêm do `scripts/atualizar-osm.ts`, que consulta o
 ohsomeNow pela hashtag do programa. Não edite os arquivos em `dados/`: eles
 são gerados automaticamente.
+
+## Estatísticas de edição dos membros
+
+Quem autorizou (no termo de adesão) a exibição de estatísticas ganha, na própria página, a
+seção "Estatísticas no OpenStreetMap", e entra na aba **Mapeadores** do painel. Para isso, no
+cabeçalho do membro: `osm: usuario` e `estatisticas: true`. Quem não tem `estatisticas: true`
+não aparece, e retirar o campo remove os dados do arquivo `dados/osm-membros.json` na renderização
+seguinte. Os números vêm da API pública do OSM (todas as edições da conta, com ou sem a hashtag)
+e são atualizados a cada publicação, no máximo a cada 12 horas. O número de meses do filtro
+"Últimos N meses" é configurável em `_data/estatisticas.yml` (`meses_recentes`), assim como o início da contagem (`inicio`, hoje 2022-01-01, o início do programa).

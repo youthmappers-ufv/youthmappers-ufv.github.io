@@ -1,0 +1,4 @@
+# Ao fim da página: seção "Área mapeada" (se houver area.geojson) e seção "Parceiros" (se houver parceiros no cabeçalho)
+filters:
+  - mapa
+  - parceiros

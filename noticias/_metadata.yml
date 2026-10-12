@@ -1,2 +1,5 @@
 # Páginas de notícias: a data do topo se repete na ficha (mesma regra dos eventos)
 body-classes: pagina-evento
+# Seção "Parceiros" ao fim da página, a partir do campo parceiros do cabeçalho
+filters:
+  - parceiros

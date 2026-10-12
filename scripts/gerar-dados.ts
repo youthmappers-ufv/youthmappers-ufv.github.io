@@ -75,7 +75,7 @@ const semestreAtual = `${hoje.slice(0, 4)}.${Number(hoje.slice(5, 7)) <= 7 ? 1 :
 // ---------- vocabulário e parceiros ----------
 const vocab = ((await lerYaml("_data/vocabulario.yml")) ?? {}) as Record<string, Obj>;
 for (const chave of ["cursos", "vinculos", "funcoes", "cargos", "papeis", "categorias_noticia", "tipos_evento", "modalidades",
-                     "tipos_projeto", "tipos_publicacao", "tipos_parceiro", "ods"]) {
+                     "ferramentas_tarefas", "tipos_projeto", "tipos_publicacao", "tipos_parceiro", "ods"]) {
   if (!vocab[chave]) { problema("_data/vocabulario.yml", `lista "${chave}" ausente`); vocab[chave] = {}; }
 }
 
@@ -145,10 +145,28 @@ for (const e of await listar("equipe")) {
   const vinculo = noVocabulario(arq, "vinculo", texto(fm.vinculo), vocab.vinculos);
   const curso = noVocabulario(arq, "curso", texto(fm.curso), vocab.cursos, estudante(vinculo));
 
+  // Membro efetivo (categoria do regimento, só estudantes) e consentimento para estatísticas individuais
+  const osmUsuario = texto(fm.osm);
+  if (fm.osm !== undefined && fm.osm !== null && osmUsuario === null) problema(arq, `"osm" deve ser o usuário do OpenStreetMap (texto)`);
+  const efetivo = texto(fm.efetivo);
+  if (efetivo !== null) {
+    if (!ehMes(efetivo)) problema(arq, `"efetivo" deve ser AAAA-MM (encontrado: ${efetivo})`);
+    else {
+      if (efetivo > mesAtual) problema(arq, `"efetivo" (${efetivo}) está no futuro`);
+      if (!estudante(vinculo)) problema(arq, `só estudantes (vinculo: graduacao ou pos-graduacao) podem ser membros efetivos`);
+    }
+  }
+  if (fm.estatisticas !== undefined && fm.estatisticas !== null && typeof fm.estatisticas !== "boolean")
+    problema(arq, `"estatisticas" deve ser true ou false`);
+  const estatisticas = fm.estatisticas === true;
+  if (estatisticas && !osmUsuario) problema(arq, `"estatisticas: true" exige o campo "osm" (usuário do OpenStreetMap)`);
+
   const ps = lerPeriodos(arq, "período", fm.periodos, "funcao", vocab.funcoes);
+  if (efetivo !== null && ehMes(efetivo) && ps.length > 0 && efetivo < ps.reduce((m, p) => p.inicio < m ? p.inicio : m, ps[0].inicio))
+    problema(arq, `"efetivo" (${efetivo}) é anterior ao início da participação nos "periodos"`);
   if (ps.length === 0) {
     problema(arq, `sem "periodos": a pessoa não aparece na página Equipe nem no painel`);
-    membros.push({ id, situacao: null, vinculo, curso });
+    membros.push({ id, situacao: null, vinculo, curso, efetivo: ehMes(efetivo) ? efetivo : null, estatisticas });
     continue;
   }
   if (ps.filter(aberto).length > 1) problema(arq, `mais de um período sem "fim": só o último deveria estar em aberto`);
@@ -168,8 +186,8 @@ for (const e of await listar("equipe")) {
   const situacao = !aberto(ultimo) ? "egresso" : ultimo.valor === "coordenacao" ? "coordenacao" : "atual";
   for (const p of ps) periodos.push({ membro: id, funcao: p.valor, inicio: p.inicio, fim: p.fim });
   for (const c of cs) mandatos.push({ membro: id, cargo: c.valor, inicio: c.inicio, fim: c.fim });
-  membros.push({ id, situacao, vinculo, curso });
-  pessoas.push({ id, nome, imagem: texto(fm.image), vinculo, curso, situacao, ultimo, periodos: ps, cargos: cs });
+  membros.push({ id, situacao, vinculo, curso, efetivo: ehMes(efetivo) ? efetivo : null, estatisticas });
+  pessoas.push({ id, nome, imagem: texto(fm.image), vinculo, curso, situacao, efetivo: ehMes(efetivo) ? efetivo : null, estatisticas, osm: osmUsuario, ultimo, periodos: ps, cargos: cs });
 }
 
 // Duas pessoas no mesmo cargo ao mesmo tempo
@@ -191,37 +209,37 @@ function referencias(arq: string, campo: string, ids: string[], validos: Set<str
 }
 
 // ---------- horário e agenda ----------
-/** "14h às 18h", "14h30 às 16h", "19:00 às 21:00", "das 9h às 12h", "14h" -> ["14:00","18:00"] */
-function lerHorario(t: string | null): [string, string | null] | null {
-  if (!t) return null;
-  const hora = String.raw`(\d{1,2})(?:\s*[h:]\s*(\d{2})?)?\s*h?`;
-  const re = new RegExp(String.raw`^\s*(?:das\s+)?` + hora + String.raw`\s*(?:(?:às|as|a|até|-|–)\s*` + hora + String.raw`)?\s*$`, "i");
-  const m = t.match(re);
-  if (!m) return null;
-  const hh = (h: string, mi?: string) => {
-    const n = Number(h), mm = Number(mi ?? 0);
-    return n <= 23 && mm <= 59 ? `${String(n).padStart(2, "0")}:${String(mm).padStart(2, "0")}` : null;
-  };
-  const ini = hh(m[1], m[2]);
-  const fim = m[3] ? hh(m[3], m[4]) : null;
-  if (!ini || (m[3] && !fim)) return null;
-  return [ini, fim];
+/** "14:30" (HH:MM, 24 h) -> "14:30"; formato inválido -> null */
+function lerHora(t: string | null): string | null {
+  const m = t?.match(/^([01]?\d|2[0-3]):([0-5]\d)$/);
+  return m ? `${m[1].padStart(2, "0")}:${m[2]}` : null;
 }
+/** "14:00" -> "14h"; "14:30" -> "14h30" */
+const horaCurta = (h: string) => (h.endsWith(":00") ? `${Number(h.slice(0, 2))}h` : `${Number(h.slice(0, 2))}h${h.slice(3)}`);
+const minutosDoDia = (h: string) => Number(h.slice(0, 2)) * 60 + Number(h.slice(3));
 
 // ---------- campos usados só pela ficha ({{< ficha >}}) ----------
 const LINHAS_FICHA = {
-  evento: ["data", "tipo", "realizacao", "local", "area_mapeada", "carga_horaria", "publico", "equipe", "parceiros", "links", "inscricao", "agenda"],
-  noticia: ["data", "categoria", "local", "equipe", "parceiros", "links"],
-  projeto: ["tipo", "periodo", "situacao", "coordenacao", "equipe", "ods", "parceiros", "links"],
+  evento: ["data", "tipo", "realizacao", "local", "area_mapeada", "carga_horaria", "publico", "equipe", "tarefas", "links", "inscricao", "agenda"],
+  noticia: ["data", "categoria", "local", "equipe", "links"],
+  projeto: ["tipo", "periodo", "situacao", "coordenacao", "equipe", "ods", "tarefas", "links"],
 };
 function validarFicha(arq: string, fm: Obj, tipo: "evento" | "projeto" | "noticia") {
-  for (const campo of ["horario", "local", "area_mapeada"]) {
+  for (const campo of ["local", "area_mapeada"]) {
     if (fm[campo] !== undefined && fm[campo] !== null && typeof fm[campo] !== "string")
       problema(arq, `"${campo}" deve ser um texto`);
   }
-  const tm = fm.tasking_manager;
-  if (tm !== undefined && tm !== null && !(Number.isInteger(tm) && (tm as number) > 0))
-    problema(arq, `"tasking_manager" deve ser o número do projeto (ex.: 12411)`);
+  if (fm.tasking_manager !== undefined) problema(arq, `"tasking_manager" foi substituído por "tarefas" (lista com "ferramenta" e "url")`);
+  if (fm.tarefas !== undefined && fm.tarefas !== null) {
+    if (!Array.isArray(fm.tarefas)) problema(arq, `"tarefas" deve ser uma lista de itens com "ferramenta" e "url"`);
+    else for (const [i, t] of (fm.tarefas as Obj[]).entries()) {
+      const ferr = texto(t?.ferramenta);
+      if (!ferr || !(ferr in vocab.ferramentas_tarefas))
+        problema(arq, `tarefa ${i + 1}: "ferramenta" deve ser uma de: ${Object.keys(vocab.ferramentas_tarefas).join(", ")}`);
+      if (!texto(t?.url) || !/^https?:\/\//.test(texto(t.url)!)) problema(arq, `tarefa ${i + 1}: a "url" deve começar com http:// ou https://`);
+      if (ferr === "outra" && !texto(t?.texto)) problema(arq, `tarefa ${i + 1}: com "ferramenta: outra", informe o nome em "texto"`);
+    }
+  }
   if (fm.links !== undefined && fm.links !== null) {
     if (!Array.isArray(fm.links)) problema(arq, `"links" deve ser uma lista de itens com "texto" e "url"`);
     else for (const [i, l] of (fm.links as Obj[]).entries()) {
@@ -255,9 +273,10 @@ for (const e of await listar("eventos")) {
   const modalidade = noVocabulario(arq, "modalidade", texto(fm.modalidade), vocab.modalidades, realizado);
   const municipio = texto(fm.municipio);
   if (!municipio && realizado) problema(arq, `campo "municipio" ausente`);
-  const numero = (campo: string) => {
+  const numero = (campo: string, padrao: number | null = null) => {
     const v = fm[campo];
     if (v === undefined || v === null) {
+      if (padrao !== null) return padrao;
       if (realizado) problema(arq, `evento já realizado sem "${campo}"`);
       return null;
     }
@@ -266,7 +285,23 @@ for (const e of await listar("eventos")) {
   };
   const publico = numero("publico");
   const externo = numero("publico_externo");
-  const horas = numero("carga_horaria");
+  // Horário: "hora_inicio" e "hora_fim" ("HH:MM", entre aspas)
+  const horaIniTxt = texto(fm.hora_inicio), horaFimTxt = texto(fm.hora_fim);
+  const horaInicio = lerHora(horaIniTxt), horaFim = lerHora(horaFimTxt);
+  if (fm.horario !== undefined) problema(arq, `"horario" foi substituído por "hora_inicio" e "hora_fim" (ex.: "14:00")`);
+  if (horaIniTxt && !horaInicio) problema(arq, `"hora_inicio: ${horaIniTxt}" inválida (use aspas e HH:MM, ex.: "14:00")`);
+  if (horaFimTxt && !horaFim) problema(arq, `"hora_fim: ${horaFimTxt}" inválida (use aspas e HH:MM, ex.: "18:00")`);
+  if (horaFim && !horaInicio) problema(arq, `"hora_fim" informada sem "hora_inicio"`);
+  const dataFimTxt = texto(fm.data_fim);
+  const mesmoDia = !dataFimTxt || dataFimTxt.slice(0, 10) === data!.slice(0, 10);
+  if (horaInicio && horaFim && mesmoDia && minutosDoDia(horaFim) <= minutosDoDia(horaInicio))
+    problema(arq, `"hora_fim" (${horaFim}) deve ser depois de "hora_inicio" (${horaInicio})`);
+  // Sem "carga_horaria", ela é calculada do horário (eventos de um dia só)
+  const derivada = horaInicio && horaFim && mesmoDia && minutosDoDia(horaFim) > minutosDoDia(horaInicio)
+    ? minutosDoDia(horaFim) - minutosDoDia(horaInicio) : null;
+  const minutos = numero("carga_horaria", derivada);   // em MINUTOS
+  if (minutos !== null && fm.carga_horaria !== undefined && minutos > 0 && minutos < 15)
+    problema(arq, `"carga_horaria: ${minutos}" parece estar em horas; o campo é em minutos (ex.: 120)`);
   if (publico !== null && externo !== null && externo > publico)
     problema(arq, `"publico_externo" (${externo}) maior que "publico" (${publico})`);
   const equipe = referencias(arq, "equipe", lista(fm.equipe), idsMembros, "equipe/");
@@ -277,16 +312,13 @@ for (const e of await listar("eventos")) {
   const dataFim = texto(fm.data_fim);
   if (dataFim !== null && (!ehData(dataFim) || dataFim.slice(0, 10) < data!.slice(0, 10)))
     problema(arq, `"data_fim" deve ser AAAA-MM-DD, igual ou posterior a "date"`);
-  const horario = texto(fm.horario);
-  const intervalo = lerHorario(horario);
-  if (horario && !intervalo)
-    problema(arq, `"horario: ${horario}" não foi reconhecido (use, por exemplo, "14h às 18h"); na agenda, o evento aparece como dia inteiro`);
+  const horario = horaInicio ? (horaFim ? `${horaCurta(horaInicio)} às ${horaCurta(horaFim)}` : horaCurta(horaInicio)) : null;
   const inscricao = texto(fm.inscricao);
   if (inscricao && !/^https?:\/\//.test(inscricao)) problema(arq, `"inscricao" deve ser um endereço começando com http:// ou https://`);
   agenda.push({
     id: e.name, titulo: texto(fm.title) ?? e.name, descricao: texto(fm.description),
     data: data!.slice(0, 10), data_fim: dataFim && ehData(dataFim) ? dataFim.slice(0, 10) : null,
-    horario, hora_inicio: intervalo?.[0] ?? null, hora_fim: intervalo?.[1] ?? null,
+    horario, hora_inicio: horaInicio, hora_fim: horaFim, carga_horaria_min: minutos,
     tipo: texto(fm.tipo), papel, modalidade: texto(fm.modalidade), local: texto(fm.local), municipio: texto(fm.municipio),
     imagem: texto(fm.image) ? `eventos/${e.name}/${texto(fm.image)}` : null,
     inscricao: inscricao && /^https?:\/\//.test(inscricao) ? inscricao : null,
@@ -294,7 +326,7 @@ for (const e of await listar("eventos")) {
   if (!tipo) continue;
   eventos.push({ id: e.name, data: data!.slice(0, 10), realizado, tipo, papel, modalidade, municipio,
                  area_mapeada: texto(fm.area_mapeada),
-                 carga_horaria: horas, publico, publico_externo: externo, parceiros: parc });
+                 carga_horaria_min: minutos, publico, publico_externo: externo, parceiros: parc });
   for (const m of equipe) participacoes.push({ evento: e.name, membro: m });
 }
 
@@ -314,6 +346,7 @@ for (const e of await listar("noticias")) {
     problema(arq, `categoria "${c}" não está no vocabulário (válidas: ${Object.keys(vocab.categorias_noticia).join(", ")})`);
   if (!texto(fm.description)) problema(arq, `sem "description": o resumo aparece na listagem de notícias`);
   referencias(arq, "equipe", lista(fm.equipe), idsMembros, "equipe/");
+  referencias(arq, "parceiros", lista(fm.parceiros), idsParceiros, "_data/parceiros.yml");
   validarFicha(arq, fm, "noticia");
   noticias.push({ id: e.name, data: data!.slice(0, 10), categorias: cats, municipio: texto(fm.municipio),
                   equipe: lista(fm.equipe).filter((m) => idsMembros.has(m)) });
@@ -373,7 +406,7 @@ const osm = (JSON.parse((await lerTexto("dados/osm-mensal.json")) ?? "{}")?.mese
 // ---------- página Equipe ----------
 // Seções e textos dos cartões, todos calculados a partir dos dados acima.
 type Pessoa = { id: string; nome: string; imagem: string | null; vinculo: string | null; curso: string | null;
-                situacao: string; ultimo: Periodo & { valor: string };
+                situacao: string; efetivo?: string | null; estatisticas?: boolean; osm?: string | null; ultimo: Periodo & { valor: string };
                 periodos: (Periodo & { valor: string })[]; cargos: (Periodo & { valor: string })[] };
 const ps = pessoas as unknown as Pessoa[];
 const nomeDe = (dom: string, v: string | null) => (v && (vocab[dom] as Obj)[v] ? String((vocab[dom] as Obj)[v]) : "");
@@ -467,6 +500,22 @@ for (const [nome, linhas] of Object.entries(tabelas)) {
 }
 await Deno.writeTextFile(`${SAIDA}/vocabulario.json`, JSON.stringify(vocab) + "\n");
 await Deno.writeTextFile(`${SAIDA}/equipe.json`, JSON.stringify({ secoes, perfis }) + "\n");
+
+// ---------- estatísticas individuais (só quem autorizou: "estatisticas: true" e "osm") ----------
+// Dados de edição vêm de dados/osm-membros.json (scripts/atualizar-osm-membros.ts).
+const cfgEst = ((await lerYaml("_data/estatisticas.yml")) ?? {}) as Obj;
+const brutoEst = JSON.parse((await lerTexto("dados/osm-membros.json")) ?? "{}") as Obj;
+const estMembros: Obj[] = [];
+for (const p of pessoas) {
+  if (p.estatisticas !== true || !p.osm) continue;
+  const d = (brutoEst.membros as Obj | undefined)?.[p.id as string] as Obj | undefined;
+  if (!d) { problema(`equipe/${p.id}.qmd`, `"estatisticas: true", mas ainda não há dados de edição (renderize com internet)`); continue; }
+  estMembros.push({ id: p.id, nome: p.nome, osm: p.osm, situacao: p.situacao, atualizado: d.atualizado, meses: d.meses });
+}
+await Deno.writeTextFile(`${SAIDA}/estatisticas.json`, JSON.stringify({
+  gerado_em: brutoEst.gerado_em ?? null, inicio: String(brutoEst.inicio ?? cfgEst.inicio ?? "2022-01-01").slice(0, 7), meses_recentes: Number(cfgEst.meses_recentes ?? 12),
+  hashtags: brutoEst.hashtags ?? [], membros: estMembros,
+}) + "\n");
 await Deno.writeTextFile(`${SAIDA}/contadores.json`, JSON.stringify(contadores) + "\n");
 // Nomes usados pelas fichas de eventos e projetos (links para perfis e parceiros)
 await Deno.writeTextFile(`${SAIDA}/referencias.json`, JSON.stringify({

@@ -1,52 +1,86 @@
 ---
-title: "Título do evento"
-date: 2026-01-31                     # AAAA-MM-DD
-# data_fim: 2026-02-01               # só para eventos de mais de um dia
-description: "Uma frase que resume a ação (aparece no cartão da listagem)."
-image: capa.jpg                      # foto horizontal, ~1600 px de largura
-categories: [mapatona]               # ex.: mapatona, oficina, palestra, conferência
-# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
-tipo: mapatona                       # mapatona, oficina, palestra, campo, conferencia, evento
-# papel: coorganizacao               # só se for coorganizada (padrão: organizacao)
-modalidade: presencial               # presencial, remota, hibrida
-municipio: Rio Paranaíba
-carga_horaria: 4                     # horas
-publico: 25                          # total de participantes
-publico_externo: 18                  # quantos não eram da UFV
-equipe: [nome-sobrenome]             # nomes dos arquivos em equipe/ (sem .qmd)
-parceiros: []                        # ids de _data/parceiros.yml
-# --- dados exibidos só na ficha (opcionais) ---
-horario: 14h às 18h                  # formato "14h às 18h" (vai para a agenda)
-# inscricao: https://forms.gle/...   # formulário de inscrição (eventos futuros)
-local: Laboratório de Informática da UFV   # onde aconteceu (ou "Transmissão online...")
-area_mapeada: Bairro Centro, Rio Paranaíba # território mapeado, se diferente do município
-tasking_manager: 12345               # nº do projeto no HOT Tasking Manager
-links:                               # outros links (álbum, apresentação...)
-  - texto: Álbum completo
-    url: https://...
-# ficha:                             # personalização da ficha (raramente necessária)
-#   ocultar: [carga_horaria]
-#   extras:
-#     - rotulo: Inscrições
-#       valor: "[Formulário](https://...)"
+# =====================================================================
+# MODELO DE EVENTO (ação do programa). Copie esta pasta para
+# eventos/AAAA-MM-DD-slug/ e preencha. Apague as linhas "opcional" que
+# não usar. Valores controlados ficam em _data/vocabulario.yml.
+#
+#   [obrigatório]  sempre
+#   [realizado]    obrigatório depois que o evento acontece (pode ficar em
+#                  branco enquanto for futuro; a validação cobra depois)
+#   [opcional]     use só se fizer sentido
+#
+# Os campos estão na ordem sugerida de preenchimento.
+# =====================================================================
+
+# --- 1. Identificação -------------------------------------------------
+title: "Título do evento"                      # [obrigatório] texto
+date: 2026-01-31                               # [obrigatório] AAAA-MM-DD (dia de início)
+# data_fim: 2026-02-01                         # [opcional] AAAA-MM-DD, igual ou posterior a date (eventos de mais de um dia)
+description: "Uma frase que resume a ação."    # [obrigatório] aparece no cartão da listagem
+image: capa.jpg                                # [opcional] foto horizontal (~1600 px) na pasta do evento; sem ela, imagem genérica
+categories: [mapatona]                         # [obrigatório] etiquetas livres; reutilize as existentes (ex.: mapatona, oficina, palestra, conferência)
+
+# --- 2. Horário (opcional) --------------------------------------------
+# Sempre entre aspas, no formato 24 h "HH:MM". Sem horário, a agenda mostra dia inteiro.
+# Em eventos de um dia, a carga horária é calculada sozinha se não for informada.
+hora_inicio: "14:00"                           # [opcional] "HH:MM"
+hora_fim: "18:00"                              # [opcional] "HH:MM", depois de hora_inicio; exige hora_inicio
+
+# --- 3. Classificação --------------------------------------------------
+tipo: mapatona                                 # [obrigatório] mapatona | oficina | palestra | campo | conferencia | evento
+# papel: coorganizacao                         # [opcional] organizacao (padrão) | coorganizacao
+modalidade: presencial                         # [realizado] presencial | remota | hibrida
+
+# --- 4. Lugar -----------------------------------------------------------
+municipio: Rio Paranaíba                       # [realizado] município onde o evento aconteceu
+local: Laboratório de Informática da UFV       # [opcional] lugar exato, ou "Transmissão online pelo Google Meet"
+area_mapeada: Bairro Centro, Rio Paranaíba     # [opcional] território mapeado, se houver (texto livre)
+
+# --- 5. Números ---------------------------------------------------------
+carga_horaria: 240                             # [realizado] em MINUTOS (120 = 2 h); calculada de hora_inicio/hora_fim se omitida
+publico: 25                                    # [realizado] total de participantes (número)
+publico_externo: 18                            # [realizado] quantos não eram da UFV (número, no máximo publico)
+
+# --- 6. Pessoas e parceiros ---------------------------------------------
+equipe: [nome-sobrenome]                       # [opcional] nomes dos arquivos em equipe/ (sem .qmd)
+parceiros: []                                  # [opcional] ids de _data/parceiros.yml; viram a seção "Parceiros" (logo e link)
+
+# --- 7. Links -----------------------------------------------------------
+# inscricao: https://forms.gle/...             # [opcional] formulário de inscrição (só aparece enquanto o evento não passou)
+tarefas:                                       # [opcional] projetos de mapeamento (lista)
+  - ferramenta: tasking-manager                #   tasking-manager | teachosm | maproulette | mapswipe | outra
+    url: https://tasks.hotosm.org/projects/12345   # endereço completo (http:// ou https://)
+    # texto: Nome exibido                      #   [opcional]; obrigatório com ferramenta: outra
+links:                                         # [opcional] outros links (álbum, apresentação...)
+  - texto: Álbum completo                      #   texto do link
+    url: https://example.org/album             #   endereço completo (http:// ou https://)
+
+# --- 8. Personalização da ficha (raramente necessária) -------------------
+# ficha:
+#   ocultar: [carga_horaria]                   # linhas: data, tipo, realizacao, local, area_mapeada, carga_horaria,
+#                                              #   publico, equipe, tarefas, links, inscricao, agenda
+#   extras:                                    # linhas extras (aceitam Markdown)
+#     - rotulo: Organização
+#       valor: "Universidade X"
+
+# --- 9. Arquivos da pasta -------------------------------------------------
+# Se a pasta tiver area.geojson, o mapa e a seção "Área mapeada" aparecem sozinhos no fim da página.
+# resources:
+#   - area.geojson
 ---
 
 {{< ficha >}}
 
 Conte o que aconteceu: o que foi feito, quem participou, que dados foram produzidos.
 
-## Área mapeada
-
-<!-- Mapa: use UMA das formas e apague a outra (ou a seção inteira).
-     1) Arquivo GeoJSON na pasta do evento (desenhe em https://geojson.io
-        ou baixe a área do projeto no Tasking Manager):
-     2) Coordenada "latitude, longitude" (openstreetmap.org: botão direito
-        no mapa > "Mostrar endereço"); zoom de 1 a 19. -->
-
-{{< mapa area.geojson >}}
-
-<!-- Para usar a coordenada, troque a linha acima por:
-     {{</* mapa centro="-19.1940, -46.2470" zoom="16" */>}}  (sem os asteriscos) -->
+<!-- MAPA
+     - Com arquivo area.geojson na pasta (desenhe em https://geojson.io ou baixe a área
+       do Tasking Manager) e "resources: - area.geojson" no cabeçalho: nada a escrever,
+       o mapa entra sozinho no fim da página.
+     - Para marcar um ponto (sem arquivo), escreva onde quiser a linha abaixo, sem os asteriscos
+       (coordenada "latitude, longitude": openstreetmap.org, botão direito > "Mostrar endereço";
+       zoom de 1 a 19):
+     {{</* mapa centro="-19.1940, -46.2470" zoom="16" */>}} -->
 
 ## Fotos
 

@@ -1,14 +1,12 @@
 ---
 title: "Júlia Mendonça Silva"
 image: fotos/julia-mendonca.jpeg
-
-# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
-curso: SIN                           # código do curso (obrigatório para estudantes)
 vinculo: graduacao                    # graduacao, pos-graduacao, docente, tecnico, externo
-#osm: usuario                         # usuário no OpenStreetMap (opcional)
+curso: SIN                           # código do curso (obrigatório para estudantes)
 periodos:                            # um item por função exercida, em ordem
   - funcao: voluntario               # coordenacao, bolsista, voluntario, colaborador
     inicio: 2022-06                  # AAAA-MM
     fim: 2024-07                     # AAAA-MM; apague a linha se ainda participa
+osm: Juliamsa                        # usuário no OpenStreetMap (opcional)
 ---
 Aluna do curso de Sistemas de Informação da Universidade Federal de Viçosa (UFV), Júlia é membra fundadora do projeto YouthmappersUFV, uma iniciativa que busca engajar estudantes universitários na produção e utilização de dados geoespaciais para o desenvolvimento comunitário.

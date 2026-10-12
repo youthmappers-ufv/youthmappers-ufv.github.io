@@ -26,6 +26,19 @@ local function cartao(p)
 end
 
 return {
+  -- {{< estatisticas-painel >}}: aba "Mapeadores" do painel (dados embutidos; ver estatisticas.js)
+  ["estatisticas-painel"] = function()
+    local est = comum.estatisticas()
+    if not est then
+      quarto.log.warning("estatisticas-painel: dados/painel/estatisticas.json não encontrado (rode quarto render)")
+      return pandoc.Null()
+    end
+    comum.dependencia_estatisticas()
+    return pandoc.RawBlock("html",
+      '<div class="estatisticas-painel"><div class="est-corpo"></div><script type="application/json" class="est-dados">' ..
+      comum.json_embutido(est) .. "</script></div>")
+  end,
+
   ["equipe"] = function()
     local dados = comum.dados_equipe()
     if not dados then

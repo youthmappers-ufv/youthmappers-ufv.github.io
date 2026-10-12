@@ -1,16 +1,42 @@
 ---
-title: "Título da notícia"
-date: 2026-01-31                     # AAAA-MM-DD
-description: "Resumo de uma frase (aparece na listagem de notícias)."
-image: capa.jpg                      # opcional; sem capa, o site usa a imagem genérica
-categories: [participação]           # participação, conquista, publicação, parceria, chamada, comunicado
-# --- opcionais, exibidos na ficha ---
-# local: Centro de Convenções
-# municipio: Curitiba
-# equipe: [nome-sobrenome]           # quem do programa esteve presente
+# =====================================================================
+# MODELO DE NOTÍCIA (participação em evento de terceiros, conquista,
+# publicação, parceria, chamada, comunicado). Se o programa organizou
+# ou ministrou a atividade, é um EVENTO, não notícia.
+# Copie esta pasta para noticias/AAAA-MM-DD-slug/ e preencha.
+#
+#   [obrigatório]  sempre
+#   [opcional]     use só se fizer sentido
+#
+# Os campos estão na ordem sugerida de preenchimento.
+# =====================================================================
+
+# --- 1. Identificação -------------------------------------------------
+title: "Título da notícia"                     # [obrigatório] texto
+date: 2026-01-31                               # [obrigatório] AAAA-MM-DD
+description: "Resumo de uma frase."            # [obrigatório] aparece na listagem de notícias
+image: capa.jpg                                # [opcional] imagem na pasta da notícia; sem ela, imagem genérica
+categories: [participação]                     # [obrigatório] uma ou mais: participação | conquista | publicação | parceria | chamada | comunicado
+
+# --- 2. Lugar (opcional) --------------------------------------------------
+# local: Centro de Convenções                  # [opcional] lugar exato
+# municipio: Curitiba                          # [opcional] município
+
+# --- 3. Pessoas e parceiros (opcional) -------------------------------------
+# equipe: [nome-sobrenome]                     # [opcional] quem do programa esteve presente (nomes dos arquivos em equipe/)
+# parceiros: []                                # [opcional] ids de _data/parceiros.yml; viram a seção "Parceiros" (logo e link)
+
+# --- 4. Links (opcional) ----------------------------------------------------
 # links:
-#   - texto: Site do evento
-#     url: https://...
+#   - texto: Site do evento                    #   texto do link
+#     url: https://...                         #   endereço completo (http:// ou https://)
+
+# --- 5. Personalização da ficha (raramente necessária) -------------------
+# ficha:
+#   ocultar: [local]                           # linhas: data, categoria, local, equipe, links
+#   extras:
+#     - rotulo: Resultado
+#       valor: "1º lugar"
 ---
 
 {{< ficha >}}

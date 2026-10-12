@@ -29,3 +29,10 @@
   logo: imagens/parceiros/mapeadores-livres-ufpr.png
   site: https://www.instagram.com/mapealivreufpr/
   ativo: false
+
+- id: tomtom
+  nome: Tomtom
+  tipo: empresa
+  logo: imagens/parceiros/tomtom.png
+  site: https://www.tomtom.com/
+  ativo: false

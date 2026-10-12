@@ -4,31 +4,29 @@ date: 2022-07-09
 description: "O projeto foi criado para priorizar o mapeamento de feições em áreas de risco geológico, considerando os frequentes desastres ocorridos nesta região do estado do Rio de Janeiro, como os deslizamentos que aconteceram em Angra dos Reis em abril de 2022, com maior atenção ao bairro Monsuaba, que foi o mais atingido e que vitimou, fatalmente, 11 pessoas."
 image: capa.jpg
 categories: [mapatona]
-horario: 21h às 23h
-local: Transmissão online pelo Google Meet
-resources:
-  - area.geojson
-# --- dados para o painel (valores válidos em _data/vocabulario.yml) ---
+hora_inicio: "21:00"
+hora_fim: "23:00"
 tipo: mapatona                       # mapatona, oficina, palestra, campo, conferencia
 modalidade: remota               # presencial, remota, hibrida
 municipio: Rio Paranaíba
-carga_horaria: 4                     # horas
+local: Transmissão online pelo Google Meet
+area_mapeada: Angra dos Reis (RJ), com prioridade para o bairro Monsuaba
+carga_horaria: 180                    # minutos
 publico: 10                          # total de participantes
 publico_externo: 0                  # quantos não eram da UFV
 equipe: [rodrigo-smarzaro,julia-mendonca]             # nomes dos arquivos em equipe/ (sem .qmd)
 parceiros: []                        # ids de _data/parceiros.yml
-area_mapeada: Angra dos Reis (RJ), com prioridade para o bairro Monsuaba
-tasking_manager: 12411
+tarefas:
+  - ferramenta: tasking-manager
+    url: https://tasks.hotosm.org/projects/12411
+resources:
+  - area.geojson
 ---
 
 {{< ficha >}}
 
 
 O Mapeamento na cidade de Angra dos Reis/RJ tem como objetivo incluir edifícios, estradas rurais, pontos de interesses (comércio em geral, escolas, postos de saúde, praças) e áreas verdes nos locais de mata, melhorando assim os dados do OpenStreetMap. 
-
-## Área mapeada
-
-{{< mapa area.geojson >}}
 
 ## Fotos
 
