@@ -11,7 +11,7 @@
     "href": "sobre.html#objetivos",
     "title": "O programa",
     "section": "Objetivos",
-    "text": "Objetivos\n\nObjetivo geral e objetivos específicos do programa."
+    "text": "Objetivos\n\nObjetivo geral\nApoiar a geração, organização, acesso e disseminação de dados espaciais abertos, e desenvolver ferramentas abertas para sua produção e uso, em benefício de toda a comunidade acadêmica, instituições, ONGs e população em geral, que poderão acessar livremente os dados e as ferramentas.\n\n\nObjetivos específicos\n\nCapacitar estudantes universitários no uso de geotecnologias, softwares de SIG e plataformas de mapeamento colaborativo, como o OpenStreetMap.\nProduzir dados geoespaciais abertos e de qualidade para apoiar a tomada de decisão de governos, organizações da sociedade civil e comunidades locais.\nRealizar mapeamentos participativos em áreas vulneráveis ou de interesse público, contribuindo para a gestão de riscos, o planejamento urbano e o desenvolvimento regional.\nPromover a educação cidadã e a participação comunitária, sensibilizando a sociedade sobre a importância de dados geoespaciais na solução de problemas locais.\nFomentar parcerias acadêmicas e institucionais nacionais e internacionais para a execução de projetos colaborativos de mapeamento.\nDesenvolver projetos de pesquisa aplicada que integrem extensão, ensino e ciência de dados geoespaciais.\nDivulgar informações e resultados por meio de relatórios, workshops, treinamentos, eventos abertos à comunidade e do portal web do programa.\nIncentivar o uso de dados abertos e a transparência, fortalecendo políticas públicas baseadas em evidências e o planejamento sustentável.\nDesenvolver e disponibilizar, sob licenças abertas, ferramentas de software que facilitem o mapeamento colaborativo, a análise de dados do OpenStreetMap e o acesso a esses dados por não especialistas.\nColetar e publicar, sob licença aberta, imagens aéreas e em nível de rua da região, e aplicar técnicas de visão computacional e inteligência artificial para identificar lacunas no mapa, sempre com revisão humana.\nApoiar a incorporação responsável de dados abertos oficiais ao OpenStreetMap, em diálogo com a comunidade OSM Brasil e conforme suas diretrizes de importação."
   },
   {
     "objectID": "sobre.html#parceiros",
@@ -25,7 +25,7 @@
     "href": "sobre.html#como-participar",
     "title": "O programa",
     "section": "Como participar",
-    "text": "Como participar\nEstudantes de qualquer curso podem participar como voluntários. Não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap.\nPara entrar no programa, escreva para youthmapperschapter@ufv.br informando seu nome, curso e período."
+    "text": "Como participar\nAs ações abertas (mapatonas, oficinas e palestras) recebem qualquer pessoa, e não é preciso experiência prévia com mapas: as primeiras ações incluem uma oficina de introdução ao OpenStreetMap. Estudantes de qualquer curso da UFV Rio Paranaíba podem também atuar na extensão como voluntários e, depois de concluir o ciclo de capacitação e cumprir os critérios do regimento do capítulo, tornar-se membros efetivos.\nPara começar, escreva para youthmapperschapter@ufv.br informando seu nome, curso e período."
   },
   {
     "objectID": "projetos/2026-11-01-atlas-colaborativo/index.html",
@@ -389,7 +389,7 @@
     "href": "index.html",
     "title": "YouthMappers UFV",
     "section": "",
-    "text": "Estudantes mapeando o mundo\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 11/10/2026."
+    "text": "Estudantes mapeando o mundo\n\nO capítulo YouthMappers da UFV, campus Rio Paranaíba, produz dados abertos no OpenStreetMap e desenvolve ferramentas livres para quem precisa deles.\n\nConheça as ações Participe do programa\nNúmeros atualizados em 12/10/2026."
   },
   {
     "objectID": "index.html#proximas-acoes",
