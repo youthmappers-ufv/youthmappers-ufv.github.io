@@ -103,13 +103,23 @@ try {
   // Descarta os meses iniciais sem nenhuma atividade
   const primeiro = meses.findIndex((m) => Object.keys(TOPICOS).some((c) => m[c] !== 0));
   const serie = primeiro < 0 ? [] : meses.slice(primeiro);
+  // A API às vezes responde com sucesso mas com tudo zerado (instabilidade
+  // ou reprocessamento do ohsomeNow): não sobrescrever os dados bons
+  if (serie.length === 0) throw new Error("resposta sem nenhuma edição");
 
   const agora = new Date().toISOString();
   const totais: Record<string, unknown> = {};
-  for (const campo of Object.keys(serie[0] ?? {})) {
+  for (const campo of Object.keys(serie[0])) {
     if (campo === "mes" || campo === "parcial") continue;
     const soma = serie.reduce((s, m) => s + (m[campo] as number), 0);
     totais[campo] = Math.round(soma * 1000) / 1000;
+  }
+
+  // Edições acumuladas só caem por pequenos ajustes; uma queda grande indica
+  // resposta incompleta da API
+  const edicoesAntes = (await lerJson(ARQ_TOTAIS))?.edicoes;
+  if (typeof edicoesAntes === "number" && (totais.edicoes as number) < edicoesAntes / 2) {
+    throw new Error(`total de edições caiu de ${edicoesAntes} para ${totais.edicoes}`);
   }
 
   await Deno.mkdir("dados", { recursive: true });
