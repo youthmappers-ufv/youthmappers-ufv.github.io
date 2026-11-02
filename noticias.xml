@@ -13,8 +13,10 @@
 <url>https://youthmappers-ufv.github.io/imagens/compartilhamento.jpg</url>
 <title>YouthMappers UFV</title>
 <link>https://youthmappers-ufv.github.io/noticias.html</link>
+<height>76</height>
+<width>144</width>
 </image>
-<generator>quarto-1.10.20</generator>
+<generator>quarto-1.11.9</generator>
 <lastBuildDate>Mon, 02 Oct 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>YouthMappers UFV participa do State of the Map Brasil 2023, em Curitiba</title>
@@ -57,7 +59,7 @@ UFPR, Curitiba
   <category>participação</category>
   <guid>https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/</guid>
   <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/capa.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://youthmappers-ufv.github.io/noticias/2023-10-02-participacao-no-state-of-the-map-brasil-curitiba/capa.jpg" medium="image" type="image/jpeg" height="108" width="144"/>
 </item>
 </channel>
 </rss>
