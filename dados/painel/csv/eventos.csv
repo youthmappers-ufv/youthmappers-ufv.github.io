@@ -30,4 +30,4 @@ id,data,realizado,tipo,papel,modalidade,municipio,area_mapeada,carga_horaria_min
 2025-09-25-mapeamento-colaborativo-com-editor-josm,2025-09-25,true,oficina,organizacao,hibrida,Rio Paranaíba,,120,10,0,
 2025-10-09-mapatona-youthmappers-estradas-rurais-de-rio-paranaiba,2025-10-09,true,mapatona,organizacao,hibrida,Rio Paranaíba,Estradas Rurais de Rio Paranaíba - Região Sudeste,240,10,0,
 2025-11-06-tradutona-mapcomplete,2025-11-06,true,evento,organizacao,hibrida,Rio Paranaíba,,240,10,0,tomtom
-2026-11-12-sotm-brasil-2026,2026-11-12,false,conferencia,organizacao,presencial,Uberlândia,,,,,
+2026-11-12-sotm-brasil-2026,2026-11-12,true,conferencia,organizacao,presencial,Uberlândia,,,,,
